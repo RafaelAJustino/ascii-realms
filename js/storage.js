@@ -2,10 +2,14 @@ import { rt } from './runtime.js';
 import { KEY } from './data.js';
 import { clamp } from './utils.js';
 import { normalizeSave, SAVE_VERSION } from './state-schema.js';
+import {activeJourney} from './journey-paths.js';
+import {syncAchievements,ACHIEVEMENT_BY_ID} from './achievements.js';
 export const BACKUP_KEY = `${KEY}-backup`;
 export const MIGRATION_BACKUP_KEY = `${KEY}-pre-migration`;
 export function save(){
  if(!rt.state)return false;
+ const newAwards=syncAchievements(rt.state);
+ if(newAwards.length)rt.achievementFeedback=`Conquista: ${ACHIEVEMENT_BY_ID[newAwards.at(-1)].name}`;
  rt.state.version=SAVE_VERSION;
  try {const encoded=JSON.stringify(rt.state);localStorage.setItem(KEY,encoded);localStorage.setItem(BACKUP_KEY,encoded);return true;}catch{return false;}
 }
@@ -27,6 +31,6 @@ export function load(){
   localStorage.setItem(KEY,encoded);
   localStorage.setItem(BACKUP_KEY,encoded);
  }catch{return false;}
- rt.state=s;rt.screen=s.dungeons?.attempt?'dungeon':'world';rt.busy=false;rt.phase='idle';rt.area=clamp(s.area,1,100);
+ rt.state=s;rt.screen=s.dungeons?.attempt?'dungeon':activeJourney(s)?'journey':'world';rt.busy=false;rt.phase='idle';rt.area=clamp(s.area,1,100);
  return true;
 }

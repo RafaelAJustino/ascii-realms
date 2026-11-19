@@ -25,3 +25,21 @@ export const statDefaults=()=>({playTimeSeconds:0,monstersDefeated:0,bossesDefea
 export function statAdd(key,amount=1,s=rt.state){if(!s||!Number.isFinite(amount)||amount<0)return;s.statistics??=statDefaults();s.statistics[key]=(s.statistics[key]||0)+amount;}
 export function recordEncounter(e,s=rt.state){if(!s)return;const id=e.baseName||e.name;const entry=s.bestiary??={};const v=entry[id]??={encounters:0,wins:0,losses:0};v.encounters++;}
 export function recordOutcome(e,win,s=rt.state){if(!s)return;const id=e.baseName||e.name;const entry=s.bestiary??={};const v=entry[id]??={encounters:0,wins:0,losses:0};v[win?'wins':'losses']++;}
+
+// Conhecimento é registrado apenas após uma ação/afinidade realmente observada.
+export function observeMonsterAction(enemy,action,s=rt.state){
+ if(!s||!enemy||!action?.id)return false;
+ const key=enemy.baseName||enemy.name;
+ const entry=(s.bestiary??={})[key]??={encounters:0,wins:0,losses:0};
+ entry.observedActions??={};
+ const existing=entry.observedActions[action.id];
+ entry.observedActions[action.id]={name:String(action.name||action.id).slice(0,60),count:Math.min(999,(existing?.count||0)+1)};
+ return true;
+}
+export function observeMonsterAffinity(enemy,element,multiplier,s=rt.state){
+ if(!s||!enemy||element==='physical'||!Number.isFinite(multiplier)||multiplier===1)return false;
+ const key=enemy.baseName||enemy.name;
+ const entry=(s.bestiary??={})[key]??={encounters:0,wins:0,losses:0};
+ entry.observedAffinities??={};entry.observedAffinities[element]=multiplier;
+ return true;
+}

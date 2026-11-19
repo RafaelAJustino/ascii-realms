@@ -1,7 +1,15 @@
+import {secretDefaults,normalizeSecrets} from './secrets.js';
 // Estrutura aditiva: os campos antigos permanecem na raiz do salvamento.
-export const SAVE_VERSION = 5;
+export const SAVE_VERSION = 11;
+import {emptyJourney,normalizeJourney} from './journey-paths.js';
+import {worldClimateDefaults,normalizeWorldClimate} from './world-climate.js';
+import {normalizeAchievements,syncAchievements} from './achievements.js';
+import {normalizeSkillVariants} from './skill-variants.js';
+import {normalizeWeaponEvolution} from './weapon-evolution.js';
+import {cityLifeDefaults,normalizeCityLife} from './city-life.js';
+import {narrativeDefaults,normalizeNarrative,EVENT_BY_ID} from './journey-events.js';
 export const EQUIPMENT_SLOTS = ['weapon','head','body','hands','feet','ring','amulet'];
-export function extensionDefaults(){return {quests:{active:{},completed:[],claimed:[]},bestiary:{},statistics:{playTimeSeconds:0,monstersDefeated:0,bossesDefeated:0,deaths:0,damageDealt:0,highestDamage:0,damageTaken:0,goldEarned:0,goldSpent:0,itemsFound:0,questsCompleted:0,dungeonsCompleted:0},dungeons:{completed:[],rewards:[],best:{},attempt:null},specializations:{selected:null,unlocked:[]},enhancements:{}};}
+export function extensionDefaults(){return {quests:{active:{},completed:[],claimed:[]},bestiary:{},statistics:{playTimeSeconds:0,monstersDefeated:0,bossesDefeated:0,deaths:0,damageDealt:0,highestDamage:0,damageTaken:0,goldEarned:0,goldSpent:0,itemsFound:0,questsCompleted:0,dungeonsCompleted:0},dungeons:{completed:[],rewards:[],best:{},attempt:null},specializations:{selected:null,unlocked:[]},enhancements:{},journey:emptyJourney(),worldClimate:worldClimateDefaults(),secrets:secretDefaults(),narrative:narrativeDefaults(),cityLife:cityLifeDefaults(),achievements:normalizeAchievements(null),skillVariants:{}};}
 export function normalizeSave(source){
  if(!source||typeof source!=='object'||Array.isArray(source))throw Error('Salvamento inválido');
  const s=structuredClone(source);
@@ -24,7 +32,7 @@ export function normalizeSave(source){
  s.quests.claimed=Array.isArray(s.quests.claimed)?s.quests.claimed:[];
  for(const [key,value] of Object.entries(extensionDefaults().statistics))if(!Number.isFinite(s.statistics[key])||s.statistics[key]<0)s.statistics[key]=value;
  // Retomar combates seria inseguro: evita duplicação de recompensas após recarga.
- for(const it of s.items){if(!it||typeof it!=='object')continue;it.upgrade=Number.isInteger(it.upgrade)&&it.upgrade>=0&&it.upgrade<=10?it.upgrade:0;if(typeof it.setId!=='string')delete it.setId;}
+ for(const it of s.items){if(!it||typeof it!=='object')continue;it.upgrade=Number.isInteger(it.upgrade)&&it.upgrade>=0&&it.upgrade<=10?it.upgrade:0;if(typeof it.setId!=='string')delete it.setId;normalizeWeaponEvolution(it);}
  // Uma batalha interrompida em masmorra retorna ao início da sala sem gerar recompensa.
  const attempt=s.dungeons?.attempt;
  if(attempt){if(typeof attempt.id!=='string'||!Number.isInteger(attempt.room)||attempt.room<1||attempt.room>5){s.dungeons.attempt=null;}else if(s.combat){attempt.roomResolved=false;}}
@@ -33,6 +41,17 @@ export function normalizeSave(source){
  s.dungeons.best=s.dungeons.best&&typeof s.dungeons.best==='object'?s.dungeons.best:{};
  if(!['guerreiro','mago','arqueiro','ladino'].includes(s.cls))s.specializations.selected=null;
  if(!Array.isArray(s.specializations.unlocked))s.specializations.unlocked=[];
+ s.journey=normalizeJourney(s.journey,s.area);
+ s.worldClimate=normalizeWorldClimate(s.worldClimate);
+ s.secrets=normalizeSecrets(s.secrets);
+ // Compatibilidade com a antiga Etapa 7 descartada: nenhum aliado permanece ativo ou salvo.
+ delete s.companions;
+ s.narrative=normalizeNarrative(s.narrative);
+ s.cityLife=normalizeCityLife(s.cityLife);
+ if(s.journey.event&&(!EVENT_BY_ID[s.journey.event]||s.narrative.completed.includes(s.journey.event)))s.journey.event=null;
+ s.achievements=normalizeAchievements(s.achievements);
+ s.skillVariants=normalizeSkillVariants(s.skillVariants);
+ syncAchievements(s);
  s.combat=null;s.version=SAVE_VERSION;
  return s;
 }

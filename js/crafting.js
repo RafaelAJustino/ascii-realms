@@ -6,7 +6,8 @@ import {save} from './storage.js';
 import {render} from './ui.js';
 import {statAdd} from './progression.js';
 
-export const FORGE_MATERIALS=['Ferro Bruto','Cristal Escarlate','Essência Venenosa','Aço das Montanhas','Fragmento Antigo','Cristal Glacial','Essência Sombria','Núcleo Infernal','Fragmento Celestial','Matéria do Vazio'];
+export {FORGE_MATERIALS} from './forge-materials.js';
+import {FORGE_MATERIALS} from './forge-materials.js';
 export const SETS=[
  ['Guardião Silvestre','defensive'],['Caçador Escarlate','critical'],['Alquimista do Pântano','magic'],['Bastião de Ferro','defensive'],['Legado das Ruínas','offensive'],['Coração Glacial','magic'],['Juramento Sombrio','critical'],['Fúria Infernal','offensive'],['Graça Celestial','defensive'],['Soberania do Vazio','magic']
 ].map(([name,style],region)=>({id:`set-${region}`,name,style,region}));
