@@ -5,7 +5,7 @@ const css=readFileSync(new URL('../css/combat-compact.css',import.meta.url),'utf
 const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
 assert.match(ui,/rt\.state\?\.combat&&rt\.screen==='combat'/);
 assert.match(ui,/return '<div class=\\?"brand\\?">ASCII REALMS<\/div>'/);
-assert.match(ui,/rt\.state&&rt\.screen!=='combat'/);
+assert.doesNotMatch(ui,/<nav class=\"nav\">/);
 assert.match(ui,/combat-stage/);
 assert.match(ui,/const maxFont=6;/);
 assert.match(ui,/Math\.min\(1,available\/naturalWidth,availableHeight\/naturalHeight\)/);

@@ -140,3 +140,22 @@ As artes sao mostradas em `<pre>` com fonte monoespacada e sem quebra de linha. 
 Durante o combate, o cabeçalho exibe apenas ASCII REALMS e a navegação principal não é renderizada. A grade de ataque comum + quatro habilidades mantém botões de 42px com espaçamento de 6px. As artes ASCII são ajustadas por largura e altura com limite superior de 6px; fora do combate, a navegação original permanece. O histórico usa rolagem interna. O submenu de ataques continua aberto entre turnos. A persistência v5 não foi alterada.
 
 **Validação:** testes automatizados executados em Node. A validação visual real em navegador não foi concluída porque o ambiente bloqueou a navegação do Chromium para arquivos locais e localhost. A visibilidade simultânea de todos os elementos em cada resolução ainda precisa ser conferida manualmente.
+
+## UX/UI compacta (novembro de 2026)
+- Mercante viajante: preço real obtido de `potionPrice`, identificação de ouro insuficiente e compra bloqueada quando necessário. Catálogo de equipamentos exibe raridade, nível e preço.
+- Criação: campos de nome e classe com 100% da largura útil, rótulos associados e foco visível.
+- Padrão CSS compartilhado em `css/ux-unified.css`: espaçamento 8px, altura de botões 40px, máximo 50px, fonte monoespaçada, feedback de foco e estados desabilitados.
+- Combate: medidores acessíveis e proporcionais de HP (herói/inimigo) e MP (herói), com valores numéricos. Nenhuma regra de dano, mana ou salvamento foi alterada.
+- Testes: `npm test` inclui `tests/ux-unified.mjs`. São testes automatizados estruturais e funcionais já existentes; a inspeção visual real em todas as resoluções solicitadas permanece pendente, pois o Chromium não completou a inicialização no ambiente de testes.
+
+## Aba Herói: distribuição provisória
+
+Os seis atributos exibem descrições fundamentadas em `player.stats`. Os botões + e - alteram somente a distribuição temporária em memória (`js/hero-distribution.js`); a prévia utiliza a própria função `stats(atributosProvisorios)`, incluindo equipamentos, conjuntos, passivas e especialização. Apenas **Aplicar pontos** altera os atributos permanentes e grava no LocalStorage. **Descartar alterações** restaura a prévia sem salvar. Ao sair da aba com pontos pendentes, há confirmação.
+
+## Navegação principal (atualização)
+
+A barra inferior foi removida. A tela de mundo agora concentra Explorar, Selecionar Mapa, Visitar Cidade e Jogador, nesta ordem. Explorar e Jogador ocupam a largura completa; Mapa e Cidade dividem uma grade de duas colunas. O menu Jogador reúne Herói, Inventário, Equipamentos (acesso à seção de equipamentos do inventário), Habilidades, Missões, Bestiário, Estatísticas e Especialização. As missões podem ser abertas na cidade e acompanhadas no menu Jogador. Ferraria e Masmorras continuam na cidade.
+
+A tela de entrada mostra Continuar, Novo Jogo e Excluir Jogo em coluna, com confirmação antes da exclusão. O menu anterior é preservado temporariamente para permitir retorno, sem alterar o formato do salvamento.
+
+Teste adicional: `node tests/main-navigation.mjs`. Os testes estruturais de navegação não substituem inspeção visual em dispositivos físicos.

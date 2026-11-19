@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/smoke.mjs && node tests/loot.mjs && node tests/spawns.mjs && node tests/rarity.mjs && node tests/persistence.mjs && node tests/elemental-ai.mjs && node tests/boss-phases.mjs && node tests/progression.mjs && node tests/crafting.mjs && node tests/dungeons-specs.mjs && node tests/final-review.mjs && node tests/ascii-art.mjs && node tests/combat-layout.mjs && node tests/compact-combat.mjs"
+    "test": "node tests/smoke.mjs && node tests/loot.mjs && node tests/spawns.mjs && node tests/rarity.mjs && node tests/persistence.mjs && node tests/elemental-ai.mjs && node tests/boss-phases.mjs && node tests/progression.mjs && node tests/crafting.mjs && node tests/dungeons-specs.mjs && node tests/final-review.mjs && node tests/ascii-art.mjs && node tests/combat-layout.mjs && node tests/compact-combat.mjs && node tests/ux-unified.mjs && node tests/hero-distribution.mjs && node tests/main-navigation.mjs"
   }
 }
