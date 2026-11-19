@@ -1,6 +1,7 @@
 import {secretDefaults,normalizeSecrets} from './secrets.js';
 // Estrutura aditiva: os campos antigos permanecem na raiz do salvamento.
-export const SAVE_VERSION = 11;
+export const SAVE_VERSION = 12;
+import {normalizeInvested} from './attribute-milestones.js';
 import {emptyJourney,normalizeJourney} from './journey-paths.js';
 import {worldClimateDefaults,normalizeWorldClimate} from './world-climate.js';
 import {normalizeAchievements,syncAchievements} from './achievements.js';
@@ -9,7 +10,7 @@ import {normalizeWeaponEvolution} from './weapon-evolution.js';
 import {cityLifeDefaults,normalizeCityLife} from './city-life.js';
 import {narrativeDefaults,normalizeNarrative,EVENT_BY_ID} from './journey-events.js';
 export const EQUIPMENT_SLOTS = ['weapon','head','body','hands','feet','ring','amulet'];
-export function extensionDefaults(){return {quests:{active:{},completed:[],claimed:[]},bestiary:{},statistics:{playTimeSeconds:0,monstersDefeated:0,bossesDefeated:0,deaths:0,damageDealt:0,highestDamage:0,damageTaken:0,goldEarned:0,goldSpent:0,itemsFound:0,questsCompleted:0,dungeonsCompleted:0},dungeons:{completed:[],rewards:[],best:{},attempt:null},specializations:{selected:null,unlocked:[]},enhancements:{},journey:emptyJourney(),worldClimate:worldClimateDefaults(),secrets:secretDefaults(),narrative:narrativeDefaults(),cityLife:cityLifeDefaults(),achievements:normalizeAchievements(null),skillVariants:{}};}
+export function extensionDefaults(){return {quests:{active:{},completed:[],claimed:[]},bestiary:{},statistics:{playTimeSeconds:0,monstersDefeated:0,bossesDefeated:0,deaths:0,damageDealt:0,highestDamage:0,damageTaken:0,goldEarned:0,goldSpent:0,itemsFound:0,questsCompleted:0,dungeonsCompleted:0},dungeons:{completed:[],rewards:[],best:{},attempt:null},specializations:{selected:null,unlocked:[]},enhancements:{},journey:emptyJourney(),worldClimate:worldClimateDefaults(),secrets:secretDefaults(),narrative:narrativeDefaults(),cityLife:cityLifeDefaults(),achievements:normalizeAchievements(null),skillVariants:{},investedStats:[0,0,0,0,0,0]};}
 export function normalizeSave(source){
  if(!source||typeof source!=='object'||Array.isArray(source))throw Error('Salvamento inválido');
  const s=structuredClone(source);
@@ -17,6 +18,8 @@ export function normalizeSave(source){
  if(!['guerreiro','mago','arqueiro','ladino'].includes(s.cls)||!Array.isArray(s.stats)||s.stats.length!==6||!s.stats.every(n=>Number.isFinite(n)&&n>=0)||!Number.isInteger(s.lv)||s.lv<1||s.lv>100||!Number.isFinite(s.xp)||s.xp<0||!Number.isFinite(s.gold)||s.gold<0||!Array.isArray(s.items)||!s.equip||typeof s.equip!=='object')throw Error('Dados essenciais inválidos');
  s.name=typeof s.name==='string'?s.name.slice(0,24):'Herói';
  s.points=Number.isFinite(s.points)&&s.points>=0?s.points:0;
+ // Salvamentos anteriores não registravam a origem dos pontos: nunca inferir investimentos.
+ s.investedStats=normalizeInvested(s.investedStats);
  s.hp=Number.isFinite(s.hp)?Math.max(0,s.hp):1;s.mp=Number.isFinite(s.mp)?Math.max(0,s.mp):1;
  s.area=Number.isInteger(s.area)&&s.area>=1&&s.area<=100?s.area:1;
  s.bosses=Array.isArray(s.bosses)?s.bosses.filter(n=>Number.isInteger(n)&&n>=0&&n<10):[];
@@ -25,6 +28,7 @@ export function normalizeSave(source){
  s.equip=Object.fromEntries(EQUIPMENT_SLOTS.map(slot=>[slot,s.equip[slot]??null]));
  s.lastEncounterSpecies=s.lastEncounterSpecies&&typeof s.lastEncounterSpecies==='object'?s.lastEncounterSpecies:{};
  for(const [key,initial] of Object.entries(extensionDefaults())){
+  if(key==='investedStats')continue;
   const value=s[key];s[key]=value&&typeof value==='object'&&!Array.isArray(value)?{...initial,...value}:structuredClone(initial);
  }
  s.quests.active=s.quests.active&&typeof s.quests.active==='object'?s.quests.active:{};

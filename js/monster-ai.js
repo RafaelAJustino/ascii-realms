@@ -1,3 +1,4 @@
+import {finishCooldownTurn,turnsRemaining} from './turn-cooldowns.js';
 import { elementMultiplier } from './elements.js';
 import { monsterRarity } from './monster-rarity.js';
 export const ARCHETYPES=Object.freeze(['aggressive','defensive','strategic','opportunist','magical','wild']);
@@ -10,7 +11,7 @@ const skills=[
  {id:'guard',name:'Postura Protetora',cost:10,cooldown:3,power:0,element:'physical',kind:'guard',unlock:10}
 ];
 const styles={aggressive:{damage:1.3,heal:.5,guard:.5,debuff:.8},defensive:{damage:.8,heal:1.8,guard:1.7,debuff:1},strategic:{damage:1.1,heal:1.2,guard:1.2,debuff:1.25},opportunist:{damage:1.15,heal:.8,guard:.8,debuff:1.1},magical:{damage:1.05,heal:1,guard:.7,debuff:1.9},wild:{damage:1,heal:1,guard:1,debuff:1}};
-export function availableMonsterActions(enemy){const cooldowns=enemy.cooldowns||{};return skills.filter(a=>enemy.lv>=a.unlock&&enemy.mp>=a.cost&&(cooldowns[a.id]||0)<=0);}
+export function availableMonsterActions(enemy){const cooldowns=enemy.cooldowns||{};return skills.filter(a=>enemy.lv>=a.unlock&&enemy.mp>=a.cost&&turnsRemaining(enemy,a.id)===0);}
 export function scoreMonsterAction(action,enemy,player,{playerStats={},random=Math.random}={}){
  const hp=enemy.hp/Math.max(1,enemy.maxhp),playerHp=player.hp/Math.max(1,player.maxhp||player.hp),archetype=enemy.archetype||'wild';
  const style=styles[archetype]||styles.wild;
@@ -42,4 +43,4 @@ export function chooseMonsterAction(enemy,player,options={}){
  if(!actions.length)return skills[0];
  return actions.map(action=>({action,score:scoreMonsterAction(action,enemy,player,{...options,random})})).sort((a,b)=>b.score-a.score)[0].action;
 }
-export function finishMonsterAction(enemy,action){enemy.mp=Math.max(0,enemy.mp-action.cost);enemy.cooldowns??={};for(const id of Object.keys(enemy.cooldowns))enemy.cooldowns[id]=Math.max(0,enemy.cooldowns[id]-1);if(action.cooldown)enemy.cooldowns[action.id]=action.cooldown;}
+export function finishMonsterAction(enemy,action){enemy.mp=Math.max(0,enemy.mp-action.cost);finishCooldownTurn(enemy,action.id,action.cooldown);}

@@ -1,3 +1,4 @@
+import {resetCooldowns,finishCooldownTurn,canUse,playerCooldownDetails,specCooldownDetails,tickCooldowns} from './turn-cooldowns.js';
 import {markGuardianVictory,recordSecret,SECRET_BOSS_REGIONS} from './secrets.js';
 import {dungeonCombatEnd} from './dungeons.js';
 import {recordWeaponVictory} from './weapon-evolution.js';
@@ -21,7 +22,7 @@ import { PLAYER_SKILL_ELEMENTS,applyElementalDamage,elementalMessage,elementMult
 import { chooseMonsterAction,finishMonsterAction } from './monster-ai.js';
 import { selectAnnouncedAction,announceMonsterAction,consumeAnnouncedAction,resolveElementReaction } from './combat-tactics.js';
 import { monsterRarity } from './monster-rarity.js';
-export function combat(boss=false,secret=false){if(rt.state.combat)return;let lv=boss?rt.area:Math.min(100,rt.area+rand(0,1));rt.state.combat={enemy:enemy(lv,boss),effects:[],turn:0,guard:0};
+export function combat(boss=false,secret=false){if(rt.state.combat)return;let lv=boss?rt.area:Math.min(100,rt.area+rand(0,1));rt.state.combat={enemy:enemy(lv,boss),effects:[],turn:0,guard:0,cooldowns:{}};
  if(secret&&!boss&&SECRET_BOSS_REGIONS.includes(mapId(rt.area))){
   const e=rt.state.combat.enemy;
   e.secretGuardian=true;
@@ -32,8 +33,8 @@ export function combat(boss=false,secret=false){if(rt.state.combat)return;let lv
 
 export function effectsTick(target,effects){for(let ef of [...effects]){if(ef.type==='poison'||ef.type==='burn'||ef.type==='bleed'){let dmg=Math.max(1,Math.floor(target.maxhp*ef.power));target.hp=Math.max(0,target.hp-dmg);rt.log.unshift(`${ef.name}: ${dmg} de dano.`);}if(ef.type==='regen')target.hp=Math.min(target.maxhp,target.hp+Math.ceil(target.maxhp*ef.power));ef.duration--;if(ef.duration<=0)effects.splice(effects.indexOf(ef),1);}}
 
-export function endCombat(win){let e=rt.state.combat.enemy;const inDungeon=!!rt.state.combat.dungeonRoom;recordOutcome(e,win);if(win){progressQuest('kill',e.baseName);if(e.boss)progressQuest('boss',e.baseName);if(rt.state.statistics)rt.state.statistics.monstersDefeated++;recordWeaponVictory(rt.state,e);let s=stats(),exp=Math.floor((12+e.lv*9)*(e.boss?8:1)*clamp(1+(e.lv-rt.state.lv)*.15,.15,1.5)*(1+s.expBonus/100)),gold=Math.floor((8+e.lv*4)*(e.boss?7:1)*(e.boss?1:monsterRarity(e.rarityId).reward));exp=Math.floor(exp*(e.boss?1:monsterRarity(e.rarityId).reward));rt.state.gold+=gold;statAdd('goldEarned',gold);rt.log.unshift(`Vitória! +${exp} EXP, +${gold} ouro.`);gainXp(exp);const firstBoss=e.boss&&!rt.state.bosses.includes(mapId(rt.area));
-const reward=rewardFor(e,rt.state.cls,firstBoss);
+export function endCombat(win){let e=rt.state.combat.enemy;resetCooldowns(rt.state.combat);resetCooldowns(e);const inDungeon=!!rt.state.combat.dungeonRoom;recordOutcome(e,win);if(win){progressQuest('kill',e.baseName);if(e.boss)progressQuest('boss',e.baseName);if(rt.state.statistics)rt.state.statistics.monstersDefeated++;recordWeaponVictory(rt.state,e);let s=stats(),exp=Math.floor((12+e.lv*9)*(e.boss?8:1)*clamp(1+(e.lv-rt.state.lv)*.15,.15,1.5)*(1+s.expBonus/100)),gold=Math.floor((8+e.lv*4)*(e.boss?7:1)*(e.boss?1:monsterRarity(e.rarityId).reward));exp=Math.floor(exp*(e.boss?1:monsterRarity(e.rarityId).reward));rt.state.gold+=gold;statAdd('goldEarned',gold);rt.log.unshift(`Vitória! +${exp} EXP, +${gold} ouro.`);gainXp(exp);const firstBoss=e.boss&&!rt.state.bosses.includes(mapId(rt.area));
+const reward=rewardFor(e,rt.state.cls,firstBoss,Math.random,rt.state.investedStats);
 for(const [name,count] of Object.entries(reward.materials)){rt.state.materials[name]=(rt.state.materials[name]||0)+count;statAdd('itemsFound',count);rt.log.unshift(`Material obtido: ${name} ×${count}.`);}
 for(const [name,count] of Object.entries(reward.consumables)){rt.state.consumables[name]=(rt.state.consumables[name]||0)+count;statAdd('itemsFound',count);rt.log.unshift(`Consumível obtido: ${name} ×${count}.`);}
 for(const it of reward.items){rt.state.items.push(it);statAdd('itemsFound');rt.log.unshift(`Item obtido: ${it.name} (${rarityName(it.rarity)}).`);}
@@ -52,7 +53,7 @@ export function enemyTurn(){
  const e=c.enemy,s=stats();effectsTick(e,e.effects);
  if(e.hp<=0)return endCombat(true);
  const stunned=c.effects.some(x=>x.type==='stun');
- if(stunned){c.lastVisualAction=null;rt.log.unshift(`${e.name} está atordoado.`);c.effects=c.effects.filter(x=>x.type!=='stun');return;}
+ if(stunned){tickCooldowns(e);c.lastVisualAction=null;rt.log.unshift(`${e.name} está atordoado.`);c.effects=c.effects.filter(x=>x.type!=='stun');return;}
  if(e.boss){
   // O ataque anunciado sempre se resolve no turno seguinte, sem novo sorteio.
   if(e.telegraph){
@@ -61,13 +62,13 @@ export function enemyTurn(){
    const combatPlayer={hp:rt.state.hp,elementalAffinities:rt.state.elementalAffinities||{},combatEffects:c.effects};
    resolveBossAttack(e,combatPlayer,s,c.guard,message=>rt.log.unshift(message));
    rt.state.hp=combatPlayer.hp;
-   return;
+   tickCooldowns(e);return;
   }
   if(e.bossSpecialCooldown>0)e.bossSpecialCooldown--;
   if(bossSpecialAvailable(e)&&((e.bossPhase===3)||Math.random()<.65)){
    c.lastVisualAction={kind:'guard',id:'announce'};
    announceBossAttack(e,message=>rt.log.unshift(message));
-   return;
+   tickCooldowns(e);return;
   }
  }
  // Anúncios não alteram as regras de ação. A habilidade só gasta MP ao ser executada.
@@ -78,7 +79,7 @@ export function enemyTurn(){
   if(announced&&announceMonsterAction(e,announced)){
    c.lastVisualAction={kind:'guard',id:'announce'};
    rt.log.unshift(`! ATAQUE ANUNCIADO! ${e.telegraph.message}`);
-   return;
+   tickCooldowns(e);return;
   }
  }
  // Decisão baseada em recursos, arquétipo, vida, recargas e afinidades.
@@ -122,8 +123,8 @@ function markImpact(before, side) {
 export async function act(kind,param) {
  if(rt.busy||!rt.state?.combat)return;
  const c=rt.state.combat,e=c.enemy,s=stats();
- if(kind==='skill'){const a=effectiveSkill(rt.state,param);if(!a||rt.state.lv<a.level||rt.state.mp<a.cost)return;}
- if(kind==='spec'){const a=specSkills(rt.state)[param];if(!a||rt.state.mp<a.cost)return;}
+ if(kind==='skill'){const a=effectiveSkill(rt.state,Number(param)),cd=playerCooldownDetails(rt.state,Number(param));if(!a||!cd||rt.state.lv<a.level||rt.state.mp<a.cost||!canUse(c,cd.id))return;}
+ if(kind==='spec'){const a=specSkills(rt.state)[Number(param)],cd=specCooldownDetails(rt.state,Number(param));if(!a||!cd||rt.state.mp<a.cost||!canUse(c,cd.id))return;}
  if(kind==='potion'&&(!rt.state.consumables[param]||rt.state.consumables[param]<1))return;
  if(kind==='flee'&&(e.boss||c.dungeonRoom))return;
  rt.busy=true;rt.phase='player-action';rt.float=null;rt.impactMeta=null;
@@ -149,6 +150,10 @@ export async function act(kind,param) {
     rt.state.combat=null;rt.sub='main';rt.screen=activeJourney(rt.state)?'journey':'world';rt.log.unshift({text:'Você fugiu!',kind:'info',id:Math.random()});if(activeJourney(rt.state))addJourneyLog(rt.state,'Você fugiu do encontro.');save();render();return;
    }pushLog('Falha ao fugir!','error');
   }
+  // Apenas ações concluídas consomem um turno. A habilidade usada recebe
+  // sua recarga depois da redução das demais, nunca no próprio turno.
+  const used=kind==='skill'?playerCooldownDetails(rt.state,Number(param)):kind==='spec'?specCooldownDetails(rt.state,Number(param)):null;
+  finishCooldownTurn(c,used?.id,used?.turns||0);
   syncCombatLog();rt.phase='player-action';
   if(!rt.state.combat)return;
   markImpact(before,'enemy');await playCombatReaction(rt.app,{side:'enemy',amount:Math.max(0,before.enemy-e.hp),log:rt.log.slice(0,3),critical:rt.float?.critical});

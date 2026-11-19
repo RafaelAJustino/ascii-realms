@@ -1,3 +1,4 @@
+import {normalizeInvested,earnedMilestones} from './attribute-milestones.js';
 import {stats} from './player.js';
 import {save} from './storage.js';
 
@@ -15,7 +16,7 @@ export function pending(){return !!draft&&draft.some(n=>n>0);}
 export function distribution(state){
  if(!draft)draft=[0,0,0,0,0,0];
  const spent=draft.reduce((sum,n)=>sum+n,0);
- return {spent,remaining:state.points-spent,delta:[...draft],preview:stats(state.stats.map((n,i)=>n+draft[i])),current:stats()};
+ return {spent,remaining:state.points-spent,delta:[...draft],preview:stats(state.stats.map((n,i)=>n+draft[i]),normalizeInvested(state.investedStats).map((n,i)=>n+draft[i])),current:stats(),invested:normalizeInvested(state.investedStats),plannedInvested:normalizeInvested(state.investedStats).map((n,i)=>n+draft[i])};
 }
 export function changeDraft(state,index,direction){
  if(!Number.isInteger(index)||index<0||index>=6||![-1,1].includes(direction))return false;
@@ -29,7 +30,11 @@ export function applyDraft(state){
  if(!pending())return false;
  const delta=[...draft],spent=delta.reduce((a,b)=>a+b,0);
  if(!Number.isSafeInteger(state.points)||spent>state.points||delta.some(n=>!Number.isSafeInteger(n)||n<0)||state.stats.some((n,i)=>!Number.isSafeInteger(n)||!Number.isSafeInteger(n+delta[i])))return false;
- state.stats=state.stats.map((n,i)=>n+delta[i]);state.points-=spent;
- draft=null;save();return true;
+ const oldStats=[...state.stats],oldInvested=normalizeInvested(state.investedStats),oldPoints=state.points;
+ const nextInvested=oldInvested.map((n,i)=>n+delta[i]);
+ if(nextInvested.some(n=>n>297))return false;
+ state.stats=state.stats.map((n,i)=>n+delta[i]);state.investedStats=nextInvested;state.points-=spent;
+ if(!save()){state.stats=oldStats;state.investedStats=oldInvested;state.points=oldPoints;return false;}
+ draft=null;return true;
 }
 export function confirmLeave(ask=()=>true){if(!pending())return true;if(!ask('Descartar a distribuição provisória de atributos?'))return false;discardDraft();return true;}

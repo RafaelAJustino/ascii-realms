@@ -1,3 +1,5 @@
+import {investedMilestones} from './attribute-milestones.js';
+import {turnsRemaining,playerCooldownDetails,specCooldownDetails} from './turn-cooldowns.js';
 import {SECRET_EVENTS,SECRET_BOSS_REGIONS} from './secrets.js';
 import {fallbackMenu} from './menu-history.js';
 import {ACHIEVEMENTS,ACHIEVEMENT_BY_ID,equippedTitle} from './achievements.js';
@@ -67,7 +69,8 @@ export function worldMap(){return maps.map((m,i)=>panel(`${i+1}. ${m[0]} ${rt.st
 
 export function character(){
  const d=distribution(rt.state),permanent=rt.state.stats;
- const rows=A.map((a,i)=>`<div class="hero-attribute"><div class="hero-attribute-title"><b>${N[i]}</b><span class="small muted">${a.toUpperCase()}</span></div><p class="small muted">${ATTRIBUTE_HELP[i]}</p><div class="hero-attribute-controls">${btn('−',`attrMinus:${i}`,d.delta[i]===0)}<span class="hero-attribute-value">${permanent[i]} ${d.delta[i]?`&gt; <strong>${permanent[i]+d.delta[i]}</strong>`:'= '+permanent[i]}${d.current[a]>permanent[i]?` <small class="muted">(+${d.current[a]-permanent[i]} equip.)</small>`:''}</span>${btn('+',`attrPlus:${i}`,d.remaining===0)}</div></div>`).join('');
+ const currentMilestones=investedMilestones(d.invested),plannedMilestones=investedMilestones(d.plannedInvested);
+ const rows=A.map((a,i)=>`<div class="hero-attribute"><div class="hero-attribute-title"><b>${N[i]}</b><span class="small muted">${a.toUpperCase()}</span></div><p class="small muted">${ATTRIBUTE_HELP[i]}</p><div class="hero-attribute-controls">${btn('−',`attrMinus:${i}`,d.delta[i]===0)}<span class="hero-attribute-value">${permanent[i]} ${d.delta[i]?`&gt; <strong>${permanent[i]+d.delta[i]}</strong>`:'= '+permanent[i]}${d.current[a]>permanent[i]?` <small class="muted">(+${d.current[a]-permanent[i]} equip.)</small>`:''}</span>${btn('+',`attrPlus:${i}`,d.remaining===0)}</div><div class="milestone-info">${(()=>{const m=currentMilestones[a],next=plannedMilestones[a],promoted=next.count>m.count;return `<div class="milestone-top"><span>Investidos: ${m.points}${next.points!==m.points?' &gt; '+next.points:''}</span><span>Marcos: ${m.count}${promoted?' &gt; <strong>'+next.count+'</strong>':''}</span></div><div class="milestone-track" role="progressbar" aria-label="Progresso do marco de ${N[i]}" aria-valuemin="0" aria-valuemax="5" aria-valuenow="${next.progress}"><span style="width:${next.progress*20}%"></span></div><div class="milestone-bottom"><span>${next.progress}/5 para o próximo</span><span>${next.rule.label}: +${m.total}${m.rule.unit}${next.total!==m.total?' &gt; +'+next.total+next.rule.unit:''}</span></div><small class="muted">Próximo marco: ${next.next} investidos, +${next.rule.per}${next.rule.unit}${promoted?' · NOVO MARCO NA PRÉVIA':''}</small>`;})()}</div></div>`).join('');
  const fields=[['HP máximo','maxhp',0],['MP máximo','maxmp',0],['Ataque físico','atk',0],['Ataque mágico','mag',0],['Defesa física','def',0],['Defesa mágica','md',0],['Precisão','hit',1,'%'],['Esquiva','dodge',1,'%'],['Crítico','crit',1,'%'],['Dano crítico','critD',3,'x']];
  const fmt=(v,dec,unit='')=>Number(v).toFixed(dec)+unit;
  const preview=fields.map(([label,key,dec,unit=''])=>{const before=d.current[key],after=d.preview[key],diff=after-before,changed=Math.abs(diff)>1e-8;return `<div class="hero-preview-row"><span>${label}</span><span class="${changed?'hero-preview-changed':'muted'}">${fmt(before,dec,unit)} ${changed?`&gt; ${fmt(after,dec,unit)} (+${fmt(diff,dec,unit)})`:'='}</span></div>`;}).join('');
@@ -131,10 +134,10 @@ export function combatControls(){
  if(rt.sub==='attack'){
   const basic=actionButton('Ataque comum','attack',false,'','combat-attack-basic');
   const skills=active[rt.state.cls].map((a,i)=>{
-   const skill=effectiveSkill(rt.state,i),belowLevel=rt.state.lv<skill.level,lowMp=rt.state.mp<skill.cost;
-   return actionButton(skill.name,`skill:${i}`,belowLevel||lowMp,belowLevel?`Nível ${skill.level} · Bloqueada`:`${skill.cost} MP${skill.variant==='standard'?'':skill.variant==='power'?' · Potência':' · Economia'}`,'combat-skill');
+   const skill=effectiveSkill(rt.state,i),belowLevel=rt.state.lv<skill.level,lowMp=rt.state.mp<skill.cost,remaining=turnsRemaining(rt.state.combat,playerCooldownDetails(rt.state,i).id);
+   return actionButton(skill.name,`skill:${i}`,belowLevel||lowMp||remaining>0,remaining?`RECARGA: ${remaining} ${remaining===1?'TURNO':'TURNOS'}`:belowLevel?`Nível ${skill.level} · Bloqueada`:`${skill.cost} MP${skill.variant==='standard'?'':skill.variant==='power'?' · Potência':' · Economia'}`,'combat-skill');
   }).join('');
-  const exclusive=specSkills(rt.state).map((a,i)=>actionButton(a.name,`spec:${i}`,rt.state.mp<a.cost,`${a.cost} MP`,'combat-specialization')).join('');
+  const exclusive=specSkills(rt.state).map((a,i)=>{const remaining=turnsRemaining(rt.state.combat,specCooldownDetails(rt.state,i).id);return actionButton(a.name,`spec:${i}`,rt.state.mp<a.cost||remaining>0,remaining?`RECARGA: ${remaining} ${remaining===1?'TURNO':'TURNOS'}`:`${a.cost} MP`,'combat-specialization');}).join('');
   return `<div class="combat-attacks"><div class="combat-attack-basic-row">${basic}</div><div class="combat-skills-grid">${skills}</div>${exclusive?`<div class="combat-extra-skills"><div class="combat-extra-title">Especialização</div><div class="combat-extra-grid">${exclusive}</div></div>`:''}<div class="combat-back-row">${actionButton('Voltar','submenu:main')}</div></div>`;
  }
  const potions=Object.entries(rt.state.consumables).map(([k,v])=>actionButton(`${k} (${v})`,`potion:${k}`,!v)).join('');
@@ -208,7 +211,7 @@ export function updateHeroDistribution(){
   if(current&&replacement){
    if(selector==='.hero-attributes'){
     const oldRows=current.querySelectorAll('.hero-attribute'),newRows=replacement.querySelectorAll('.hero-attribute');
-    if(oldRows.length===newRows.length){oldRows.forEach((row,i)=>{const oldValue=row.querySelector('.hero-attribute-value'),newValue=newRows[i].querySelector('.hero-attribute-value');if(oldValue&&newValue)oldValue.innerHTML=newValue.innerHTML;const oldButtons=row.querySelectorAll('button'),newButtons=newRows[i].querySelectorAll('button');oldButtons.forEach((button,j)=>{if(newButtons[j])button.disabled=newButtons[j].disabled;});});continue;}
+    if(oldRows.length===newRows.length){oldRows.forEach((row,i)=>{const oldValue=row.querySelector('.hero-attribute-value'),newValue=newRows[i].querySelector('.hero-attribute-value');if(oldValue&&newValue)oldValue.innerHTML=newValue.innerHTML;const oldMilestone=row.querySelector('.milestone-info'),newMilestone=newRows[i].querySelector('.milestone-info');if(oldMilestone&&newMilestone)oldMilestone.innerHTML=newMilestone.innerHTML;const oldButtons=row.querySelectorAll('button'),newButtons=newRows[i].querySelectorAll('button');oldButtons.forEach((button,j)=>{if(newButtons[j])button.disabled=newButtons[j].disabled;});});continue;}
    }
    if(selector==='.hero-distribution-actions'){const a=current.querySelectorAll('button'),b=replacement.querySelectorAll('button');a.forEach((button,i)=>{if(b[i])button.disabled=b[i].disabled;});continue;}
    current.innerHTML=replacement.innerHTML;

@@ -1,3 +1,4 @@
+import {equipmentDropBonus} from './attribute-milestones.js';
 import {FORGE_MATERIALS} from './crafting.js';
 import { maps } from './data.js';
 import { mapId } from './utils.js';
@@ -17,14 +18,16 @@ export const dropProfiles = [
  {materials:['Fragmento Sagrado','Escama Quimérica','Insígnia Celestial'],equipment:['body','ring','amulet']},
  {materials:['Poeira Sombria','Carne do Vazio','Eco Cristalizado'],equipment:['weapon','amulet','ring']}
 ];
-export function rewardFor(enemy, playerClass, firstBoss=false, random=Math.random){
+export function rewardFor(enemy, playerClass, firstBoss=false, random=Math.random, investedStats=null){
  const region=mapId(enemy.lv), profile=dropProfiles[region], species=enemy.speciesIndex??Math.max(0,maps[region].slice(3,6).indexOf(enemy.baseName||enemy.name));
  const materials={}, items=[], consumables={};
  // Materiais são a recompensa comum. Equipamentos são excepcionais.
  if(random()<(enemy.boss?1:.43)) materials[enemy.boss?maps[region][6]:profile.materials[species]]=enemy.boss?3:1;
  if(random()<(enemy.boss?1:.24))materials[FORGE_MATERIALS[region]]=(materials[FORGE_MATERIALS[region]]||0)+(enemy.boss?3:1);
  if(random()<(enemy.boss?.65:.13)) consumables[random()<.65?'hp':'mp']=1;
- const chance=enemy.boss?(firstBoss?1:.20):Math.min(.18,.045*monsterRarity(enemy.rarityId).drop);
+ const baseChance=enemy.boss?(firstBoss?1:.20):Math.min(.18,.045*monsterRarity(enemy.rarityId).drop);
+ // Sorte aumenta apenas a chance de equipamento. O prêmio garantido do primeiro chefe não muda.
+ const chance=firstBoss&&enemy.boss?baseChance:Math.min(enemy.boss?.25:.23,baseChance+equipmentDropBonus(investedStats));
  if(random()<chance){
    const slot=enemy.boss?['weapon','body','amulet'][Math.floor(random()*3)]:profile.equipment[species];
    const rarity=firstBoss?2+ (random()<.08?1:0):enemy.boss?(random()<.12?3:random()<.5?2:1):(random()<.015?2:random()<.20?1:0);
