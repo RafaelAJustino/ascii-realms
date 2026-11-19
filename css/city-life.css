@@ -1,0 +1,11 @@
+/* Etapa 5: cidade interativa, sem barra fixa; rolagem administrada por .content. */
+.city-reputation{font-size:12px;color:var(--text);padding:7px 9px;margin:8px 0;border:1px solid var(--border);border-radius:4px;overflow-wrap:anywhere}
+.city-feedback{font-size:12px;color:var(--accent);padding:8px;border-left:2px solid var(--accent);background:rgba(100,170,140,.08);overflow-wrap:anywhere}
+.city-npcs{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}
+.city-npc,.city-contract{border:1px solid var(--border);padding:10px;border-radius:4px;min-width:0;overflow-wrap:anywhere}
+.city-npc p,.city-contract p{margin:6px 0}
+.city-npc button,.city-contract button,.city-quiz button{height:42px;max-height:50px;min-height:42px;width:100%;box-sizing:border-box}
+.city-quiz{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;min-width:0;margin:8px 0}
+.city-quiz button{font-size:clamp(10px,2.6vw,13px);overflow-wrap:anywhere}
+@media(max-width:375px){.city-quiz{grid-template-columns:1fr}}
+.city-npc button:focus-visible,.city-contract button:focus-visible,.city-quiz button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}

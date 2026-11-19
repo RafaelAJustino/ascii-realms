@@ -1,0 +1,9 @@
+/* Etapa 1: fluxo persistente de exploração, mobile-first. */
+.path-options,.journey-actions{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;width:100%;min-width:0}
+.path-option{padding:10px;border:1px solid var(--border,#26433e);border-radius:4px;min-width:0}
+.path-option p{margin:6px 0}
+.path-options button,.journey-actions button{box-sizing:border-box;width:100%;height:42px;max-height:50px;min-width:0}
+.journey-actions{margin-top:12px}
+.journey-history{max-height:112px;overflow-y:auto;padding:8px;border:1px solid var(--border,#26433e);margin-top:8px}
+.journey-history p{margin:5px 0;overflow-wrap:anywhere}
+.path-option button:focus-visible,.journey-actions button:focus-visible{outline:2px solid var(--accent,#80ddad);outline-offset:2px}
