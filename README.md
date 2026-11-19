@@ -1,3 +1,19 @@
+**Versão atual: Jornada Contínua, Etapa 7 (reformulada, sem companheiros).**
+
+## Etapa 7 reformulada: clima, ciclo do tempo e acontecimentos regionais
+
+A base desta versão é a **Etapa 6**, não a versão antiga da Etapa 7. **Não há companheiros recrutáveis, habilidades de aliados ou turnos automáticos de companheiros.**
+
+- `js/world-climate.js`: relógio interno (12 ações por dia), alternância de dia/noite, clima regional por períodos de quatro ações e acontecimentos regionais com duração limitada.
+- O tempo avança após ações efetivas de exploração e descanso em acampamento, nunca durante a simples renderização ou o carregamento. O ciclo não depende do relógio do dispositivo.
+- Condições regionais influenciam a chance de combate em até alguns pontos percentuais e a probabilidade de eventos narrativos no ramo não hostil. Todos os modificadores são limitados ao intervalo válido de probabilidade. As recompensas, o cálculo de dano e a progressão permanecem iguais.
+- Clima e eventos aparecem na tela principal, na seleção e acompanhamento de caminhos, no acampamento, na cidade e na taverna. Não há bloqueios de serviços essenciais nem recompensas especiais repetíveis.
+- Os acontecimentos regionais são verificados apenas a cada seis ações de avanço, com 20% de chance por verificação elegível. Duram sete ações de tempo de jogo. A tabela possui incursão de monstros, caravana desaparecida, festival, escassez e vestígios antigos.
+- Salvamento **v10**, migrado de v1 a v9 e compatível com a versão v10 antiga de companheiros: a propriedade `companions` é removida no carregamento e novos personagens não a recebem. A chave de LocalStorage e os backups permanecem os mesmos.
+- `tests/world-climate.mjs`: relógio, eventos, risco, persistência, normalização e ausência de companheiros.
+
+**Histórico da versão: Jornada Contínua, Etapa 5 de 9.** Esta versão inclui todas as etapas 1 a 5 da sequência iniciada em Botão Voltar Sticky. As seções abaixo documentam a evolução histórica do projeto; menções a etapas futuras em seções anteriores referem-se ao momento daquela entrega.
+
 # ASCII REALMS
 
 RPG ASCII de navegador, refatorado em módulos ES6, sem dependências externas de execução.
@@ -159,3 +175,120 @@ A barra inferior foi removida. A tela de mundo agora concentra Explorar, Selecio
 A tela de entrada mostra Continuar, Novo Jogo e Excluir Jogo em coluna, com confirmação antes da exclusão. O menu anterior é preservado temporariamente para permitir retorno, sem alterar o formato do salvamento.
 
 Teste adicional: `node tests/main-navigation.mjs`. Os testes estruturais de navegação não substituem inspeção visual em dispositivos físicos.
+
+## Preservação de rolagem e foco
+
+A função `render()` distingue atualizações na mesma tela de navegação real por meio de `lastRenderedScreen`. Para atualizações, `js/viewport-state.js` registra a rolagem do documento e dos contêineres internos e restaura suas posições com limites válidos, além do foco com `preventScroll`. Ao mudar de tela, a rolagem principal e do conteúdo é reiniciada. A distribuição provisória de atributos utiliza `updateHeroDistribution()` para atualizar apenas saldos, valores, botões e prévia, mantendo os elementos interativos existentes. Nenhum dado temporário é persistido por essa rotina.
+
+Teste adicional: `node tests/viewport-state.mjs`. Os testes automatizados não substituem inspeção visual e interação manual em navegadores e tamanhos de tela reais.
+
+### Navegação sticky (19/11/2026)
+- `css/menu-sticky.css`: botão `< VOLTAR` com `position: sticky` no topo do contêiner `.content`, sem barra fixa.
+- `js/menu-history.js`: histórico temporário de telas, loja e posição de rolagem; não é gravado no LocalStorage.
+- `js/ui.js`: um único botão superior em menus secundários; remove botões de retorno redundantes, preservando o menu específico de combate.
+- `js/main.js`: retorno pela hierarquia visitada, com confirmação de distribuição provisória de atributos e recuperação de rolagem.
+- `tests/sticky-back.mjs`: testes de estrutura CSS e histórico. A inspeção visual real em dispositivos ainda deve ser realizada.
+
+## Mundo Vivo: Etapa 1 de 9 (novo fluxo de exploração)
+
+Base: **Botão Voltar Sticky**. Não inclui as antigas expansões Mundo Vivo.
+
+- `Explorar` abre somente a seleção Seguro / Desconhecido / Perigoso.
+- Depois da escolha, o caminho fica persistido em `journey` no salvamento v6.
+- `Continuar explorando` gera o próximo resultado pelo sistema de exploração original.
+- Ao vencer combates comuns, retorna à jornada com o resumo do resultado. Ao fugir, também retorna. Ao ser derrotado ou desmaiar, volta à cidade.
+- Um mercante viajante retorna à jornada pelo botão Voltar.
+- `Voltar para cidade` encerra o caminho e abre os serviços urbanos.
+- Caminhos modificam SOMENTE a chance de combate: Seguro 72%, Desconhecido 80% (original), Perigoso 86%.
+- O restante se distribui proporcionalmente: mercante 50%, armadilha 25%, materiais 25%. Inimigos, raridade, dano e recompensas continuam com as regras originais.
+- A área é validada contra nível e desbloqueio. A jornada é invalidada ao trocar de área.
+- Após recarga o caminho ativo reaparece sem gerar novo encontro. Salvamentos de v1 a v5 migram para v6 com backup.
+- Esta entrega contempla **somente a Etapa 1**. Eventos narrativos, acampamentos, velocidades e os demais sistemas permanecem nas etapas seguintes.
+
+
+## Mundo Vivo: Etapa 2 de 9 (eventos narrativos e acampamentos)
+
+Base: **Jornada Contínua, Etapa 1**, originada da versão **Botão Voltar Sticky**. Não incorpora a antiga sequência Mundo Vivo.
+
+- Dez eventos narrativos **únicos**, identificados por IDs persistentes, com duas a três escolhas cada. Algumas ações exigem consumíveis. As escolhas podem gerar ouro, materiais regionais, poções, cura, recuperação de mana, dano controlado, um combate ou sinais narrativos persistentes (`narrative.flags`).
+- O evento é apresentado **no caminho selecionado** depois de `CONTINUAR EXPLORANDO`. Enquanto estiver pendente, não se pode gerar outro encontro nem abandonar o evento. O evento pendente volta após recarga, sem recompensas duplicadas. Depois da escolha, a jornada continua no mesmo caminho.
+- A probabilidade de combate não foi alterada (Seguro 72%, Desconhecido 80%, Perigoso 86%). **Somente após um resultado não-hostil**, e enquanto houver eventos inéditos, é sorteado evento narrativo com probabilidade de 55% / 65% / 70% respectivamente. Caso não ocorra um evento, usa-se a distribuição não-hostil anterior: mercante 50%, armadilha 25% e materiais 25%.
+- **Acampamento** acessível no caminho ativo, com recuperação de 25% do HP/MP máximo ao descansar; custo de 10 ouro; intervalo mínimo de 5 ações de exploração entre descansos (contagem persiste mesmo após encerrar o caminho); 10% de possibilidade de emboscada, que usa o combate normal. Após vencer ou fugir da emboscada, o jogador retorna ao caminho.
+- É possível utilizar poções existentes de vida, mana e elixir no acampamento, sem duplicar inventário, efeitos ou preços. O acampamento não substitui serviços urbanos.
+- Salvamento **v7**: acrescenta `narrative` e `journey.event`, preservando todos os demais campos. Migração de v1–v6 mantém os backups da estratégia já existente. O registro de escolhas permanece após retornar à cidade; dados de evento pendente só persistem enquanto a jornada estiver ativa.
+- O layout continua mobile-first: controles de 42px, grade de uma coluna para escolhas, sem nova navegação inferior. Botão Voltar sticky do acampamento retorna ao caminho.
+- Testes: `node tests/journey-events.mjs`, `node tests/journey-events-flow.mjs` e `npm test`. Ainda é necessária inspeção visual real em smartphone/desktop.
+- **Etapa 3** (velocidades de combate) ainda não foi implementada.
+
+
+## Jornada Contínua: Etapa 3 (velocidade do combate)
+
+- O combate permite **Normal**, **Rápido** (padrão) e **Instantâneo**. A preferência fica em `ascii-realms-combat-speed`, separada do salvamento do personagem, e não altera estatísticas, dano ou turnos.
+- Tempos visuais (feedback / impacto no inimigo / preparo inimigo / impacto no herói): Normal **100 / 230 / 350 / 240 ms**, Rápido **40 / 160 / 230 / 150 ms**, Instantâneo **0 / 0 / 0 / 0 ms**. Esses tempos substituem os antigos 220 / 350 / 950 / 350 ms. O modo Instantâneo mantém a mesma ordem de ações, mas omite esperas visuais.
+- O botão de saída da jornada agora aparece como **< VOLTAR PARA INÍCIO**, encerra o caminho e abre a tela principal (`world`), sem encaminhar à cidade. Ele permanece indisponível durante eventos com escolhas pendentes.
+- A **Etapa 4** (ataques anunciados adicionais, reações elementais e padrões de monstros) ainda não foi iniciada. Os anúncios dos chefes e a IA anteriores continuam intactos.
+- Teste: `npm test` inclui `tests/combat-speed.mjs` e a regressão de jornada. Testes visuais móveis e execução manual em navegador continuam necessários.
+
+## Jornada Contínua, Etapa 4: anúncios e aprendizado
+
+- Monstros não-chefes de raridade Elite (18%), Campeão (24%) e Lendário (30%) podem anunciar uma habilidade especial **disponível** no turno anterior. A verificação ocorre apenas quando a criatura possui MP e uma técnica ofensiva potente desbloqueada. O anúncio consome o turno do inimigo, e o golpe só consome MP e inicia recarga quando executado no turno seguinte. Uma nova preparação exige um intervalo de quatro ações do inimigo. Chefes mantêm seus próprios anúncios e fases.
+- Reações elementais sobre efeitos já existentes no inimigo: **Fogo + Veneno** consome veneno para causar até 20% de dano adicional; **Gelo + Queimadura** consome queimadura e acrescenta até 10%. O bônus é limitado pelo HP restante, não se repete sem reaplicação do efeito e não ativa quando o golpe não causa dano.
+- Bestiário registra técnicas realmente executadas e afinidades realmente testadas, sem revelar espécies desconhecidas. Após dois encontros revela o padrão de arquétipo da criatura. Dados são campos aditivos no bestiário do salvamento v7; não há migração nem reinicialização do progresso.
+- Não há posturas de combate novas nem mudanças nas fórmulas-base, nos níveis, nos drops, na economia ou no sistema de progressão.
+- Validação: `npm test`, incluindo `tests/combat-tactics.mjs`. A verificação visual em navegador continua recomendada.
+
+## Jornada Contínua, Etapa 5: cidades, NPCs, tavernas e reputação
+
+Base: Etapa 4 da Jornada Contínua. As Etapas 6 a 9 ainda não estão incluídas. **Não** incorpora a sequência antiga Mundo Vivo.
+
+- **Taverna** acessível a partir de `Visitar Cidade`, com 10 moradores fixos (um para cada região), personalidade, conversas, rumores, contratos e desafio regional. A navegação mantém o botão Voltar sticky e o histórico existente.
+- **Dois NPCs recorrentes:** Élio aparece depois de ajudar o viajante ferido; Tomás aparece depois de ajudar o mercador perdido. Eles reconhecem as escolhas anteriores mesmo ao migrar salvamentos v7. Conversas e recompensas especiais são registradas por ID, evitando duplicação.
+- **Contratos:** referências diretas às 50 missões já existentes (`QUESTS`, `acceptQuest`, `questStatus`), sem criar um segundo sistema de missões.
+- **Rumores:** referências às criaturas, chefes e materiais reais do mapa, incluindo pistas de passagem secreta quando o jogador já a identificou. Rumores vistos são registrados por região.
+- **Atividade da taverna:** escolha entre três criaturas de regiões diferentes, apenas uma pertence ao mapa local. Uma tentativa por cidade, com prêmio único de 12 ouro e 3 pontos de reputação para acertos.
+- **Reputação por cidade:** intervalo entre -30 e 100. Decisões narrativas reais afetam a reputação apenas uma vez por evento. Faixas de desconto em lojas locais: 0%, 5% a partir de 20, 10% a partir de 50 e 15% a partir de 80 pontos. O cálculo é centralizado em `cityPrice()`, aplicado tanto na interface quanto ao debitar o ouro. **O mercante viajante não recebe esses descontos.** Reputação elevada também modifica falas dos moradores.
+- **Mercadores urbanos:** lote especial de raridade Incomum, ou Raro após ajudar o mercador perdido, com preço calculado pela fórmula já existente de `makeItem`. Apenas uma compra por cidade e por janela de seis explorações. O equipamento é gerado pelo sistema existente na compra, com atributos aleatórios indicados antes da confirmação.
+- **Ferraria:** encomenda exclusiva uma vez por região, após concluir pelo menos uma missão local. Consome dois materiais regionais e ouro indicado na interface. O item produzido utiliza `makeItem()` e não substitui fabricação ou aprimoramento existentes.
+- **Salvamento v8:** extensão aditiva `cityLife` para reputações, conversas, presentes, rumores, desafios, compras de estoque, encomendas e créditos narrativos. `normalizeSave()` migra v1-v7 sem excluir equipamentos, jornadas, bestiário, chefes ou missões, mantendo os backups existentes. Reputação antiga não é inventada retroativamente, pois os mapas onde as escolhas passadas aconteceram não estão armazenados.
+- **Testes:** `npm test` inclui `tests/city-life.mjs`, com casos de integração e prevenção de duplicação. Teste visual complementar com Chromium sobre *snapshots HTML renderizados com os estilos reais* em 320 × 568, 375 × 667, 390 × 844, 430 × 932, 720 × 1280 e 1366 × 768 para Cidade, Taverna e Ferraria. Essa verificação não equivale a testes manuais completos de gameplay no navegador.
+
+
+## Etapa 6. Conquistas, títulos, evolução de armas e variações de habilidades (v9)
+
+- Conquistas verificadas a partir de dados existentes (explorações, vitórias, chefes, masmorras, missões, eventos, equipamentos e reputação), sem recompensas de atributos. Títulos equipáveis em **Jogador > Conquistas** e exibidos em **Herói**. Recompensas idempotentes, inclusive em carregamento de salvamentos antigos.
+- Armas especiais elegíveis: armas épicas/lendárias e relíquias da primeira conclusão de masmorras. Apenas vitórias enquanto **equipada** contam. Evolução por 3 marcos (8/25/50 vitórias, 0/1/2 chefes, 0/1/2 missões resgatadas, 2/3/4 unidades do material regional). Bônus **de 3% do poder base da arma por estágio**, no máximo 9%; não multiplica nem substitui +0...+10. Evolução consome somente materiais, conforme mostrado na Ferraria.
+- As quatro habilidades ativas de cada classe aceitam os perfis Original, Potência (1,12x efeito com 1,25x MP, arredondado) e Economia (0,92x efeito com 0,75x MP, arredondado). Habilidades defensivas mudam de 3 para 4/2 turnos. Seleção somente após desbloqueio e fora de combate. Nenhuma mudança na especialização ou custo original quando usando perfil Original.
+- Salvo v9, com migração aditiva v1 a v8, e novos campos `achievements`, `skillVariants` e `item.evolution`; o salvamento original é preservado em backup de migração.
+- Teste: `npm test`. A revisão visual e interativa completa requer um navegador.
+
+
+## Etapa 8: Segredos e polimento
+
+- Novo diário **Jogador > Descobertas**, com oito locais secretos distribuídos entre regiões existentes. Nenhum local é exibido como descoberto antes de uma escolha concluída.
+- Após ao menos um evento narrativo concluído, segredos aparecem exclusivamente no resultado não-hostil das explorações, com chances base de 2,5% (seguro), 4,5% (desconhecido) e 6,5% (perigoso); o evento regional Vestígios antigos aumenta essa chance em 50%, até 10%. Os encontros hostis originais são preservados.
+- Três guardiões secretos opcionais (regiões 3, 6 e 9), com chance de 1,2% por encontro hostil em caminho perigoso enquanto não derrotados. São variantes dos monstros da área, com +35% de HP e +12% de ataque; não desbloqueiam mapas nem contam como chefes principais.
+- Primeira vitória contra cada guardião concede **uma arma rara**, utilizando `makeItem()` do sistema existente, sem duplicação após recarga. Demais recompensas do combate seguem as regras já implementadas.
+- Descobertas concluídas usam o sistema existente de eventos narrativos, com escolhas e recompensas únicas. Estado adicional mínimo é salvo em `secrets` (versão 11). Nenhuma mecânica de companheiros foi adicionada.
+- Os efeitos narrativos, drops e feedback utilizam os sistemas de recursos, estatísticas, combate e histórico já existentes.
+
+## Avatares dinâmicos e animações ASCII
+
+- `js/hero-avatar.js`: monta, a partir de `state.cls`, `state.equip` e `state.items`, avatares diferentes de Guerreiro, Mago, Arqueiro e Ladino. O visual utiliza os slots reais `head`, `body`, `hands`, `feet`, `weapon`, `ring` e `amulet`, com cor independente para cada raridade. A aparência é derivada no momento da renderização, sem persistir artes ou modificar equipamentos.
+- `js/combat-visuals.js`: sequenciador visual efêmero baseado em Web Animations API. Usa movimentos, símbolos ASCII e efeitos de preparo, projétil e impacto, com efeitos específicos por classe e por habilidade. As habilidades dos monstros são diferenciadas por tipo e elemento. Não modifica dano, crítico, precisão, esquiva ou a IA.
+- `css/dynamic-combat-art.css`: tintas por raridade, efeitos sobrepostos sem ocupar espaço na grade e suporte a movimento reduzido.
+- Velocidade visual usa os modos `Normal`, `Rápido` e `Instantâneo` já existentes. O modo Instantâneo ignora a sequência decorativa, mas a lógica dos turnos é mantida. Quando o navegador indica preferência por movimento reduzido, as sequências decorativas também são suprimidas.
+- A ordem visual agora é: preparar e lançar no DOM existente, resolver o ataque lógico, exibir o impacto, mostrar o resultado e iniciar o turno inimigo. Os botões são desabilitados durante a sequência e não são duplicados.
+- `tests/dynamic-combat-art.mjs`: valida as quatro classes, sete slots visuais, coloração individual, os 16 efeitos das habilidades de classe, os ataques básicos, os efeitos de monstros, os três modos de velocidade e a integração. Os testes de regressão existentes continuam sendo executados.
+
+**Limitação de validação:** foram feitas verificações visuais isoladas das quatro composições de avatar em seis larguras, sem rolagem horizontal. Os ataques animados, a movimentação durante combates reais e fluxos completos no navegador precisam de inspeção manual adicional.
+
+## Reformulação dos avatares ASCII
+
+- Quatro silhuetas refeitas, com grade fixa de 33 colunas e 22 linhas.
+- Composição baseada nos slots existentes: head, body, hands, feet, weapon, ring e amulet.
+- Armas com empunhadura conectada à mão; avatar desarmado sem arma flutuante.
+- Cores de raridade aplicadas individualmente por peça usando as classes CSS já existentes.
+- Integração preservada em Herói e combate. Animações anteriores continuam usando a mesma classe `.dynamic-hero`.
+- Teste: `node tests/avatar-redesign.mjs` (e regressão completa via `npm test`).
+
+A revisão visual foi realizada em uma prévia de composição ASCII. Não substitui a validação manual de todos os efeitos animados nas resoluções móveis.

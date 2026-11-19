@@ -43,5 +43,5 @@ rt.sub='attack';rt.state.combat.enemy.hp=1;rt.state.combat.enemy.def=0;const ran
 try{await act('attack');}finally{Math.random=rand;}
 assert.equal(rt.state.combat,null);assert.equal(rt.sub,'main');
 combat();assert.equal(rt.sub,'main');
-const save=localStorage.getItem('ascii-realms-save-v1');assert.ok(save);assert.equal(JSON.parse(save).version,5);
-console.log('OK: grade 2x2, quatro habilidades fixas, bloqueio, submenu persistente, retorno manual, finalização e LocalStorage v5.');
+const save=localStorage.getItem('ascii-realms-save-v1');assert.ok(save);assert.equal(JSON.parse(save).version,11);
+console.log('OK: grade 2x2, quatro habilidades fixas, bloqueio, submenu persistente, retorno manual, finalização e LocalStorage v6.');

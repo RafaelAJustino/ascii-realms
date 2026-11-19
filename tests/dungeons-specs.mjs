@@ -35,5 +35,5 @@ dungeonCombatEnd(true);assert.equal(rt.state.dungeons.completed.length,1);assert
 rt.state.dungeons.attempt={id:'dungeon-0',room:5,roomResolved:false};dungeonCombatEnd(true);assert.equal(rt.state.items.length,initialItems+1);assert.equal(rt.state.statistics.dungeonsCompleted,2);
 rt.state.dungeons.attempt={id:'dungeon-0',room:2,roomResolved:false};dungeonCombatEnd(false);assert.equal(rt.state.dungeons.attempt,null);
 for(const cls of ['guerreiro','mago','arqueiro','ladino']){assert.equal(specOptions(cls).length,2);for(const spec of specOptions(cls)){assert.ok(spec.passive&&spec.skill&&spec.improved&&spec.ultimate);}}
-assert.equal(JSON.parse(store.get(KEY)).version,5);
+assert.equal(JSON.parse(store.get(KEY)).version,11);
 console.log('OK: 10 masmorras, salas, abandono, derrota, recompensas únicas, persistência e 8 especializações.');

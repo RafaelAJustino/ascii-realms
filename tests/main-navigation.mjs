@@ -27,8 +27,8 @@ for(const action of ['character','inventory','skills','quests','bestiary','stati
 assert.ok(player.includes('nav:world'));
 rt.screen='player';render();assert.doesNotMatch(app.innerHTML,/<nav\b/);
 rt.screen='world';render();assert.doesNotMatch(app.innerHTML,/<nav\b/);
-rt.screen='maps';rt.returnScreen='world';render();assert.ok(app.innerHTML.includes('data-action="nav:world"'));
-rt.screen='character';rt.returnScreen='player';render();assert.ok(app.innerHTML.includes('data-action="nav:player"'));
+rt.screen='maps';rt.returnScreen='world';render();assert.ok(app.innerHTML.includes('data-action="menuBack"'));
+rt.screen='character';rt.returnScreen='player';render();assert.ok(app.innerHTML.includes('data-action="menuBack"'));
 const css=readFileSync(new URL('../css/navigation-main.css',import.meta.url),'utf8');
 assert.match(css,/grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
 assert.match(css,/grid-column:1\/-1/);

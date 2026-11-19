@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+const store=new Map();
+globalThis.localStorage={getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)};
+const app={innerHTML:'',addEventListener(){},querySelector(){return null},querySelectorAll(){return []}};
+globalThis.document={querySelector:s=>s==='#app'?app:null};globalThis.window={addEventListener(){}};globalThis.requestAnimationFrame=f=>f();
+const {rt}=await import('../js/runtime.js');
+const {newGame}=await import('../js/player.js');
+const {openPaths,selectPath,explore,returnToCity}=await import('../js/exploration.js');
+const {endCombat}=await import('../js/combat.js');
+const {load}=await import('../js/storage.js');
+const {KEY}=await import('../js/data.js');
+newGame('Aventureiro','guerreiro');
+assert.equal(rt.screen,'world');
+assert.equal(openPaths(),true);assert.equal(rt.screen,'paths');assert.equal(rt.state.combat,null);
+assert.equal(selectPath('unknown'),true);assert.equal(rt.screen,'journey');assert.equal(rt.state.journey.steps,0);
+assert.ok(app.innerHTML.includes('CONTINUAR EXPLORANDO'));
+const rand=Math.random;
+try{
+ Math.random=()=>.99;assert.equal(explore(),true);assert.equal(rt.screen,'journey');assert.equal(rt.state.journey.steps,1);assert.ok(rt.state.journey.last.some(x=>x.includes('encontrou')));
+ const before=JSON.parse(store.get(KEY));assert.equal(before.journey.path,'unknown');assert.equal(before.journey.steps,1);
+ rt.state=null;assert.equal(load(),true);assert.equal(rt.screen,'journey');assert.equal(rt.state.journey.steps,1);assert.equal(rt.state.combat,null);
+ Math.random=()=>.1;assert.equal(explore(),true);assert.equal(rt.screen,'combat');assert.ok(rt.state.combat);
+ endCombat(true);assert.equal(rt.screen,'journey');assert.equal(rt.state.combat,null);assert.equal(rt.state.journey.steps,2);assert.ok(rt.state.journey.last.some(x=>x.includes('Vitória')));
+ assert.equal(returnToCity(),true);assert.equal(rt.screen,'world');assert.equal(rt.state.journey.path,null);
+ assert.equal(openPaths(),true);assert.equal(rt.screen,'paths');
+ assert.equal(selectPath('safe'),true);
+ Math.random=()=>.74;assert.equal(explore(),true);assert.equal(rt.screen,'merchant');assert.equal(rt.state.journey.path,'safe');
+ rt.screen='journey';assert.equal(returnToCity(),true);assert.equal(rt.shop,'weapon');
+ const now=JSON.parse(store.get(KEY));assert.equal(now.journey.path,null);
+}finally{Math.random=rand;}
+console.log('OK: início sem encontro, caminho persistente, coleta, recarga, vitória, mercante, retorno à tela inicial e novo início.');
