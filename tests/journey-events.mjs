@@ -41,7 +41,7 @@ const ambush=restAtCamp(state,{maxhp:100,maxmp:80},()=>0);
 assert.equal(ambush.ambush,true);
 // Dados v6 não eram obrigados a conter a extensão narrativa.
 const old={version:6,name:'Teste',cls:'guerreiro',stats:[8,2,3,4,8,3],lv:1,xp:0,gold:100,points:0,hp:80,mp:20,items:[],equip:{},materials:{},bosses:[],area:1,journey:{...emptyJourney(),path:'unknown',area:1,steps:2,last:['antes']}};
-const migrated=normalizeSave(old);assert.equal(migrated.version,11);assert.deepEqual(migrated.narrative,narrativeDefaults());assert.equal(migrated.journey.path,'unknown');
+const migrated=normalizeSave(old);assert.equal(migrated.version,12);assert.deepEqual(migrated.narrative,narrativeDefaults());assert.equal(migrated.journey.path,'unknown');
 const serialized=JSON.parse(JSON.stringify({...old,version:7,journey:state.journey,narrative:state.narrative}));
 const loaded=normalizeSave(serialized);assert.equal(loaded.narrative.completed.length,2);assert.equal(loaded.narrative.flags.travelerHelped,true);assert.equal(loaded.narrative.lastRestAt,state.narrative.lastRestAt);
 const ui=readFileSync(new URL('../js/ui.js',import.meta.url),'utf8');const main=readFileSync(new URL('../js/main.js',import.meta.url),'utf8');

@@ -73,7 +73,7 @@ const old={version:7,name:'Teste',cls:'guerreiro',stats:[8,2,3,4,8,3],lv:1,xp:0,
 const loaded=normalizeSave(JSON.parse(JSON.stringify(old)));
 assert.equal(loaded.bestiary.Aranha.observedActions.heavy.count,2);
 assert.equal(loaded.bestiary.Aranha.observedAffinities.fire,1.5);
-assert.equal(loaded.version,11,'Migração v7 para v8 preserva bestiário');
+assert.equal(loaded.version,12,'Migração v7 para v8 preserva bestiário');
 const combat=readFileSync(new URL('../js/combat.js',import.meta.url),'utf8');
 const ui=readFileSync(new URL('../js/ui.js',import.meta.url),'utf8');
 assert.match(combat,/consumeAnnouncedAction\(e\)/);

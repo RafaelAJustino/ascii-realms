@@ -21,5 +21,5 @@ const full=stats();assert.equal(setBonuses(Object.values(rt.state.equip).map(uid
 rt.state.equip.feet=null;assert.ok(stats().regen<full.regen);assert.ok(stats().def<=full.def);
 assert.equal(validEquip(makeItem(100,'weapon','mago')),false);
 const oldGold=rt.state.gold;const bad=recipes(9)[0];assert.equal(craft(bad.id),false);assert.equal(rt.state.gold,oldGold);
-save();rt.state=null;assert.equal(load(),true);assert.equal(rt.state.version,11);assert.equal(rt.state.items.find(x=>x.uid===first.uid).upgrade,10);assert.ok(rt.state.items.some(x=>x.setId===SETS[0].id));
+save();rt.state=null;assert.equal(load(),true);assert.equal(rt.state.version,12);assert.equal(rt.state.items.find(x=>x.uid===first.uid).upgrade,10);assert.ok(rt.state.items.some(x=>x.setId===SETS[0].id));
 console.log('OK: 90 receitas, recursos, IDs, +10, falhas, bônus cumulativos, restrições, salvamento v4.');

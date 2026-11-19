@@ -15,7 +15,7 @@ const {selectPath,explore,chooseEventOption}=await import('../js/exploration.js'
 const {combat,endCombat}=await import('../js/combat.js');
 const {save,load}=await import('../js/storage.js');
 const {KEY}=await import('../js/data.js');
-assert.equal(SAVE_VERSION,11);
+assert.equal(SAVE_VERSION,12);
 assert.equal(SECRET_EVENTS.length,8);
 assert.equal(new Set(SECRET_EVENTS.map(e=>e.id)).size,8);
 assert.deepEqual(SECRET_BOSS_REGIONS,[2,5,8]);

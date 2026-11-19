@@ -292,3 +292,77 @@ Base: Etapa 4 da Jornada Contínua. As Etapas 6 a 9 ainda não estão incluídas
 - Teste: `node tests/avatar-redesign.mjs` (e regressão completa via `npm test`).
 
 A revisão visual foi realizada em uma prévia de composição ASCII. Não substitui a validação manual de todos os efeitos animados nas resoluções móveis.
+
+## Cooldowns exclusivamente por turnos
+
+Todas as habilidades de combate possuem recargas independentes definidas em `js/turn-cooldowns.js`. Cada ação válida do herói reduz as recargas anteriores uma única vez. A habilidade usada recebe seu cooldown somente após essa redução. Por exemplo, cooldown 3 implica três oportunidades seguintes bloqueadas, tornando-se utilizável na quarta oportunidade. Ataque comum não possui recarga. Tentativas de habilidade indisponível são rejeitadas antes do consumo de MP ou do início de animações.
+
+| Classe | Habilidade | Turnos | Motivo |
+|---|---|---:|---|
+| Guerreiro | Golpe Brutal | 2 | Dano físico elevado |
+| Guerreiro | Postura Defensiva | 3 | Defesa reforçada por três turnos |
+| Guerreiro | Fúria de Batalha | 3 | Multiplicador alto de dano |
+| Guerreiro | Execução | 4 | Multiplicador alto e bônus contra alvo ferido |
+| Mago | Bola de Fogo | 2 | Queimadura persistente |
+| Mago | Barreira Arcana | 3 | Proteção por três turnos |
+| Mago | Tempestade Arcana | 3 | Dano mágico alto |
+| Mago | Meteoro | 5 | Maior multiplicador de dano e custo de MP elevado |
+| Arqueiro | Tiro Preciso | 1 | Ataque relativamente leve, sem efeito contínuo |
+| Arqueiro | Chuva de Flechas | 2 | Golpe de dano intermediário |
+| Arqueiro | Flecha Perfurante | 3 | Ignora parte da proteção física |
+| Arqueiro | Disparo Mortal | 4 | Ataque de dano muito elevado |
+| Ladino | Ataque Furtivo | 1 | Ataque ágil sem efeito contínuo |
+| Ladino | Lâmina Venenosa | 2 | Veneno aplicado por vários turnos |
+| Ladino | Dança das Sombras | 3 | Multiplicador alto de dano |
+| Ladino | Assassinato | 4 | Dano elevado com bônus contra alvo ferido |
+
+### Especializações
+
+| Especialização | Habilidade | Turnos | Motivo |
+|---|---|---:|---|
+| Berserker | Golpe Frenético | 2 | Ataque poderoso inicial |
+| Berserker | Ruptura Final | 4 | Golpe supremo |
+| Guardião | Escudo Protetor | 3 | Proteção reforçada |
+| Guardião | Bastião Eterno | 4 | Defesa suprema |
+| Arquimago | Explosão Prismática | 3 | Magia ofensiva forte |
+| Arquimago | Cataclismo Arcano | 5 | Magia suprema |
+| Feiticeiro | Praga Arcana | 2 | Aplicação de veneno |
+| Feiticeiro | Eclipse Maldito | 4 | Habilidade suprema com veneno |
+| Atirador | Disparo Cirúrgico | 2 | Dano com perfuração |
+| Atirador | Tiro do Horizonte | 4 | Perfuração suprema |
+| Caçador | Flecha Tóxica | 2 | Aplicação de veneno |
+| Caçador | Caçada Final | 4 | Veneno com multiplicador elevado |
+| Assassino | Lâmina Fatal | 2 | Finalização inicial |
+| Assassino | Golpe do Carrasco | 4 | Finalização suprema |
+| Sombra | Corte Espectral | 2 | Ataque mágico inicial |
+| Sombra | Noite Sem Fim | 4 | Ataque supremo |
+
+### Habilidades de monstros
+
+| Técnica | Turnos | Motivo |
+|---|---:|---|
+| Ataque | 0 | Ataque comum sempre disponível |
+| Golpe Devastador | 2 | Dano físico alto |
+| Maldição | 3 | Efeito debilitante |
+| Regeneração | 3 | Recuperação de HP |
+| Explosão Elemental | 3 | Alto dano elemental |
+| Postura Protetora | 3 | Defesa temporária já existente na IA |
+
+Chefes conservam anúncios especiais e fases próprias. Anúncios e perdas de ação contam como oportunidades do monstro; não gastam MP de técnicas apenas preparadas. Os modos Normal, Rápido e Instantâneo não afetam cooldowns. O carregamento continua descartando combates interrompidos, preservando todas as informações permanentes anteriores sem alterar a versão do salvamento.
+
+Teste adicional: `node tests/turn-cooldowns.mjs` (incluído em `npm test`).
+
+
+## Marcos Evolutivos (salvamento v12)
+A cada 5 pontos **confirmados manualmente** em Força, Inteligência, Agilidade, Destreza, Vitalidade e Sorte, um marco é desbloqueado. Pontos iniciais, ganhos automáticos por nível e equipamentos não contam. Salvamentos anteriores não contêm histórico confiável de investimentos; por segurança, sua contagem começa em zero e somente futuras aplicações são registradas.
+
+| Atributo | Benefício por marco | Limite adicional |
+|---|---:|---:|
+| Força | +1% ataque físico | 20% |
+| Inteligência | +1% ataque mágico | 20% |
+| Agilidade | +0,5 ponto percentual de esquiva | 10 pp |
+| Destreza | +0,5 ponto percentual de crítico | 10 pp |
+| Vitalidade | +1% HP máximo | 20% |
+| Sorte | +0,5 ponto percentual de equipamento em drop | 5 pp |
+
+Limites gerais existentes preservados: esquiva 40%, crítico 65%, precisão 99%. O bônus de Sorte somente modifica o sorteio de **equipamento**, com teto total de 23% para monstros e 25% para chefes, sem modificar os materiais ou recompensas garantidas. Bônus de dano e HP incidem uma vez após os modificadores anteriores. A prévia usa `stats(attributeOverride,investedOverride)` e nunca grava pontos provisórios.

@@ -20,5 +20,5 @@ rt.state.bosses.push(0);assert.equal(acceptQuest(boss.id),true);assert.equal(que
 recordEncounter({baseName:'Lobo'});recordOutcome({baseName:'Lobo'},true);recordEncounter({baseName:'Lobo'});recordOutcome({baseName:'Lobo'},false);assert.deepEqual(rt.state.bestiary.Lobo,{encounters:2,wins:1,losses:1});
 statAdd('damageDealt',17);assert.equal(rt.state.statistics.damageDealt,17);
 save();rt.state=null;assert.equal(load(),true);assert.equal(rt.state.bestiary.Lobo.wins,1);assert.equal(rt.state.quests.claimed.includes(kill.id),true);assert.equal(rt.state.statistics.damageDealt,17);
-const old=JSON.parse(store.get(KEY));old.version=2;delete old.quests;delete old.bestiary;delete old.statistics;store.set(KEY,JSON.stringify(old));rt.state=null;assert.equal(load(),true);assert.equal(rt.state.version,11);assert.equal(rt.state.gold,gold+kill.reward.gold);
+const old=JSON.parse(store.get(KEY));old.version=2;delete old.quests;delete old.bestiary;delete old.statistics;store.set(KEY,JSON.stringify(old));rt.state=null;assert.equal(load(),true);assert.equal(rt.state.version,12);assert.equal(rt.state.gold,gold+kill.reward.gold);
 console.log('OK: 50 missões, aceitação, progressão, entrega, recompensa única, bestiário, estatísticas, persistência e migração v2.');

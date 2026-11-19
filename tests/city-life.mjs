@@ -17,7 +17,7 @@ const {normalizeSave}=await import('../js/state-schema.js');
 const {QUESTS,questStatus}=await import('../js/progression.js');
 await import('../js/main.js');
 const click=action=>{const b={dataset:{action},disabled:false};handlers.click({target:{closest:()=>b}});};
-newGame('Cidades','guerreiro');assert.equal(rt.state.version,11);assert.deepEqual(rt.state.cityLife,cityLifeDefaults());
+newGame('Cidades','guerreiro');assert.equal(rt.state.version,12);assert.deepEqual(rt.state.cityLife,cityLifeDefaults());
 assert.equal(LOCAL_NPCS.length,10);assert.equal(RECURRING_NPCS.length,2);
 assert.equal(new Set([...LOCAL_NPCS,...RECURRING_NPCS].map(n=>n.id)).size,12);
 assert.deepEqual(cityNpcs(rt.state,0).map(n=>n.id),[LOCAL_NPCS[0].id]);
@@ -97,10 +97,10 @@ click('tavernTalk:ina-folhas');assert.ok(rt.state.cityLife.npcs['ina-folhas'].ta
 click('tavernQuiz:0');assert.equal(rt.state.cityLife.quizAnswered.includes(0),true);
 // Persistência v8, migração v7 e salvamento anterior.
 const earned=rt.state.gold;const snapshot=JSON.stringify(rt.state.cityLife);save();rt.state=null;
-assert.equal(load(),true);assert.equal(rt.state.version,11);assert.equal(rt.state.gold,earned);
+assert.equal(load(),true);assert.equal(rt.state.version,12);assert.equal(rt.state.gold,earned);
 assert.equal(JSON.stringify(rt.state.cityLife),snapshot);
 const legacy=structuredClone(rt.state);legacy.version=7;delete legacy.cityLife;
-const migrated=normalizeSave(legacy);assert.equal(migrated.version,11);assert.deepEqual(migrated.cityLife,cityLifeDefaults());
+const migrated=normalizeSave(legacy);assert.equal(migrated.version,12);assert.deepEqual(migrated.cityLife,cityLifeDefaults());
 assert.equal(migrated.narrative.flags.travelerHelped,true);
 assert.ok(cityNpcs(migrated,0).some(n=>n.id==='elio-viajante'),'NPC reconhece escolha feita em salvamentos antigos');
 const invalid=normalizeCityLife({reputation:[500,-100,'oops'],quizAnswered:[0,0,12,-1],offersBought:['0:0','not:valid'],npcs:{hack:{talks:4},'ina-folhas':{talks:6}}});

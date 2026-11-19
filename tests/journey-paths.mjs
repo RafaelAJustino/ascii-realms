@@ -15,5 +15,5 @@ assert.equal(endJourney(hero),true);assert.equal(activeJourney(hero),false);
 for(const [file,text] of [['../js/ui.js',/paths:pathSelection,journey:pathJourney/],['../js/main.js',/action==='journeyContinue'/],['../js/combat.js',/resumeJourney/],['../js/exploration.js',/export function openPaths/],['../js/storage.js',/activeJourney\(s\)\?'journey'/],['../css/journey-paths.css',/grid-template-columns:minmax\(0,1fr\)/]])assert.match(read(file),text);
 assert.match(read('../js/ui.js'),/journeyCity/);
 assert.match(read('../js/exploration.js'),/if\(roll<chance\)/);
-assert.match(read('../js/state-schema.js'),/SAVE_VERSION = 11/);
+assert.match(read('../js/state-schema.js'),/SAVE_VERSION = 12/);
 console.log('OK: fluxo de caminhos, progressão, integridade, retomada, retorno, estilos e versão 9.');
