@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+const store=new Map();globalThis.localStorage={getItem:k=>store.get(k)||null,setItem(k,v){store.set(k,v)},removeItem:k=>store.delete(k)};
+const app={innerHTML:'',addEventListener(){},querySelector(){return null},querySelectorAll(){return []}};
+globalThis.document={querySelector:s=>s==='#app'?app:null};globalThis.window={addEventListener(){}};globalThis.requestAnimationFrame=f=>f();
+const {rt}=await import('../js/runtime.js');
+const {newGame}=await import('../js/player.js');
+const {QUESTS,acceptQuest,progressQuest,deliverQuest,claimQuest,questStatus,recordEncounter,recordOutcome,statAdd}=await import('../js/progression.js');
+const {save,load}=await import('../js/storage.js');
+const {KEY}=await import('../js/data.js');
+assert.equal(QUESTS.length,50);
+for(let i=0;i<10;i++){const a=QUESTS.filter(q=>q.region===i);assert.deepEqual(['kill','kill','collect','explore','boss'],a.map(q=>q.type));}
+newGame('Tester','guerreiro');const kill=QUESTS[0],collect=QUESTS[2],explore=QUESTS[3],boss=QUESTS[4];
+assert.equal(acceptQuest(kill.id),true);assert.equal(acceptQuest(kill.id),false);
+progressQuest('kill',kill.target,2);assert.equal(rt.state.quests.active[kill.id].progress,2);
+progressQuest('kill',kill.target,2);assert.equal(questStatus(kill),'Concluída');const gold=rt.state.gold;
+assert.equal(claimQuest(kill.id),true);assert.equal(claimQuest(kill.id),false);assert.equal(rt.state.gold,gold+kill.reward.gold);
+assert.equal(acceptQuest(collect.id),true);rt.state.materials[collect.target]=3;assert.equal(deliverQuest(collect.id),true);assert.equal(rt.state.materials[collect.target],0);assert.equal(deliverQuest(collect.id),false);
+assert.equal(acceptQuest(explore.id),true);for(let i=0;i<5;i++)progressQuest('explore',0);assert.equal(questStatus(explore),'Concluída');
+rt.state.bosses.push(0);assert.equal(acceptQuest(boss.id),true);assert.equal(questStatus(boss),'Concluída');
+recordEncounter({baseName:'Lobo'});recordOutcome({baseName:'Lobo'},true);recordEncounter({baseName:'Lobo'});recordOutcome({baseName:'Lobo'},false);assert.deepEqual(rt.state.bestiary.Lobo,{encounters:2,wins:1,losses:1});
+statAdd('damageDealt',17);assert.equal(rt.state.statistics.damageDealt,17);
+save();rt.state=null;assert.equal(load(),true);assert.equal(rt.state.bestiary.Lobo.wins,1);assert.equal(rt.state.quests.claimed.includes(kill.id),true);assert.equal(rt.state.statistics.damageDealt,17);
+const old=JSON.parse(store.get(KEY));old.version=2;delete old.quests;delete old.bestiary;delete old.statistics;store.set(KEY,JSON.stringify(old));rt.state=null;assert.equal(load(),true);assert.equal(rt.state.version,5);assert.equal(rt.state.gold,gold+kill.reward.gold);
+console.log('OK: 50 missões, aceitação, progressão, entrega, recompensa única, bestiário, estatísticas, persistência e migração v2.');

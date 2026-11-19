@@ -1,0 +1,31 @@
+/* Etapa de padronização: apenas apresentação e navegação, sem alterar regras. */
+button{min-height:var(--button-height);padding:8px var(--button-padding);border-radius:var(--button-radius);font-family:var(--font);line-height:1.3;text-align:center;white-space:normal;overflow-wrap:anywhere;word-break:normal;vertical-align:middle;touch-action:manipulation}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;box-shadow:0 0 0 4px rgba(165,246,173,.15)}
+button:disabled{opacity:.48;filter:saturate(.65);cursor:not-allowed;box-shadow:none}
+.actions{gap:var(--button-gap);align-items:stretch}
+.actions>button{width:100%;height:100%;min-width:0}
+.item button+button{margin-inline-start:var(--button-gap)}
+.nav{gap:var(--button-gap)}
+.nav button{min-height:var(--button-height);padding:8px 12px;white-space:nowrap;flex:0 0 auto}
+.combat-controls,.combat-attacks,.combat-menu-grid,.combat-skills-grid,.combat-back-row,.combat-extra-skills,.combat-extra-grid{width:100%;min-width:0}
+.combat-attacks{display:flex;flex-direction:column;gap:var(--button-gap)}
+.combat-attack-basic-row,.combat-back-row{display:grid;grid-template-columns:minmax(0,1fr)}
+.combat-skills-grid,.combat-menu-grid,.combat-extra-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--button-gap);align-items:stretch}
+.combat-skills-grid{grid-template-rows:repeat(2,minmax(var(--button-height),auto))}
+.combat-controls button{box-sizing:border-box;min-width:0;width:100%;min-height:var(--button-height);height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.combat-action-name,.combat-action-meta{display:block;max-width:100%;overflow-wrap:anywhere;line-height:1.25;text-align:center}
+.combat-action-meta{font-size:11px;color:var(--muted);font-weight:normal}
+.combat-controls button:disabled .combat-action-meta{color:var(--text)}
+.combat-attack-basic-row button,.combat-skills-grid button{min-height:64px}
+.combat-skills-grid button{height:100%}
+.combat-extra-skills{display:flex;flex-direction:column;gap:6px}
+.combat-extra-title{color:var(--muted);font-size:12px;text-align:center}
+.combat-controls.locked{pointer-events:none}
+@media(max-width:430px){.combat-controls button{font-size:clamp(10px,3vw,13px);padding:7px 5px}.combat-action-meta{font-size:10px}.actions{gap:8px}}
+@media(max-width:340px){.combat-controls button{font-size:10px}.combat-action-meta{font-size:9px}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+/* Mesmo tamanho para ataque comum e quatro habilidades, inclusive com textos longos. */
+.combat-attacks{--combat-attack-height:80px}
+.combat-skills-grid{grid-template-rows:repeat(2,var(--combat-attack-height))}
+.combat-attack-basic-row{height:var(--combat-attack-height)}
+.combat-attack-basic-row button,.combat-skills-grid button{height:var(--combat-attack-height);min-height:var(--combat-attack-height)}

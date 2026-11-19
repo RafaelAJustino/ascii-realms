@@ -1,0 +1,2 @@
+export const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),rand=(a,b)=>Math.floor(Math.random()*(b-a+1))+a,escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export const mapId=l=>Math.floor((l-1)/10),tier=l=>Math.floor((l-1)/10),xpNeed=l=>Math.floor(28*l**1.65+40),bar=(x,max,kind='')=>`<div class="bar ${kind}"><div style="width:${clamp(100*x/Math.max(1,max),0,100)}%"></div></div>`;

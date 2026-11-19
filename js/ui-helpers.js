@@ -1,0 +1,1 @@
+export const btn=(label,fn,disabled=false)=>`<button ${disabled?'disabled':''} data-action="${fn}">${label}</button>`,panel=(title,html)=>`<section class="panel"><h3>${title}</h3>${html}</section>`,stat=(k,v)=>`<div class="stat"><span>${k}</span><b>${v}</b></div>`;

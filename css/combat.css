@@ -1,0 +1,8 @@
+.ascii-container{width:100%;overflow:hidden;text-align:center}.ascii-art{display:inline-block;text-align:left;white-space:pre;line-height:1.1;letter-spacing:0;font-family:var(--font);margin:8px auto;color:#a5e5b5;max-width:100%}pre:not(.ascii-art){font:12px/1.15 var(--font);white-space:pre;overflow:auto;color:#a5e5b5;text-align:center}.enemy-visual,.hero-visual{position:relative}.impact{animation:hit .35s ease-in-out}.floating-damage{position:absolute;top:30%;right:15%;font-weight:bold;font-size:24px;color:#ff8d8d;text-shadow:0 2px 7px #000;pointer-events:none;animation:float-damage .7s ease-out forwards}.floating-damage.player{right:8%}.turn-status{color:#a5e5b5;font-size:12px;min-height:18px}.actions.locked{pointer-events:none;opacity:.45}
+
+/* Escala responsiva das cenas: preserva todos os caracteres e o corpo inteiro. */
+.ascii-container{min-width:0;max-width:100%;overflow:hidden;display:flex;justify-content:center;align-items:center;contain:layout;}
+.ascii-art{display:block;flex:0 0 auto;max-width:none;white-space:pre!important;overflow:visible;word-break:normal;overflow-wrap:normal;font-variant-ligatures:none;font-kerning:none;letter-spacing:0;line-height:1.04;margin:10px 0;}
+.city-scene{padding:8px 0;min-height:100px;}
+.city-scene .ascii-art{color:#b5cfac;line-height:1.12;}
+@media(max-width:480px){.ascii-art{margin:5px 0}.city-scene{min-height:80px;padding:3px 0}}
