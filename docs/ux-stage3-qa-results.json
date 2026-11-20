@@ -1,0 +1,1178 @@
+[
+  {
+    "pageWidth": 320,
+    "viewport": 320,
+    "contentWidth": 318,
+    "contentClient": 318,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 71,
+        "left": 14,
+        "right": 85,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 88,
+        "right": 159,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 162,
+        "right": 232,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 235,
+        "right": 306,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "player",
+    "width": 320,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 360,
+    "viewport": 360,
+    "contentWidth": 358,
+    "contentClient": 358,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 81,
+        "left": 14,
+        "right": 95,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 98,
+        "right": 179,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 182,
+        "right": 262,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 265,
+        "right": 346,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "player",
+    "width": 360,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 375,
+    "viewport": 375,
+    "contentWidth": 373,
+    "contentClient": 373,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 82,
+        "left": 15,
+        "right": 97,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 103,
+        "right": 185,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 191,
+        "right": 272,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 278,
+        "right": 360,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "player",
+    "width": 375,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 390,
+    "viewport": 390,
+    "contentWidth": 388,
+    "contentClient": 388,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 86,
+        "left": 15,
+        "right": 101,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 107,
+        "right": 192,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 198,
+        "right": 284,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 290,
+        "right": 375,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "player",
+    "width": 390,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 430,
+    "viewport": 430,
+    "contentWidth": 428,
+    "contentClient": 428,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 96,
+        "left": 15,
+        "right": 111,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 117,
+        "right": 212,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 218,
+        "right": 314,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 320,
+        "right": 415,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "player",
+    "width": 430,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 720,
+    "viewport": 720,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 19,
+        "right": 185,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 191,
+        "right": 357,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 363,
+        "right": 529,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 535,
+        "right": 701,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "player",
+    "width": 720,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 1366,
+    "viewport": 1366,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 342,
+        "right": 508,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 514,
+        "right": 680,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 686,
+        "right": 852,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 858,
+        "right": 1024,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "player",
+    "width": 1366,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 320,
+    "viewport": 320,
+    "contentWidth": 318,
+    "contentClient": 318,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 71,
+        "left": 14,
+        "right": 85,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 88,
+        "right": 159,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 162,
+        "right": 232,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 235,
+        "right": 306,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "diary",
+    "width": 320,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 360,
+    "viewport": 360,
+    "contentWidth": 358,
+    "contentClient": 358,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 81,
+        "left": 14,
+        "right": 95,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 98,
+        "right": 179,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 182,
+        "right": 262,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 265,
+        "right": 346,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "diary",
+    "width": 360,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 375,
+    "viewport": 375,
+    "contentWidth": 373,
+    "contentClient": 373,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 82,
+        "left": 15,
+        "right": 97,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 103,
+        "right": 185,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 191,
+        "right": 272,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 278,
+        "right": 360,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "diary",
+    "width": 375,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 390,
+    "viewport": 390,
+    "contentWidth": 388,
+    "contentClient": 388,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 86,
+        "left": 15,
+        "right": 101,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 107,
+        "right": 192,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 198,
+        "right": 284,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 290,
+        "right": 375,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "diary",
+    "width": 390,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 430,
+    "viewport": 430,
+    "contentWidth": 428,
+    "contentClient": 428,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 96,
+        "left": 15,
+        "right": 111,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 117,
+        "right": 212,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 218,
+        "right": 314,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 320,
+        "right": 415,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "diary",
+    "width": 430,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 720,
+    "viewport": 720,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 19,
+        "right": 185,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 191,
+        "right": 357,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 363,
+        "right": 529,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 535,
+        "right": 701,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "diary",
+    "width": 720,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 1366,
+    "viewport": 1366,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 342,
+        "right": 508,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 514,
+        "right": 680,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 686,
+        "right": 852,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 858,
+        "right": 1024,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "diary",
+    "width": 1366,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 320,
+    "viewport": 320,
+    "contentWidth": 318,
+    "contentClient": 318,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 71,
+        "left": 14,
+        "right": 85,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 88,
+        "right": 159,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 162,
+        "right": 232,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 235,
+        "right": 306,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "atlas",
+    "width": 320,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 360,
+    "viewport": 360,
+    "contentWidth": 358,
+    "contentClient": 358,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 81,
+        "left": 14,
+        "right": 95,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 98,
+        "right": 179,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 182,
+        "right": 262,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 265,
+        "right": 346,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "atlas",
+    "width": 360,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 375,
+    "viewport": 375,
+    "contentWidth": 373,
+    "contentClient": 373,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 82,
+        "left": 15,
+        "right": 97,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 103,
+        "right": 185,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 191,
+        "right": 272,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 278,
+        "right": 360,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "atlas",
+    "width": 375,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 390,
+    "viewport": 390,
+    "contentWidth": 388,
+    "contentClient": 388,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 86,
+        "left": 15,
+        "right": 101,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 107,
+        "right": 192,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 198,
+        "right": 284,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 290,
+        "right": 375,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "atlas",
+    "width": 390,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 430,
+    "viewport": 430,
+    "contentWidth": 428,
+    "contentClient": 428,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 96,
+        "left": 15,
+        "right": 111,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 117,
+        "right": 212,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 218,
+        "right": 314,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 320,
+        "right": 415,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "atlas",
+    "width": 430,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 720,
+    "viewport": 720,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 19,
+        "right": 185,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 191,
+        "right": 357,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 363,
+        "right": 529,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 535,
+        "right": 701,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "atlas",
+    "width": 720,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 1366,
+    "viewport": 1366,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 342,
+        "right": 508,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 514,
+        "right": 680,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 686,
+        "right": 852,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 858,
+        "right": 1024,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "atlas",
+    "width": 1366,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 320,
+    "viewport": 320,
+    "contentWidth": 318,
+    "contentClient": 318,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 71,
+        "left": 14,
+        "right": 85,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 88,
+        "right": 159,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 162,
+        "right": 232,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 71,
+        "left": 235,
+        "right": 306,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "world",
+    "width": 320,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 360,
+    "viewport": 360,
+    "contentWidth": 358,
+    "contentClient": 358,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 81,
+        "left": 14,
+        "right": 95,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 98,
+        "right": 179,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 182,
+        "right": 262,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 81,
+        "left": 265,
+        "right": 346,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "world",
+    "width": 360,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 375,
+    "viewport": 375,
+    "contentWidth": 373,
+    "contentClient": 373,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 82,
+        "left": 15,
+        "right": 97,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 103,
+        "right": 185,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 191,
+        "right": 272,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 82,
+        "left": 278,
+        "right": 360,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "world",
+    "width": 375,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 390,
+    "viewport": 390,
+    "contentWidth": 388,
+    "contentClient": 388,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 86,
+        "left": 15,
+        "right": 101,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 107,
+        "right": 192,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 198,
+        "right": 284,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 86,
+        "left": 290,
+        "right": 375,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "world",
+    "width": 390,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 430,
+    "viewport": 430,
+    "contentWidth": 428,
+    "contentClient": 428,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 96,
+        "left": 15,
+        "right": 111,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 117,
+        "right": 212,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 218,
+        "right": 314,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 96,
+        "left": 320,
+        "right": 415,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "world",
+    "width": 430,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 720,
+    "viewport": 720,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 19,
+        "right": 185,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 191,
+        "right": 357,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 363,
+        "right": 529,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 535,
+        "right": 701,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "world",
+    "width": 720,
+    "overflow": false,
+    "shortButton": false
+  },
+  {
+    "pageWidth": 1366,
+    "viewport": 1366,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "tabRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 342,
+        "right": 508,
+        "label": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 514,
+        "right": 680,
+        "label": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 686,
+        "right": 852,
+        "label": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 858,
+        "right": 1024,
+        "label": "Mundo"
+      }
+    ],
+    "navVisible": true,
+    "selected": 1,
+    "screen": "world",
+    "width": 1366,
+    "overflow": false,
+    "shortButton": false
+  }
+]

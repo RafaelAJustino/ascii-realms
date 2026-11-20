@@ -1,0 +1,57 @@
+import assert from 'node:assert/strict';
+import {TAVERNS,TAVERN_GUESTS,TAVERN_EVENTS,tavernDefaults,normalizeTavern,enterTavern,resolveTavernEvent,pendingTavernEvent,guestDialogue,guestForRegion,talkToGuest} from '../js/tavern-stories.js';
+import {cityLifeDefaults,normalizeCityLife} from '../js/city-life.js';
+import {normalizeSave} from '../js/state-schema.js';
+import {readFileSync} from 'node:fs';
+assert.equal(TAVERNS.length,10);assert.equal(new Set(TAVERNS).size,10);
+assert.equal(TAVERN_GUESTS.length,20);assert.equal(TAVERN_EVENTS.length,20);
+assert.equal(new Set(TAVERN_EVENTS.map(e=>e.id)).size,20);
+assert.equal(new Set(TAVERN_GUESTS.map(g=>g.id)).size,20);
+for(let region=0;region<10;region++){
+ assert.equal(TAVERN_GUESTS.filter(g=>g.region===region).length,2);
+ assert.equal(TAVERN_EVENTS.filter(e=>e.region===region).length,2);
+}
+const base=()=>({name:'Aventureiro',cls:'mago',gold:100,combat:null,cityLife:cityLifeDefaults()});
+const st=base();assert.deepEqual(st.cityLife.tavern,tavernDefaults());
+let event;
+for(let i=0;i<60&&!event;i++)event=enterTavern(st,0);
+assert.ok(event,'Visitas repetidas podem gerar um evento opcional');
+assert.ok(st.cityLife.tavern.visits[0]>0);
+assert.equal(pendingTavernEvent(st,0)?.id,event.id);
+const initialVisits=st.cityLife.tavern.visits[0];
+assert.equal(enterTavern(st,0)?.id,event.id,'Um evento pendente não é substituído');
+assert.equal(st.cityLife.tavern.visits[0],initialVisits+1);
+assert.equal(resolveTavernEvent(st,0,event.id,'invalid'),null);
+assert.equal(resolveTavernEvent(st,1,event.id,'help'),null);
+assert.equal(st.gold,100);
+const beforeRep=st.cityLife.reputation[0];
+const outcome=resolveTavernEvent(st,0,event.id,'help');
+assert.equal(outcome.goldDelta,-5);assert.equal(st.gold,95);
+assert.equal(st.cityLife.reputation[0],beforeRep+4);
+assert.equal(st.cityLife.tavern.pending,null);
+assert.deepEqual(st.cityLife.tavern.completed,[event.id]);
+assert.equal(resolveTavernEvent(st,0,event.id,'help'),null,'Não duplica pagamento, reputação ou recompensa');
+assert.equal(st.gold,95);
+const guest=TAVERN_GUESTS.find(g=>g.id===event.guest);
+assert.match(guestDialogue(st,guest),/Sua ajuda não foi esquecida/);
+assert.ok(guestForRegion(1,st).some(g=>g.id===guest.id),'Personagem reconhecido reaparece na próxima região');
+const conversation=talkToGuest(st,1,guest.id);assert.ok(conversation?.message);assert.equal(st.cityLife.tavern.guestTalks[guest.id],1);
+const normalized=normalizeCityLife(structuredClone(st.cityLife));assert.deepEqual(normalized,st.cityLife);
+assert.deepEqual(normalizeTavern({visits:[-3,1000000],completed:[event.id,event.id,'fake'],pending:'fake',guestsMet:['fake',guest.id]}),{
+ visits:[0,100000,...Array(8).fill(0)],completed:[event.id],decisions:{},pending:null,guestsMet:[guest.id],guestTalks:{}
+});
+const poor=base();poor.gold=0;poor.cityLife.tavern.pending=TAVERN_EVENTS[0].id;
+assert.equal(resolveTavernEvent(poor,0,TAVERN_EVENTS[0].id,'help'),null,'Sem ouro não confirma apoio');
+assert.equal(poor.cityLife.tavern.pending,TAVERN_EVENTS[0].id);
+assert.ok(resolveTavernEvent(poor,0,TAVERN_EVENTS[0].id,'investigate'));
+assert.equal(poor.gold,0);
+const legacy={version:12,name:'Veterana',cls:'arqueiro',lv:4,xp:50,points:0,gold:100,stats:[3,3,6,7,3,4],items:[],equip:{},area:1};
+const migrated=normalizeSave(legacy);
+assert.deepEqual(migrated.cityLife.tavern,tavernDefaults());
+const withStory=structuredClone(migrated);withStory.cityLife.tavern=st.cityLife.tavern;
+assert.deepEqual(normalizeSave(withStory).cityLife.tavern,st.cityLife.tavern);
+const ui=readFileSync(new URL('../js/ui.js',import.meta.url),'utf8');
+const main=readFileSync(new URL('../js/main.js',import.meta.url),'utf8');
+assert.match(ui,/pendingTavernEvent/);assert.match(ui,/guestDialogue/);assert.match(ui,/tavernStory:/);
+assert.match(main,/enterTavern\(/);assert.match(main,/resolveTavernEvent\(/);
+console.log('OK: 10 tavernas, 20 visitantes, 20 encontros, ocorrências opcionais, escolhas idempotentes, NPCs recorrentes, reputação, ouro, migração e integração UI.');

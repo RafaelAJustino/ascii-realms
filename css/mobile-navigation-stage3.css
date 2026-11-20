@@ -1,0 +1,23 @@
+/* Etapa 3: 4 áreas contextuais dentro do painel, nunca uma barra inferior fixa. */
+#app .ux-area-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0 0 12px;padding:5px;background:#101f21;border:1px solid var(--ux-edge);border-radius:9px;min-width:0}
+#app .ux-area-nav .ux-area-tab{box-sizing:border-box;min-width:0;width:100%;min-height:44px;max-height:50px;padding:6px 2px;font-size:clamp(10px,2.9vw,13px);font-weight:600;letter-spacing:-.015em;color:var(--ux-secondary);background:transparent;border:1px solid transparent;white-space:nowrap}
+#app .ux-area-nav .ux-area-tab.is-current{color:#0b211b;background:#b7e6bc;border-color:#dbf7d7;font-weight:700}
+#app .ux-area-nav .ux-area-tab:disabled{opacity:.35;cursor:not-allowed}
+#app .ux-area-nav .ux-area-tab:focus-visible{outline:3px solid var(--ux-focus);outline-offset:1px}
+#app .ux-route-list{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-top:12px}
+#app .ux-route-list .ux-route{min-height:52px;max-height:none!important;height:auto;display:flex;justify-content:space-between;align-items:center;text-align:left;gap:12px;padding:10px 12px;border:1px solid var(--ux-edge);border-radius:8px;color:var(--ux-ink);background:#172b2b}
+#app .ux-route strong,#app .ux-route small{display:block;overflow-wrap:anywhere}
+#app .ux-route strong{font-size:13px;line-height:1.35}
+#app .ux-route small{color:var(--ux-secondary);margin-top:3px;font-size:11px;line-height:1.4}
+#app .ux-route>span:last-child{font-size:19px;color:var(--ux-important);flex-shrink:0}
+#app .ux-hub-highlight{display:flex;flex-direction:column;gap:5px;min-width:0;background:#192822;border:1px solid #67806c;padding:12px;border-radius:8px;margin:4px 0 12px}
+#app .ux-hub-highlight strong{font-size:14px;line-height:1.35;overflow-wrap:anywhere}
+#app .ux-hub-highlight button{margin-top:8px;width:100%}
+#app .ux-known-npcs{padding-left:20px;margin:8px 0;line-height:1.8;overflow-wrap:anywhere}
+#app .ux-related-link{margin:14px 0 0}
+#app .ux-related-link button{display:block;width:100%;margin-top:8px}
+#app .ux-section-footnote{margin-top:12px}
+#app .main-actions button:last-child{grid-column:auto}
+#app .main-actions button:first-child{grid-column:1/-1}
+@media(max-width:360px){#app .ux-area-nav{gap:3px;padding:4px}#app .ux-area-nav .ux-area-tab{font-size:10px;padding:6px 0}}
+@media(prefers-reduced-motion:reduce){#app .ux-area-tab,#app .ux-route{transition:none!important}}

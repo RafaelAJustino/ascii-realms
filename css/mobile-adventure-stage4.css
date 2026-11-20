@@ -1,0 +1,60 @@
+/* UX Etapa 4: exploração mobile-first sem mudanças nas chances de jogo. */
+#app .ux-path-intro{margin:0 0 12px;color:var(--ux-secondary);font-size:12px;line-height:1.5}
+#app .ux-path-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:10px}
+#app .ux-path-card{min-width:0;padding:12px;border:1px solid var(--ux-edge);border-radius:9px;background:#132729;display:flex;flex-direction:column;gap:7px}
+#app .ux-path-card[data-path="safe"]{border-left:4px solid #8cbea0}
+#app .ux-path-card[data-path="unknown"]{border-left:4px solid #c3ac7a}
+#app .ux-path-card[data-path="dangerous"]{border-left:4px solid #b57f80}
+#app .ux-path-heading{display:flex;flex-direction:column;gap:3px;min-width:0}
+#app .ux-path-heading strong{font-size:15px;line-height:1.3}
+#app .ux-path-heading .ux-path-tag{font-size:10px;letter-spacing:.07em;font-weight:800;color:var(--ux-secondary)}
+#app .ux-path-card p{margin:0;color:var(--ux-secondary);font-size:12px;line-height:1.5}
+#app .ux-path-stats{display:flex;gap:6px;flex-wrap:wrap}
+#app .ux-path-stat{font-size:11px;padding:4px 7px;border-radius:6px;background:#243439;border:1px solid #425b59;color:#e6eee8}
+#app .ux-path-card button{width:100%;margin-top:auto;min-height:44px;max-height:50px;background:#b8e6c2;color:#12231c;font-weight:700}
+#app .ux-path-note{font-size:11px;color:var(--ux-secondary);margin:10px 0 0;line-height:1.45}
+#app .ux-journey-header{display:grid;gap:8px;margin-bottom:10px}
+#app .ux-journey-place{border:1px solid var(--ux-edge);border-radius:8px;padding:10px;background:#182827;min-width:0}
+#app .ux-journey-place strong{display:block;font-size:14px;overflow-wrap:anywhere}
+#app .ux-journey-place p{font-size:12px;margin:5px 0 0;color:var(--ux-secondary)}
+#app .ux-journey-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#app .ux-journey-chip{min-width:0;border-radius:7px;padding:8px;background:#182929;border:1px solid #43605a;font-size:11px;color:var(--ux-secondary)}
+#app .ux-journey-chip strong{display:block;color:var(--ux-ink);font-size:14px;line-height:1.4}
+#app .ux-journey-vitals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#app .ux-journey-vital{min-width:0;font-size:11px;color:var(--ux-secondary)}
+#app .ux-journey-vital .ux-vital-heading{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:3px}
+#app .ux-journey-vital strong{color:var(--ux-ink);font-size:12px;font-variant-numeric:tabular-nums}
+#app .ux-journey-meter{height:7px;overflow:hidden;border-radius:20px;background:#233738;margin-top:5px}
+#app .ux-journey-meter>span{display:block;height:100%;border-radius:20px;background:#87bd91}
+#app .ux-journey-meter.mp>span{background:#87adca}
+#app .ux-journey-alert{padding:10px 11px;border:1px solid #a98b58;border-radius:7px;background:#2c2920;font-size:12px;line-height:1.45}
+#app .ux-journey-alert strong{display:block;color:#f3d8a7}
+#app .ux-journey-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0 8px}
+#app .ux-journey-actions button{min-width:0;box-sizing:border-box;width:100%;height:44px;min-height:44px;max-height:50px;padding:5px 6px;white-space:normal;font-size:12px;line-height:1.25}
+#app .ux-journey-actions button:first-child{grid-column:1/-1;background:#b8e6c2;color:#14221a;font-weight:800;height:48px}
+#app .ux-journey-actions button:disabled{opacity:.48}
+#app .ux-journey-art,#app .ux-journey-log{margin-top:10px;border:1px solid var(--ux-edge);border-radius:8px;padding:0 10px 10px;min-width:0}
+#app .ux-journey-art>summary,#app .ux-journey-log>summary{min-height:44px;display:flex;align-items:center;gap:8px;color:var(--ux-ink);font-size:12px;font-weight:600;cursor:pointer;list-style:none}
+#app .ux-journey-art>summary::before,#app .ux-journey-log>summary::before{content:'+';font-weight:800;color:var(--ux-important)}
+#app .ux-journey-art[open]>summary::before,#app .ux-journey-log[open]>summary::before{content:'−'}
+#app .ux-journey-art .ascii-container{margin:4px 0 0}
+#app .ux-journey-log ul{padding:0;margin:0;list-style:none;display:grid;gap:6px}
+#app .ux-journey-log li{font-size:12px;overflow-wrap:anywhere;border-top:1px solid #314844;padding-top:6px}
+#app .ux-journey-event{margin:10px 0;border:1px solid #a28558;background:#29271f;border-radius:8px;padding:11px;min-width:0}
+#app .ux-journey-event h4{margin:0 0 5px;font-size:14px;color:#ebd9b1}
+#app .ux-journey-event p{font-size:12px;margin:4px 0 10px;line-height:1.45}
+#app .ux-journey-event .journey-event-options{margin:0 0 7px}
+#app .ux-journey-event .journey-event-options button{min-height:44px;height:auto;max-height:none;padding:10px;text-align:left}
+#app .ux-journey-event .ux-journey-art{border-color:#7b6952}
+#app .ux-journey-rest{font-size:11px;line-height:1.45;color:var(--ux-secondary);margin:8px 0 0}
+#app .ux-camp-summary{padding:10px;border:1px solid var(--ux-edge);border-radius:8px;background:#172b2a;margin-bottom:10px}
+#app .ux-camp-status{padding:10px;border:1px solid #756c4e;border-radius:7px;background:#242820;font-size:12px;margin:12px 0}
+#app .ux-camp-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#app .ux-camp-actions button{min-height:44px;height:auto;max-height:50px;padding:6px 5px;white-space:normal}
+#app .ux-camp-actions button:first-child,#app .ux-camp-actions button:last-child{grid-column:1/-1}
+#app .ux-camp-actions button:first-child{background:#b8e6c2;color:#14221a;font-weight:800}
+#app .ux-resume-line{margin:8px 0;padding:8px 10px;border:1px solid var(--ux-edge);border-radius:7px;background:#152a27;font-size:12px;color:var(--ux-secondary)}
+#app .ux-resume-line strong{color:var(--ux-ink)}
+@media (min-width:570px){#app .ux-path-grid{grid-template-columns:repeat(3,minmax(0,1fr))}#app .ux-journey-header{grid-template-columns:1fr 1fr}#app .ux-journey-header .ux-journey-vitals{grid-column:1/-1}}
+@media(max-width:360px){#app .ux-journey-actions button,#app .ux-camp-actions button{font-size:11px}}
+@media(prefers-reduced-motion:reduce){#app .ux-path-card,#app .ux-journey-meter>span{transition:none!important}}

@@ -1,0 +1,11 @@
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {EVENT_ART,eventTheme} from './js/density-events.js';
+import {NARRATIVE_EVENTS} from './js/journey-events.js';
+import {EPIC_EVENTS} from './js/epic-events.js';
+import {TAVERN_EVENTS} from './js/tavern-stories.js';
+const escape=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const events=[...NARRATIVE_EVENTS,...EPIC_EVENTS,...TAVERN_EVENTS];
+const sections=[['Exploração original',NARRATIVE_EVENTS],['Expansão épica',EPIC_EVENTS],['Acontecimentos de taverna',TAVERN_EVENTS]];
+const html=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ASCII REALMS | Galeria de eventos</title><style>body{background:#0f1715;color:#d9e4d2;margin:0;font:14px system-ui;padding:18px}main{max-width:1120px;margin:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:18px}article{background:#17231e;border:1px solid #426450;border-radius:7px;padding:12px;min-width:0;overflow:hidden}h2{margin-top:32px}pre{font:6px/1.04 'DejaVu Sans Mono',Consolas,monospace;letter-spacing:0;white-space:pre;overflow:auto;color:#b7c9af;margin:0}p{line-height:1.5}small{color:#a0c5ab}a{color:#c3e9bc}@media(max-width:480px){pre{font-size:4px}article{padding:6px}}</style></head><body><main><h1>ASCII REALMS | Lote 6: 50 acontecimentos</h1><p>Galeria de revisão artística. Arte original em caracteres ASCII, 84 × 34. Cada descrição provém do cadastro atual do jogo. As composições usam modelos temáticos e variações por identificador.</p>${sections.map(([heading,list])=>`<h2>${escape(heading)} (${list.length})</h2><div class="grid">${list.map(e=>`<article><h3>${escape(e.title)}</h3><small>${escape(e.id)} | ${escape(eventTheme(e))}</small><pre>${escape(EVENT_ART[e.id])}</pre><p>${escape(e.description)}</p></article>`).join('')}</div>`).join('')}</main></body></html>`;
+mkdirSync('docs',{recursive:true});writeFileSync('docs/galeria-eventos-densidade.html',html);
+console.log(`Galeria criada: ${events.length} artes`);

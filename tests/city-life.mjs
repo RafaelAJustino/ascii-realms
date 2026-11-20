@@ -1,0 +1,115 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const saved=new Map();
+globalThis.localStorage={getItem:k=>saved.get(k)??null,setItem:(k,v)=>saved.set(k,String(v)),removeItem:k=>saved.delete(k)};
+const handlers={};const app={innerHTML:'',addEventListener:(event,fn)=>handlers[event]=fn,querySelector(){return null},querySelectorAll(){return []}};
+globalThis.document={querySelector:s=>s==='#app'?app:null,querySelectorAll(){return []},scrollingElement:null};
+globalThis.window={addEventListener(){}};globalThis.requestAnimationFrame=fn=>fn();globalThis.setInterval=()=>0;
+const {rt}=await import('../js/runtime.js');
+const {newGame}=await import('../js/player.js');
+const {city,store,tavernUI,forgeUI,render}=await import('../js/ui.js');
+const {KEY}=await import('../js/data.js');
+const {load,save}=await import('../js/storage.js');
+const {chooseEventOption,selectPath}=await import('../js/exploration.js');
+const {buyItem,buyPotion,potionPrice,buyCityOffer,orderFromForge}=await import('../js/shops.js');
+const {cityLifeDefaults,normalizeCityLife,LOCAL_NPCS,RECURRING_NPCS,reputation,reputationDiscount,cityPrice,creditNarrativeChoice,cityNpcs,talkToNpc,hearRumor,canAnswerQuiz,answerQuiz,cityQuizOptions,cityOffer,forgeOrder,canForgeOrder}=await import('../js/city-life.js');
+const {normalizeSave}=await import('../js/state-schema.js');
+const {QUESTS,questStatus}=await import('../js/progression.js');
+await import('../js/main.js');
+const click=action=>{const b={dataset:{action},disabled:false};handlers.click({target:{closest:()=>b}});};
+newGame('Cidades','guerreiro');assert.equal(rt.state.version,14);assert.deepEqual(rt.state.cityLife,cityLifeDefaults());
+assert.equal(LOCAL_NPCS.length,10);assert.equal(RECURRING_NPCS.length,2);
+assert.equal(new Set([...LOCAL_NPCS,...RECURRING_NPCS].map(n=>n.id)).size,12);
+assert.deepEqual(cityNpcs(rt.state,0).map(n=>n.id),[LOCAL_NPCS[0].id]);
+assert.equal(reputation(rt.state,0),0);assert.equal(reputationDiscount(rt.state,0),0);
+assert.equal(cityPrice(rt.state,0,185),185);
+rt.state.cityLife.reputation[0]=20;assert.equal(reputationDiscount(rt.state,0),5);assert.equal(cityPrice(rt.state,0,185),175);
+rt.state.cityLife.reputation[0]=50;assert.equal(reputationDiscount(rt.state,0),10);assert.equal(cityPrice(rt.state,0,185),166);
+rt.state.cityLife.reputation[0]=80;assert.equal(reputationDiscount(rt.state,0),15);assert.equal(cityPrice(rt.state,0,185),157);
+rt.state.cityLife.reputation[0]=100;assert.equal(reputationDiscount(rt.state,0),15,'Desconto limitado a 15%');
+rt.state.cityLife.reputation[0]=0;
+// Reputação vinculada à escolha real e concedida uma só vez.
+selectPath('unknown');rt.state.journey.event='wounded-traveler';rt.state.consumables.hp++;
+const goldBefore=rt.state.gold;assert.equal(chooseEventOption('wounded-traveler','help'),true);
+assert.equal(reputation(rt.state,0),8);assert.equal(rt.state.gold,goldBefore+24);
+assert.equal(creditNarrativeChoice(rt.state,'wounded-traveler','help',0),0);
+assert.equal(reputation(rt.state,0),8);assert.equal(cityNpcs(rt.state,0).length,2);
+assert.equal(cityNpcs(rt.state,1).some(n=>n.id==='elio-viajante'),true,'NPC recorrente viaja entre cidades');
+const firstTalk=talkToNpc(rt.state,0,'elio-viajante');assert.ok(firstTalk.message.includes('salvou'));
+assert.equal(firstTalk.received,1);assert.equal(firstTalk.reputation,4);
+const potions=rt.state.consumables.hp;
+assert.equal(talkToNpc(rt.state,0,'elio-viajante').received,0,'Presente não se repete');
+assert.equal(rt.state.consumables.hp,potions);
+assert.equal(rt.state.cityLife.npcs['elio-viajante'].talks,2);
+assert.equal(talkToNpc(rt.state,1,'elio-viajante').received,0,'Nenhum novo presente em outra cidade');
+assert.equal(talkToNpc(rt.state,0,'inventado'),null);
+assert.equal(reputation(rt.state,0),12);
+for(let i=0;i<3;i++)assert.ok(hearRumor(rt.state,0));
+assert.equal(rt.state.cityLife.rumorsSeen.length,3);hearRumor(rt.state,0);assert.equal(rt.state.cityLife.rumorsSeen.length,3);
+rt.state.narrative.flags.passageMarked=true;assert.match(hearRumor(rt.state,0),/passagem secreta/);
+assert.equal(canAnswerQuiz(rt.state,0),true);
+for(let region=0;region<10;region++){const options=cityQuizOptions(region);assert.equal(new Set(options).size,3);assert.equal(options[region%3],(await import('../js/data.js')).maps[region][3]);}
+const quizGold=rt.state.gold;
+assert.deepEqual(answerQuiz(rt.state,0,0),{correct:true,answer:'Lobo',gold:12});
+assert.equal(rt.state.gold,quizGold+12);assert.equal(reputation(rt.state,0),15);
+assert.equal(answerQuiz(rt.state,0,0),null);
+// A mesma fórmula de desconto deve ser usada na tela e na compra.
+rt.state.gold=2000;rt.state.cityLife.reputation[0]=50;rt.screen='city';rt.shop='weapon';
+const expectedBase=3*13+25,expectedCost=cityPrice(rt.state,0,expectedBase);
+assert.match(city(),/Taverna e moradores/);assert.match(city(),/REPUTAÇÃO/);
+assert.match(store(),new RegExp(`Nível 3[\\s\\S]*?Preço: <b class=\"gold\">${expectedCost} Ouro`));
+const starting=rt.state.gold,initialItems=rt.state.items.length;
+assert.equal(buyItem('weapon',3),true);assert.equal(rt.state.gold,starting-expectedCost);assert.equal(rt.state.items.length,initialItems+1);
+const potionCost=cityPrice(rt.state,0,potionPrice('hp'));const goldAfterWeapon=rt.state.gold;
+assert.equal(buyPotion('hp'),true);assert.equal(rt.state.gold,goldAfterWeapon-potionCost);
+const offer=cityOffer(rt.state,0);assert.equal(offer.rarity,1);assert.equal(offer.sold,false);
+const offerGold=rt.state.gold,offerCount=rt.state.items.length;
+assert.equal(buyCityOffer(),true);assert.equal(rt.state.gold,offerGold-offer.price);assert.equal(rt.state.items.length,offerCount+1);
+assert.equal(rt.state.items.at(-1).rarity,1);assert.equal(buyCityOffer(),false);
+assert.equal(cityOffer(rt.state,0).sold,true);
+// Oferta temporária muda após 6 explorações e a nova compra não reutiliza a anterior.
+rt.state.narrative.explorations=6;assert.equal(cityOffer(rt.state,0).sold,false);
+// Outras áreas possuem estoque próprio.
+assert.equal(cityOffer(rt.state,1).sold,false);
+rt.state.narrative.flags.merchantHelped=true;assert.equal(cityOffer(rt.state,0).rarity,2,'Item raro associado à ajuda ao mercador');
+rt.state.narrative.flags.merchantHelped=false;
+// A encomenda usa missões existentes para desbloqueio, custos reais e item único.
+const order=forgeOrder(rt.state,0);assert.ok(order&&order.required===2);
+rt.screen='forge';rt.state.materials[order.material]=10;
+// O serviço permite ser concluído uma vez na cidade.
+assert.equal(canForgeOrder(rt.state,0),false,'Encomenda exige missão concluída');
+rt.state.quests.completed.push('q0-explore');assert.equal(canForgeOrder(rt.state,0),true);
+const forgeGold=rt.state.gold,forgeMaterial=rt.state.materials[order.material],forgeItems=rt.state.items.length;
+assert.equal(orderFromForge(),true);assert.equal(rt.state.gold,forgeGold-order.gold);
+assert.equal(rt.state.materials[order.material],forgeMaterial-order.required);
+assert.equal(rt.state.items.length,forgeItems+1);assert.equal(orderFromForge(),false);
+assert.match(forgeUI(),/Encomenda regional já concluída/);
+// Taverna, contratos do mesmo conjunto de missões, HTML e botão sticky.
+rt.screen='tavern';assert.match(tavernUI(),/TAVERNA/);assert.match(tavernUI(),/Élio, o Viajante/);
+assert.match(tavernUI(),/tavernTalk:elio-viajante/);
+assert.match(tavernUI(),/CONTRATOS DA CIDADE/);
+assert.match(tavernUI(),/tavernContract:q0-kill/);
+const contract=QUESTS.find(q=>q.id==='q0-kill0');assert.equal(questStatus(contract,rt.state),'Disponível');
+render();assert.match(app.innerHTML,/menu-back-button/);
+click('tavernContract:q0-kill0');assert.equal(questStatus(contract,rt.state),'Em andamento');
+assert.match(app.innerHTML,/TAVERNA/);
+click('tavernTalk:ina-folhas');assert.ok(rt.state.cityLife.npcs['ina-folhas'].talks>=1);
+click('tavernQuiz:0');assert.equal(rt.state.cityLife.quizAnswered.includes(0),true);
+// Persistência v8, migração v7 e salvamento anterior.
+const earned=rt.state.gold;const snapshot=JSON.stringify(rt.state.cityLife);save();rt.state=null;
+assert.equal(load(),true);assert.equal(rt.state.version,14);assert.equal(rt.state.gold,earned);
+assert.equal(JSON.stringify(rt.state.cityLife),snapshot);
+const legacy=structuredClone(rt.state);legacy.version=7;delete legacy.cityLife;
+const migrated=normalizeSave(legacy);assert.equal(migrated.version,14);assert.deepEqual(migrated.cityLife,cityLifeDefaults());
+assert.equal(migrated.narrative.flags.travelerHelped,true);
+assert.ok(cityNpcs(migrated,0).some(n=>n.id==='elio-viajante'),'NPC reconhece escolha feita em salvamentos antigos');
+const invalid=normalizeCityLife({reputation:[500,-100,'oops'],quizAnswered:[0,0,12,-1],offersBought:['0:0','not:valid'],npcs:{hack:{talks:4},'ina-folhas':{talks:6}}});
+assert.deepEqual(invalid.reputation.slice(0,3),[100,-30,0]);
+assert.deepEqual(invalid.quizAnswered,[0]);assert.deepEqual(invalid.offersBought,['0:0']);assert.equal(invalid.npcs.hack,undefined);
+// Camadas visuais e pontos de integração sem trocar estética ou criar barra inferior.
+const css=readFileSync(new URL('../css/city-life.css',import.meta.url),'utf8');
+assert.match(css,/grid-template-columns/);assert.match(css,/max-height:50px/);
+const main=readFileSync(new URL('../js/main.js',import.meta.url),'utf8');
+for(const action of ['tavernTalk','tavernRumor','tavernQuiz','tavernContract','cityOffer','forgeOrder'])assert.match(main,new RegExp(`action==='${action}'`));
+assert.doesNotMatch(css,/position:\s*fixed/);
+console.log('OK: cidades, NPCs recorrentes, rumores, contratos reais, atividade limitada, reputação, preços iguais ao cobrado, estoque, encomenda, duplicação, integração UI, persistência v9 e migração v7-v8.');

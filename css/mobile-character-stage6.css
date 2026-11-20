@@ -1,0 +1,125 @@
+/* ASCII REALMS | UX/UI Mobile-First | Etapa 6: Personagem, inventário e habilidades.
+   Aplica-se apenas às novas estruturas, sem interferir na arena da Etapa 5. */
+#app .ux6-hero-heading h4 { margin: 3px 0 1px; font-size: 18px; color: #d7f5dc; line-height: 1.25; overflow-wrap:anywhere; }
+#app .ux6-hero-heading p { margin:2px 0 4px; font-size:12px; }
+#app .ux6-summary-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; margin:12px 0; }
+#app .ux6-summary-grid > div { background:#192d2b; border:1px solid #45665b; border-radius:7px; padding:9px; min-width:0; display:grid; gap:4px; }
+#app .ux6-summary-grid span { color:#abc6b7; font-size:10px; letter-spacing:.04em; }
+#app .ux6-summary-grid strong { font-size:14px; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+#app .ux6-shortcuts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:12px; min-width:0; }
+#app .ux6-shortcuts button { min-width:0; width:100%; font-size:12px; }
+#app .ux6-detail { display:block; min-width:0; border:1px solid #446557; border-radius:7px; background:#142522; overflow:hidden; margin:9px 0; }
+#app .ux6-detail > summary { box-sizing:border-box; display:flex; align-items:center; padding:10px; min-height:44px; font-size:12px; font-weight:700; list-style:none; color:#d2ecd4; cursor:pointer; }
+#app .ux6-detail > summary::-webkit-details-marker { display:none; }
+#app .ux6-detail > summary::before { content:'[+]'; padding-right:9px; font-weight:750; color:#b0e8b7; }
+#app .ux6-detail[open] > summary::before { content:'[-]'; }
+#app .ux6-detail[open] > summary { border-bottom:1px solid #446557; }
+#app .ux6-detail > p { margin:2px 10px 9px; }
+#app .ux6-portrait { padding:4px; min-width:0; min-height:135px; max-height:270px; }
+#app .ux6-portrait .ascii-art { max-width:none; margin:auto; }
+#app .ux6-intro { margin:0 0 9px; }
+#app .hero-points { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; margin:4px 0 11px; padding:0; }
+#app .hero-points span { min-width:0; display:flex; flex-direction:column; font-size:10px; gap:2px; background:#1c302e; border:1px solid #486354; border-radius:6px; padding:8px 6px; }
+#app .hero-points b { font-size:17px; color:#d9f3cf; font-variant-numeric:tabular-nums; }
+#app .hero-attributes { gap:8px; }
+#app .ux6-attribute { border:1px solid #486558; background:#142522; border-radius:8px; padding:10px; }
+#app .ux6-attribute .hero-attribute-title { font-size:13px; gap:5px; }
+#app .ux6-attribute .hero-attribute-title .small { font-size:10px; text-align:right; }
+#app .ux6-attribute p { font-size:11px; margin:4px 0 9px; line-height:1.35; }
+#app .ux6-attribute .hero-attribute-controls { grid-template-columns:44px minmax(0,1fr) 44px; gap:7px; }
+#app .ux6-attribute .hero-attribute-controls button { font-size:21px; min-height:44px; height:44px; max-height:50px; width:44px; padding:1px; }
+#app .ux6-attribute .hero-attribute-value { font-size:14px; font-weight:750; font-variant-numeric:tabular-nums; }
+#app .ux6-equip-boost { display:block; font-size:10px; font-weight:400; }
+#app .ux6-attribute .milestone-info { margin-top:10px; padding-top:6px; border-top:1px solid #345247; }
+#app .ux6-attribute .milestone-top,#app .ux6-attribute .milestone-bottom { font-size:10px; line-height:1.35; overflow-wrap:anywhere; }
+#app .ux6-attribute .milestone-track { margin:5px 0; }
+#app .ux6-unlocked { font-size:10px; font-weight:700; color:#c9f2bc; padding-top:4px; }
+#app .hero-distribution-actions { grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; }
+#app .hero-distribution-actions button { box-sizing:border-box; width:100%; padding:4px; min-height:44px; max-height:50px; height:auto; font-size:11px; }
+#app .hero-distribution-actions button:first-child:not(:disabled) { color:#081e14; background:#a9e8ac; border-color:#a9e8ac; font-weight:800; }
+#app .hero-preview { display:grid; gap:0; min-width:0; }
+#app .hero-preview-row { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; gap:5px; flex-wrap:nowrap; font-size:11px; border-bottom:1px solid #31453e; padding:8px 2px; }
+#app .hero-preview-row span:last-child { text-align:right; font-variant-numeric:tabular-nums; }
+#app .ux6-inventory-summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; margin:0 0 12px; }
+#app .ux6-inventory-summary span { min-width:0; display:flex; align-items:center; flex-direction:column; gap:3px; padding:8px 5px; border:1px solid #496456; border-radius:7px; background:#182a27; font-size:10px; text-align:center; }
+#app .ux6-inventory-summary strong { font-size:16px; font-variant-numeric:tabular-nums; color:#e0f2dd; }
+#app .ux6-inventory-tabs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; margin-bottom:10px; }
+#app .ux6-inventory-tabs button { box-sizing:border-box; min-width:0; min-height:44px; max-height:50px; padding:4px; font-size:12px; }
+#app .ux6-inventory-tabs button.is-active,#app .ux6-bag-filters button.is-active { background:#b1ebba; color:#10281e; border-color:#b1ebba; font-weight:800; }
+#app .ux6-tab-panel { min-width:0; }
+#app .ux6-tab-panel > p:first-child { margin-top:3px; }
+#app .ux6-slots { display:grid; gap:7px; }
+#app .ux6-slot { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:6px; padding:9px; min-width:0; background:#1a2c29; border:1px solid #476458; border-radius:7px; }
+#app .ux6-slot > div:first-child { display:flex; flex-direction:column; align-items:flex-start; min-width:0; gap:2px; }
+#app .ux6-slot small { font-size:10px; color:#a8c4b5; }
+#app .ux6-slot strong { font-size:12px; color:#e6f0e8; overflow-wrap:anywhere; }
+#app .ux6-slot button { padding:5px 10px; font-size:11px; max-height:50px; min-height:44px; }
+#app .ux6-slot-art { grid-column:1 / -1; }
+#app .ux6-bag-filters { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; margin:9px 0; }
+#app .ux6-bag-filters button { box-sizing:border-box; min-width:0; min-height:44px; max-height:50px; padding:4px; font-size:11px; }
+#app .ux6-bag { display:grid; gap:8px; }
+#app .ux6-item-card { min-width:0; border:1px solid #466757; background:#172b28; border-radius:8px; overflow:hidden; }
+#app .ux6-item-title { display:flex; align-items:center; min-height:56px; padding:8px 9px; box-sizing:border-box; gap:8px; min-width:0; list-style:none; cursor:pointer; }
+#app .ux6-item-title::-webkit-details-marker { display:none; }
+#app .ux6-item-card[open] > .ux6-item-title { border-bottom:1px solid #466757; }
+#app .ux6-rarity-dot { flex:0 0 6px; height:26px; background:#7e9e88; border-radius:2px; }
+#app .ux6-rarity-1 { background:#6bcc80; } #app .ux6-rarity-2 { background:#78baf0; } #app .ux6-rarity-3 { background:#cc93f2; } #app .ux6-rarity-4 { background:#f1c970; }
+#app .ux6-item-heading { flex:1 1 auto; min-width:0; display:grid; gap:3px; }
+#app .ux6-item-heading strong { font-size:12px; line-height:1.35; overflow-wrap:anywhere; }
+#app .ux6-item-heading small { font-size:10px; line-height:1.25; color:#adbdac; overflow-wrap:anywhere; }
+#app .ux6-chevron { margin-left:auto; font-size:17px; font-weight:800; color:#b0e8b7; }
+#app .ux6-item-card[open] .ux6-chevron { font-size:0; }
+#app .ux6-item-card[open] .ux6-chevron::after { content:'−'; font-size:17px; }
+#app .ux6-item-details { padding:9px; min-width:0; }
+#app .ux6-item-details > p { margin:0 0 7px; font-size:11px; }
+#app .ux6-comparison { padding:8px; border:1px solid #49665c; background:#10211f; border-radius:7px; min-width:0; margin-bottom:9px; }
+#app .ux6-compare-header { display:grid; gap:3px; }
+#app .ux6-compare-header strong { font-size:11px; }
+#app .ux6-compare-header span { font-size:10px; }
+#app .ux6-comparison > p { margin:5px 0; font-size:10px; }
+#app .ux6-compare-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:5px; align-items:center; border-bottom:1px solid #30483b; padding:6px 0; min-width:0; font-size:11px; }
+#app .ux6-compare-values { white-space:normal; text-align:right; font-variant-numeric:tabular-nums; }
+#app .ux6-gain { color:#9be6a7; } #app .ux6-loss { color:#f3a2a2; }
+#app .ux6-item-buttons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; margin:7px 0; }
+#app .ux6-item-buttons button { min-width:0; min-height:44px; max-height:50px; font-size:12px; }
+#app .ux6-item-buttons button:first-child:not(:disabled) { background:#b1ebba; color:#10281e; font-weight:800; border-color:#b1ebba; }
+#app .ux6-consumables { display:grid; gap:8px; }
+#app .ux6-resource-item { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:7px; align-items:center; background:#172b28; border:1px solid #446359; border-radius:7px; padding:8px; }
+#app .ux6-resource-item > span { display:grid; grid-template-columns:minmax(0,1fr); gap:3px; min-width:0; }
+#app .ux6-resource-item strong { font-size:12px; overflow-wrap:anywhere; }
+#app .ux6-resource-item small { font-size:11px; color:#a4c0b4; }
+#app .ux6-resource-item button { min-height:44px; padding:4px 8px; font-size:11px; }
+#app .ux6-resource-item .object-art-detail { grid-column:1/-1; }
+#app .ux6-skill-list { display:grid; gap:8px; }
+#app .ux6-skill { min-width:0; background:#182a27; border:1px solid #496559; border-radius:8px; padding:10px; }
+#app .ux6-skill-top { display:flex; align-items:flex-start; justify-content:space-between; gap:7px; }
+#app .ux6-skill-top > div { min-width:0; }
+#app .ux6-skill-top strong { font-size:13px; overflow-wrap:anywhere; }
+#app .ux6-skill-top p { margin:4px 0; }
+#app .ux6-skill-state { flex:0 0 auto; padding:3px 5px; border:1px solid #68726b; border-radius:4px; background:#26312d; color:#c3c7c0; font-size:10px; }
+#app .ux6-skill-state.unlocked { background:#19382d; color:#a9e7b7; border-color:#568770; }
+#app .ux6-variant-choice { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px; margin:7px 0 5px; padding:0; min-width:0; border:0; }
+#app .ux6-variant-choice legend { grid-column:1/-1; padding:0 0 6px; font-size:11px; color:#abc6b7; }
+#app .ux6-variant-choice button { min-width:0; min-height:44px; max-height:50px; padding:4px 3px; font-size:10px; }
+#app .ux6-variant-choice button[aria-pressed="true"] { background:#9fdbaa; border-color:#c5efca; color:#112c1b; opacity:1; font-weight:750; }
+#app .ux6-skill-hint { margin:5px 0 0; font-size:11px; }
+#app .ux6-passives { padding:8px 10px; display:grid; gap:8px; }
+#app .ux6-passives > div { border-bottom:1px solid #39564a; padding-bottom:8px; }
+#app .ux6-passives strong { font-size:12px; display:block; }
+#app .ux6-passives p { margin:5px 0 0; }
+#app .ux6-hero-art .ascii-container,#app .ux6-equipped-avatar .ascii-container { container-type:inline-size; }
+@media(min-width:580px){
+ #app .ux6-inventory-tabs { grid-template-columns:repeat(4,minmax(0,1fr)); }
+ #app .ux6-bag-filters { grid-template-columns:repeat(4,minmax(0,1fr)); }
+ #app .ux6-summary-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+ #app .hero-attributes { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:350px){
+ #app .ux6-inventory-summary span { font-size:9px; }
+ #app .ux6-summary-grid strong { font-size:12px; }
+ #app .ux6-shortcuts button { font-size:11px; }
+ #app .ux6-compare-row { font-size:10px; }
+ #app .hero-distribution-actions { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(prefers-reduced-motion:reduce){#app .ux6-detail *,#app .ux6-item-card *,#app .ux6-attribute * {animation:none!important;transition:none!important;}}
+#app .ux6-next-milestone { display:block; margin-top:5px; font-size:10px; }

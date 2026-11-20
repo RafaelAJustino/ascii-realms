@@ -1,0 +1,149 @@
+[
+  {
+    "viewport": "320x568",
+    "documentWidth": 320,
+    "bodyWidth": 320,
+    "contentWidth": 318,
+    "contentClientWidth": 318,
+    "contentScrollHeight": 642,
+    "contentClientHeight": 530,
+    "arenaWidth": 302,
+    "arenaHeight": 210,
+    "controlsWithinWidth": true,
+    "minButtonHeight": 44,
+    "skillCount": 4,
+    "skillColumns": "139px 139px",
+    "artWidth": [
+      91.21875,
+      96.015625
+    ],
+    "status": "Um Aranha apareceu!",
+    "bodyHeight": 568
+  },
+  {
+    "viewport": "360x780",
+    "documentWidth": 360,
+    "bodyWidth": 360,
+    "contentWidth": 358,
+    "contentClientWidth": 358,
+    "contentScrollHeight": 742,
+    "contentClientHeight": 742,
+    "arenaWidth": 342,
+    "arenaHeight": 296,
+    "controlsWithinWidth": true,
+    "minButtonHeight": 44,
+    "skillCount": 4,
+    "skillColumns": "156.5px 156.5px",
+    "artWidth": [
+      128.28125,
+      135.03125
+    ],
+    "status": "Um Aranha apareceu!",
+    "bodyHeight": 780
+  },
+  {
+    "viewport": "375x667",
+    "documentWidth": 375,
+    "bodyWidth": 375,
+    "contentWidth": 373,
+    "contentClientWidth": 373,
+    "contentScrollHeight": 697,
+    "contentClientHeight": 629,
+    "arenaWidth": 357,
+    "arenaHeight": 253,
+    "controlsWithinWidth": true,
+    "minButtonHeight": 44,
+    "skillCount": 4,
+    "skillColumns": "164px 164px",
+    "artWidth": [
+      109.75,
+      115.53125
+    ],
+    "status": "Um Aranha apareceu!",
+    "bodyHeight": 667
+  },
+  {
+    "viewport": "390x844",
+    "documentWidth": 390,
+    "bodyWidth": 390,
+    "contentWidth": 388,
+    "contentClientWidth": 388,
+    "contentScrollHeight": 806,
+    "contentClientHeight": 806,
+    "arenaWidth": 372,
+    "arenaHeight": 320,
+    "controlsWithinWidth": true,
+    "minButtonHeight": 44,
+    "skillCount": 4,
+    "skillColumns": "171.5px 171.5px",
+    "artWidth": [
+      138.96875,
+      146.28125
+    ],
+    "status": "Um Aranha apareceu!",
+    "bodyHeight": 844
+  },
+  {
+    "viewport": "430x932",
+    "documentWidth": 430,
+    "bodyWidth": 430,
+    "contentWidth": 428,
+    "contentClientWidth": 428,
+    "contentScrollHeight": 894,
+    "contentClientHeight": 894,
+    "arenaWidth": 412,
+    "arenaHeight": 320,
+    "controlsWithinWidth": true,
+    "minButtonHeight": 44,
+    "skillCount": 4,
+    "skillColumns": "191.5px 191.5px",
+    "artWidth": [
+      138.96875,
+      146.28125
+    ],
+    "status": "Um Aranha apareceu!",
+    "bodyHeight": 932
+  },
+  {
+    "viewport": "720x1280",
+    "documentWidth": 720,
+    "bodyWidth": 720,
+    "contentWidth": 718,
+    "contentClientWidth": 718,
+    "contentScrollHeight": 1242,
+    "contentClientHeight": 1242,
+    "arenaWidth": 702,
+    "arenaHeight": 320,
+    "controlsWithinWidth": true,
+    "minButtonHeight": 44,
+    "skillCount": 4,
+    "skillColumns": "336.5px 336.5px",
+    "artWidth": [
+      138.96875,
+      146.28125
+    ],
+    "status": "Um Aranha apareceu!",
+    "bodyHeight": 1280
+  },
+  {
+    "viewport": "1366x900",
+    "documentWidth": 1366,
+    "bodyWidth": 1366,
+    "contentWidth": 718,
+    "contentClientWidth": 718,
+    "contentScrollHeight": 862,
+    "contentClientHeight": 862,
+    "arenaWidth": 702,
+    "arenaHeight": 320,
+    "controlsWithinWidth": true,
+    "minButtonHeight": 44,
+    "skillCount": 4,
+    "skillColumns": "336.5px 336.5px",
+    "artWidth": [
+      138.96875,
+      146.28125
+    ],
+    "status": "Um Aranha apareceu!",
+    "bodyHeight": 900
+  }
+]

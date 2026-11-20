@@ -1,0 +1,2914 @@
+[
+  {
+    "documentWidth": 320,
+    "innerWidth": 320,
+    "contentWidth": 318,
+    "contentClient": 318,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 14,
+        "right": 84.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 87.75,
+        "right": 158.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 161.5,
+        "right": 232.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 235.25,
+        "right": 306,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 9,
+        "right": 121,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 247,
+        "left": 38,
+        "right": 285,
+        "disabled": false,
+        "name": "Escolher Seguro"
+      },
+      {
+        "height": 44,
+        "width": 247,
+        "left": 38,
+        "right": 285,
+        "disabled": false,
+        "name": "Escolher Desconhecido"
+      },
+      {
+        "height": 44,
+        "width": 247,
+        "left": 38,
+        "right": 285,
+        "disabled": false,
+        "name": "Escolher Perigoso"
+      }
+    ],
+    "routeCount": 3,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "rotas",
+    "width": 320,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 360,
+    "innerWidth": 360,
+    "contentWidth": 358,
+    "contentClient": 358,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 14,
+        "right": 94.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 97.75,
+        "right": 178.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 181.5,
+        "right": 262.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 265.25,
+        "right": 346,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 9,
+        "right": 121,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 287,
+        "left": 38,
+        "right": 325,
+        "disabled": false,
+        "name": "Escolher Seguro"
+      },
+      {
+        "height": 44,
+        "width": 287,
+        "left": 38,
+        "right": 325,
+        "disabled": false,
+        "name": "Escolher Desconhecido"
+      },
+      {
+        "height": 44,
+        "width": 287,
+        "left": 38,
+        "right": 325,
+        "disabled": false,
+        "name": "Escolher Perigoso"
+      }
+    ],
+    "routeCount": 3,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "rotas",
+    "width": 360,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 375,
+    "innerWidth": 375,
+    "contentWidth": 373,
+    "contentClient": 373,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 15,
+        "right": 96.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 102.75,
+        "right": 184.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 190.5,
+        "right": 272.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 278.25,
+        "right": 360,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 9,
+        "right": 121,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 302,
+        "left": 38,
+        "right": 340,
+        "disabled": false,
+        "name": "Escolher Seguro"
+      },
+      {
+        "height": 44,
+        "width": 302,
+        "left": 38,
+        "right": 340,
+        "disabled": false,
+        "name": "Escolher Desconhecido"
+      },
+      {
+        "height": 44,
+        "width": 302,
+        "left": 38,
+        "right": 340,
+        "disabled": false,
+        "name": "Escolher Perigoso"
+      }
+    ],
+    "routeCount": 3,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "rotas",
+    "width": 375,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 390,
+    "innerWidth": 390,
+    "contentWidth": 388,
+    "contentClient": 388,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 15,
+        "right": 100.5,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 106.5,
+        "right": 192,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 198,
+        "right": 283.5,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 289.5,
+        "right": 375,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 9,
+        "right": 121,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 317,
+        "left": 38,
+        "right": 355,
+        "disabled": false,
+        "name": "Escolher Seguro"
+      },
+      {
+        "height": 44,
+        "width": 317,
+        "left": 38,
+        "right": 355,
+        "disabled": false,
+        "name": "Escolher Desconhecido"
+      },
+      {
+        "height": 44,
+        "width": 317,
+        "left": 38,
+        "right": 355,
+        "disabled": false,
+        "name": "Escolher Perigoso"
+      }
+    ],
+    "routeCount": 3,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "rotas",
+    "width": 390,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 430,
+    "innerWidth": 430,
+    "contentWidth": 428,
+    "contentClient": 428,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 15,
+        "right": 110.5,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 116.5,
+        "right": 212,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 218,
+        "right": 313.5,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 319.5,
+        "right": 415,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 9,
+        "right": 121,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 357,
+        "left": 38,
+        "right": 395,
+        "disabled": false,
+        "name": "Escolher Seguro"
+      },
+      {
+        "height": 44,
+        "width": 357,
+        "left": 38,
+        "right": 395,
+        "disabled": false,
+        "name": "Escolher Desconhecido"
+      },
+      {
+        "height": 44,
+        "width": 357,
+        "left": 38,
+        "right": 395,
+        "disabled": false,
+        "name": "Escolher Perigoso"
+      }
+    ],
+    "routeCount": 3,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "rotas",
+    "width": 430,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 720,
+    "innerWidth": 720,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 19,
+        "right": 185,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 191,
+        "right": 357,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 363,
+        "right": 529,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 535,
+        "right": 701,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 13,
+        "right": 125,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 187,
+        "left": 42,
+        "right": 229,
+        "disabled": false,
+        "name": "Escolher Seguro"
+      },
+      {
+        "height": 44,
+        "width": 187,
+        "left": 268,
+        "right": 455,
+        "disabled": false,
+        "name": "Escolher Desconhecido"
+      },
+      {
+        "height": 44,
+        "width": 187,
+        "left": 494,
+        "right": 681,
+        "disabled": false,
+        "name": "Escolher Perigoso"
+      }
+    ],
+    "routeCount": 3,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "rotas",
+    "width": 720,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 1366,
+    "innerWidth": 1366,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 342,
+        "right": 508,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 514,
+        "right": 680,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 686,
+        "right": 852,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 858,
+        "right": 1024,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 336,
+        "right": 448,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 187,
+        "left": 365,
+        "right": 552,
+        "disabled": false,
+        "name": "Escolher Seguro"
+      },
+      {
+        "height": 44,
+        "width": 187,
+        "left": 591,
+        "right": 778,
+        "disabled": false,
+        "name": "Escolher Desconhecido"
+      },
+      {
+        "height": 44,
+        "width": 187,
+        "left": 817,
+        "right": 1004,
+        "disabled": false,
+        "name": "Escolher Perigoso"
+      }
+    ],
+    "routeCount": 3,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "rotas",
+    "width": 1366,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 320,
+    "innerWidth": 320,
+    "contentWidth": 318,
+    "contentClient": 318,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 14,
+        "right": 84.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 87.75,
+        "right": 158.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 161.5,
+        "right": 232.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 235.25,
+        "right": 306,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 276,
+        "left": 22,
+        "right": 298,
+        "disabled": false,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 134,
+        "left": 22,
+        "right": 156,
+        "disabled": false,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 134,
+        "left": 164,
+        "right": 298,
+        "disabled": false,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": true,
+    "scene": "expedicao",
+    "width": 320,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 360,
+    "innerWidth": 360,
+    "contentWidth": 358,
+    "contentClient": 358,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 14,
+        "right": 94.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 97.75,
+        "right": 178.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 181.5,
+        "right": 262.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 265.25,
+        "right": 346,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 316,
+        "left": 22,
+        "right": 338,
+        "disabled": false,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 154,
+        "left": 22,
+        "right": 176,
+        "disabled": false,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 154,
+        "left": 184,
+        "right": 338,
+        "disabled": false,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": true,
+    "scene": "expedicao",
+    "width": 360,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 375,
+    "innerWidth": 375,
+    "contentWidth": 373,
+    "contentClient": 373,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 15,
+        "right": 96.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 102.75,
+        "right": 184.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 190.5,
+        "right": 272.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 278.25,
+        "right": 360,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 331,
+        "left": 22,
+        "right": 353,
+        "disabled": false,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 161.5,
+        "left": 22,
+        "right": 183.5,
+        "disabled": false,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 161.5,
+        "left": 191.5,
+        "right": 353,
+        "disabled": false,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": true,
+    "scene": "expedicao",
+    "width": 375,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 390,
+    "innerWidth": 390,
+    "contentWidth": 388,
+    "contentClient": 388,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 15,
+        "right": 100.5,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 106.5,
+        "right": 192,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 198,
+        "right": 283.5,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 289.5,
+        "right": 375,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 346,
+        "left": 22,
+        "right": 368,
+        "disabled": false,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 169,
+        "left": 22,
+        "right": 191,
+        "disabled": false,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 169,
+        "left": 199,
+        "right": 368,
+        "disabled": false,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": true,
+    "scene": "expedicao",
+    "width": 390,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 430,
+    "innerWidth": 430,
+    "contentWidth": 428,
+    "contentClient": 428,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 15,
+        "right": 110.5,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 116.5,
+        "right": 212,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 218,
+        "right": 313.5,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 319.5,
+        "right": 415,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 386,
+        "left": 22,
+        "right": 408,
+        "disabled": false,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 189,
+        "left": 22,
+        "right": 211,
+        "disabled": false,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 189,
+        "left": 219,
+        "right": 408,
+        "disabled": false,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": true,
+    "scene": "expedicao",
+    "width": 430,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 720,
+    "innerWidth": 720,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 19,
+        "right": 185,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 191,
+        "right": 357,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 363,
+        "right": 529,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 535,
+        "right": 701,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 668,
+        "left": 26,
+        "right": 694,
+        "disabled": false,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 26,
+        "right": 356,
+        "disabled": false,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 364,
+        "right": 694,
+        "disabled": false,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": true,
+    "scene": "expedicao",
+    "width": 720,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 1366,
+    "innerWidth": 1366,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 342,
+        "right": 508,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 514,
+        "right": 680,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 686,
+        "right": 852,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 858,
+        "right": 1024,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 668,
+        "left": 349,
+        "right": 1017,
+        "disabled": false,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 349,
+        "right": 679,
+        "disabled": false,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 687,
+        "right": 1017,
+        "disabled": false,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": true,
+    "scene": "expedicao",
+    "width": 1366,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 320,
+    "innerWidth": 320,
+    "contentWidth": 318,
+    "contentClient": 318,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 14,
+        "right": 84.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 87.75,
+        "right": 158.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 161.5,
+        "right": 232.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 235.25,
+        "right": 306,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 252,
+        "left": 34,
+        "right": 286,
+        "disabled": false,
+        "name": "Ajudar (1 poção de vida)"
+      },
+      {
+        "height": 44,
+        "width": 252,
+        "left": 34,
+        "right": 286,
+        "disabled": false,
+        "name": "Indicar o caminho seguro"
+      },
+      {
+        "height": 44,
+        "width": 252,
+        "left": 34,
+        "right": 286,
+        "disabled": false,
+        "name": "Seguir em frente"
+      },
+      {
+        "height": 48,
+        "width": 276,
+        "left": 22,
+        "right": 298,
+        "disabled": true,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 134,
+        "left": 22,
+        "right": 156,
+        "disabled": true,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 134,
+        "left": 164,
+        "right": 298,
+        "disabled": true,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": true,
+    "actionsBeforeArt": false,
+    "scene": "evento",
+    "width": 320,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 360,
+    "innerWidth": 360,
+    "contentWidth": 358,
+    "contentClient": 358,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 14,
+        "right": 94.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 97.75,
+        "right": 178.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 181.5,
+        "right": 262.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 265.25,
+        "right": 346,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 292,
+        "left": 34,
+        "right": 326,
+        "disabled": false,
+        "name": "Ajudar (1 poção de vida)"
+      },
+      {
+        "height": 44,
+        "width": 292,
+        "left": 34,
+        "right": 326,
+        "disabled": false,
+        "name": "Indicar o caminho seguro"
+      },
+      {
+        "height": 44,
+        "width": 292,
+        "left": 34,
+        "right": 326,
+        "disabled": false,
+        "name": "Seguir em frente"
+      },
+      {
+        "height": 48,
+        "width": 316,
+        "left": 22,
+        "right": 338,
+        "disabled": true,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 154,
+        "left": 22,
+        "right": 176,
+        "disabled": true,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 154,
+        "left": 184,
+        "right": 338,
+        "disabled": true,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": true,
+    "actionsBeforeArt": false,
+    "scene": "evento",
+    "width": 360,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 375,
+    "innerWidth": 375,
+    "contentWidth": 373,
+    "contentClient": 373,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 15,
+        "right": 96.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 102.75,
+        "right": 184.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 190.5,
+        "right": 272.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 278.25,
+        "right": 360,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 307,
+        "left": 34,
+        "right": 341,
+        "disabled": false,
+        "name": "Ajudar (1 poção de vida)"
+      },
+      {
+        "height": 44,
+        "width": 307,
+        "left": 34,
+        "right": 341,
+        "disabled": false,
+        "name": "Indicar o caminho seguro"
+      },
+      {
+        "height": 44,
+        "width": 307,
+        "left": 34,
+        "right": 341,
+        "disabled": false,
+        "name": "Seguir em frente"
+      },
+      {
+        "height": 48,
+        "width": 331,
+        "left": 22,
+        "right": 353,
+        "disabled": true,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 161.5,
+        "left": 22,
+        "right": 183.5,
+        "disabled": true,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 161.5,
+        "left": 191.5,
+        "right": 353,
+        "disabled": true,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": true,
+    "actionsBeforeArt": false,
+    "scene": "evento",
+    "width": 375,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 390,
+    "innerWidth": 390,
+    "contentWidth": 388,
+    "contentClient": 388,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 15,
+        "right": 100.5,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 106.5,
+        "right": 192,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 198,
+        "right": 283.5,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 289.5,
+        "right": 375,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 322,
+        "left": 34,
+        "right": 356,
+        "disabled": false,
+        "name": "Ajudar (1 poção de vida)"
+      },
+      {
+        "height": 44,
+        "width": 322,
+        "left": 34,
+        "right": 356,
+        "disabled": false,
+        "name": "Indicar o caminho seguro"
+      },
+      {
+        "height": 44,
+        "width": 322,
+        "left": 34,
+        "right": 356,
+        "disabled": false,
+        "name": "Seguir em frente"
+      },
+      {
+        "height": 48,
+        "width": 346,
+        "left": 22,
+        "right": 368,
+        "disabled": true,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 169,
+        "left": 22,
+        "right": 191,
+        "disabled": true,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 169,
+        "left": 199,
+        "right": 368,
+        "disabled": true,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": true,
+    "actionsBeforeArt": false,
+    "scene": "evento",
+    "width": 390,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 430,
+    "innerWidth": 430,
+    "contentWidth": 428,
+    "contentClient": 428,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 15,
+        "right": 110.5,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 116.5,
+        "right": 212,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 218,
+        "right": 313.5,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 319.5,
+        "right": 415,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 362,
+        "left": 34,
+        "right": 396,
+        "disabled": false,
+        "name": "Ajudar (1 poção de vida)"
+      },
+      {
+        "height": 44,
+        "width": 362,
+        "left": 34,
+        "right": 396,
+        "disabled": false,
+        "name": "Indicar o caminho seguro"
+      },
+      {
+        "height": 44,
+        "width": 362,
+        "left": 34,
+        "right": 396,
+        "disabled": false,
+        "name": "Seguir em frente"
+      },
+      {
+        "height": 48,
+        "width": 386,
+        "left": 22,
+        "right": 408,
+        "disabled": true,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 189,
+        "left": 22,
+        "right": 211,
+        "disabled": true,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 189,
+        "left": 219,
+        "right": 408,
+        "disabled": true,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": true,
+    "actionsBeforeArt": false,
+    "scene": "evento",
+    "width": 430,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 720,
+    "innerWidth": 720,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 19,
+        "right": 185,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 191,
+        "right": 357,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 363,
+        "right": 529,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 535,
+        "right": 701,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 644,
+        "left": 38,
+        "right": 682,
+        "disabled": false,
+        "name": "Ajudar (1 poção de vida)"
+      },
+      {
+        "height": 44,
+        "width": 644,
+        "left": 38,
+        "right": 682,
+        "disabled": false,
+        "name": "Indicar o caminho seguro"
+      },
+      {
+        "height": 44,
+        "width": 644,
+        "left": 38,
+        "right": 682,
+        "disabled": false,
+        "name": "Seguir em frente"
+      },
+      {
+        "height": 48,
+        "width": 668,
+        "left": 26,
+        "right": 694,
+        "disabled": true,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 26,
+        "right": 356,
+        "disabled": true,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 364,
+        "right": 694,
+        "disabled": true,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": true,
+    "actionsBeforeArt": false,
+    "scene": "evento",
+    "width": 720,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 1366,
+    "innerWidth": 1366,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 342,
+        "right": 508,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 514,
+        "right": 680,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 686,
+        "right": 852,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 858,
+        "right": 1024,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 644,
+        "left": 361,
+        "right": 1005,
+        "disabled": false,
+        "name": "Ajudar (1 poção de vida)"
+      },
+      {
+        "height": 44,
+        "width": 644,
+        "left": 361,
+        "right": 1005,
+        "disabled": false,
+        "name": "Indicar o caminho seguro"
+      },
+      {
+        "height": 44,
+        "width": 644,
+        "left": 361,
+        "right": 1005,
+        "disabled": false,
+        "name": "Seguir em frente"
+      },
+      {
+        "height": 48,
+        "width": 668,
+        "left": 349,
+        "right": 1017,
+        "disabled": true,
+        "name": "CONTINUAR EXPLORANDO"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 349,
+        "right": 679,
+        "disabled": true,
+        "name": "Acampamento"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 687,
+        "right": 1017,
+        "disabled": true,
+        "name": "Voltar à cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": true,
+    "actionsBeforeArt": false,
+    "scene": "evento",
+    "width": 1366,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 320,
+    "innerWidth": 320,
+    "contentWidth": 318,
+    "contentClient": 318,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 14,
+        "right": 84.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 87.75,
+        "right": 158.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 161.5,
+        "right": 232.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 235.25,
+        "right": 306,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 9,
+        "right": 121,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 276,
+        "left": 22,
+        "right": 298,
+        "disabled": true,
+        "name": "Descansar (10 ouro)"
+      },
+      {
+        "height": 44,
+        "width": 134,
+        "left": 22,
+        "right": 156,
+        "disabled": false,
+        "name": "Usar vida (3)"
+      },
+      {
+        "height": 44,
+        "width": 134,
+        "left": 164,
+        "right": 298,
+        "disabled": false,
+        "name": "Usar mana (2)"
+      },
+      {
+        "height": 44,
+        "width": 134,
+        "left": 22,
+        "right": 156,
+        "disabled": true,
+        "name": "Usar elixir (0)"
+      },
+      {
+        "height": 44,
+        "width": 276,
+        "left": 22,
+        "right": 298,
+        "disabled": false,
+        "name": "Voltar ao caminho"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "acampamento",
+    "width": 320,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 360,
+    "innerWidth": 360,
+    "contentWidth": 358,
+    "contentClient": 358,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 14,
+        "right": 94.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 97.75,
+        "right": 178.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 181.5,
+        "right": 262.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 265.25,
+        "right": 346,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 9,
+        "right": 121,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 316,
+        "left": 22,
+        "right": 338,
+        "disabled": true,
+        "name": "Descansar (10 ouro)"
+      },
+      {
+        "height": 44,
+        "width": 154,
+        "left": 22,
+        "right": 176,
+        "disabled": false,
+        "name": "Usar vida (3)"
+      },
+      {
+        "height": 44,
+        "width": 154,
+        "left": 184,
+        "right": 338,
+        "disabled": false,
+        "name": "Usar mana (2)"
+      },
+      {
+        "height": 44,
+        "width": 154,
+        "left": 22,
+        "right": 176,
+        "disabled": true,
+        "name": "Usar elixir (0)"
+      },
+      {
+        "height": 44,
+        "width": 316,
+        "left": 22,
+        "right": 338,
+        "disabled": false,
+        "name": "Voltar ao caminho"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "acampamento",
+    "width": 360,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 375,
+    "innerWidth": 375,
+    "contentWidth": 373,
+    "contentClient": 373,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 15,
+        "right": 96.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 102.75,
+        "right": 184.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 190.5,
+        "right": 272.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 278.25,
+        "right": 360,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 9,
+        "right": 121,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 331,
+        "left": 22,
+        "right": 353,
+        "disabled": true,
+        "name": "Descansar (10 ouro)"
+      },
+      {
+        "height": 44,
+        "width": 161.5,
+        "left": 22,
+        "right": 183.5,
+        "disabled": false,
+        "name": "Usar vida (3)"
+      },
+      {
+        "height": 44,
+        "width": 161.5,
+        "left": 191.5,
+        "right": 353,
+        "disabled": false,
+        "name": "Usar mana (2)"
+      },
+      {
+        "height": 44,
+        "width": 161.5,
+        "left": 22,
+        "right": 183.5,
+        "disabled": true,
+        "name": "Usar elixir (0)"
+      },
+      {
+        "height": 44,
+        "width": 331,
+        "left": 22,
+        "right": 353,
+        "disabled": false,
+        "name": "Voltar ao caminho"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "acampamento",
+    "width": 375,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 390,
+    "innerWidth": 390,
+    "contentWidth": 388,
+    "contentClient": 388,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 15,
+        "right": 100.5,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 106.5,
+        "right": 192,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 198,
+        "right": 283.5,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 289.5,
+        "right": 375,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 9,
+        "right": 121,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 346,
+        "left": 22,
+        "right": 368,
+        "disabled": true,
+        "name": "Descansar (10 ouro)"
+      },
+      {
+        "height": 44,
+        "width": 169,
+        "left": 22,
+        "right": 191,
+        "disabled": false,
+        "name": "Usar vida (3)"
+      },
+      {
+        "height": 44,
+        "width": 169,
+        "left": 199,
+        "right": 368,
+        "disabled": false,
+        "name": "Usar mana (2)"
+      },
+      {
+        "height": 44,
+        "width": 169,
+        "left": 22,
+        "right": 191,
+        "disabled": true,
+        "name": "Usar elixir (0)"
+      },
+      {
+        "height": 44,
+        "width": 346,
+        "left": 22,
+        "right": 368,
+        "disabled": false,
+        "name": "Voltar ao caminho"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "acampamento",
+    "width": 390,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 430,
+    "innerWidth": 430,
+    "contentWidth": 428,
+    "contentClient": 428,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 15,
+        "right": 110.5,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 116.5,
+        "right": 212,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 218,
+        "right": 313.5,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 319.5,
+        "right": 415,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 9,
+        "right": 121,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 386,
+        "left": 22,
+        "right": 408,
+        "disabled": true,
+        "name": "Descansar (10 ouro)"
+      },
+      {
+        "height": 44,
+        "width": 189,
+        "left": 22,
+        "right": 211,
+        "disabled": false,
+        "name": "Usar vida (3)"
+      },
+      {
+        "height": 44,
+        "width": 189,
+        "left": 219,
+        "right": 408,
+        "disabled": false,
+        "name": "Usar mana (2)"
+      },
+      {
+        "height": 44,
+        "width": 189,
+        "left": 22,
+        "right": 211,
+        "disabled": true,
+        "name": "Usar elixir (0)"
+      },
+      {
+        "height": 44,
+        "width": 386,
+        "left": 22,
+        "right": 408,
+        "disabled": false,
+        "name": "Voltar ao caminho"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "acampamento",
+    "width": 430,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 720,
+    "innerWidth": 720,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 19,
+        "right": 185,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 191,
+        "right": 357,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 363,
+        "right": 529,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 535,
+        "right": 701,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 13,
+        "right": 125,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 668,
+        "left": 26,
+        "right": 694,
+        "disabled": true,
+        "name": "Descansar (10 ouro)"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 26,
+        "right": 356,
+        "disabled": false,
+        "name": "Usar vida (3)"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 364,
+        "right": 694,
+        "disabled": false,
+        "name": "Usar mana (2)"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 26,
+        "right": 356,
+        "disabled": true,
+        "name": "Usar elixir (0)"
+      },
+      {
+        "height": 44,
+        "width": 668,
+        "left": 26,
+        "right": 694,
+        "disabled": false,
+        "name": "Voltar ao caminho"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "acampamento",
+    "width": 720,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 1366,
+    "innerWidth": 1366,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 342,
+        "right": 508,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 514,
+        "right": 680,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 686,
+        "right": 852,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 858,
+        "right": 1024,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 44,
+        "width": 112,
+        "left": 336,
+        "right": 448,
+        "disabled": false,
+        "name": "< VOLTAR"
+      },
+      {
+        "height": 44,
+        "width": 668,
+        "left": 349,
+        "right": 1017,
+        "disabled": true,
+        "name": "Descansar (10 ouro)"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 349,
+        "right": 679,
+        "disabled": false,
+        "name": "Usar vida (3)"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 687,
+        "right": 1017,
+        "disabled": false,
+        "name": "Usar mana (2)"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 349,
+        "right": 679,
+        "disabled": true,
+        "name": "Usar elixir (0)"
+      },
+      {
+        "height": 44,
+        "width": 668,
+        "left": 349,
+        "right": 1017,
+        "disabled": false,
+        "name": "Voltar ao caminho"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "acampamento",
+    "width": 1366,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 320,
+    "innerWidth": 320,
+    "contentWidth": 318,
+    "contentClient": 318,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 14,
+        "right": 84.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 87.75,
+        "right": 158.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 161.5,
+        "right": 232.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 70.75,
+        "left": 235.25,
+        "right": 306,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 276,
+        "left": 22,
+        "right": 298,
+        "disabled": false,
+        "name": "Retomar expedição"
+      },
+      {
+        "height": 44,
+        "width": 134,
+        "left": 22,
+        "right": 156,
+        "disabled": false,
+        "name": "Selecionar mapa"
+      },
+      {
+        "height": 44,
+        "width": 134,
+        "left": 164,
+        "right": 298,
+        "disabled": false,
+        "name": "Visitar cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "aventura",
+    "width": 320,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 360,
+    "innerWidth": 360,
+    "contentWidth": 358,
+    "contentClient": 358,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 14,
+        "right": 94.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 97.75,
+        "right": 178.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 181.5,
+        "right": 262.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 80.75,
+        "left": 265.25,
+        "right": 346,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 316,
+        "left": 22,
+        "right": 338,
+        "disabled": false,
+        "name": "Retomar expedição"
+      },
+      {
+        "height": 44,
+        "width": 154,
+        "left": 22,
+        "right": 176,
+        "disabled": false,
+        "name": "Selecionar mapa"
+      },
+      {
+        "height": 44,
+        "width": 154,
+        "left": 184,
+        "right": 338,
+        "disabled": false,
+        "name": "Visitar cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "aventura",
+    "width": 360,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 375,
+    "innerWidth": 375,
+    "contentWidth": 373,
+    "contentClient": 373,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 15,
+        "right": 96.75,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 102.75,
+        "right": 184.5,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 190.5,
+        "right": 272.25,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 81.75,
+        "left": 278.25,
+        "right": 360,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 331,
+        "left": 22,
+        "right": 353,
+        "disabled": false,
+        "name": "Retomar expedição"
+      },
+      {
+        "height": 44,
+        "width": 161.5,
+        "left": 22,
+        "right": 183.5,
+        "disabled": false,
+        "name": "Selecionar mapa"
+      },
+      {
+        "height": 44,
+        "width": 161.5,
+        "left": 191.5,
+        "right": 353,
+        "disabled": false,
+        "name": "Visitar cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "aventura",
+    "width": 375,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 390,
+    "innerWidth": 390,
+    "contentWidth": 388,
+    "contentClient": 388,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 15,
+        "right": 100.5,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 106.5,
+        "right": 192,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 198,
+        "right": 283.5,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 85.5,
+        "left": 289.5,
+        "right": 375,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 346,
+        "left": 22,
+        "right": 368,
+        "disabled": false,
+        "name": "Retomar expedição"
+      },
+      {
+        "height": 44,
+        "width": 169,
+        "left": 22,
+        "right": 191,
+        "disabled": false,
+        "name": "Selecionar mapa"
+      },
+      {
+        "height": 44,
+        "width": 169,
+        "left": 199,
+        "right": 368,
+        "disabled": false,
+        "name": "Visitar cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "aventura",
+    "width": 390,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 430,
+    "innerWidth": 430,
+    "contentWidth": 428,
+    "contentClient": 428,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 15,
+        "right": 110.5,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 116.5,
+        "right": 212,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 218,
+        "right": 313.5,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 95.5,
+        "left": 319.5,
+        "right": 415,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 386,
+        "left": 22,
+        "right": 408,
+        "disabled": false,
+        "name": "Retomar expedição"
+      },
+      {
+        "height": 44,
+        "width": 189,
+        "left": 22,
+        "right": 211,
+        "disabled": false,
+        "name": "Selecionar mapa"
+      },
+      {
+        "height": 44,
+        "width": 189,
+        "left": 219,
+        "right": 408,
+        "disabled": false,
+        "name": "Visitar cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "aventura",
+    "width": 430,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 720,
+    "innerWidth": 720,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 19,
+        "right": 185,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 191,
+        "right": 357,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 363,
+        "right": 529,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 535,
+        "right": 701,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 668,
+        "left": 26,
+        "right": 694,
+        "disabled": false,
+        "name": "Retomar expedição"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 26,
+        "right": 356,
+        "disabled": false,
+        "name": "Selecionar mapa"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 364,
+        "right": 694,
+        "disabled": false,
+        "name": "Visitar cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "aventura",
+    "width": 720,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  },
+  {
+    "documentWidth": 1366,
+    "innerWidth": 1366,
+    "contentWidth": 718,
+    "contentClient": 718,
+    "buttonRects": [
+      {
+        "height": 44,
+        "width": 166,
+        "left": 342,
+        "right": 508,
+        "disabled": false,
+        "name": "Aventura"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 514,
+        "right": 680,
+        "disabled": false,
+        "name": "Personagem"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 686,
+        "right": 852,
+        "disabled": false,
+        "name": "Diário"
+      },
+      {
+        "height": 44,
+        "width": 166,
+        "left": 858,
+        "right": 1024,
+        "disabled": false,
+        "name": "Mundo"
+      },
+      {
+        "height": 48,
+        "width": 668,
+        "left": 349,
+        "right": 1017,
+        "disabled": false,
+        "name": "Retomar expedição"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 349,
+        "right": 679,
+        "disabled": false,
+        "name": "Selecionar mapa"
+      },
+      {
+        "height": 44,
+        "width": 330,
+        "left": 687,
+        "right": 1017,
+        "disabled": false,
+        "name": "Visitar cidade"
+      }
+    ],
+    "routeCount": 0,
+    "eventBeforeActions": null,
+    "actionsBeforeArt": null,
+    "scene": "aventura",
+    "width": 1366,
+    "overflow": false,
+    "shortButton": false,
+    "offscreenButton": false
+  }
+]

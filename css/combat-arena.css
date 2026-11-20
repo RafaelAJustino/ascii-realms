@@ -1,0 +1,71 @@
+/* Arena unificada. Todas as coordenadas dos efeitos pertencem a este elemento. */
+.combat-content{overflow-x:hidden!important;overflow-y:auto!important;scrollbar-width:thin}
+.combat-stage{
+ display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+ grid-template-rows:minmax(184px,1fr) auto minmax(32px,.15fr)!important;
+ gap:6px!important;height:100%;min-width:0;min-height:0;overflow:visible!important;
+}
+.combat-arena{
+ position:relative;isolation:isolate;min-width:0;min-height:184px;width:100%;height:100%;
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+ grid-template-rows:minmax(0,1fr) minmax(0,1fr);gap:0;
+ background:radial-gradient(ellipse at 50% 52%,#26342e90 0%,#111c20 65%,#0d171d 100%);
+ border:1px solid var(--border,#40574e);border-radius:7px;overflow:hidden;
+}
+.combat-arena::before{
+ content:'';position:absolute;inset:7px;border:1px solid #7ea78924;border-radius:4px;pointer-events:none;
+}
+.combat-arena::after{
+ content:'';position:absolute;left:9%;right:9%;top:50%;height:1px;
+ background:linear-gradient(90deg,transparent,#9ab8a524,transparent);pointer-events:none;
+}
+.combat-arena-status{z-index:3;min-width:0;min-height:0;align-self:stretch;overflow:hidden;padding:clamp(5px,1.5vw,10px);display:flex;flex-direction:column;gap:3px}
+.combat-enemy-status{grid-area:1/1;align-items:stretch;justify-content:flex-start}
+.combat-player-status{grid-area:2/2;align-items:stretch;justify-content:flex-end}
+.combat-arena-status h3{margin:0!important;padding:0!important;font-size:clamp(10px,2.25vw,13px)!important;line-height:1.15;overflow-wrap:anywhere;color:var(--accent,#a5e5b5)}
+.combat-arena-level{margin:0;color:var(--muted,#9daaaa);font-size:clamp(9px,1.9vw,11px);line-height:1.1}
+.combat-arena-status .resource-meter{width:100%;min-width:0;gap:3px;display:grid;grid-template-columns:21px minmax(0,1fr);align-items:center;font-size:clamp(8px,2vw,11px)}
+.combat-arena-status .resource-label{grid-column:1;grid-row:1;font-size:inherit}
+.combat-arena-status .resource-track{grid-column:2;grid-row:1;min-width:0;height:7px}
+.combat-arena-status .resource-value{grid-column:2;grid-row:2;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-size:clamp(8px,1.9vw,11px)}
+.combat-arena-status .boss-phase,.combat-arena-status .combat-warning{margin:2px 0 0;padding:3px 4px;max-height:44%;overflow:auto;font-size:clamp(8px,1.85vw,10px);line-height:1.15}
+.combat-arena-status .boss-warning{padding:2px;margin:2px 0}
+.combat-arena .combat-enemy,.combat-arena .combat-player{position:relative;z-index:2;min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.combat-arena .combat-enemy{grid-area:1/2;align-self:stretch;justify-self:stretch}
+.combat-arena .combat-player{grid-area:2/1;align-self:stretch;justify-self:stretch}
+.combat-arena .ascii-container{width:100%;height:100%;max-width:100%;max-height:100%;flex:1 1 auto;overflow:hidden;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0}
+.combat-arena .ascii-art{white-space:pre!important;margin:0!important;line-height:1!important;letter-spacing:0!important;font-variant-ligatures:none;flex:none;max-width:none!important}
+.combat-arena .combat-effects{position:absolute;inset:0;z-index:7;pointer-events:none;overflow:hidden}
+.combat-arena .floating-damage{z-index:10;top:19%;right:7%;font-size:clamp(12px,3vw,20px);line-height:1;white-space:nowrap;color:#ff9b8d;animation:float-damage .65s ease-out forwards}
+.combat-arena .floating-damage.heal{color:#84e8b0}
+.combat-arena .combat-player .floating-damage{right:7%;top:28%}
+.combat-arena .combat-reaction{z-index:11;right:7%;top:20%;font-size:clamp(10px,2.5vw,14px)}
+.combat-arena .combat-player .combat-reaction{top:26%}
+.combat-stage>.panel{margin:0!important;min-height:0;min-width:0;padding:4px 7px!important;overflow:hidden;display:flex;flex-direction:column}
+.combat-stage>.panel h3{margin:0 0 2px;font-size:11px;line-height:1.15}
+.combat-stage>.panel:last-child{min-height:32px;max-height:90px}
+.combat-stage>.panel:last-child .log{min-height:0;overflow-y:auto}
+.combat-stage>.panel:nth-child(2){overflow-y:auto!important;max-height:38dvh}
+.combat-stage .combat-speed-options{margin:1px 0 4px;gap:8px}
+.combat-stage .combat-attacks{gap:8px}
+.combat-stage .combat-skills-grid{gap:8px!important;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,42px)!important}
+.combat-stage .combat-attack-basic-row{height:42px!important}
+.combat-stage .combat-attack-basic-row button,.combat-stage .combat-skills-grid button{height:42px!important;max-height:50px!important}
+.combat-stage .combat-menu-grid,.combat-stage .combat-back-row,.combat-stage .combat-extra-grid{gap:8px}
+.combat-stage .combat-menu-grid button,.combat-stage .combat-back-row button,.combat-stage .combat-extra-grid button{max-height:50px!important}
+.combat-stage .combat-extra-title{font-size:10px}
+@media(max-width:430px){
+ .combat-stage{gap:4px!important}
+ .combat-arena-status{padding:5px;gap:2px}
+ .combat-arena-status .resource-meter{grid-template-columns:18px minmax(0,1fr);gap:2px}
+ .combat-arena-status .resource-track{height:6px}
+ .combat-arena-status .boss-phase{max-height:35%}
+}
+@media(max-height:670px){
+ .combat-stage{grid-template-rows:minmax(156px,1fr) auto minmax(24px,.12fr)!important;gap:3px!important}
+ .combat-arena{min-height:156px}
+ .combat-stage>.panel:last-child{max-height:55px;min-height:24px}
+ .combat-stage>.panel:nth-child(2){max-height:43dvh}
+}
+@media(max-height:510px){.combat-stage{height:auto;grid-template-rows:156px auto 40px!important}.combat-arena{height:156px}}
+@media(prefers-reduced-motion:reduce){.combat-arena .floating-damage{animation:none}}

@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+const store=new Map();
+globalThis.localStorage={getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)};
+const app={innerHTML:'',addEventListener(){},querySelector(){return null},querySelectorAll(){return []}};
+globalThis.document={querySelector:s=>s==='#app'?app:null};globalThis.window={addEventListener(){}};globalThis.requestAnimationFrame=f=>f();
+const {rt}=await import('../js/runtime.js');
+const {newGame}=await import('../js/player.js');
+const {selectPath,chooseEventOption}=await import('../js/exploration.js');
+const {load}=await import('../js/storage.js');
+const {KEY}=await import('../js/data.js');
+const {regionSpecies}=await import('../js/expanded-species.js');
+newGame('Caminhante','guerreiro');selectPath('unknown');
+rt.state.journey.event='road-toll';rt.screen='journey';
+const before=rt.state.gold;
+assert.equal(chooseEventOption('road-toll','fight'),true);
+assert.equal(rt.screen,'combat');assert.equal(rt.state.combat.enemy.humanoid,true);
+assert.ok(regionSpecies(0).some(s=>s.id===rt.state.combat.enemy.speciesId));
+assert.equal(rt.state.journey.event,null);
+assert.equal(rt.state.narrative.decisions['road-toll'],'fight');
+assert.equal(rt.state.gold,before);
+assert.equal(chooseEventOption('road-toll','fight'),false);
+const saved=JSON.parse(store.get(KEY));assert.equal(saved.narrative.decisions['road-toll'],'fight');
+// A recarga não reabre automaticamente o combate nem recria a recompensa.
+rt.state=null;assert.equal(load(),true);assert.equal(rt.state.combat,null);
+assert.equal(rt.state.narrative.completed.filter(x=>x==='road-toll').length,1);
+console.log('OK: escolha de luta aciona humanoide regional, salva decisão única e recupera sem combate duplicado.');

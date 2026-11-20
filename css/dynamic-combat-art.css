@@ -1,0 +1,18 @@
+/* Partes individuais do avatar obedecem à raridade do equipamento real. */
+.dynamic-hero{color:#a5e5b5}
+.dynamic-hero .avatar-ink{color:inherit}
+.dynamic-hero [class*="-common"]{color:#b7bfc7}
+.dynamic-hero [class*="-uncommon"]{color:#75cf83}
+.dynamic-hero [class*="-rare"]{color:#77b7f9}
+.dynamic-hero [class*="-epic"]{color:#c59bfb}
+.dynamic-hero [class*="-legendary"]{color:#f5cb64}
+.dynamic-hero .avatar-weapon-base{color:#d6e4d5}
+.combat-stage{position:relative;isolation:isolate}
+.combat-fx-layer{position:absolute;inset:0;z-index:8;pointer-events:none;overflow:hidden;contain:layout}
+.combat-fx{position:absolute;white-space:pre;color:#ddf8cc;text-shadow:0 0 5px currentColor;font:700 12px/1 var(--font);letter-spacing:0}
+.combat-fx-fire,.combat-fx-meteor{color:#ffaa71}.combat-fx-ice{color:#95d6f9}
+.combat-fx-electric,.combat-fx-storm{color:#f6de80}.combat-fx-poison{color:#9ce785}
+.combat-fx-heal,.combat-fx-barrier{color:#85edbb}
+.combat-reaction{position:absolute;z-index:9;right:8%;top:32%;font:700 12px/1.1 var(--font);color:#f4b1a4;pointer-events:none;text-shadow:0 2px 4px #000}
+.combat-reaction.heal{color:#7cf0a8}.combat-reaction.dodge{color:#b2dcfa}.combat-reaction.block{color:#d6d6d6}.combat-reaction.critical{color:#fcd581}
+@media(prefers-reduced-motion:reduce){.combat-fx,.combat-reaction{animation:none!important;transition:none!important}}

@@ -1,0 +1,12 @@
+import {writeFileSync} from 'node:fs';
+import {maps} from './js/data.js';
+import {LOCAL_NPCS,RECURRING_NPCS} from './js/city-life.js';
+import {TAVERN_GUESTS} from './js/tavern-stories.js';
+import {NPC_PORTRAITS,INTERIOR_ART,INTERIOR_TYPES} from './js/density-settlements.js';
+const escape=x=>String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const npcs=[...LOCAL_NPCS,...RECURRING_NPCS,...TAVERN_GUESTS];
+const inside=maps.flatMap((m,r)=>INTERIOR_TYPES.map(type=>({id:r+':'+type,label:m[1]+' · '+({tavern:'Taverna',forge:'Ferraria',weapon:'Armas',armor:'Armaduras',accessory:'Acessórios',potion:'Poções',materials:'Mercado'}[type])})));
+const cards=(items,arts)=>items.map(i=>`<article><h2>${escape(i.label||i.name)} <small>${escape(i.id)}</small></h2><div class="artbox"><pre>${escape(arts[i.id])}</pre></div></article>`).join('');
+const html=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ASCII REALMS - NPCs e Interiores</title><style>body{margin:0;padding:16px;background:#0c1119;color:#e8dfcb;font:14px system-ui;max-width:1280px;margin:auto}nav{position:sticky;top:0;background:#111923;padding:12px;z-index:2}a{color:#e7bd80;margin-right:14px}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:16px}article{min-width:0;background:#18202c;border:1px solid #45505c;padding:12px;border-radius:8px}h2{font-size:14px}small{color:#aaa;font-size:11px}.artbox{width:100%;overflow:auto;background:#070b11;border-radius:4px}pre{font-family:Consolas,'Liberation Mono',monospace;line-height:1.05;font-size:clamp(3px,.65vw,7px);white-space:pre;font-weight:400;letter-spacing:0;margin:10px auto;display:table}h1{font-size:20px}</style></head><body><nav><a href="#npc">NPCs (32)</a><a href="#inside">Interiores (70)</a></nav><h1 id="npc">Retratos ASCII: moradores e visitantes</h1><main>${cards(npcs,NPC_PORTRAITS)}</main><h1 id="inside">Interiores dos estabelecimentos</h1><main>${cards(inside,INTERIOR_ART)}</main></body></html>`;
+writeFileSync('docs/galeria-npcs-estabelecimentos.html',html);
+console.log('Galeria criada:',npcs.length,'retratos e',inside.length,'interiores.');

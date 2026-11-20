@@ -1,0 +1,5 @@
+/* Etapa 8: informações de preparação e efeitos ativos sem deslocar o layout. */
+.epic8-danger,.epic8-effects{box-sizing:border-box;max-width:100%;min-width:0;border:1px solid var(--border,#3b5149);border-radius:5px;padding:8px 10px;margin:8px 0;overflow-wrap:anywhere;line-height:1.45}
+.epic8-danger b{color:var(--gold,#ffdc91)}
+.epic8-effects{border-color:var(--danger,#c87777)}
+@media(max-width:359px){.epic8-danger,.epic8-effects{font-size:11px;padding:7px 8px}}

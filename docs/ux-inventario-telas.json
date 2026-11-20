@@ -1,0 +1,143 @@
+{
+  "source": "js/ui.js",
+  "screenCount": 25,
+  "screens": [
+    {
+      "id": "home",
+      "group": "Aventura",
+      "purpose": "Continuar ou iniciar jogo"
+    },
+    {
+      "id": "create",
+      "group": "Aventura",
+      "purpose": "Criar classe e nome"
+    },
+    {
+      "id": "world",
+      "group": "Aventura",
+      "purpose": "Tela principal da aventura"
+    },
+    {
+      "id": "paths",
+      "group": "Aventura",
+      "purpose": "Escolha entre caminhos"
+    },
+    {
+      "id": "journey",
+      "group": "Aventura",
+      "purpose": "Exploração persistente e eventos"
+    },
+    {
+      "id": "camp",
+      "group": "Aventura",
+      "purpose": "Descanso e consumíveis"
+    },
+    {
+      "id": "merchant",
+      "group": "Aventura",
+      "purpose": "Mercador de jornada e loja"
+    },
+    {
+      "id": "combat",
+      "group": "Aventura",
+      "purpose": "Arena diagonal e ações por turno"
+    },
+    {
+      "id": "result",
+      "group": "Aventura",
+      "purpose": "Resultado e continuidade"
+    },
+    {
+      "id": "player",
+      "group": "Personagem",
+      "purpose": "Menu de desenvolvimento"
+    },
+    {
+      "id": "character",
+      "group": "Personagem",
+      "purpose": "Distribuição de atributos e avatar"
+    },
+    {
+      "id": "inventory",
+      "group": "Personagem",
+      "purpose": "Itens e equipamentos"
+    },
+    {
+      "id": "skills",
+      "group": "Personagem",
+      "purpose": "Habilidades, passivas e variantes"
+    },
+    {
+      "id": "specializations",
+      "group": "Personagem",
+      "purpose": "Especialização"
+    },
+    {
+      "id": "achievements",
+      "group": "Personagem",
+      "purpose": "Títulos e conquistas"
+    },
+    {
+      "id": "statistics",
+      "group": "Personagem",
+      "purpose": "Estatísticas"
+    },
+    {
+      "id": "quests",
+      "group": "Diário",
+      "purpose": "Missões clássicas, narrativas e procedurais"
+    },
+    {
+      "id": "bestiary",
+      "group": "Diário",
+      "purpose": "Descobertas de criaturas"
+    },
+    {
+      "id": "secrets",
+      "group": "Diário",
+      "purpose": "Descobertas e segredos"
+    },
+    {
+      "id": "maps",
+      "group": "Mundo",
+      "purpose": "Regiões e mapas"
+    },
+    {
+      "id": "city",
+      "group": "Mundo",
+      "purpose": "Cidade e serviços"
+    },
+    {
+      "id": "tavern",
+      "group": "Mundo",
+      "purpose": "NPCs, contratos e eventos"
+    },
+    {
+      "id": "forge",
+      "group": "Mundo",
+      "purpose": "Crafting, evolução e refino"
+    },
+    {
+      "id": "dungeons",
+      "group": "Mundo",
+      "purpose": "Seleção de masmorras"
+    },
+    {
+      "id": "dungeon",
+      "group": "Mundo",
+      "purpose": "Expedição em masmorra"
+    }
+  ],
+  "phases": 9,
+  "completedPhases": [
+    1,
+    2
+  ],
+  "mobilePriorityWidths": [
+    320,
+    360,
+    375,
+    390,
+    430
+  ]
+}

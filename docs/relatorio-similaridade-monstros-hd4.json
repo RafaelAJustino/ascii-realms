@@ -1,0 +1,85 @@
+{
+  "species": 150,
+  "pairs": 11175,
+  "above_0_92": 82,
+  "above_0_98": 0,
+  "maximum_iou": 0.9773,
+  "top_15": [
+    {
+      "a": "Besouro Solar",
+      "b": "Escaravelho Dourado",
+      "iou": 0.9773
+    },
+    {
+      "a": "Ídolo Envenenado",
+      "b": "Guardião de Mármore",
+      "iou": 0.97446
+    },
+    {
+      "a": "Saqueador da Mata",
+      "b": "Saqueador do Oásis",
+      "iou": 0.9721
+    },
+    {
+      "a": "Ídolo Envenenado",
+      "b": "Colosso do Esquecimento",
+      "iou": 0.96805
+    },
+    {
+      "a": "Diabrete",
+      "b": "Predador Abissal",
+      "iou": 0.96713
+    },
+    {
+      "a": "Armadura Profana",
+      "b": "Guardião do Véu",
+      "iou": 0.95907
+    },
+    {
+      "a": "Lagarto de Vidro",
+      "b": "Crocodilo do Lodo",
+      "iou": 0.95832
+    },
+    {
+      "a": "Gárgula de Basalto",
+      "b": "Diabrete",
+      "iou": 0.9579
+    },
+    {
+      "a": "Titã de Rocha",
+      "b": "Armadura Profana",
+      "iou": 0.95784
+    },
+    {
+      "a": "Colosso de Geada",
+      "b": "Estátua Animada",
+      "iou": 0.95564
+    },
+    {
+      "a": "Necromante Errante",
+      "b": "Profeta Desfeito",
+      "iou": 0.95432
+    },
+    {
+      "a": "Crocodilo do Lodo",
+      "b": "Salamandra",
+      "iou": 0.95293
+    },
+    {
+      "a": "Lagarto de Vidro",
+      "b": "Salamandra",
+      "iou": 0.9524
+    },
+    {
+      "a": "Titã de Rocha",
+      "b": "Golem de Lava",
+      "iou": 0.95229
+    },
+    {
+      "a": "Desertor do Fim",
+      "b": "Saqueador do Vazio",
+      "iou": 0.95208
+    }
+  ],
+  "note": "Sobreposicao de area nao e medida definitiva de semelhanca artistica. Revisao visual individual pendente."
+}

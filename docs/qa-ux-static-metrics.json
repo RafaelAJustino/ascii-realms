@@ -1,0 +1,905 @@
+[
+  {
+    "screen": "home",
+    "width": 320,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Criar novo personagem",
+        "height": 48,
+        "right": 298,
+        "left": 22
+      },
+      {
+        "label": "Continuar aventura",
+        "height": 44,
+        "right": 298,
+        "left": 22
+      },
+      {
+        "label": "Excluir progresso salvo",
+        "height": 44,
+        "right": 298,
+        "left": 22
+      }
+    ],
+    "nextStep": null,
+    "viewport": 320
+  },
+  {
+    "screen": "home",
+    "width": 360,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Criar novo personagem",
+        "height": 48,
+        "right": 338,
+        "left": 22
+      },
+      {
+        "label": "Continuar aventura",
+        "height": 44,
+        "right": 338,
+        "left": 22
+      },
+      {
+        "label": "Excluir progresso salvo",
+        "height": 44,
+        "right": 338,
+        "left": 22
+      }
+    ],
+    "nextStep": null,
+    "viewport": 360
+  },
+  {
+    "screen": "home",
+    "width": 375,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Criar novo personagem",
+        "height": 48,
+        "right": 353,
+        "left": 22
+      },
+      {
+        "label": "Continuar aventura",
+        "height": 44,
+        "right": 353,
+        "left": 22
+      },
+      {
+        "label": "Excluir progresso salvo",
+        "height": 44,
+        "right": 353,
+        "left": 22
+      }
+    ],
+    "nextStep": null,
+    "viewport": 375
+  },
+  {
+    "screen": "home",
+    "width": 390,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Criar novo personagem",
+        "height": 48,
+        "right": 368,
+        "left": 22
+      },
+      {
+        "label": "Continuar aventura",
+        "height": 44,
+        "right": 368,
+        "left": 22
+      },
+      {
+        "label": "Excluir progresso salvo",
+        "height": 44,
+        "right": 368,
+        "left": 22
+      }
+    ],
+    "nextStep": null,
+    "viewport": 390
+  },
+  {
+    "screen": "home",
+    "width": 430,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Criar novo personagem",
+        "height": 48,
+        "right": 408,
+        "left": 22
+      },
+      {
+        "label": "Continuar aventura",
+        "height": 44,
+        "right": 408,
+        "left": 22
+      },
+      {
+        "label": "Excluir progresso salvo",
+        "height": 44,
+        "right": 408,
+        "left": 22
+      }
+    ],
+    "nextStep": null,
+    "viewport": 430
+  },
+  {
+    "screen": "home",
+    "width": 720,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Criar novo personagem",
+        "height": 48,
+        "right": 694,
+        "left": 26
+      },
+      {
+        "label": "Continuar aventura",
+        "height": 44,
+        "right": 694,
+        "left": 26
+      },
+      {
+        "label": "Excluir progresso salvo",
+        "height": 44,
+        "right": 694,
+        "left": 26
+      }
+    ],
+    "nextStep": null,
+    "viewport": 720
+  },
+  {
+    "screen": "home",
+    "width": 1366,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Criar novo personagem",
+        "height": 48,
+        "right": 1017,
+        "left": 349
+      },
+      {
+        "label": "Continuar aventura",
+        "height": 44,
+        "right": 1017,
+        "left": 349
+      },
+      {
+        "label": "Excluir progresso salvo",
+        "height": 44,
+        "right": 1017,
+        "left": 349
+      }
+    ],
+    "nextStep": null,
+    "viewport": 1366
+  },
+  {
+    "screen": "world",
+    "width": 320,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Explorar",
+        "height": 48,
+        "right": 298,
+        "left": 22
+      },
+      {
+        "label": "Selecionar mapa",
+        "height": 44,
+        "right": 156,
+        "left": 22
+      },
+      {
+        "label": "Visitar cidade",
+        "height": 44,
+        "right": 298,
+        "left": 164
+      },
+      {
+        "label": "Personagem",
+        "height": 44,
+        "right": 298,
+        "left": 22
+      }
+    ],
+    "nextStep": "PRÓXIMO PASSOIniciar uma exploraçãoEscolha um caminho para encontrar criaturas, recompensas e acontecimentos.",
+    "viewport": 320
+  },
+  {
+    "screen": "world",
+    "width": 360,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Explorar",
+        "height": 48,
+        "right": 338,
+        "left": 22
+      },
+      {
+        "label": "Selecionar mapa",
+        "height": 44,
+        "right": 176,
+        "left": 22
+      },
+      {
+        "label": "Visitar cidade",
+        "height": 44,
+        "right": 338,
+        "left": 184
+      },
+      {
+        "label": "Personagem",
+        "height": 44,
+        "right": 338,
+        "left": 22
+      }
+    ],
+    "nextStep": "PRÓXIMO PASSOIniciar uma exploraçãoEscolha um caminho para encontrar criaturas, recompensas e acontecimentos.",
+    "viewport": 360
+  },
+  {
+    "screen": "world",
+    "width": 375,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Explorar",
+        "height": 48,
+        "right": 353,
+        "left": 22
+      },
+      {
+        "label": "Selecionar mapa",
+        "height": 44,
+        "right": 183.5,
+        "left": 22
+      },
+      {
+        "label": "Visitar cidade",
+        "height": 44,
+        "right": 353,
+        "left": 191.5
+      },
+      {
+        "label": "Personagem",
+        "height": 44,
+        "right": 353,
+        "left": 22
+      }
+    ],
+    "nextStep": "PRÓXIMO PASSOIniciar uma exploraçãoEscolha um caminho para encontrar criaturas, recompensas e acontecimentos.",
+    "viewport": 375
+  },
+  {
+    "screen": "world",
+    "width": 390,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Explorar",
+        "height": 48,
+        "right": 368,
+        "left": 22
+      },
+      {
+        "label": "Selecionar mapa",
+        "height": 44,
+        "right": 191,
+        "left": 22
+      },
+      {
+        "label": "Visitar cidade",
+        "height": 44,
+        "right": 368,
+        "left": 199
+      },
+      {
+        "label": "Personagem",
+        "height": 44,
+        "right": 368,
+        "left": 22
+      }
+    ],
+    "nextStep": "PRÓXIMO PASSOIniciar uma exploraçãoEscolha um caminho para encontrar criaturas, recompensas e acontecimentos.",
+    "viewport": 390
+  },
+  {
+    "screen": "world",
+    "width": 430,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Explorar",
+        "height": 48,
+        "right": 408,
+        "left": 22
+      },
+      {
+        "label": "Selecionar mapa",
+        "height": 44,
+        "right": 211,
+        "left": 22
+      },
+      {
+        "label": "Visitar cidade",
+        "height": 44,
+        "right": 408,
+        "left": 219
+      },
+      {
+        "label": "Personagem",
+        "height": 44,
+        "right": 408,
+        "left": 22
+      }
+    ],
+    "nextStep": "PRÓXIMO PASSOIniciar uma exploraçãoEscolha um caminho para encontrar criaturas, recompensas e acontecimentos.",
+    "viewport": 430
+  },
+  {
+    "screen": "world",
+    "width": 720,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Explorar",
+        "height": 48,
+        "right": 694,
+        "left": 26
+      },
+      {
+        "label": "Selecionar mapa",
+        "height": 44,
+        "right": 356,
+        "left": 26
+      },
+      {
+        "label": "Visitar cidade",
+        "height": 44,
+        "right": 694,
+        "left": 364
+      },
+      {
+        "label": "Personagem",
+        "height": 44,
+        "right": 694,
+        "left": 26
+      }
+    ],
+    "nextStep": "PRÓXIMO PASSOIniciar uma exploraçãoEscolha um caminho para encontrar criaturas, recompensas e acontecimentos.",
+    "viewport": 720
+  },
+  {
+    "screen": "world",
+    "width": 1366,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Explorar",
+        "height": 48,
+        "right": 1017,
+        "left": 349
+      },
+      {
+        "label": "Selecionar mapa",
+        "height": 44,
+        "right": 679,
+        "left": 349
+      },
+      {
+        "label": "Visitar cidade",
+        "height": 44,
+        "right": 1017,
+        "left": 687
+      },
+      {
+        "label": "Personagem",
+        "height": 44,
+        "right": 1017,
+        "left": 349
+      }
+    ],
+    "nextStep": "PRÓXIMO PASSOIniciar uma exploraçãoEscolha um caminho para encontrar criaturas, recompensas e acontecimentos.",
+    "viewport": 1366
+  },
+  {
+    "screen": "player",
+    "width": 320,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Herói e atributos",
+        "height": 44,
+        "right": 156,
+        "left": 22
+      },
+      {
+        "label": "Inventário e equipamentos",
+        "height": 44,
+        "right": 298,
+        "left": 164
+      },
+      {
+        "label": "Habilidades",
+        "height": 44,
+        "right": 156,
+        "left": 22
+      },
+      {
+        "label": "Missões",
+        "height": 44,
+        "right": 298,
+        "left": 164
+      },
+      {
+        "label": "Bestiário",
+        "height": 44,
+        "right": 156,
+        "left": 22
+      },
+      {
+        "label": "Estatísticas",
+        "height": 44,
+        "right": 298,
+        "left": 164
+      },
+      {
+        "label": "Especialização",
+        "height": 44,
+        "right": 156,
+        "left": 22
+      },
+      {
+        "label": "Conquistas e títulos",
+        "height": 44,
+        "right": 298,
+        "left": 164
+      },
+      {
+        "label": "Descobertas",
+        "height": 44,
+        "right": 156,
+        "left": 22
+      }
+    ],
+    "nextStep": null,
+    "viewport": 320
+  },
+  {
+    "screen": "player",
+    "width": 360,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Herói e atributos",
+        "height": 44,
+        "right": 176,
+        "left": 22
+      },
+      {
+        "label": "Inventário e equipamentos",
+        "height": 44,
+        "right": 338,
+        "left": 184
+      },
+      {
+        "label": "Habilidades",
+        "height": 44,
+        "right": 176,
+        "left": 22
+      },
+      {
+        "label": "Missões",
+        "height": 44,
+        "right": 338,
+        "left": 184
+      },
+      {
+        "label": "Bestiário",
+        "height": 44,
+        "right": 176,
+        "left": 22
+      },
+      {
+        "label": "Estatísticas",
+        "height": 44,
+        "right": 338,
+        "left": 184
+      },
+      {
+        "label": "Especialização",
+        "height": 44,
+        "right": 176,
+        "left": 22
+      },
+      {
+        "label": "Conquistas e títulos",
+        "height": 44,
+        "right": 338,
+        "left": 184
+      },
+      {
+        "label": "Descobertas",
+        "height": 44,
+        "right": 176,
+        "left": 22
+      }
+    ],
+    "nextStep": null,
+    "viewport": 360
+  },
+  {
+    "screen": "player",
+    "width": 375,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Herói e atributos",
+        "height": 44,
+        "right": 183.5,
+        "left": 22
+      },
+      {
+        "label": "Inventário e equipamentos",
+        "height": 44,
+        "right": 353,
+        "left": 191.5
+      },
+      {
+        "label": "Habilidades",
+        "height": 44,
+        "right": 183.5,
+        "left": 22
+      },
+      {
+        "label": "Missões",
+        "height": 44,
+        "right": 353,
+        "left": 191.5
+      },
+      {
+        "label": "Bestiário",
+        "height": 44,
+        "right": 183.5,
+        "left": 22
+      },
+      {
+        "label": "Estatísticas",
+        "height": 44,
+        "right": 353,
+        "left": 191.5
+      },
+      {
+        "label": "Especialização",
+        "height": 44,
+        "right": 183.5,
+        "left": 22
+      },
+      {
+        "label": "Conquistas e títulos",
+        "height": 44,
+        "right": 353,
+        "left": 191.5
+      },
+      {
+        "label": "Descobertas",
+        "height": 44,
+        "right": 183.5,
+        "left": 22
+      }
+    ],
+    "nextStep": null,
+    "viewport": 375
+  },
+  {
+    "screen": "player",
+    "width": 390,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Herói e atributos",
+        "height": 44,
+        "right": 191,
+        "left": 22
+      },
+      {
+        "label": "Inventário e equipamentos",
+        "height": 44,
+        "right": 368,
+        "left": 199
+      },
+      {
+        "label": "Habilidades",
+        "height": 44,
+        "right": 191,
+        "left": 22
+      },
+      {
+        "label": "Missões",
+        "height": 44,
+        "right": 368,
+        "left": 199
+      },
+      {
+        "label": "Bestiário",
+        "height": 44,
+        "right": 191,
+        "left": 22
+      },
+      {
+        "label": "Estatísticas",
+        "height": 44,
+        "right": 368,
+        "left": 199
+      },
+      {
+        "label": "Especialização",
+        "height": 44,
+        "right": 191,
+        "left": 22
+      },
+      {
+        "label": "Conquistas e títulos",
+        "height": 44,
+        "right": 368,
+        "left": 199
+      },
+      {
+        "label": "Descobertas",
+        "height": 44,
+        "right": 191,
+        "left": 22
+      }
+    ],
+    "nextStep": null,
+    "viewport": 390
+  },
+  {
+    "screen": "player",
+    "width": 430,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Herói e atributos",
+        "height": 44,
+        "right": 211,
+        "left": 22
+      },
+      {
+        "label": "Inventário e equipamentos",
+        "height": 44,
+        "right": 408,
+        "left": 219
+      },
+      {
+        "label": "Habilidades",
+        "height": 44,
+        "right": 211,
+        "left": 22
+      },
+      {
+        "label": "Missões",
+        "height": 44,
+        "right": 408,
+        "left": 219
+      },
+      {
+        "label": "Bestiário",
+        "height": 44,
+        "right": 211,
+        "left": 22
+      },
+      {
+        "label": "Estatísticas",
+        "height": 44,
+        "right": 408,
+        "left": 219
+      },
+      {
+        "label": "Especialização",
+        "height": 44,
+        "right": 211,
+        "left": 22
+      },
+      {
+        "label": "Conquistas e títulos",
+        "height": 44,
+        "right": 408,
+        "left": 219
+      },
+      {
+        "label": "Descobertas",
+        "height": 44,
+        "right": 211,
+        "left": 22
+      }
+    ],
+    "nextStep": null,
+    "viewport": 430
+  },
+  {
+    "screen": "player",
+    "width": 720,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Herói e atributos",
+        "height": 44,
+        "right": 356,
+        "left": 26
+      },
+      {
+        "label": "Inventário e equipamentos",
+        "height": 44,
+        "right": 694,
+        "left": 364
+      },
+      {
+        "label": "Habilidades",
+        "height": 44,
+        "right": 356,
+        "left": 26
+      },
+      {
+        "label": "Missões",
+        "height": 44,
+        "right": 694,
+        "left": 364
+      },
+      {
+        "label": "Bestiário",
+        "height": 44,
+        "right": 356,
+        "left": 26
+      },
+      {
+        "label": "Estatísticas",
+        "height": 44,
+        "right": 694,
+        "left": 364
+      },
+      {
+        "label": "Especialização",
+        "height": 44,
+        "right": 356,
+        "left": 26
+      },
+      {
+        "label": "Conquistas e títulos",
+        "height": 44,
+        "right": 694,
+        "left": 364
+      },
+      {
+        "label": "Descobertas",
+        "height": 44,
+        "right": 356,
+        "left": 26
+      }
+    ],
+    "nextStep": null,
+    "viewport": 720
+  },
+  {
+    "screen": "player",
+    "width": 1366,
+    "pageOverflow": false,
+    "appOverflow": false,
+    "contentOverflow": false,
+    "buttons": [
+      {
+        "label": "Herói e atributos",
+        "height": 44,
+        "right": 679,
+        "left": 349
+      },
+      {
+        "label": "Inventário e equipamentos",
+        "height": 44,
+        "right": 1017,
+        "left": 687
+      },
+      {
+        "label": "Habilidades",
+        "height": 44,
+        "right": 679,
+        "left": 349
+      },
+      {
+        "label": "Missões",
+        "height": 44,
+        "right": 1017,
+        "left": 687
+      },
+      {
+        "label": "Bestiário",
+        "height": 44,
+        "right": 679,
+        "left": 349
+      },
+      {
+        "label": "Estatísticas",
+        "height": 44,
+        "right": 1017,
+        "left": 687
+      },
+      {
+        "label": "Especialização",
+        "height": 44,
+        "right": 679,
+        "left": 349
+      },
+      {
+        "label": "Conquistas e títulos",
+        "height": 44,
+        "right": 1017,
+        "left": 687
+      },
+      {
+        "label": "Descobertas",
+        "height": 44,
+        "right": 679,
+        "left": 349
+      }
+    ],
+    "nextStep": null,
+    "viewport": 1366
+  }
+]

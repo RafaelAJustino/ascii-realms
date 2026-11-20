@@ -1,0 +1,1 @@
+export const rt = { app: document.querySelector('#app'), state:null, screen:'home',returnScreen:'world', area:1, shop:'weapon', filter:'all', inventoryTab:'equipped', citySection:'services', questFilter:'available', sub:'main', busy:false, log:[], phase:'idle', float:null, previousHp:null, impactMeta:null, pendingNavScroll:null };

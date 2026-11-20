@@ -1,0 +1,1 @@
+@media(max-width:480px){.content{padding:9px}.grid{grid-template-columns:1fr}.brand{font-size:16px}.nav button{font-size:11px;padding:9px 4px}.head{padding:8px 11px}.panel{padding:10px}.actions button{min-height:var(--button-height)}}@media(max-width:340px){.nav button{font-size:10px;padding:8px 3px}}

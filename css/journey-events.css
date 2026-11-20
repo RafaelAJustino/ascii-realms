@@ -1,0 +1,5 @@
+/* Etapa 2: interações narrativas e acampamento em layout mobile-first. */
+.journey-event-options,.camp-actions{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0;width:100%;margin:10px 0}
+.journey-event-options button,.camp-actions button{font-family:inherit;width:100%;box-sizing:border-box;min-height:42px;height:42px;max-height:50px;white-space:normal;overflow-wrap:anywhere}
+.journey-event-options button:focus-visible,.camp-actions button:focus-visible{outline:2px solid var(--accent,#80ddad);outline-offset:2px}
+.journey-event-options button:disabled,.camp-actions button:disabled{opacity:.5;cursor:not-allowed}

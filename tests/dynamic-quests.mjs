@@ -1,0 +1,44 @@
+import assert from 'node:assert/strict';
+import {DYNAMIC_QUESTS,dynamicDefaults,normalizeDynamic,dynamicUnlocked,dynamicStatus,acceptDynamic,progressDynamic,claimDynamic} from '../js/dynamic-quests.js';
+import {normalizeSave,SAVE_VERSION} from '../js/state-schema.js';
+import {TAVERN_GUESTS,TAVERN_EVENTS} from '../js/tavern-stories.js';
+assert.equal(DYNAMIC_QUESTS.length,20);
+assert.equal(new Set(DYNAMIC_QUESTS.map(x=>x.id)).size,20);
+for(let r=0;r<10;r++)assert.equal(DYNAMIC_QUESTS.filter(q=>q.region===r).length,2);
+function state(){return {version:12,name:'Teste',cls:'guerreiro',lv:10,xp:0,points:0,stats:[5,5,5,5,5,5],gold:50,items:[],equip:{},area:1,bosses:[],narrative:{completed:[]}};}
+let s=normalizeSave(state());assert.equal(SAVE_VERSION,14);assert.deepEqual(s.dynamicQuests,dynamicDefaults());
+const first=DYNAMIC_QUESTS[0],second=DYNAMIC_QUESTS[1];
+assert.equal(dynamicStatus(s,first),'Não descoberta');assert.equal(acceptDynamic(s,first.id,0),false);
+s.cityLife.tavern.guestsMet.push(TAVERN_GUESTS[0].id);
+assert.equal(dynamicUnlocked(s,first),true);assert.equal(acceptDynamic(s,first.id,1),false);
+assert.equal(acceptDynamic(s,first.id,0),true);assert.equal(acceptDynamic(s,first.id,0),false);
+assert.equal(dynamicStatus(s,first),'Em andamento');
+assert.deepEqual(progressDynamic(s,'kill',0),[]);
+assert.deepEqual(progressDynamic(s,'explore',1),[]);
+assert.deepEqual(progressDynamic(s,'explore',0),[]);
+assert.deepEqual(progressDynamic(s,'explore',0),[]);
+assert.deepEqual(progressDynamic(s,'explore',0),[first.id]);
+assert.equal(dynamicStatus(s,first),'Concluída');assert.equal(acceptDynamic(s,second.id,0),false);
+const gold=s.gold;const reward=claimDynamic(s,first.id,'protect');assert.ok(reward.xp>0&&reward.gold>0);assert.equal(s.gold,gold+reward.gold);
+assert.equal(claimDynamic(s,first.id,'protect'),null);assert.equal(s.gold,gold+reward.gold);
+assert.equal(dynamicStatus(s,second),'Disponível');assert.equal(acceptDynamic(s,second.id,0),true);
+assert.deepEqual(progressDynamic(s,'kill',0,4),[second.id]);
+assert.ok(claimDynamic(s,second.id,'investigate'));
+assert.equal(claimDynamic(s,second.id,'investigate'),null);
+const after=normalizeSave(s);assert.deepEqual(after.dynamicQuests,s.dynamicQuests);
+let tampered=normalizeDynamic({active:{'dq-0-0':{progress:999},evil:{progress:5}},claimed:['dq-0-1','dq-0-1','evil'],completed:['dq-0-1','dq-1-0'],decisions:{evil:'protect','dq-0-1':'hack'}});
+assert.deepEqual(tampered.claimed,['dq-0-1']);assert.deepEqual(tampered.completed,['dq-1-0']);assert.deepEqual(tampered.active['dq-0-0'],{progress:3});assert.ok(!('evil' in tampered.active));
+assert.equal(dynamicStatus(normalizeSave(state()),first),'Não descoberta');
+const eventState=normalizeSave(state());eventState.cityLife.tavern.completed.push(TAVERN_EVENTS[0].id);assert.equal(dynamicUnlocked(eventState,first),true);
+console.log('OK: 20 missões narrativas, desbloqueio, progressão, escolhas, recompensas únicas e migração v13.');
+
+// Integração com os pontos reais de entrada e o menu existente.
+import {readFileSync} from 'node:fs';
+const source=name=>readFileSync(new URL('../js/'+name,import.meta.url),'utf8');
+assert.match(source('exploration.js'),/progressDynamic\(rt\.state,'explore',mapId\(rt\.area\)\)/);
+assert.match(source('combat.js'),/progressDynamic\(rt\.state,'kill',mapId\(rt\.area\)\)/);
+assert.match(source('main.js'),/dynamicAccept/);
+assert.match(source('main.js'),/dynamicClaim/);
+assert.match(source('progression-ui.js'),/MISSÕES NARRATIVAS/);
+assert.match(source('ui.js'),/MISSÕES DESCOBERTAS/);
+assert.ok(!source('combat.js').includes('companions.js'));

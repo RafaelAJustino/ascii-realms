@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {maps} from '../js/data.js';
+import {REGION_SPECIES} from '../js/expanded-species.js';
+import {canonicalDungeonBosses} from '../js/ascii-validator.js';
+import {DENSITY_BESTIARY,DENSITY_SPECIES_NAMES,DENSITY_REGIONAL_BOSSES,DENSITY_DUNGEON_BOSSES,densityCreatureArtwork,densityCreatureFamily} from '../js/density-bestiary.js';
+assert.equal(DENSITY_SPECIES_NAMES.length,150);
+assert.equal(DENSITY_REGIONAL_BOSSES.length,10);
+assert.equal(DENSITY_DUNGEON_BOSSES.length,10);
+assert.equal(Object.keys(DENSITY_BESTIARY).length,170);
+const keys=[...REGION_SPECIES.flat().map(x=>x.name),...maps.map(m=>m[2]),...canonicalDungeonBosses];
+assert.equal(new Set(keys).size,170);
+const seen=new Set();
+for(const name of keys){
+ const art=densityCreatureArtwork(name),boss=!DENSITY_SPECIES_NAMES.includes(name);
+ assert.equal(typeof art,'string',name);
+ const lines=art.split('\n');
+ assert.equal(lines.length,boss?88:78,name);
+ assert.ok(lines.every(x=>x.length===(boss?128:112)),name+' width');
+ assert.match(art,/^[\x20-\x7E\n]+$/,name+' printable ASCII');
+ assert.ok((art.match(/[@%#*+=:]/g)||[]).length>100,name+' shading');
+ assert.ok(!seen.has(art),name+' duplicate picture');seen.add(art);
+ assert.equal(densityCreatureArtwork(name),art,name+' deterministic');
+ assert.ok(densityCreatureFamily(name));
+}
+assert.equal(densityCreatureArtwork('NÃO EXISTE'),null);
+const ui=readFileSync(new URL('../js/ui.js',import.meta.url),'utf8');
+const bestiary=readFileSync(new URL('../js/progression-ui.js',import.meta.url),'utf8');
+assert.match(ui,/artwork=densityCreatureArtwork\(e.baseName,true,e.boss\?e.bossPhase\|\|1:1\)\|\|detailedArtworks/);
+assert.match(bestiary,/densityCreatureArtwork\(name\)\|\|detailedArtworks/);
+console.log('OK: 150 monstros HD 112x78 e 20 chefes HD 128x88, ASCII exclusivo, integracao e compatibilidade.');

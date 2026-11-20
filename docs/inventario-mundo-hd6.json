@@ -1,0 +1,1007 @@
+{
+  "version": "HD6",
+  "generatedFrom": "registries reais",
+  "total": 100,
+  "entries": [
+    {
+      "id": "city:0",
+      "name": "Vila das Folhas",
+      "region": "Floresta Esquecida",
+      "category": "Cidade",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "city:1",
+      "name": "Oásis Rubro",
+      "region": "Deserto Escarlate",
+      "category": "Cidade",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "city:2",
+      "name": "Porto Nebuloso",
+      "region": "Pântano Sombrio",
+      "category": "Cidade",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "city:3",
+      "name": "Fortaleza de Ferro",
+      "region": "Montanhas de Ferro",
+      "category": "Cidade",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "city:4",
+      "name": "Refúgio Antigo",
+      "region": "Ruínas Perdidas",
+      "category": "Cidade",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "city:5",
+      "name": "Vila da Neve",
+      "region": "Terras Congeladas",
+      "category": "Cidade",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "city:6",
+      "name": "Santuário Cinzento",
+      "region": "Vale Amaldiçoado",
+      "category": "Cidade",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "city:7",
+      "name": "Bastião das Cinzas",
+      "region": "Abismo Ardente",
+      "category": "Cidade",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "city:8",
+      "name": "Cidadela da Luz",
+      "region": "Reino Celestial",
+      "category": "Cidade",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "city:9",
+      "name": "Último Refúgio",
+      "region": "Vazio Eterno",
+      "category": "Cidade",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "biome:0",
+      "name": "Floresta Esquecida",
+      "region": "Floresta Esquecida",
+      "category": "Bioma",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "biome:1",
+      "name": "Deserto Escarlate",
+      "region": "Deserto Escarlate",
+      "category": "Bioma",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "biome:2",
+      "name": "Pântano Sombrio",
+      "region": "Pântano Sombrio",
+      "category": "Bioma",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "biome:3",
+      "name": "Montanhas de Ferro",
+      "region": "Montanhas de Ferro",
+      "category": "Bioma",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "biome:4",
+      "name": "Ruínas Perdidas",
+      "region": "Ruínas Perdidas",
+      "category": "Bioma",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "biome:5",
+      "name": "Terras Congeladas",
+      "region": "Terras Congeladas",
+      "category": "Bioma",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "biome:6",
+      "name": "Vale Amaldiçoado",
+      "region": "Vale Amaldiçoado",
+      "category": "Bioma",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "biome:7",
+      "name": "Abismo Ardente",
+      "region": "Abismo Ardente",
+      "category": "Bioma",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "biome:8",
+      "name": "Reino Celestial",
+      "region": "Reino Celestial",
+      "category": "Bioma",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "biome:9",
+      "name": "Vazio Eterno",
+      "region": "Vazio Eterno",
+      "category": "Bioma",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "dungeon:0",
+      "name": "Cripta das Raízes",
+      "region": "Floresta Esquecida",
+      "category": "Masmorra",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "dungeon:1",
+      "name": "Tumba Rubra",
+      "region": "Deserto Escarlate",
+      "category": "Masmorra",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "dungeon:2",
+      "name": "Covil das Toxinas",
+      "region": "Pântano Sombrio",
+      "category": "Masmorra",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "dungeon:3",
+      "name": "Forja Subterrânea",
+      "region": "Montanhas de Ferro",
+      "category": "Masmorra",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "dungeon:4",
+      "name": "Catacumbas Perdidas",
+      "region": "Ruínas Perdidas",
+      "category": "Masmorra",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "dungeon:5",
+      "name": "Caverna do Inverno",
+      "region": "Terras Congeladas",
+      "category": "Masmorra",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "dungeon:6",
+      "name": "Sepulcro Maldito",
+      "region": "Vale Amaldiçoado",
+      "category": "Masmorra",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "dungeon:7",
+      "name": "Caldeira Infernal",
+      "region": "Abismo Ardente",
+      "category": "Masmorra",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "dungeon:8",
+      "name": "Templo da Aurora",
+      "region": "Reino Celestial",
+      "category": "Masmorra",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "dungeon:9",
+      "name": "Fenda Primordial",
+      "region": "Vazio Eterno",
+      "category": "Masmorra",
+      "size": "140 × 64",
+      "source": "js/high-density-world.js",
+      "status": "integrada",
+      "asciiLength": 9023
+    },
+    {
+      "id": "interior:0:tavern",
+      "name": "Taverna de Vila das Folhas",
+      "region": "Floresta Esquecida",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:0:forge",
+      "name": "Ferraria de Vila das Folhas",
+      "region": "Floresta Esquecida",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:0:weapon",
+      "name": "Loja de armas de Vila das Folhas",
+      "region": "Floresta Esquecida",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:0:armor",
+      "name": "Loja de armaduras de Vila das Folhas",
+      "region": "Floresta Esquecida",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:0:accessory",
+      "name": "Loja de acessórios de Vila das Folhas",
+      "region": "Floresta Esquecida",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:0:potion",
+      "name": "Alquimista de Vila das Folhas",
+      "region": "Floresta Esquecida",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:0:materials",
+      "name": "Mercado de materiais de Vila das Folhas",
+      "region": "Floresta Esquecida",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:1:tavern",
+      "name": "Taverna de Oásis Rubro",
+      "region": "Deserto Escarlate",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:1:forge",
+      "name": "Ferraria de Oásis Rubro",
+      "region": "Deserto Escarlate",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:1:weapon",
+      "name": "Loja de armas de Oásis Rubro",
+      "region": "Deserto Escarlate",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:1:armor",
+      "name": "Loja de armaduras de Oásis Rubro",
+      "region": "Deserto Escarlate",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:1:accessory",
+      "name": "Loja de acessórios de Oásis Rubro",
+      "region": "Deserto Escarlate",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:1:potion",
+      "name": "Alquimista de Oásis Rubro",
+      "region": "Deserto Escarlate",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:1:materials",
+      "name": "Mercado de materiais de Oásis Rubro",
+      "region": "Deserto Escarlate",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:2:tavern",
+      "name": "Taverna de Porto Nebuloso",
+      "region": "Pântano Sombrio",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:2:forge",
+      "name": "Ferraria de Porto Nebuloso",
+      "region": "Pântano Sombrio",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:2:weapon",
+      "name": "Loja de armas de Porto Nebuloso",
+      "region": "Pântano Sombrio",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:2:armor",
+      "name": "Loja de armaduras de Porto Nebuloso",
+      "region": "Pântano Sombrio",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:2:accessory",
+      "name": "Loja de acessórios de Porto Nebuloso",
+      "region": "Pântano Sombrio",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:2:potion",
+      "name": "Alquimista de Porto Nebuloso",
+      "region": "Pântano Sombrio",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:2:materials",
+      "name": "Mercado de materiais de Porto Nebuloso",
+      "region": "Pântano Sombrio",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:3:tavern",
+      "name": "Taverna de Fortaleza de Ferro",
+      "region": "Montanhas de Ferro",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:3:forge",
+      "name": "Ferraria de Fortaleza de Ferro",
+      "region": "Montanhas de Ferro",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:3:weapon",
+      "name": "Loja de armas de Fortaleza de Ferro",
+      "region": "Montanhas de Ferro",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:3:armor",
+      "name": "Loja de armaduras de Fortaleza de Ferro",
+      "region": "Montanhas de Ferro",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:3:accessory",
+      "name": "Loja de acessórios de Fortaleza de Ferro",
+      "region": "Montanhas de Ferro",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:3:potion",
+      "name": "Alquimista de Fortaleza de Ferro",
+      "region": "Montanhas de Ferro",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:3:materials",
+      "name": "Mercado de materiais de Fortaleza de Ferro",
+      "region": "Montanhas de Ferro",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:4:tavern",
+      "name": "Taverna de Refúgio Antigo",
+      "region": "Ruínas Perdidas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:4:forge",
+      "name": "Ferraria de Refúgio Antigo",
+      "region": "Ruínas Perdidas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:4:weapon",
+      "name": "Loja de armas de Refúgio Antigo",
+      "region": "Ruínas Perdidas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:4:armor",
+      "name": "Loja de armaduras de Refúgio Antigo",
+      "region": "Ruínas Perdidas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:4:accessory",
+      "name": "Loja de acessórios de Refúgio Antigo",
+      "region": "Ruínas Perdidas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:4:potion",
+      "name": "Alquimista de Refúgio Antigo",
+      "region": "Ruínas Perdidas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:4:materials",
+      "name": "Mercado de materiais de Refúgio Antigo",
+      "region": "Ruínas Perdidas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:5:tavern",
+      "name": "Taverna de Vila da Neve",
+      "region": "Terras Congeladas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:5:forge",
+      "name": "Ferraria de Vila da Neve",
+      "region": "Terras Congeladas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:5:weapon",
+      "name": "Loja de armas de Vila da Neve",
+      "region": "Terras Congeladas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:5:armor",
+      "name": "Loja de armaduras de Vila da Neve",
+      "region": "Terras Congeladas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:5:accessory",
+      "name": "Loja de acessórios de Vila da Neve",
+      "region": "Terras Congeladas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:5:potion",
+      "name": "Alquimista de Vila da Neve",
+      "region": "Terras Congeladas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:5:materials",
+      "name": "Mercado de materiais de Vila da Neve",
+      "region": "Terras Congeladas",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:6:tavern",
+      "name": "Taverna de Santuário Cinzento",
+      "region": "Vale Amaldiçoado",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:6:forge",
+      "name": "Ferraria de Santuário Cinzento",
+      "region": "Vale Amaldiçoado",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:6:weapon",
+      "name": "Loja de armas de Santuário Cinzento",
+      "region": "Vale Amaldiçoado",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:6:armor",
+      "name": "Loja de armaduras de Santuário Cinzento",
+      "region": "Vale Amaldiçoado",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:6:accessory",
+      "name": "Loja de acessórios de Santuário Cinzento",
+      "region": "Vale Amaldiçoado",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:6:potion",
+      "name": "Alquimista de Santuário Cinzento",
+      "region": "Vale Amaldiçoado",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:6:materials",
+      "name": "Mercado de materiais de Santuário Cinzento",
+      "region": "Vale Amaldiçoado",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:7:tavern",
+      "name": "Taverna de Bastião das Cinzas",
+      "region": "Abismo Ardente",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:7:forge",
+      "name": "Ferraria de Bastião das Cinzas",
+      "region": "Abismo Ardente",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:7:weapon",
+      "name": "Loja de armas de Bastião das Cinzas",
+      "region": "Abismo Ardente",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:7:armor",
+      "name": "Loja de armaduras de Bastião das Cinzas",
+      "region": "Abismo Ardente",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:7:accessory",
+      "name": "Loja de acessórios de Bastião das Cinzas",
+      "region": "Abismo Ardente",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:7:potion",
+      "name": "Alquimista de Bastião das Cinzas",
+      "region": "Abismo Ardente",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:7:materials",
+      "name": "Mercado de materiais de Bastião das Cinzas",
+      "region": "Abismo Ardente",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:8:tavern",
+      "name": "Taverna de Cidadela da Luz",
+      "region": "Reino Celestial",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:8:forge",
+      "name": "Ferraria de Cidadela da Luz",
+      "region": "Reino Celestial",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:8:weapon",
+      "name": "Loja de armas de Cidadela da Luz",
+      "region": "Reino Celestial",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:8:armor",
+      "name": "Loja de armaduras de Cidadela da Luz",
+      "region": "Reino Celestial",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:8:accessory",
+      "name": "Loja de acessórios de Cidadela da Luz",
+      "region": "Reino Celestial",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:8:potion",
+      "name": "Alquimista de Cidadela da Luz",
+      "region": "Reino Celestial",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:8:materials",
+      "name": "Mercado de materiais de Cidadela da Luz",
+      "region": "Reino Celestial",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:9:tavern",
+      "name": "Taverna de Último Refúgio",
+      "region": "Vazio Eterno",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:9:forge",
+      "name": "Ferraria de Último Refúgio",
+      "region": "Vazio Eterno",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:9:weapon",
+      "name": "Loja de armas de Último Refúgio",
+      "region": "Vazio Eterno",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:9:armor",
+      "name": "Loja de armaduras de Último Refúgio",
+      "region": "Vazio Eterno",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:9:accessory",
+      "name": "Loja de acessórios de Último Refúgio",
+      "region": "Vazio Eterno",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:9:potion",
+      "name": "Alquimista de Último Refúgio",
+      "region": "Vazio Eterno",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    },
+    {
+      "id": "interior:9:materials",
+      "name": "Mercado de materiais de Último Refúgio",
+      "region": "Vazio Eterno",
+      "category": "Interior",
+      "size": "124 × 54",
+      "source": "js/high-density-interiors.js",
+      "status": "integrada",
+      "asciiLength": 6749
+    }
+  ]
+}

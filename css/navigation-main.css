@@ -1,0 +1,14 @@
+/* Navigation without fixed bars: all primary actions live in the world view. */
+:root{--nav-gap:8px;--nav-button-height:42px}
+#app .nav{display:none}
+.start-actions{display:flex;flex-direction:column;gap:var(--nav-gap);width:100%}
+.main-actions,.player-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--nav-gap);width:100%;min-width:0}
+.start-actions button,.main-actions button,.player-actions button,.menu-back button,.world-boss button{box-sizing:border-box;height:var(--nav-button-height);min-height:0;max-height:50px;min-width:0;width:100%;padding:4px 7px;font-family:monospace;font-size:clamp(10px,2.9vw,13px);line-height:1.15;white-space:normal;overflow-wrap:anywhere}
+.main-actions button:first-child,.main-actions button:last-child{grid-column:1/-1}
+.main-actions button:first-child{background:var(--accent);color:#081512;font-weight:bold;border-color:var(--accent)}
+.start-actions button.danger{border-color:#ba5b5b;color:#f3a3a3}
+.start-actions button.danger:disabled{opacity:.4}
+.menu-back,.world-boss{margin-top:8px}
+.player-actions button{font-size:clamp(9px,2.8vw,13px)}
+.content{padding-bottom:8px}
+@media(max-width:350px){.main-actions,.player-actions{gap:8px}.main-actions button,.player-actions button{padding-inline:3px;font-size:10px}}

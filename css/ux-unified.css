@@ -1,0 +1,15 @@
+/* Global compact UX system. Loaded last; combat-specific constraints remain intact. */
+:root{--ui-gap:8px;--ui-gap-small:4px;--ui-padding:10px;--ui-button-height:40px;--ui-button-max-height:50px;--ui-border-radius:4px;--button-height:var(--ui-button-height);--button-gap:var(--ui-gap);--button-padding:var(--ui-padding);--button-radius:var(--ui-border-radius)}
+.content{padding:10px;overflow-x:hidden}.panel{padding:10px;margin-bottom:8px}.panel h3{margin-bottom:6px;font-size:14px}.item{padding:7px 0}.actions{gap:var(--ui-gap);margin:8px 0}.nav{gap:var(--ui-gap);padding:6px}.stat{gap:8px}
+button{box-sizing:border-box;min-height:var(--ui-button-height);max-height:var(--ui-button-max-height);padding:5px 10px;font:inherit;font-size:13px;line-height:1.15;border-radius:var(--ui-border-radius);text-align:center;overflow-wrap:anywhere;white-space:normal}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button:disabled{opacity:.48;cursor:not-allowed;filter:saturate(.5)}
+.actions>button{height:var(--ui-button-height)}
+.item button+button{margin-inline-start:var(--ui-gap)}
+.character-creation{display:grid;gap:6px;min-width:0}.character-creation p{margin:0 0 5px}.character-creation label{display:block;font-size:13px}.character-creation input,.character-creation select{display:block;width:100%;min-width:0;max-width:100%;box-sizing:border-box;min-height:40px;padding:8px 10px}.character-creation button{width:100%}
+.merchant-item{display:flex;align-items:center;justify-content:space-between;gap:var(--ui-gap)}.merchant-item>div{min-width:0}.merchant-item>button{flex:0 0 auto}
+.resource-meter{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:5px;min-width:0;margin:2px 0;font-size:11px;line-height:1.1}.resource-label{font-weight:bold}.resource-value{font-variant-numeric:tabular-nums;white-space:nowrap}.resource-track{height:9px;min-width:0;background:#25313a;border:1px solid #43585c;border-radius:2px;overflow:hidden}.resource-fill{height:100%;transition:width .22s ease}.resource-fill.high{background:#65c983}.resource-fill.mid{background:#dfbd58}.resource-fill.low{background:#e56c6c}.resource-fill.mp{background:#75b6ed}
+.combat-stage .resource-meter{flex:none}.combat-stage .hero-visual{display:flex;flex-direction:column;gap:1px}
+.combat-stage .combat-controls button{max-height:50px}.combat-stage .combat-attack-basic-row button,.combat-stage .combat-skills-grid button{height:42px!important;max-height:50px!important;min-height:0!important}
+@media(max-width:430px){.content{padding:8px}.panel{padding:8px}.resource-meter{font-size:10px;gap:4px}.merchant-item button{padding-inline:8px}}
+@media(prefers-reduced-motion:reduce){.resource-fill,button,.panel,.item{animation:none!important;transition:none!important}}

@@ -1,0 +1,38 @@
+import assert from 'node:assert/strict';
+const store=new Map();
+globalThis.localStorage={getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)};
+const app={innerHTML:'',addEventListener(){},querySelector(){return null},querySelectorAll(){return []}};
+globalThis.document={querySelector:s=>s==='#app'?app:null};globalThis.window={addEventListener(){}};globalThis.requestAnimationFrame=f=>f();
+const {rt}=await import('../js/runtime.js');
+const {newGame}=await import('../js/player.js');
+const {selectPath,explore,chooseEventOption,openCamp,campRest,campUsePotion,leaveCamp,returnToCity}=await import('../js/exploration.js');
+const {load}=await import('../js/storage.js');
+const {KEY}=await import('../js/data.js');
+newGame('Explorador','guerreiro');selectPath('unknown');
+const oldRng=Math.random;
+try{
+ const seq=[.9,0,0];Math.random=()=>seq.shift()??.5;
+ assert.equal(explore(),true);assert.equal(rt.screen,'journey');assert.equal(rt.state.journey.event,'wounded-traveler');
+ assert.match(app.innerHTML,/Viajante ferido/);assert.match(app.innerHTML,/journeyChoice:wounded-traveler:help/);
+ assert.equal(explore(),false);assert.equal(returnToCity(),false);
+ const pending=JSON.parse(store.get(KEY));assert.equal(pending.journey.event,'wounded-traveler');
+ rt.state=null;assert.equal(load(),true);assert.equal(rt.state.journey.event,'wounded-traveler');
+ assert.equal(chooseEventOption('wounded-traveler','invalid'),false);
+ const before=rt.state.gold;assert.equal(chooseEventOption('wounded-traveler','help'),true);
+ assert.equal(rt.state.journey.event,null);assert.equal(rt.state.gold,before+24);
+ assert.equal(chooseEventOption('wounded-traveler','help'),false);
+ assert.equal(rt.state.narrative.completed.length,1);
+ assert.equal(openCamp(),true);assert.equal(rt.screen,'camp');
+ assert.match(app.innerHTML,/campPotion:mp/);
+ rt.state.hp=Math.max(1,rt.state.hp-40);rt.state.mp=Math.max(0,rt.state.mp-10);
+ Math.random=()=>.99;
+ const gold=rt.state.gold;assert.equal(campRest(),true);assert.equal(rt.state.gold,gold-10);assert.equal(rt.screen,'camp');
+ assert.equal(campRest(),false);
+ assert.equal(campUsePotion('mp'),true);
+ assert.equal(leaveCamp(),true);assert.equal(rt.screen,'journey');
+ rt.state=null;assert.equal(load(),true);assert.equal(rt.screen,'journey');assert.equal(rt.state.narrative.completed.length,1);
+ assert.equal(rt.state.narrative.lastRestAt,1);assert.equal(rt.state.narrative.flags.travelerHelped,true);
+ assert.equal(returnToCity(),true);assert.equal(rt.screen,'city');
+ assert.equal(rt.state.narrative.completed.length,1);
+}finally{Math.random=oldRng;}
+console.log('OK: evento gerado na jornada, interface, resolução única, bloqueio, recarga pendente, acampamento, consumíveis, descanso e retorno à tela inicial.');

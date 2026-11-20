@@ -1,0 +1,7 @@
+/* Expansão épica III: histórias da taverna; sem navegação fixa. */
+.tavern-story{border:1px solid var(--border);border-radius:4px;padding:10px;min-width:0;overflow-wrap:anywhere}
+.tavern-story p{font-size:12px;line-height:1.5;margin:8px 0}
+.tavern-story-choices{display:grid;grid-template-columns:1fr;gap:8px;min-width:0}
+.tavern-story-choices button{box-sizing:border-box;min-height:42px;max-height:50px;width:100%;font-family:monospace}
+.tavern-story-choices button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(min-width:460px){.tavern-story-choices{grid-template-columns:repeat(2,minmax(0,1fr))}}

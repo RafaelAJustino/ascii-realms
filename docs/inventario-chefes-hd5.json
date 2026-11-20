@@ -1,0 +1,282 @@
+[
+  {
+    "id": "Guardião das Raízes",
+    "category": "regional",
+    "index": 0,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "sha256": "6d1be4479a75f63b11334635a41d46cdf19cbe5a45c33148743cc4c73ca85d8c"
+  },
+  {
+    "id": "Escorpião Imperial",
+    "category": "regional",
+    "index": 1,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "sha256": "6986e300abec0b08a917e4562618d0bee62be871a8a7cb72e81610ee207112e9"
+  },
+  {
+    "id": "Hidra Venenosa",
+    "category": "regional",
+    "index": 2,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "sha256": "736b6612d197c06783c93c9b6c935afb4b79186c57b7e43de39cc3992d9b5dd9"
+  },
+  {
+    "id": "Golem Ancestral",
+    "category": "regional",
+    "index": 3,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "sha256": "c299eeede2fe588dccc49cee09a2dc5bd52927aa2df6d8d2d80fa143256c30e9"
+  },
+  {
+    "id": "Rei Esquecido",
+    "category": "regional",
+    "index": 4,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "sha256": "3a7d2680c09c48cc429405bb5bcdcf080adbbf975cf15e219286b5598e0fe4ed"
+  },
+  {
+    "id": "Dragão Glacial",
+    "category": "regional",
+    "index": 5,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "sha256": "d4e0e3a13d1ce3dd14c2e051e6fc60fd312fd501c730d752238fceffdc12e0e5"
+  },
+  {
+    "id": "Senhor dos Mortos",
+    "category": "regional",
+    "index": 6,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "sha256": "c2a8e373a378b0e10d927abc2f4d90d27c9a62907eb867a5e9047b4b20ec14bf"
+  },
+  {
+    "id": "Demônio das Chamas",
+    "category": "regional",
+    "index": 7,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "sha256": "742f4e70af35641b1ceb5d7cc448117c584285d544ee866527f6407cae2c3a74"
+  },
+  {
+    "id": "Serafim Corrompido",
+    "category": "regional",
+    "index": 8,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "sha256": "4df912c7c3a8a47396a07e4e142e4a8f3d289730341820395946a436c92c1b8f"
+  },
+  {
+    "id": "Entidade Primordial",
+    "category": "regional",
+    "index": 9,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "sha256": "f478b802527c954e78e16c018f6246932ccc58c7b387f0a029c7472986915e71"
+  },
+  {
+    "id": "Coração Enraizado",
+    "category": "dungeon",
+    "index": 0,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1
+    ],
+    "sha256": "a3dc5e8f810415ebd9a0e6161b641f986fa3af1e719373c0f9a8e2c05d05ac9b"
+  },
+  {
+    "id": "Matriarca de Areia",
+    "category": "dungeon",
+    "index": 1,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1
+    ],
+    "sha256": "045d397dc1cbc114fb54a92ed651a3e93aeee751f1b922534820d8b83fc45f7b"
+  },
+  {
+    "id": "Devorador Tóxico",
+    "category": "dungeon",
+    "index": 2,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1
+    ],
+    "sha256": "0a536fbb654847c4306784731d3642af877d3b77f54b9d85cb0b9e65ae31f6ba"
+  },
+  {
+    "id": "Colosso Ferrífero",
+    "category": "dungeon",
+    "index": 3,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1
+    ],
+    "sha256": "37fa917a8009836cb5cf507bc1c132b89333e99953be21d8f6f7dea8497df5e6"
+  },
+  {
+    "id": "Sentinela do Túmulo",
+    "category": "dungeon",
+    "index": 4,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1
+    ],
+    "sha256": "d6dc34521544fc64f0a7328764da77348b6eedd9527a516920fa8165b261f9b3"
+  },
+  {
+    "id": "Titã de Geada",
+    "category": "dungeon",
+    "index": 5,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1
+    ],
+    "sha256": "6e6edc071cd1356b2f95432e464815b13a3489b404e45ca2eb867efac60ca232"
+  },
+  {
+    "id": "Arauto das Cinzas Mortas",
+    "category": "dungeon",
+    "index": 6,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1
+    ],
+    "sha256": "113d3fa266547959272a8a881236495389285814b9205dfbbf5dbbc598f8811a"
+  },
+  {
+    "id": "Fornalha Viva",
+    "category": "dungeon",
+    "index": 7,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1
+    ],
+    "sha256": "da490a0f0fe5706c1bc82905c62cbf9320c227768b4e233b5fd2e853169a802e"
+  },
+  {
+    "id": "Juiz da Aurora",
+    "category": "dungeon",
+    "index": 8,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1
+    ],
+    "sha256": "ebbb3de057623b646a2527f03afe8721c20139bbce341484e0b3df2293657f21"
+  },
+  {
+    "id": "Núcleo do Nada",
+    "category": "dungeon",
+    "index": 9,
+    "dimensions": [
+      128,
+      88
+    ],
+    "phases": [
+      1
+    ],
+    "sha256": "0d80682d69e0ee7e37f75ce095e7b31954b8f52d0f529b25b6024a754118beef"
+  }
+]

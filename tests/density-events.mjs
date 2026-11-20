@@ -1,0 +1,38 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {EVENT_ART,EVENT_ART_DIMENSIONS,densityEventArtwork,eventMotionClass,eventTheme} from '../js/density-events.js';
+import {NARRATIVE_EVENTS} from '../js/journey-events.js';
+import {EPIC_EVENTS} from '../js/epic-events.js';
+import {TAVERN_EVENTS} from '../js/tavern-stories.js';
+const events=[...NARRATIVE_EVENTS,...EPIC_EVENTS,...TAVERN_EVENTS];
+assert.equal(events.length,50);
+assert.equal(Object.keys(EVENT_ART).length,50);
+assert.equal(new Set(Object.values(EVENT_ART)).size,50,'desenhos exatamente iguais');
+assert.deepEqual(EVENT_ART_DIMENSIONS,[84,34]);
+for(const e of events){
+ const art=densityEventArtwork(e.id),lines=art.split('\n');
+ assert.equal(lines.length,34,e.id);
+ assert.ok(lines.every(line=>line.length===84),e.id);
+ assert.match(art,/^[\x20-\x7e\n]+$/,e.id);
+ assert.ok(art.replace(/\s/g,'').length>=150,e.id);
+ assert.equal(densityEventArtwork(e.id),art,'determinismo do desenho');
+ assert.ok(['event-flicker','event-tension','event-idle'].includes(eventMotionClass(e.id)));
+ assert.equal(typeof eventTheme(e),'string');
+}
+assert.equal(densityEventArtwork('id-inexistente'),null);
+const ui=readFileSync(new URL('../js/ui.js',import.meta.url),'utf8');
+assert.match(ui,/densityEventArtwork\(id\)/);
+assert.match(ui,/eventScene\(event\.id\)/);
+assert.match(ui,/eventScene\(story\.id\)/);
+assert.match(ui,/escape\(artwork\)/);
+const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
+assert.match(html,/density-events\.css/);
+const css=readFileSync(new URL('../css/density-events.css',import.meta.url),'utf8');
+assert.match(css,/prefers-reduced-motion:reduce/);
+assert.match(css,/white-space:pre/);
+assert.match(css,/overflow:hidden/);
+const audit=JSON.parse(readFileSync(new URL('../docs/inventario-visual-densidade.json',import.meta.url),'utf8'));
+assert.equal(audit.summary.remaining,0);
+assert.equal(audit.summary.redrawn,611);
+for(const e of events)assert.equal(audit.records.find(r=>r.id===e.id)?.status,'redesenhado',e.id);
+console.log('OK: 50 eventos narrativos ilustrados em ASCII 84x34, integração em jornada/taverna, CSS com movimento reduzido, inventário sem pendências cadastradas.');

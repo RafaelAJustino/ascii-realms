@@ -1,0 +1,1 @@
+.combat-warning{border:1px solid #eab45e;color:#ffda8d;background:rgba(120,72,10,.16);padding:5px 7px;border-radius:4px;font-size:11px;line-height:1.35;margin:4px 0;overflow-wrap:anywhere}.combat-warning:before{content:"! ";font-weight:700}@media(max-width:375px){.combat-warning{font-size:10px;padding:3px 5px}}

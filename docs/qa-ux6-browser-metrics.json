@@ -1,0 +1,282 @@
+[
+  {
+    "screen": "character",
+    "size": "320x568",
+    "viewport": 320,
+    "docW": 320,
+    "contentW": 318,
+    "contentClientW": 318,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "character",
+    "size": "360x780",
+    "viewport": 360,
+    "docW": 360,
+    "contentW": 358,
+    "contentClientW": 358,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "character",
+    "size": "375x667",
+    "viewport": 375,
+    "docW": 375,
+    "contentW": 373,
+    "contentClientW": 373,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "character",
+    "size": "390x844",
+    "viewport": 390,
+    "docW": 390,
+    "contentW": 388,
+    "contentClientW": 388,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "character",
+    "size": "430x932",
+    "viewport": 430,
+    "docW": 430,
+    "contentW": 428,
+    "contentClientW": 428,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "character",
+    "size": "720x1280",
+    "viewport": 720,
+    "docW": 720,
+    "contentW": 718,
+    "contentClientW": 718,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "character",
+    "size": "1366x900",
+    "viewport": 1366,
+    "docW": 1366,
+    "contentW": 718,
+    "contentClientW": 718,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "inventory",
+    "size": "320x568",
+    "viewport": 320,
+    "docW": 320,
+    "contentW": 318,
+    "contentClientW": 318,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "inventory",
+    "size": "360x780",
+    "viewport": 360,
+    "docW": 360,
+    "contentW": 358,
+    "contentClientW": 358,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "inventory",
+    "size": "375x667",
+    "viewport": 375,
+    "docW": 375,
+    "contentW": 373,
+    "contentClientW": 373,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "inventory",
+    "size": "390x844",
+    "viewport": 390,
+    "docW": 390,
+    "contentW": 388,
+    "contentClientW": 388,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "inventory",
+    "size": "430x932",
+    "viewport": 430,
+    "docW": 430,
+    "contentW": 428,
+    "contentClientW": 428,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "inventory",
+    "size": "720x1280",
+    "viewport": 720,
+    "docW": 720,
+    "contentW": 718,
+    "contentClientW": 718,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "inventory",
+    "size": "1366x900",
+    "viewport": 1366,
+    "docW": 1366,
+    "contentW": 718,
+    "contentClientW": 718,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "comparacao",
+    "size": "320x568",
+    "viewport": 320,
+    "docW": 320,
+    "contentW": 318,
+    "contentClientW": 318,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "comparacao",
+    "size": "360x780",
+    "viewport": 360,
+    "docW": 360,
+    "contentW": 358,
+    "contentClientW": 358,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "comparacao",
+    "size": "375x667",
+    "viewport": 375,
+    "docW": 375,
+    "contentW": 373,
+    "contentClientW": 373,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "comparacao",
+    "size": "390x844",
+    "viewport": 390,
+    "docW": 390,
+    "contentW": 388,
+    "contentClientW": 388,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "comparacao",
+    "size": "430x932",
+    "viewport": 430,
+    "docW": 430,
+    "contentW": 428,
+    "contentClientW": 428,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "comparacao",
+    "size": "720x1280",
+    "viewport": 720,
+    "docW": 720,
+    "contentW": 718,
+    "contentClientW": 718,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "comparacao",
+    "size": "1366x900",
+    "viewport": 1366,
+    "docW": 1366,
+    "contentW": 718,
+    "contentClientW": 718,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "skills",
+    "size": "320x568",
+    "viewport": 320,
+    "docW": 320,
+    "contentW": 318,
+    "contentClientW": 318,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "skills",
+    "size": "360x780",
+    "viewport": 360,
+    "docW": 360,
+    "contentW": 358,
+    "contentClientW": 358,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "skills",
+    "size": "375x667",
+    "viewport": 375,
+    "docW": 375,
+    "contentW": 373,
+    "contentClientW": 373,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "skills",
+    "size": "390x844",
+    "viewport": 390,
+    "docW": 390,
+    "contentW": 388,
+    "contentClientW": 388,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "skills",
+    "size": "430x932",
+    "viewport": 430,
+    "docW": 430,
+    "contentW": 428,
+    "contentClientW": 428,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "skills",
+    "size": "720x1280",
+    "viewport": 720,
+    "docW": 720,
+    "contentW": 718,
+    "contentClientW": 718,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  },
+  {
+    "screen": "skills",
+    "size": "1366x900",
+    "viewport": 1366,
+    "docW": 1366,
+    "contentW": 718,
+    "contentClientW": 718,
+    "minButtonHeight": 44,
+    "outsideButtons": 0
+  }
+]

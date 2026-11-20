@@ -1,0 +1,16 @@
+/* Etapa 7: retratos e objetos em alta densidade, preservando colunas monoespaçadas. */
+.hd-npc-portrait,.hd-object-scene,.hd-event-scene{min-width:0;max-width:100%;overflow:hidden;display:flex;align-items:center;justify-content:center;isolation:isolate}
+.hd-object-scene .ascii-art,.hd-npc-portrait .ascii-art,.hd-event-scene .ascii-art{font-family:Consolas,"Liberation Mono",ui-monospace,monospace!important;font-weight:400!important;font-variant-ligatures:none!important;font-kerning:none!important;letter-spacing:0!important;white-space:pre!important;text-align:left!important;line-height:1.04!important;max-width:none!important;overflow:visible}
+.hd-npc-portrait{max-height:350px;min-height:0}
+.hd-object-scene{max-height:270px;min-height:0;flex:1 1 auto}
+.hd-event-scene{min-height:100px;max-height:380px;padding:6px 2px;border-color:rgba(161,189,162,.4)}
+.object-art-detail[open] .hd-object-scene,.npc-art-detail[open] .hd-npc-portrait{margin:5px 0}
+.hd-rarity-0 .ascii-art{color:#bac0c5}
+.hd-rarity-1 .ascii-art{color:#8dc69b}
+.hd-rarity-2 .ascii-art{color:#87baff}
+.hd-rarity-3 .ascii-art{color:#bc9bea}
+.hd-rarity-4 .ascii-art{color:#f3cc80}
+.hd-object-scene.ascii-zoomable,.hd-npc-portrait.ascii-zoomable,.hd-event-scene.ascii-zoomable{cursor:zoom-in;outline-offset:-2px}
+.hd-object-scene.ascii-zoomable:focus-visible,.hd-npc-portrait.ascii-zoomable:focus-visible,.hd-event-scene.ascii-zoomable:focus-visible{outline:2px solid #a6c6a0}
+@media(max-width:430px){.hd-npc-portrait{max-height:280px}.hd-object-scene{max-height:225px}.hd-event-scene{max-height:290px;padding:2px 0}.object-art-content{min-width:0}}
+@media(prefers-reduced-motion:reduce){.hd-event-scene .ascii-art,.hd-npc-portrait .ascii-art,.hd-object-scene .ascii-art{animation:none!important;transition:none!important}}

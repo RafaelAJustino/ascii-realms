@@ -1,0 +1,36 @@
+/** Capturas isoladas com HTML de render() e CSS reais. Não testa ações do gameplay no navegador. */
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {dirname,resolve} from 'node:path';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const store=new Map();
+globalThis.localStorage={getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)};
+const app={innerHTML:'',addEventListener(){},querySelector(){return null},querySelectorAll(){return []}};
+globalThis.document={querySelector:s=>s==='#app'?app:null,querySelectorAll:()=>[],scrollingElement:null};
+globalThis.window={innerHeight:812,addEventListener(){}};
+globalThis.requestAnimationFrame=f=>f();
+const {newGame,stats}=await import('../js/player.js');
+const {rt}=await import('../js/runtime.js');
+const {render}=await import('../js/ui.js');
+const {choosePath}=await import('../js/journey-paths.js');
+const {CAMP_COOLDOWN}=await import('../js/journey-events.js');
+const index=readFileSync(resolve(root,'index.html'),'utf8');
+const styles=[...index.matchAll(/href="(css\/[^\"]+\.css)"/g)].map(m=>readFileSync(resolve(root,m[1]),'utf8')).join('\n');
+mkdirSync(resolve(root,'docs'),{recursive:true});
+newGame('Explorador','arqueiro');
+const write=(screen,label)=>{
+ rt.screen=screen;render();
+ const html=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ASCII REALMS | ${label}</title><style>${styles}</style></head><body><a class="ux-skip-link" href="#app">Ir ao conteúdo</a><main id="app">${app.innerHTML}</main></body></html>`;
+ writeFileSync(resolve(root,`docs/ux-stage4-${label}.html`),html);
+};
+write('paths','rotas');
+choosePath(rt.state,'unknown');rt.state.journey.steps=8;
+rt.state.journey.last=['Você encontrou fragmentos de ferro.','Uma caravana cruzou seu caminho.','O tempo ficou mais frio.'];
+rt.state.hp=Math.round(stats().maxhp*.65);rt.state.mp=Math.round(stats().maxmp*.75);
+write('journey','expedicao');
+rt.state.journey.event='wounded-traveler';
+write('journey','evento');
+rt.state.journey.event=null;rt.state.narrative.lastRestAt=rt.state.narrative.explorations;
+write('camp','acampamento');
+write('world','aventura');
+console.log('Cinco prévias estáticas geradas a partir do render() e CSS do projeto. Cooldown de descanso:',CAMP_COOLDOWN);

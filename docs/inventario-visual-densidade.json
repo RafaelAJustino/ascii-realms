@@ -1,0 +1,4686 @@
+{
+  "summary": {
+    "basis": "ASCII REALMS: Expansão Épica, Etapa 8",
+    "style": "ASCII 32-126, sombreamento por densidade",
+    "categories": {
+      "hero": 4,
+      "monster": 150,
+      "regional-boss": 10,
+      "dungeon-boss": 10,
+      "city": 10,
+      "dungeon": 10,
+      "tavern": 10,
+      "tavern-guest": 20,
+      "equipment": 220,
+      "narrative-event": 50,
+      "npc": 12,
+      "biome": 10,
+      "interior": 60,
+      "material": 30,
+      "object": 5
+    },
+    "redrawn": 611,
+    "remaining": 0,
+    "phase": "Lote 6: eventos, animações e revisão",
+    "note": "Todos os 611 elementos cadastrados no inventário receberam composição ASCII integrada. Os desenhos procedurais exigem revisão artística individual; o inventário não prova cobertura de cada ornamento ou elemento decorativo legado."
+  },
+  "records": [
+    {
+      "category": "hero",
+      "id": "guerreiro",
+      "name": "Guerreiro",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "hero",
+      "id": "mago",
+      "name": "Mago",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "hero",
+      "id": "arqueiro",
+      "name": "Arqueiro",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "hero",
+      "id": "ladino",
+      "name": "Ladino",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-original-0",
+      "name": "Lobo",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-original-1",
+      "name": "Aranha",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-original-2",
+      "name": "Ent",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-common-0",
+      "name": "Corvo Carniceiro",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-common-1",
+      "name": "Javali Espinhoso",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-common-2",
+      "name": "Cervo Corrompido",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-common-3",
+      "name": "Lince das Brumas",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-common-4",
+      "name": "Raiz Faminta",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-common-5",
+      "name": "Vespa do Musgo",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-common-6",
+      "name": "Saqueador da Mata",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-common-7",
+      "name": "Arqueiro Fora da Lei",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-common-8",
+      "name": "Urso da Clareira",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-special-9",
+      "name": "Capitão dos Salteadores",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-special-10",
+      "name": "Aranha Matriarca",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r0-special-11",
+      "name": "Espírito do Carvalho",
+      "region": "r0",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-original-0",
+      "name": "Escorpião",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-original-1",
+      "name": "Serpente",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-original-2",
+      "name": "Nômade",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-common-0",
+      "name": "Víbora de Dunas",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-common-1",
+      "name": "Abutre Carmesim",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-common-2",
+      "name": "Chacal do Sal",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-common-3",
+      "name": "Besouro Solar",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-common-4",
+      "name": "Lagarto de Vidro",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-common-5",
+      "name": "Escaravelho Dourado",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-common-6",
+      "name": "Saqueador do Oásis",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-common-7",
+      "name": "Desertor das Dunas",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-common-8",
+      "name": "Hiena Escarlate",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-special-9",
+      "name": "Capitão das Areias",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-special-10",
+      "name": "Serpente de Cristal",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r1-special-11",
+      "name": "Guardião de Obsidiana",
+      "region": "r1",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-original-0",
+      "name": "Sapo",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-original-1",
+      "name": "Sanguessuga",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-original-2",
+      "name": "Bruxa",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-common-0",
+      "name": "Mosquito Sepulcral",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-common-1",
+      "name": "Crocodilo do Lodo",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-common-2",
+      "name": "Aranha do Charco",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-common-3",
+      "name": "Raiz Pútrida",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-common-4",
+      "name": "Enguia Sombria",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-common-5",
+      "name": "Bolha Ácida",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-common-6",
+      "name": "Contrabandista do Pântano",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-common-7",
+      "name": "Assaltante das Barcas",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-common-8",
+      "name": "Corvo Pestilento",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-special-9",
+      "name": "Alquimista Exilado",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-special-10",
+      "name": "Fera dos Juncos",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r2-special-11",
+      "name": "Ídolo Envenenado",
+      "region": "r2",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-original-0",
+      "name": "Troll",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-original-1",
+      "name": "Harpia",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-original-2",
+      "name": "Autômato",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-common-0",
+      "name": "Cabra da Escarpa",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-common-1",
+      "name": "Gárgula de Basalto",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-common-2",
+      "name": "Águia Serrana",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-common-3",
+      "name": "Aranha de Pedra",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-common-4",
+      "name": "Morcego das Minas",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-common-5",
+      "name": "Vermes de Ferro",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-common-6",
+      "name": "Bandido da Passagem",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-common-7",
+      "name": "Desertor da Forja",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-common-8",
+      "name": "Urso de Granito",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-special-9",
+      "name": "Capataz Renegado",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-special-10",
+      "name": "Sentinela de Bronze",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r3-special-11",
+      "name": "Titã de Rocha",
+      "region": "r3",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-original-0",
+      "name": "Esqueleto",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-original-1",
+      "name": "Espectro",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-original-2",
+      "name": "Sentinela",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-common-0",
+      "name": "Rato de Catacumba",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-common-1",
+      "name": "Múmia Rachada",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-common-2",
+      "name": "Corvo Funerário",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-common-3",
+      "name": "Aranha Ossuária",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-common-4",
+      "name": "Cão Espectral",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-common-5",
+      "name": "Ídolo Esquecido",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-common-6",
+      "name": "Saqueador de Tumbas",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-common-7",
+      "name": "Mercenário das Ruínas",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-common-8",
+      "name": "Armadura Vazia",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-special-9",
+      "name": "Profanador do Selo",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-special-10",
+      "name": "Guardião de Mármore",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r4-special-11",
+      "name": "Lamento Ancestral",
+      "region": "r4",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-original-0",
+      "name": "Yeti",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-original-1",
+      "name": "Lobo Polar",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-original-2",
+      "name": "Elemental",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-common-0",
+      "name": "Raposa de Neve",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-common-1",
+      "name": "Coruja Boreal",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-common-2",
+      "name": "Aranha de Gelo",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-common-3",
+      "name": "Alce Congelado",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-common-4",
+      "name": "Foca das Fendas",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-common-5",
+      "name": "Vento Encarnado",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-common-6",
+      "name": "Caçador Desertor",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-common-7",
+      "name": "Saqueador de Trenós",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-common-8",
+      "name": "Urso Glacial",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-special-9",
+      "name": "Capitão da Nevasca",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-special-10",
+      "name": "Colosso de Geada",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r5-special-11",
+      "name": "Espectro de Gelo",
+      "region": "r5",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-original-0",
+      "name": "Carniçal",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-original-1",
+      "name": "Banshee",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-original-2",
+      "name": "Cavaleiro",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-common-0",
+      "name": "Cão do Ossuário",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-common-1",
+      "name": "Corvo Maldito",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-common-2",
+      "name": "Aranha Cadavérica",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-common-3",
+      "name": "Morcego Espectral",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-common-4",
+      "name": "Armadura Profana",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-common-5",
+      "name": "Vulto do Sino",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-common-6",
+      "name": "Ladrão de Relíquias",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-common-7",
+      "name": "Cavaleiro Desertor",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-common-8",
+      "name": "Abutre de Ossos",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-special-9",
+      "name": "Necromante Errante",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-special-10",
+      "name": "Algoz Sepulcral",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r6-special-11",
+      "name": "Arauto Espectral",
+      "region": "r6",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-original-0",
+      "name": "Diabrete",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-original-1",
+      "name": "Salamandra",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-original-2",
+      "name": "Cultista",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-common-0",
+      "name": "Cão de Cinzas",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-common-1",
+      "name": "Morcego Incandescente",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-common-2",
+      "name": "Aranha de Brasa",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-common-3",
+      "name": "Serpente Magmática",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-common-4",
+      "name": "Besouro de Escória",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-common-5",
+      "name": "Fagulha Viva",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-common-6",
+      "name": "Saqueador de Cinzas",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-common-7",
+      "name": "Mercenário Infernal",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-common-8",
+      "name": "Carniçal de Enxofre",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-special-9",
+      "name": "Inquisidor Caído",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-special-10",
+      "name": "Golem de Lava",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r7-special-11",
+      "name": "Arauto do Calor",
+      "region": "r7",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-original-0",
+      "name": "Arconte",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-original-1",
+      "name": "Quimera",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-original-2",
+      "name": "Vigia",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-common-0",
+      "name": "Leão Alado",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-common-1",
+      "name": "Corvo de Prata",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-common-2",
+      "name": "Cervo Astral",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-common-3",
+      "name": "Aranha Luminosa",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-common-4",
+      "name": "Estátua Animada",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-common-5",
+      "name": "Serpente Radiante",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-common-6",
+      "name": "Desertor Celestial",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-common-7",
+      "name": "Saqueador de Relíquias",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-common-8",
+      "name": "Grifo Menor",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-special-9",
+      "name": "Paladino Desviado",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-special-10",
+      "name": "Elemental da Aurora",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r8-special-11",
+      "name": "Guardião do Véu",
+      "region": "r8",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-original-0",
+      "name": "Sombra",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-original-1",
+      "name": "Aberração",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-original-2",
+      "name": "Eco",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-common-0",
+      "name": "Cão do Nada",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-common-1",
+      "name": "Morcego Sem Rosto",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-common-2",
+      "name": "Aranha do Vazio",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-common-3",
+      "name": "Serpente Sem Sombra",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-common-4",
+      "name": "Sentinela Fraturada",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-common-5",
+      "name": "Orbe Dissoluto",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-common-6",
+      "name": "Desertor do Fim",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-common-7",
+      "name": "Saqueador do Vazio",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-common-8",
+      "name": "Predador Abissal",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-special-9",
+      "name": "Profeta Desfeito",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-special-10",
+      "name": "Arauto da Ausência",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "monster",
+      "id": "r9-special-11",
+      "name": "Colosso do Esquecimento",
+      "region": "r9",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "regional-boss",
+      "id": "regional-boss-0",
+      "name": "Guardião das Raízes",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "regional-boss",
+      "id": "regional-boss-1",
+      "name": "Escorpião Imperial",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "regional-boss",
+      "id": "regional-boss-2",
+      "name": "Hidra Venenosa",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "regional-boss",
+      "id": "regional-boss-3",
+      "name": "Golem Ancestral",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "regional-boss",
+      "id": "regional-boss-4",
+      "name": "Rei Esquecido",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "regional-boss",
+      "id": "regional-boss-5",
+      "name": "Dragão Glacial",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "regional-boss",
+      "id": "regional-boss-6",
+      "name": "Senhor dos Mortos",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "regional-boss",
+      "id": "regional-boss-7",
+      "name": "Demônio das Chamas",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "regional-boss",
+      "id": "regional-boss-8",
+      "name": "Serafim Corrompido",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "regional-boss",
+      "id": "regional-boss-9",
+      "name": "Entidade Primordial",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon-boss",
+      "id": "dungeon-0-boss",
+      "name": "Coração Enraizado",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon-boss",
+      "id": "dungeon-1-boss",
+      "name": "Matriarca de Areia",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon-boss",
+      "id": "dungeon-2-boss",
+      "name": "Devorador Tóxico",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon-boss",
+      "id": "dungeon-3-boss",
+      "name": "Colosso Ferrífero",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon-boss",
+      "id": "dungeon-4-boss",
+      "name": "Sentinela do Túmulo",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon-boss",
+      "id": "dungeon-5-boss",
+      "name": "Titã de Geada",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon-boss",
+      "id": "dungeon-6-boss",
+      "name": "Arauto das Cinzas Mortas",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon-boss",
+      "id": "dungeon-7-boss",
+      "name": "Fornalha Viva",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon-boss",
+      "id": "dungeon-8-boss",
+      "name": "Juiz da Aurora",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon-boss",
+      "id": "dungeon-9-boss",
+      "name": "Núcleo do Nada",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "city",
+      "id": "city-0",
+      "name": "Vila das Folhas",
+      "region": 0,
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "city",
+      "id": "city-1",
+      "name": "Oásis Rubro",
+      "region": 1,
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "city",
+      "id": "city-2",
+      "name": "Porto Nebuloso",
+      "region": 2,
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "city",
+      "id": "city-3",
+      "name": "Fortaleza de Ferro",
+      "region": 3,
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "city",
+      "id": "city-4",
+      "name": "Refúgio Antigo",
+      "region": 4,
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "city",
+      "id": "city-5",
+      "name": "Vila da Neve",
+      "region": 5,
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "city",
+      "id": "city-6",
+      "name": "Santuário Cinzento",
+      "region": 6,
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "city",
+      "id": "city-7",
+      "name": "Bastião das Cinzas",
+      "region": 7,
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "city",
+      "id": "city-8",
+      "name": "Cidadela da Luz",
+      "region": 8,
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "city",
+      "id": "city-9",
+      "name": "Último Refúgio",
+      "region": 9,
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon",
+      "id": "dungeon-0",
+      "name": "Cripta das Raízes",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon",
+      "id": "dungeon-1",
+      "name": "Tumba Rubra",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon",
+      "id": "dungeon-2",
+      "name": "Covil das Toxinas",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon",
+      "id": "dungeon-3",
+      "name": "Forja Subterrânea",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon",
+      "id": "dungeon-4",
+      "name": "Catacumbas Perdidas",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon",
+      "id": "dungeon-5",
+      "name": "Caverna do Inverno",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon",
+      "id": "dungeon-6",
+      "name": "Sepulcro Maldito",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon",
+      "id": "dungeon-7",
+      "name": "Caldeira Infernal",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon",
+      "id": "dungeon-8",
+      "name": "Templo da Aurora",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "dungeon",
+      "id": "dungeon-9",
+      "name": "Fenda Primordial",
+      "art": "ASCII por densidade (integração atual)",
+      "status": "redesenhado"
+    },
+    {
+      "category": "tavern",
+      "id": "tavern-0",
+      "name": "O Corvo das Raízes",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern",
+      "id": "tavern-1",
+      "name": "A Última Duna",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern",
+      "id": "tavern-2",
+      "name": "O Junco Negro",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern",
+      "id": "tavern-3",
+      "name": "O Martelo Partido",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern",
+      "id": "tavern-4",
+      "name": "A Ânfora Rachada",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern",
+      "id": "tavern-5",
+      "name": "A Lareira Branca",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern",
+      "id": "tavern-6",
+      "name": "O Sino Velado",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern",
+      "id": "tavern-7",
+      "name": "A Brasa Errante",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern",
+      "id": "tavern-8",
+      "name": "O Cálice da Aurora",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern",
+      "id": "tavern-9",
+      "name": "A Luz que Resta",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-0",
+      "name": "Mara da Trilha",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-1",
+      "name": "Dorian Quebra-Ramos",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-2",
+      "name": "Samir das Areias",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-3",
+      "name": "Ilya do Sal",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-4",
+      "name": "Vesna do Lodo",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-5",
+      "name": "Bram dos Juncos",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-6",
+      "name": "Edrik do Ferro",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-7",
+      "name": "Runa Cinzel",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-8",
+      "name": "Cassian da Pedra",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-9",
+      "name": "Dália das Tumbas",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-10",
+      "name": "Oren do Inverno",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-11",
+      "name": "Freya do Gelo",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-12",
+      "name": "Silas dos Sinos",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-13",
+      "name": "Mirela do Véu",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-14",
+      "name": "Varek da Brasa",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-15",
+      "name": "Asha das Cinzas",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-16",
+      "name": "Elian da Aurora",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-17",
+      "name": "Liora do Limiar",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-18",
+      "name": "Nohr do Vazio",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "tavern-guest",
+      "id": "guest-19",
+      "name": "Seren da Vigília",
+      "status": "redesenhado",
+      "art": "ASCII por densidade (integração atual)"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-weapon-0",
+      "name": "Lâmina de Vigília das Raízes",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-weapon-1",
+      "name": "Gume Rompedor do Musgo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-weapon-2",
+      "name": "Cetro das Runas Silvestre",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-weapon-3",
+      "name": "Tomo do Oráculo das Raízes",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-weapon-4",
+      "name": "Arco do Vigia do Musgo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-weapon-5",
+      "name": "Besta de Caçada Silvestre",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-weapon-6",
+      "name": "Punhal do Crepúsculo das Raízes",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-weapon-7",
+      "name": "Lâmina do Sussurro do Musgo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-armor-0",
+      "name": "Gibão de Couro das Raízes",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-armor-1",
+      "name": "Cota de Malha do Musgo",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-armor-2",
+      "name": "Couraça de Placas Silvestre",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-armor-3",
+      "name": "Capuz do Rastreador das Raízes",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-armor-4",
+      "name": "Elmo do Bastião do Musgo",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-armor-5",
+      "name": "Manoplas do Artífice Silvestre",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-armor-6",
+      "name": "Luvas de Ferro das Raízes",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-armor-7",
+      "name": "Botas do Passo Leve do Musgo",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-armor-8",
+      "name": "Grevas do Caminhante Silvestre",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-accessory-0",
+      "name": "Anel da Mira das Raízes",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-accessory-1",
+      "name": "Anel do Feitiço do Musgo",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-accessory-2",
+      "name": "Anel da Fortuna Silvestre",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-accessory-3",
+      "name": "Amuleto do Vigor das Raízes",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r0-accessory-4",
+      "name": "Talismã dos Ecos do Musgo",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-weapon-0",
+      "name": "Lâmina de Vigília do Rubro",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-weapon-1",
+      "name": "Gume Rompedor Escarlate",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-weapon-2",
+      "name": "Cetro das Runas das Dunas",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-weapon-3",
+      "name": "Tomo do Oráculo do Rubro",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-weapon-4",
+      "name": "Arco do Vigia Escarlate",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-weapon-5",
+      "name": "Besta de Caçada das Dunas",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-weapon-6",
+      "name": "Punhal do Crepúsculo do Rubro",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-weapon-7",
+      "name": "Lâmina do Sussurro Escarlate",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-armor-0",
+      "name": "Gibão de Couro do Rubro",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-armor-1",
+      "name": "Cota de Malha Escarlate",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-armor-2",
+      "name": "Couraça de Placas das Dunas",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-armor-3",
+      "name": "Capuz do Rastreador do Rubro",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-armor-4",
+      "name": "Elmo do Bastião Escarlate",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-armor-5",
+      "name": "Manoplas do Artífice das Dunas",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-armor-6",
+      "name": "Luvas de Ferro do Rubro",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-armor-7",
+      "name": "Botas do Passo Leve Escarlate",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-armor-8",
+      "name": "Grevas do Caminhante das Dunas",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-accessory-0",
+      "name": "Anel da Mira do Rubro",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-accessory-1",
+      "name": "Anel do Feitiço Escarlate",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-accessory-2",
+      "name": "Anel da Fortuna das Dunas",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-accessory-3",
+      "name": "Amuleto do Vigor do Rubro",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r1-accessory-4",
+      "name": "Talismã dos Ecos Escarlate",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-weapon-0",
+      "name": "Lâmina de Vigília Sombrio",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-weapon-1",
+      "name": "Gume Rompedor do Lodo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-weapon-2",
+      "name": "Cetro das Runas da Névoa",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-weapon-3",
+      "name": "Tomo do Oráculo Sombrio",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-weapon-4",
+      "name": "Arco do Vigia do Lodo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-weapon-5",
+      "name": "Besta de Caçada da Névoa",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-weapon-6",
+      "name": "Punhal do Crepúsculo Sombrio",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-weapon-7",
+      "name": "Lâmina do Sussurro do Lodo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-armor-0",
+      "name": "Gibão de Couro Sombrio",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-armor-1",
+      "name": "Cota de Malha do Lodo",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-armor-2",
+      "name": "Couraça de Placas da Névoa",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-armor-3",
+      "name": "Capuz do Rastreador Sombrio",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-armor-4",
+      "name": "Elmo do Bastião do Lodo",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-armor-5",
+      "name": "Manoplas do Artífice da Névoa",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-armor-6",
+      "name": "Luvas de Ferro Sombrio",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-armor-7",
+      "name": "Botas do Passo Leve do Lodo",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-armor-8",
+      "name": "Grevas do Caminhante da Névoa",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-accessory-0",
+      "name": "Anel da Mira Sombrio",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-accessory-1",
+      "name": "Anel do Feitiço do Lodo",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-accessory-2",
+      "name": "Anel da Fortuna da Névoa",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-accessory-3",
+      "name": "Amuleto do Vigor Sombrio",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r2-accessory-4",
+      "name": "Talismã dos Ecos do Lodo",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-weapon-0",
+      "name": "Lâmina de Vigília da Forja",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-weapon-1",
+      "name": "Gume Rompedor de Ferro",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-weapon-2",
+      "name": "Cetro das Runas Ferrífero",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-weapon-3",
+      "name": "Tomo do Oráculo da Forja",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-weapon-4",
+      "name": "Arco do Vigia de Ferro",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-weapon-5",
+      "name": "Besta de Caçada Ferrífero",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-weapon-6",
+      "name": "Punhal do Crepúsculo da Forja",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-weapon-7",
+      "name": "Lâmina do Sussurro de Ferro",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-armor-0",
+      "name": "Gibão de Couro da Forja",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-armor-1",
+      "name": "Cota de Malha de Ferro",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-armor-2",
+      "name": "Couraça de Placas Ferrífero",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-armor-3",
+      "name": "Capuz do Rastreador da Forja",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-armor-4",
+      "name": "Elmo do Bastião de Ferro",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-armor-5",
+      "name": "Manoplas do Artífice Ferrífero",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-armor-6",
+      "name": "Luvas de Ferro da Forja",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-armor-7",
+      "name": "Botas do Passo Leve de Ferro",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-armor-8",
+      "name": "Grevas do Caminhante Ferrífero",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-accessory-0",
+      "name": "Anel da Mira da Forja",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-accessory-1",
+      "name": "Anel do Feitiço de Ferro",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-accessory-2",
+      "name": "Anel da Fortuna Ferrífero",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-accessory-3",
+      "name": "Amuleto do Vigor da Forja",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r3-accessory-4",
+      "name": "Talismã dos Ecos de Ferro",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-weapon-0",
+      "name": "Lâmina de Vigília das Ruínas",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-weapon-1",
+      "name": "Gume Rompedor Antigo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-weapon-2",
+      "name": "Cetro das Runas dos Sepulcros",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-weapon-3",
+      "name": "Tomo do Oráculo das Ruínas",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-weapon-4",
+      "name": "Arco do Vigia Antigo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-weapon-5",
+      "name": "Besta de Caçada dos Sepulcros",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-weapon-6",
+      "name": "Punhal do Crepúsculo das Ruínas",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-weapon-7",
+      "name": "Lâmina do Sussurro Antigo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-armor-0",
+      "name": "Gibão de Couro das Ruínas",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-armor-1",
+      "name": "Cota de Malha Antigo",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-armor-2",
+      "name": "Couraça de Placas dos Sepulcros",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-armor-3",
+      "name": "Capuz do Rastreador das Ruínas",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-armor-4",
+      "name": "Elmo do Bastião Antigo",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-armor-5",
+      "name": "Manoplas do Artífice dos Sepulcros",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-armor-6",
+      "name": "Luvas de Ferro das Ruínas",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-armor-7",
+      "name": "Botas do Passo Leve Antigo",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-armor-8",
+      "name": "Grevas do Caminhante dos Sepulcros",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-accessory-0",
+      "name": "Anel da Mira das Ruínas",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-accessory-1",
+      "name": "Anel do Feitiço Antigo",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-accessory-2",
+      "name": "Anel da Fortuna dos Sepulcros",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-accessory-3",
+      "name": "Amuleto do Vigor das Ruínas",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r4-accessory-4",
+      "name": "Talismã dos Ecos Antigo",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-weapon-0",
+      "name": "Lâmina de Vigília Glacial",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-weapon-1",
+      "name": "Gume Rompedor da Geada",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-weapon-2",
+      "name": "Cetro das Runas da Aurora",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-weapon-3",
+      "name": "Tomo do Oráculo Glacial",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-weapon-4",
+      "name": "Arco do Vigia da Geada",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-weapon-5",
+      "name": "Besta de Caçada da Aurora",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-weapon-6",
+      "name": "Punhal do Crepúsculo Glacial",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-weapon-7",
+      "name": "Lâmina do Sussurro da Geada",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-armor-0",
+      "name": "Gibão de Couro Glacial",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-armor-1",
+      "name": "Cota de Malha da Geada",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-armor-2",
+      "name": "Couraça de Placas da Aurora",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-armor-3",
+      "name": "Capuz do Rastreador Glacial",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-armor-4",
+      "name": "Elmo do Bastião da Geada",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-armor-5",
+      "name": "Manoplas do Artífice da Aurora",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-armor-6",
+      "name": "Luvas de Ferro Glacial",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-armor-7",
+      "name": "Botas do Passo Leve da Geada",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-armor-8",
+      "name": "Grevas do Caminhante da Aurora",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-accessory-0",
+      "name": "Anel da Mira Glacial",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-accessory-1",
+      "name": "Anel do Feitiço da Geada",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-accessory-2",
+      "name": "Anel da Fortuna da Aurora",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-accessory-3",
+      "name": "Amuleto do Vigor Glacial",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r5-accessory-4",
+      "name": "Talismã dos Ecos da Geada",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-weapon-0",
+      "name": "Lâmina de Vigília do Lamento",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-weapon-1",
+      "name": "Gume Rompedor da Maldição",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-weapon-2",
+      "name": "Cetro das Runas Profano",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-weapon-3",
+      "name": "Tomo do Oráculo do Lamento",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-weapon-4",
+      "name": "Arco do Vigia da Maldição",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-weapon-5",
+      "name": "Besta de Caçada Profano",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-weapon-6",
+      "name": "Punhal do Crepúsculo do Lamento",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-weapon-7",
+      "name": "Lâmina do Sussurro da Maldição",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-armor-0",
+      "name": "Gibão de Couro do Lamento",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-armor-1",
+      "name": "Cota de Malha da Maldição",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-armor-2",
+      "name": "Couraça de Placas Profano",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-armor-3",
+      "name": "Capuz do Rastreador do Lamento",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-armor-4",
+      "name": "Elmo do Bastião da Maldição",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-armor-5",
+      "name": "Manoplas do Artífice Profano",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-armor-6",
+      "name": "Luvas de Ferro do Lamento",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-armor-7",
+      "name": "Botas do Passo Leve da Maldição",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-armor-8",
+      "name": "Grevas do Caminhante Profano",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-accessory-0",
+      "name": "Anel da Mira do Lamento",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-accessory-1",
+      "name": "Anel do Feitiço da Maldição",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-accessory-2",
+      "name": "Anel da Fortuna Profano",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-accessory-3",
+      "name": "Amuleto do Vigor do Lamento",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r6-accessory-4",
+      "name": "Talismã dos Ecos da Maldição",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-weapon-0",
+      "name": "Lâmina de Vigília do Inferno",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-weapon-1",
+      "name": "Gume Rompedor Ígneo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-weapon-2",
+      "name": "Cetro das Runas das Brasas",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-weapon-3",
+      "name": "Tomo do Oráculo do Inferno",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-weapon-4",
+      "name": "Arco do Vigia Ígneo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-weapon-5",
+      "name": "Besta de Caçada das Brasas",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-weapon-6",
+      "name": "Punhal do Crepúsculo do Inferno",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-weapon-7",
+      "name": "Lâmina do Sussurro Ígneo",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-armor-0",
+      "name": "Gibão de Couro do Inferno",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-armor-1",
+      "name": "Cota de Malha Ígneo",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-armor-2",
+      "name": "Couraça de Placas das Brasas",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-armor-3",
+      "name": "Capuz do Rastreador do Inferno",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-armor-4",
+      "name": "Elmo do Bastião Ígneo",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-armor-5",
+      "name": "Manoplas do Artífice das Brasas",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-armor-6",
+      "name": "Luvas de Ferro do Inferno",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-armor-7",
+      "name": "Botas do Passo Leve Ígneo",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-armor-8",
+      "name": "Grevas do Caminhante das Brasas",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-accessory-0",
+      "name": "Anel da Mira do Inferno",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-accessory-1",
+      "name": "Anel do Feitiço Ígneo",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-accessory-2",
+      "name": "Anel da Fortuna das Brasas",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-accessory-3",
+      "name": "Amuleto do Vigor do Inferno",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r7-accessory-4",
+      "name": "Talismã dos Ecos Ígneo",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-weapon-0",
+      "name": "Lâmina de Vigília Celestial",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-weapon-1",
+      "name": "Gume Rompedor da Alvorada",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-weapon-2",
+      "name": "Cetro das Runas do Firmamento",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-weapon-3",
+      "name": "Tomo do Oráculo Celestial",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-weapon-4",
+      "name": "Arco do Vigia da Alvorada",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-weapon-5",
+      "name": "Besta de Caçada do Firmamento",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-weapon-6",
+      "name": "Punhal do Crepúsculo Celestial",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-weapon-7",
+      "name": "Lâmina do Sussurro da Alvorada",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-armor-0",
+      "name": "Gibão de Couro Celestial",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-armor-1",
+      "name": "Cota de Malha da Alvorada",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-armor-2",
+      "name": "Couraça de Placas do Firmamento",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-armor-3",
+      "name": "Capuz do Rastreador Celestial",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-armor-4",
+      "name": "Elmo do Bastião da Alvorada",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-armor-5",
+      "name": "Manoplas do Artífice do Firmamento",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-armor-6",
+      "name": "Luvas de Ferro Celestial",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-armor-7",
+      "name": "Botas do Passo Leve da Alvorada",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-armor-8",
+      "name": "Grevas do Caminhante do Firmamento",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-accessory-0",
+      "name": "Anel da Mira Celestial",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-accessory-1",
+      "name": "Anel do Feitiço da Alvorada",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-accessory-2",
+      "name": "Anel da Fortuna do Firmamento",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-accessory-3",
+      "name": "Amuleto do Vigor Celestial",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r8-accessory-4",
+      "name": "Talismã dos Ecos da Alvorada",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-weapon-0",
+      "name": "Lâmina de Vigília do Eclipse",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-weapon-1",
+      "name": "Gume Rompedor do Vazio",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-weapon-2",
+      "name": "Cetro das Runas Abissal",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-weapon-3",
+      "name": "Tomo do Oráculo do Eclipse",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-weapon-4",
+      "name": "Arco do Vigia do Vazio",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-weapon-5",
+      "name": "Besta de Caçada Abissal",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-weapon-6",
+      "name": "Punhal do Crepúsculo do Eclipse",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-weapon-7",
+      "name": "Lâmina do Sussurro do Vazio",
+      "slot": "weapon",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-armor-0",
+      "name": "Gibão de Couro do Eclipse",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-armor-1",
+      "name": "Cota de Malha do Vazio",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-armor-2",
+      "name": "Couraça de Placas Abissal",
+      "slot": "body",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-armor-3",
+      "name": "Capuz do Rastreador do Eclipse",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-armor-4",
+      "name": "Elmo do Bastião do Vazio",
+      "slot": "head",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-armor-5",
+      "name": "Manoplas do Artífice Abissal",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-armor-6",
+      "name": "Luvas de Ferro do Eclipse",
+      "slot": "hands",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-armor-7",
+      "name": "Botas do Passo Leve do Vazio",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-armor-8",
+      "name": "Grevas do Caminhante Abissal",
+      "slot": "feet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-accessory-0",
+      "name": "Anel da Mira do Eclipse",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-accessory-1",
+      "name": "Anel do Feitiço do Vazio",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-accessory-2",
+      "name": "Anel da Fortuna Abissal",
+      "slot": "ring",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-accessory-3",
+      "name": "Amuleto do Vigor do Eclipse",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "equipment",
+      "id": "ep6-r9-accessory-4",
+      "name": "Talismã dos Ecos do Vazio",
+      "slot": "amulet",
+      "status": "redesenhado",
+      "art": "ASCII de densidade 27×21 e ícone 11×9; Lote 5"
+    },
+    {
+      "category": "narrative-event",
+      "id": "wounded-traveler",
+      "name": "Viajante ferido",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "forgotten-altar",
+      "name": "Altar abandonado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "suspicious-chest",
+      "name": "Baú suspeito",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "trapped-creature",
+      "name": "Criatura aprisionada",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "attacked-caravan",
+      "name": "Caravana atacada",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "ancient-ruins",
+      "name": "Ruínas antigas",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "mysterious-spring",
+      "name": "Fonte misteriosa",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "lost-merchant",
+      "name": "Mercador perdido",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "abandoned-camp",
+      "name": "Acampamento abandonado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "hidden-passage",
+      "name": "Passagem secreta",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "road-toll",
+      "name": "Pedágio dos Saqueadores",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "caravan-ledger",
+      "name": "Livro de Contas Rasgado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "bandit-hideout",
+      "name": "Esconderijo da Estrada Cinzenta",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "bandit-deserter",
+      "name": "Desertor Amedrontado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "witness-confrontation",
+      "name": "O Nome do Contratante",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "hungry-refugees",
+      "name": "Refugiados da Fronteira",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "watchtower-smoke",
+      "name": "Fumaça na Torre de Vigia",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "moonlit-shrine",
+      "name": "Santuário ao Luar",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "venom-tracks",
+      "name": "Rastros de Veneno",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "forgotten-letter",
+      "name": "Carta Sem Destinatário",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "fallen-soldier",
+      "name": "Armadura do Soldado Perdido",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "masked-pilgrim",
+      "name": "Peregrino Mascarado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "broken-bridge",
+      "name": "Ponte Destruída",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "mining-dispute",
+      "name": "Disputa na Mina",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "frozen-camp",
+      "name": "Fogueira Sob a Neve",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "ashen-offering",
+      "name": "Oferenda nas Cinzas",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "celestial-envoy",
+      "name": "Mensageiro da Aurora",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "void-whispers",
+      "name": "Sussurros do Vazio",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "stolen-medicine",
+      "name": "Remédios Roubados",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "ambushed-messenger",
+      "name": "Mensageiro Encurralado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-mapa-rasgado",
+      "name": "O mapa rasgado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-voz-na-mata",
+      "name": "Voz entre as árvores",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-odre-perdido",
+      "name": "O odre perdido",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-poco-selado",
+      "name": "O poço selado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-raiz-negra",
+      "name": "A raiz negra",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-barco-vazio",
+      "name": "O barco vazio",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-contrato-ferro",
+      "name": "Contrato de ferro",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-molde-perdido",
+      "name": "Molde desaparecido",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-nome-apagado",
+      "name": "O nome apagado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-selo-funerario",
+      "name": "O selo funerário",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-rastro-sem-pegadas",
+      "name": "Rastro sem pegadas",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-cartas-do-frio",
+      "name": "Cartas do frio",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-sino-calado",
+      "name": "O sino calado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-vila-esquecida",
+      "name": "A vila esquecida",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-ordem-das-cinzas",
+      "name": "A ordem das cinzas",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-metal-das-brasas",
+      "name": "Metal das brasas",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-juramento-velado",
+      "name": "Juramento velado",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-carta-da-aurora",
+      "name": "Carta da aurora",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-memoria-perdida",
+      "name": "Memória perdida",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "narrative-event",
+      "id": "tavern-ultima-chama",
+      "name": "A última chama",
+      "status": "redesenhado",
+      "art": "ASCII 84×34, composição por tema do acontecimento"
+    },
+    {
+      "category": "npc",
+      "id": "ina-folhas",
+      "name": "Ina das Folhas",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "ravi-oasis",
+      "name": "Ravi Rubro",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "nara-porto",
+      "name": "Nara da Névoa",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "orim-ferro",
+      "name": "Orim Ferrovelho",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "sel-ruinas",
+      "name": "Sel das Ruínas",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "bora-neve",
+      "name": "Bora da Neve",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "mirna-cinzento",
+      "name": "Mirna Cinzenta",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "tarek-cinzas",
+      "name": "Tarek das Cinzas",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "aria-luz",
+      "name": "Aria da Luz",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "nox-refugio",
+      "name": "Nox do Refúgio",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "elio-viajante",
+      "name": "Élio, o Viajante",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "npc",
+      "id": "tomas-mercador",
+      "name": "Tomás, o Mercador",
+      "status": "redesenhado",
+      "art": "ASCII 64x40"
+    },
+    {
+      "category": "biome",
+      "id": "biome-0",
+      "name": "Floresta Esquecida",
+      "status": "redesenhado",
+      "art": "ASCII 112x42"
+    },
+    {
+      "category": "interior",
+      "id": "0:forge",
+      "name": "Vila das Folhas · forge",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "0:weapon",
+      "name": "Vila das Folhas · weapon",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "0:armor",
+      "name": "Vila das Folhas · armor",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "0:accessory",
+      "name": "Vila das Folhas · accessory",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "0:potion",
+      "name": "Vila das Folhas · potion",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "0:materials",
+      "name": "Vila das Folhas · materials",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "biome",
+      "id": "biome-1",
+      "name": "Deserto Escarlate",
+      "status": "redesenhado",
+      "art": "ASCII 112x42"
+    },
+    {
+      "category": "interior",
+      "id": "1:forge",
+      "name": "Oásis Rubro · forge",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "1:weapon",
+      "name": "Oásis Rubro · weapon",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "1:armor",
+      "name": "Oásis Rubro · armor",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "1:accessory",
+      "name": "Oásis Rubro · accessory",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "1:potion",
+      "name": "Oásis Rubro · potion",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "1:materials",
+      "name": "Oásis Rubro · materials",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "biome",
+      "id": "biome-2",
+      "name": "Pântano Sombrio",
+      "status": "redesenhado",
+      "art": "ASCII 112x42"
+    },
+    {
+      "category": "interior",
+      "id": "2:forge",
+      "name": "Porto Nebuloso · forge",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "2:weapon",
+      "name": "Porto Nebuloso · weapon",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "2:armor",
+      "name": "Porto Nebuloso · armor",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "2:accessory",
+      "name": "Porto Nebuloso · accessory",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "2:potion",
+      "name": "Porto Nebuloso · potion",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "2:materials",
+      "name": "Porto Nebuloso · materials",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "biome",
+      "id": "biome-3",
+      "name": "Montanhas de Ferro",
+      "status": "redesenhado",
+      "art": "ASCII 112x42"
+    },
+    {
+      "category": "interior",
+      "id": "3:forge",
+      "name": "Fortaleza de Ferro · forge",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "3:weapon",
+      "name": "Fortaleza de Ferro · weapon",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "3:armor",
+      "name": "Fortaleza de Ferro · armor",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "3:accessory",
+      "name": "Fortaleza de Ferro · accessory",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "3:potion",
+      "name": "Fortaleza de Ferro · potion",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "3:materials",
+      "name": "Fortaleza de Ferro · materials",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "biome",
+      "id": "biome-4",
+      "name": "Ruínas Perdidas",
+      "status": "redesenhado",
+      "art": "ASCII 112x42"
+    },
+    {
+      "category": "interior",
+      "id": "4:forge",
+      "name": "Refúgio Antigo · forge",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "4:weapon",
+      "name": "Refúgio Antigo · weapon",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "4:armor",
+      "name": "Refúgio Antigo · armor",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "4:accessory",
+      "name": "Refúgio Antigo · accessory",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "4:potion",
+      "name": "Refúgio Antigo · potion",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "4:materials",
+      "name": "Refúgio Antigo · materials",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "biome",
+      "id": "biome-5",
+      "name": "Terras Congeladas",
+      "status": "redesenhado",
+      "art": "ASCII 112x42"
+    },
+    {
+      "category": "interior",
+      "id": "5:forge",
+      "name": "Vila da Neve · forge",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "5:weapon",
+      "name": "Vila da Neve · weapon",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "5:armor",
+      "name": "Vila da Neve · armor",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "5:accessory",
+      "name": "Vila da Neve · accessory",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "5:potion",
+      "name": "Vila da Neve · potion",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "5:materials",
+      "name": "Vila da Neve · materials",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "biome",
+      "id": "biome-6",
+      "name": "Vale Amaldiçoado",
+      "status": "redesenhado",
+      "art": "ASCII 112x42"
+    },
+    {
+      "category": "interior",
+      "id": "6:forge",
+      "name": "Santuário Cinzento · forge",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "6:weapon",
+      "name": "Santuário Cinzento · weapon",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "6:armor",
+      "name": "Santuário Cinzento · armor",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "6:accessory",
+      "name": "Santuário Cinzento · accessory",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "6:potion",
+      "name": "Santuário Cinzento · potion",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "6:materials",
+      "name": "Santuário Cinzento · materials",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "biome",
+      "id": "biome-7",
+      "name": "Abismo Ardente",
+      "status": "redesenhado",
+      "art": "ASCII 112x42"
+    },
+    {
+      "category": "interior",
+      "id": "7:forge",
+      "name": "Bastião das Cinzas · forge",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "7:weapon",
+      "name": "Bastião das Cinzas · weapon",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "7:armor",
+      "name": "Bastião das Cinzas · armor",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "7:accessory",
+      "name": "Bastião das Cinzas · accessory",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "7:potion",
+      "name": "Bastião das Cinzas · potion",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "7:materials",
+      "name": "Bastião das Cinzas · materials",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "biome",
+      "id": "biome-8",
+      "name": "Reino Celestial",
+      "status": "redesenhado",
+      "art": "ASCII 112x42"
+    },
+    {
+      "category": "interior",
+      "id": "8:forge",
+      "name": "Cidadela da Luz · forge",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "8:weapon",
+      "name": "Cidadela da Luz · weapon",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "8:armor",
+      "name": "Cidadela da Luz · armor",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "8:accessory",
+      "name": "Cidadela da Luz · accessory",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "8:potion",
+      "name": "Cidadela da Luz · potion",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "8:materials",
+      "name": "Cidadela da Luz · materials",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "biome",
+      "id": "biome-9",
+      "name": "Vazio Eterno",
+      "status": "redesenhado",
+      "art": "ASCII 112x42"
+    },
+    {
+      "category": "interior",
+      "id": "9:forge",
+      "name": "Último Refúgio · forge",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "9:weapon",
+      "name": "Último Refúgio · weapon",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "9:armor",
+      "name": "Último Refúgio · armor",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "9:accessory",
+      "name": "Último Refúgio · accessory",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "9:potion",
+      "name": "Último Refúgio · potion",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "interior",
+      "id": "9:materials",
+      "name": "Último Refúgio · materials",
+      "status": "redesenhado",
+      "art": "ASCII 100x38"
+    },
+    {
+      "category": "material",
+      "id": "Madeira Antiga",
+      "name": "Madeira Antiga",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Cristal Solar",
+      "name": "Cristal Solar",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Lodo Arcano",
+      "name": "Lodo Arcano",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Minério de Ferro",
+      "name": "Minério de Ferro",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Relíquia Antiga",
+      "name": "Relíquia Antiga",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Gelo Eterno",
+      "name": "Gelo Eterno",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Osso Rúnico",
+      "name": "Osso Rúnico",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Brasa Infernal",
+      "name": "Brasa Infernal",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Pena Celestial",
+      "name": "Pena Celestial",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Fragmento do Vazio",
+      "name": "Fragmento do Vazio",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Ferro Bruto",
+      "name": "Ferro Bruto",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Cristal Escarlate",
+      "name": "Cristal Escarlate",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Essência Venenosa",
+      "name": "Essência Venenosa",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Aço das Montanhas",
+      "name": "Aço das Montanhas",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Fragmento Antigo",
+      "name": "Fragmento Antigo",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Cristal Glacial",
+      "name": "Cristal Glacial",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Essência Sombria",
+      "name": "Essência Sombria",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Núcleo Infernal",
+      "name": "Núcleo Infernal",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Fragmento Celestial",
+      "name": "Fragmento Celestial",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Matéria do Vazio",
+      "name": "Matéria do Vazio",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Seiva Primordial",
+      "name": "Seiva Primordial",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Âmbar Escarlate",
+      "name": "Âmbar Escarlate",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Sal de Miasma",
+      "name": "Sal de Miasma",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Carvão Rúnico",
+      "name": "Carvão Rúnico",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Pó de Relicário",
+      "name": "Pó de Relicário",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Orvalho Glacial",
+      "name": "Orvalho Glacial",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Tinta Maldita",
+      "name": "Tinta Maldita",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Enxofre Vivo",
+      "name": "Enxofre Vivo",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Luz Condensada",
+      "name": "Luz Condensada",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "material",
+      "id": "Éter do Eclipse",
+      "name": "Éter do Eclipse",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "object",
+      "id": "hp",
+      "name": "Poção de Vida",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "object",
+      "id": "mp",
+      "name": "Poção de Mana",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "object",
+      "id": "elixir",
+      "name": "Elixir",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "object",
+      "id": "antidote",
+      "name": "Antídoto",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    },
+    {
+      "category": "object",
+      "id": "chest",
+      "name": "Baú",
+      "status": "redesenhado",
+      "art": "ASCII 27×21, ícone 11×9"
+    }
+  ]
+}

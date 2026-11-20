@@ -1,0 +1,25 @@
+/** Gera amostra isolada da interface real combatUI() com CSS da aplicação. */
+import {readFileSync,writeFileSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {resolve,dirname} from 'node:path';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const map=new Map();
+globalThis.localStorage={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v),removeItem:k=>map.delete(k)};
+const app={innerHTML:'',addEventListener(){},querySelector(){return null},querySelectorAll(){return []}};
+globalThis.document={querySelector:s=>s==='#app'?app:null};
+globalThis.window={innerHeight:844,addEventListener(){}};
+globalThis.requestAnimationFrame=fn=>fn();
+const {newGame}=await import('../js/player.js');
+const {combat}=await import('../js/combat.js');
+const {rt}=await import('../js/runtime.js');
+const {combatUI}=await import('../js/ui.js');
+newGame('Aventureira','guerreiro');
+rt.state.lv=15;
+rt.state.mp=40;
+combat();
+const index=readFileSync(resolve(root,'index.html'),'utf8');
+const cssPaths=[...index.matchAll(/href="(css\/[^"?]+\.css)"/g)].map(m=>m[1]);
+const css=cssPaths.map(path=>readFileSync(resolve(root,path),'utf8')).join('\n');
+const markup=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Etapa 5 · Prévia da arena</title><style>${css}</style></head><body><main id="app"><header class="head"><div class="brand">ASCII REALMS</div></header><div class="content combat-content">${combatUI()}</div></main></body></html>`;
+writeFileSync(resolve(root,'docs/qa-ux5-fixture.html'),markup);
+console.log('Prévia isolada do combatUI() criada com',cssPaths.length,'arquivos CSS.');

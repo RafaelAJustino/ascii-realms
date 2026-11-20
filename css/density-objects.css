@@ -1,0 +1,11 @@
+/* Lote 5: os detalhes preservam colunas ASCII, sem inundar as listas. */
+.object-art-icon{display:inline-block;vertical-align:middle;white-space:pre;text-align:left;font:400 7px/1.05 Consolas,"Liberation Mono",monospace;letter-spacing:0;margin:2px 8px 2px 0;max-width:80px;overflow:hidden;color:var(--text,#d7d8d7)}
+.object-art-detail{margin:6px 0 9px;max-width:100%;border:1px solid var(--border,#3c4349);border-radius:6px;padding:4px 6px;clear:both}
+.object-art-detail summary{cursor:pointer;font-size:.78rem;min-height:28px;display:flex;align-items:center;user-select:none}
+.object-art-detail:not([open]) .object-art-content{display:none}
+.object-art-scene{width:100%;max-width:100%;min-height:0;max-height:250px;overflow:hidden;justify-content:center}
+.object-art-scene .ascii-art{font-family:Consolas,"Liberation Mono",monospace!important;white-space:pre!important;font-weight:400!important;font-variant-ligatures:none;text-align:left!important;letter-spacing:0!important;line-height:1.06!important;max-width:none!important}
+.object-art-content{display:flex;gap:10px;align-items:center;flex-wrap:wrap;overflow:hidden}
+.object-art-content .object-art-icon{font-size:8px}
+@media(max-width:430px){.object-art-scene{max-height:180px}.object-art-content{gap:4px}}
+@media(prefers-reduced-motion:reduce){.object-art-detail *{animation:none!important;transition:none!important}}

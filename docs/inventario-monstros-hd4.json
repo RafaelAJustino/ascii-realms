@@ -1,0 +1,1507 @@
+{
+  "width": 112,
+  "height": 78,
+  "total": 150,
+  "creatures": [
+    {
+      "id": "r0-original-0",
+      "name": "Lobo",
+      "region": 0,
+      "family": "wolf",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-original-1",
+      "name": "Aranha",
+      "region": 0,
+      "family": "spider",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-original-2",
+      "name": "Ent",
+      "region": 0,
+      "family": "tree",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-common-0",
+      "name": "Corvo Carniceiro",
+      "region": 0,
+      "family": "corvid",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-common-1",
+      "name": "Javali Espinhoso",
+      "region": 0,
+      "family": "boar",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-common-2",
+      "name": "Cervo Corrompido",
+      "region": 0,
+      "family": "stag",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-common-3",
+      "name": "Lince das Brumas",
+      "region": 0,
+      "family": "cat",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-common-4",
+      "name": "Raiz Faminta",
+      "region": 0,
+      "family": "tree",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-common-5",
+      "name": "Vespa do Musgo",
+      "region": 0,
+      "family": "insect",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-common-6",
+      "name": "Saqueador da Mata",
+      "region": 0,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-common-7",
+      "name": "Arqueiro Fora da Lei",
+      "region": 0,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-common-8",
+      "name": "Urso da Clareira",
+      "region": 0,
+      "family": "bear",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-special-9",
+      "name": "Capitão dos Salteadores",
+      "region": 0,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-special-10",
+      "name": "Aranha Matriarca",
+      "region": 0,
+      "family": "spider",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r0-special-11",
+      "name": "Espírito do Carvalho",
+      "region": 0,
+      "family": "tree",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-original-0",
+      "name": "Escorpião",
+      "region": 1,
+      "family": "scorpion",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-original-1",
+      "name": "Serpente",
+      "region": 1,
+      "family": "snake",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-original-2",
+      "name": "Nômade",
+      "region": 1,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-common-0",
+      "name": "Víbora de Dunas",
+      "region": 1,
+      "family": "snake",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-common-1",
+      "name": "Abutre Carmesim",
+      "region": 1,
+      "family": "vulture",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-common-2",
+      "name": "Chacal do Sal",
+      "region": 1,
+      "family": "wolf",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-common-3",
+      "name": "Besouro Solar",
+      "region": 1,
+      "family": "insect",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-common-4",
+      "name": "Lagarto de Vidro",
+      "region": 1,
+      "family": "crocodile",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-common-5",
+      "name": "Escaravelho Dourado",
+      "region": 1,
+      "family": "insect",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-common-6",
+      "name": "Saqueador do Oásis",
+      "region": 1,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-common-7",
+      "name": "Desertor das Dunas",
+      "region": 1,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-common-8",
+      "name": "Hiena Escarlate",
+      "region": 1,
+      "family": "wolf",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-special-9",
+      "name": "Capitão das Areias",
+      "region": 1,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-special-10",
+      "name": "Serpente de Cristal",
+      "region": 1,
+      "family": "snake",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r1-special-11",
+      "name": "Guardião de Obsidiana",
+      "region": 1,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-original-0",
+      "name": "Sapo",
+      "region": 2,
+      "family": "frog",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-original-1",
+      "name": "Sanguessuga",
+      "region": 2,
+      "family": "snake",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-original-2",
+      "name": "Bruxa",
+      "region": 2,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-common-0",
+      "name": "Mosquito Sepulcral",
+      "region": 2,
+      "family": "insect",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-common-1",
+      "name": "Crocodilo do Lodo",
+      "region": 2,
+      "family": "crocodile",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-common-2",
+      "name": "Aranha do Charco",
+      "region": 2,
+      "family": "spider",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-common-3",
+      "name": "Raiz Pútrida",
+      "region": 2,
+      "family": "tree",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-common-4",
+      "name": "Enguia Sombria",
+      "region": 2,
+      "family": "snake",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-common-5",
+      "name": "Bolha Ácida",
+      "region": 2,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-common-6",
+      "name": "Contrabandista do Pântano",
+      "region": 2,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-common-7",
+      "name": "Assaltante das Barcas",
+      "region": 2,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-common-8",
+      "name": "Corvo Pestilento",
+      "region": 2,
+      "family": "corvid",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-special-9",
+      "name": "Alquimista Exilado",
+      "region": 2,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-special-10",
+      "name": "Fera dos Juncos",
+      "region": 2,
+      "family": "cat",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r2-special-11",
+      "name": "Ídolo Envenenado",
+      "region": 2,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-original-0",
+      "name": "Troll",
+      "region": 3,
+      "family": "giant",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-original-1",
+      "name": "Harpia",
+      "region": 3,
+      "family": "raptor",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-original-2",
+      "name": "Autômato",
+      "region": 3,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-common-0",
+      "name": "Cabra da Escarpa",
+      "region": 3,
+      "family": "stag",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-common-1",
+      "name": "Gárgula de Basalto",
+      "region": 3,
+      "family": "demon",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-common-2",
+      "name": "Águia Serrana",
+      "region": 3,
+      "family": "raptor",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-common-3",
+      "name": "Aranha de Pedra",
+      "region": 3,
+      "family": "spider",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-common-4",
+      "name": "Morcego das Minas",
+      "region": 3,
+      "family": "bat",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-common-5",
+      "name": "Vermes de Ferro",
+      "region": 3,
+      "family": "insect",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-common-6",
+      "name": "Bandido da Passagem",
+      "region": 3,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-common-7",
+      "name": "Desertor da Forja",
+      "region": 3,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-common-8",
+      "name": "Urso de Granito",
+      "region": 3,
+      "family": "bear",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-special-9",
+      "name": "Capataz Renegado",
+      "region": 3,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-special-10",
+      "name": "Sentinela de Bronze",
+      "region": 3,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r3-special-11",
+      "name": "Titã de Rocha",
+      "region": 3,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-original-0",
+      "name": "Esqueleto",
+      "region": 4,
+      "family": "skeleton",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-original-1",
+      "name": "Espectro",
+      "region": 4,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-original-2",
+      "name": "Sentinela",
+      "region": 4,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-common-0",
+      "name": "Rato de Catacumba",
+      "region": 4,
+      "family": "rat",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-common-1",
+      "name": "Múmia Rachada",
+      "region": 4,
+      "family": "skeleton",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-common-2",
+      "name": "Corvo Funerário",
+      "region": 4,
+      "family": "corvid",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-common-3",
+      "name": "Aranha Ossuária",
+      "region": 4,
+      "family": "spider",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-common-4",
+      "name": "Cão Espectral",
+      "region": 4,
+      "family": "wolf",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-common-5",
+      "name": "Ídolo Esquecido",
+      "region": 4,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-common-6",
+      "name": "Saqueador de Tumbas",
+      "region": 4,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-common-7",
+      "name": "Mercenário das Ruínas",
+      "region": 4,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-common-8",
+      "name": "Armadura Vazia",
+      "region": 4,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-special-9",
+      "name": "Profanador do Selo",
+      "region": 4,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-special-10",
+      "name": "Guardião de Mármore",
+      "region": 4,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r4-special-11",
+      "name": "Lamento Ancestral",
+      "region": 4,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-original-0",
+      "name": "Yeti",
+      "region": 5,
+      "family": "giant",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-original-1",
+      "name": "Lobo Polar",
+      "region": 5,
+      "family": "wolf",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-original-2",
+      "name": "Elemental",
+      "region": 5,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-common-0",
+      "name": "Raposa de Neve",
+      "region": 5,
+      "family": "wolf",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-common-1",
+      "name": "Coruja Boreal",
+      "region": 5,
+      "family": "owl",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-common-2",
+      "name": "Aranha de Gelo",
+      "region": 5,
+      "family": "spider",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-common-3",
+      "name": "Alce Congelado",
+      "region": 5,
+      "family": "stag",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-common-4",
+      "name": "Foca das Fendas",
+      "region": 5,
+      "family": "seal",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-common-5",
+      "name": "Vento Encarnado",
+      "region": 5,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-common-6",
+      "name": "Caçador Desertor",
+      "region": 5,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-common-7",
+      "name": "Saqueador de Trenós",
+      "region": 5,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-common-8",
+      "name": "Urso Glacial",
+      "region": 5,
+      "family": "bear",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-special-9",
+      "name": "Capitão da Nevasca",
+      "region": 5,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-special-10",
+      "name": "Colosso de Geada",
+      "region": 5,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r5-special-11",
+      "name": "Espectro de Gelo",
+      "region": 5,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-original-0",
+      "name": "Carniçal",
+      "region": 6,
+      "family": "skeleton",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-original-1",
+      "name": "Banshee",
+      "region": 6,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-original-2",
+      "name": "Cavaleiro",
+      "region": 6,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-common-0",
+      "name": "Cão do Ossuário",
+      "region": 6,
+      "family": "wolf",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-common-1",
+      "name": "Corvo Maldito",
+      "region": 6,
+      "family": "corvid",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-common-2",
+      "name": "Aranha Cadavérica",
+      "region": 6,
+      "family": "spider",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-common-3",
+      "name": "Morcego Espectral",
+      "region": 6,
+      "family": "bat",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-common-4",
+      "name": "Armadura Profana",
+      "region": 6,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-common-5",
+      "name": "Vulto do Sino",
+      "region": 6,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-common-6",
+      "name": "Ladrão de Relíquias",
+      "region": 6,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-common-7",
+      "name": "Cavaleiro Desertor",
+      "region": 6,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-common-8",
+      "name": "Abutre de Ossos",
+      "region": 6,
+      "family": "vulture",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-special-9",
+      "name": "Necromante Errante",
+      "region": 6,
+      "family": "skeleton",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-special-10",
+      "name": "Algoz Sepulcral",
+      "region": 6,
+      "family": "skeleton",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r6-special-11",
+      "name": "Arauto Espectral",
+      "region": 6,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-original-0",
+      "name": "Diabrete",
+      "region": 7,
+      "family": "demon",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-original-1",
+      "name": "Salamandra",
+      "region": 7,
+      "family": "crocodile",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-original-2",
+      "name": "Cultista",
+      "region": 7,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-common-0",
+      "name": "Cão de Cinzas",
+      "region": 7,
+      "family": "wolf",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-common-1",
+      "name": "Morcego Incandescente",
+      "region": 7,
+      "family": "bat",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-common-2",
+      "name": "Aranha de Brasa",
+      "region": 7,
+      "family": "spider",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-common-3",
+      "name": "Serpente Magmática",
+      "region": 7,
+      "family": "snake",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-common-4",
+      "name": "Besouro de Escória",
+      "region": 7,
+      "family": "insect",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-common-5",
+      "name": "Fagulha Viva",
+      "region": 7,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-common-6",
+      "name": "Saqueador de Cinzas",
+      "region": 7,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-common-7",
+      "name": "Mercenário Infernal",
+      "region": 7,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-common-8",
+      "name": "Carniçal de Enxofre",
+      "region": 7,
+      "family": "skeleton",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-special-9",
+      "name": "Inquisidor Caído",
+      "region": 7,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-special-10",
+      "name": "Golem de Lava",
+      "region": 7,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r7-special-11",
+      "name": "Arauto do Calor",
+      "region": 7,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-original-0",
+      "name": "Arconte",
+      "region": 8,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-original-1",
+      "name": "Quimera",
+      "region": 8,
+      "family": "chimera",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-original-2",
+      "name": "Vigia",
+      "region": 8,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-common-0",
+      "name": "Leão Alado",
+      "region": 8,
+      "family": "griffin",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-common-1",
+      "name": "Corvo de Prata",
+      "region": 8,
+      "family": "corvid",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-common-2",
+      "name": "Cervo Astral",
+      "region": 8,
+      "family": "stag",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-common-3",
+      "name": "Aranha Luminosa",
+      "region": 8,
+      "family": "spider",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-common-4",
+      "name": "Estátua Animada",
+      "region": 8,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-common-5",
+      "name": "Serpente Radiante",
+      "region": 8,
+      "family": "snake",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-common-6",
+      "name": "Desertor Celestial",
+      "region": 8,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-common-7",
+      "name": "Saqueador de Relíquias",
+      "region": 8,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-common-8",
+      "name": "Grifo Menor",
+      "region": 8,
+      "family": "griffin",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-special-9",
+      "name": "Paladino Desviado",
+      "region": 8,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-special-10",
+      "name": "Elemental da Aurora",
+      "region": 8,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r8-special-11",
+      "name": "Guardião do Véu",
+      "region": 8,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-original-0",
+      "name": "Sombra",
+      "region": 9,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-original-1",
+      "name": "Aberração",
+      "region": 9,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-original-2",
+      "name": "Eco",
+      "region": 9,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-common-0",
+      "name": "Cão do Nada",
+      "region": 9,
+      "family": "wolf",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-common-1",
+      "name": "Morcego Sem Rosto",
+      "region": 9,
+      "family": "bat",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-common-2",
+      "name": "Aranha do Vazio",
+      "region": 9,
+      "family": "spider",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-common-3",
+      "name": "Serpente Sem Sombra",
+      "region": 9,
+      "family": "snake",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-common-4",
+      "name": "Sentinela Fraturada",
+      "region": 9,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-common-5",
+      "name": "Orbe Dissoluto",
+      "region": 9,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-common-6",
+      "name": "Desertor do Fim",
+      "region": 9,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-common-7",
+      "name": "Saqueador do Vazio",
+      "region": 9,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-common-8",
+      "name": "Predador Abissal",
+      "region": 9,
+      "family": "demon",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-special-9",
+      "name": "Profeta Desfeito",
+      "region": 9,
+      "family": "human",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-special-10",
+      "name": "Arauto da Ausência",
+      "region": 9,
+      "family": "spirit",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    },
+    {
+      "id": "r9-special-11",
+      "name": "Colosso do Esquecimento",
+      "region": 9,
+      "family": "construct",
+      "width": 112,
+      "height": 78,
+      "method": "sombreamento anatomico procedural",
+      "status": "integrado; curadoria individual pendente"
+    }
+  ]
+}
