@@ -1,0 +1,10 @@
+/* Arte de alta densidade: apenas caracteres ASCII em fonte mono real. */
+.density-hero{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace!important;font-weight:400!important;font-variant-ligatures:none!important;white-space:pre!important;letter-spacing:0!important;tab-size:1;line-height:1.03!important;text-align:left!important;max-width:none!important}
+.ascii-container:has(.density-hero){justify-content:center;overflow:hidden;width:100%}
+.density-hero .avatar-ink{display:inline;color:inherit}
+@media(prefers-reduced-motion:reduce){.density-hero{animation:none!important;transition:none!important}}
+
+/* Source-faithful 160x103 high-density rogue portrait: scalable text, never clipped. */
+.reference-density{display:block;white-space:pre!important;font-family:Consolas,"Liberation Mono",monospace!important;line-height:1!important;letter-spacing:0!important;tab-size:1!important;font-weight:400!important;max-width:none!important;transform-origin:center center}
+.ascii-container:has(.reference-density){overflow:hidden;min-width:0;width:100%;justify-content:center}
+@media(prefers-reduced-motion:reduce){.reference-density{animation:none!important;transition:none!important}}

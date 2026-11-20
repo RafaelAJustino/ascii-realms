@@ -1,0 +1,9 @@
+/* Lote 6: quadros de acontecimentos em ASCII, sempre texto monoespaçado. */
+.density-event-scene{max-width:100%;min-width:0;overflow:hidden;min-height:40px;border:1px solid #657a6555;border-radius:5px;background:linear-gradient(180deg,#111a18,#1a221e);margin:8px 0 12px;padding:4px}
+.density-event-art{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace!important;font-variant-ligatures:none!important;font-weight:400!important;white-space:pre!important;letter-spacing:0!important;line-height:1.03!important;color:#b7c9af;transform-origin:center center;}
+.event-flicker{animation:density-event-glow 3.2s ease-in-out infinite}
+.event-tension{animation:density-event-breathe 4s ease-in-out infinite}
+.event-idle{animation:density-event-breathe 6s ease-in-out infinite}
+@keyframes density-event-glow{0%,100%{filter:brightness(.88)}50%{filter:brightness(1.2)}}
+@keyframes density-event-breathe{0%,100%{filter:brightness(.96)}50%{filter:brightness(1.08)}}
+@media(prefers-reduced-motion:reduce){.event-flicker,.event-tension,.event-idle{animation:none!important}}

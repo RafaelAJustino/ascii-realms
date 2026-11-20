@@ -1,0 +1,7 @@
+/* Etapa 6: grandes paisagens ASCII em 140 x 64 e interiores em 124 x 54. */
+.hd-world-scene,.hd-interior-scene{max-width:100%;min-width:0;overflow:hidden;justify-content:center;isolation:isolate}
+.hd-world-scene .ascii-art,.hd-interior-scene .ascii-art{white-space:pre!important;font-family:Consolas,"Liberation Mono",monospace!important;font-variant-ligatures:none;letter-spacing:0!important;font-weight:400!important;line-height:1.05!important;text-align:left!important;max-width:none!important}
+.hd-world-scene.ascii-zoomable,.hd-interior-scene.ascii-zoomable{cursor:zoom-in;outline-offset:-3px}
+.hd-world-scene.ascii-zoomable:focus-visible,.hd-interior-scene.ascii-zoomable:focus-visible{outline:2px solid var(--accent,#80bfad)}
+@media(max-width:430px){.hd-world-scene,.hd-interior-scene{max-height:380px}}
+@media(prefers-reduced-motion:reduce){.hd-world-scene *, .hd-interior-scene *{animation:none!important;transition:none!important}}

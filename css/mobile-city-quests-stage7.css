@@ -1,0 +1,93 @@
+/* ASCII REALMS · Etapa 7. Cidade, taverna, NPCs e diário, primeiro no celular. */
+#app .ux7-city-summary { display:grid; gap:5px; min-width:0; }
+#app .ux7-city-summary > p { margin:0; }
+#app .ux7-city-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr));gap:6px; }
+#app .ux7-city-metrics span { display:grid; min-width:0; padding:8px 5px; gap:4px; text-align:center; background:#142c28; border:1px solid #466559; border-radius:7px; font-size:9px; color:#b1c8bc; }
+#app .ux7-city-metrics b { color:#dcf2d9; font-size:15px; font-variant-numeric:tabular-nums; }
+#app .ux7-city-summary .city-reputation { margin:2px 0; font-size:11px; }
+#app .ux7-city-switch { display:grid; grid-template-columns:repeat(2,minmax(0,1fr));gap:7px; margin:10px 0 8px; }
+#app .ux7-city-switch button,#app .ux7-store-tabs button,#app .ux7-quest-filters button { min-width:0; width:100%; min-height:44px; max-height:50px; padding:4px; line-height:1.25; font-size:12px; }
+#app .ux7-city-switch .is-active,#app .ux7-store-tabs .is-active,#app .ux7-quest-filters .is-active { background:#b5e8ba;color:#11231b;border-color:#b5e8ba;font-weight:800; }
+#app .ux7-service-list { display:grid; gap:7px; }
+#app .ux7-service { width:100%; min-height:56px!important; height:auto; max-height:none!important; padding:10px 12px!important; display:flex; align-items:center; justify-content:space-between; gap:10px; text-align:left; background:#172d29; border:1px solid #47695c; border-radius:8px; }
+#app .ux7-service span:first-child { display:grid; gap:3px; min-width:0; }
+#app .ux7-service strong { font-size:12px; color:#e2f2e6; overflow-wrap:anywhere; }
+#app .ux7-service small { font-size:10px; color:#afc7b9; line-height:1.3; overflow-wrap:anywhere; }
+#app .ux7-service span:last-child { font-size:18px; color:#aedfae; }
+#app .ux7-rest { margin-top:9px;padding:10px; display:grid;gap:10px;background:#192a24;border:1px solid #516a55;border-radius:8px; }
+#app .ux7-rest > span { display:grid;gap:5px; }
+#app .ux7-rest strong {font-size:12px;}
+#app .ux7-rest small {font-size:10px;color:#b8c9b8;}
+#app .ux7-rest button { width:100%;min-height:44px;max-height:50px; }
+#app .ux7-disclosure { border:1px solid #48665c; background:#142823; border-radius:8px; min-width:0; margin:9px 0; overflow:hidden; }
+#app .ux7-disclosure > summary { display:flex;gap:9px;align-items:center; justify-content:space-between;min-height:46px;padding:10px 12px;cursor:pointer;font-size:12px;font-weight:700;list-style:none;color:#dbebde;line-height:1.4; }
+#app .ux7-disclosure > summary::-webkit-details-marker { display:none; }
+#app .ux7-disclosure > summary::after { content:'+';flex-shrink:0;font-size:19px;color:#afd7b6; }
+#app .ux7-disclosure[open] > summary::after { content:'−'; }
+#app .ux7-disclosure[open] > summary { border-bottom:1px solid #48665c; }
+#app .ux7-disclosure-body,#app .ux7-market-content { padding:10px;min-width:0; }
+#app .ux7-city-art .ascii-container { padding:7px; min-height:100px; }
+#app .ux7-city-art .ascii-art { max-width:none; }
+#app .ux7-market-help { margin:0 0 9px;line-height:1.5; }
+#app .ux7-store-tabs { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:0 0 10px; }
+#app .ux7-store-tabs button:last-child { grid-column:1/-1; }
+#app .ux7-market-content .panel { margin:0 0 8px; }
+#app .ux7-market-content .panel:last-child { margin:0; }
+#app .ux7-tavern-meta { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:8px 0; }
+#app .ux7-tavern-meta span { background:#162d26;border:1px solid #426657;border-radius:7px;padding:9px 7px; font-size:10px;display:grid;gap:4px;min-width:0;overflow-wrap:anywhere; }
+#app .ux7-tavern-meta strong { color:#cee7d3; }
+#app .ux7-tavern-shortcuts,#app .ux7-quest-foot { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:10px 0; }
+#app .ux7-tavern-shortcuts button,#app .ux7-quest-foot button {min-height:44px;max-height:50px;width:100%;font-size:11px;padding:5px;}
+#app .ux7-tavern-section h4 { font-size:11px;margin:10px 0 7px;letter-spacing:.03em;color:#c2e8c9; }
+#app .ux7-npc { padding:10px; background:#182b27; border-radius:7px; border:1px solid #455d52; }
+#app .ux7-npc-title { display:grid;gap:4px; }
+#app .ux7-npc-title b { font-size:13px; }
+#app .ux7-npc-title span { font-size:10px; }
+#app .ux7-npc > p { font-size:10px; }
+#app .ux7-npc button { min-height:44px;max-height:50px;width:100%;margin-top:7px; }
+#app .ux7-npc-dialogue { border:1px solid #40594d;border-radius:6px;margin:8px 0; min-width:0; }
+#app .ux7-npc-dialogue > summary { min-height:44px; display:flex;align-items:center; padding:8px;cursor:pointer;color:#c3ddcc;font-size:11px; }
+#app .ux7-npc-dialogue > p { padding:4px 9px 8px;font-size:11px;line-height:1.55;margin:0; }
+#app .ux7-npc-dialogue .npc-art-detail { margin:4px 8px 9px; }
+#app .ux7-disclosure .city-contract { margin:7px 0; }
+#app .ux7-disclosure .city-contract button,#app .ux7-disclosure .city-quiz button,#app .ux7-disclosure .tavern-story-choices button { min-height:44px;max-height:50px;height:auto;width:100%; }
+#app .ux7-disclosure .tavern-story-choices { display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px; }
+#app .ux7-disclosure .city-quiz { grid-template-columns:1fr; }
+#app .ux7-intro { line-height:1.5;margin:0 0 10px; }
+#app .ux7-quest-filters {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:9px 0;}
+#app .ux7-quest-filters button { display:flex;align-items:center;justify-content:center;gap:5px;font-size:11px;overflow-wrap:anywhere; }
+#app .ux7-quest-number { background:#314b3d;border-radius:4px;padding:3px 5px;color:#e3eee1;font-size:11px;font-weight:800; }
+#app .ux7-quest-filters button.is-active .ux7-quest-number { background:#41674b; }
+#app .ux7-quest-filter-hint {margin:5px 0 10px;}
+#app .ux7-quest-cards { display:grid;gap:8px;min-width:0; }
+#app .ux7-quest-card { background:#172c27;border:1px solid #4d6658;border-radius:8px;padding:10px;min-width:0; }
+#app .ux7-quest-heading {display:flex;align-items:flex-start;justify-content:space-between;gap:6px; }
+#app .ux7-quest-heading strong {min-width:0;color:#e1f1e0;font-size:12px;line-height:1.4;overflow-wrap:anywhere;}
+#app .ux7-quest-kind {color:#bbddc6;border:1px solid #63806c;padding:3px 5px;border-radius:4px;font-size:10px;flex-shrink:0;}
+#app .ux7-quest-region {margin:6px 0 0;font-size:10px;}
+#app .ux7-quest-description {margin:6px 0;line-height:1.45;font-size:11px;}
+#app .ux7-quest-reward { margin:8px 0; color:#d9c994; font-size:10px; }
+#app .ux7-quest-card > .small {line-height:1.5;}
+#app .ux7-quest-card button {width:100%;min-height:44px;max-height:50px;}
+#app .ux7-quest-progress {display:grid;grid-template-columns:minmax(0,1fr) 40px;align-items:center;gap:8px;margin:9px 0;}
+#app .ux7-quest-track {height:10px;border:1px solid #4a6853;border-radius:4px;overflow:hidden;background:#22352a;}
+#app .ux7-quest-track span {display:block;height:100%;background:#9bd5a1;}
+#app .ux7-quest-progress b {font-size:10px;color:#e0efde;text-align:right;font-variant-numeric:tabular-nums;}
+#app .ux7-decision-actions {display:grid;gap:6px;}
+#app .ux7-quest-empty {padding:13px;border:1px dashed #6a8271;border-radius:7px;text-align:center;}
+#app .ux7-quest-empty strong {font-size:12px;}
+#app .ux7-quest-empty p {font-size:11px;line-height:1.5;}
+#app .ux7-quest-dashboard[data-filter="active"] .ux7-quest-card:not([data-bucket="active"]),
+#app .ux7-quest-dashboard[data-filter="available"] .ux7-quest-card:not([data-bucket="available"]),
+#app .ux7-quest-dashboard[data-filter="ready"] .ux7-quest-card:not([data-bucket="ready"]),
+#app .ux7-quest-dashboard[data-filter="finished"] .ux7-quest-card:not([data-bucket="finished"]) {display:none;}
+#app .ux7-personal-detail .panel {margin:0;}
+#app .ux7-personal-detail .procedural-actions {display:grid;grid-template-columns:1fr;gap:7px;}
+#app .ux7-personal-detail .procedural-actions button { min-height:44px;max-height:50px;width:100%; }
+#app .ux7-quest-foot {margin-top:12px;}
+#app .ux7-disclosure summary:focus-visible,#app .ux7-npc-dialogue summary:focus-visible,#app button:focus-visible {outline:2px solid #d0efbb;outline-offset:2px;}
+@media(min-width:560px){#app .ux7-store-tabs {grid-template-columns:repeat(5,minmax(0,1fr));}#app .ux7-store-tabs button:last-child{grid-column:auto;}#app .ux7-tavern-meta{grid-template-columns:repeat(3,minmax(0,1fr));}#app .ux7-quest-filters{grid-template-columns:repeat(4,minmax(0,1fr));}#app .ux7-quest-cards{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:350px){#app .ux7-tavern-meta span{font-size:9px;}#app .ux7-city-metrics span{font-size:8px;}#app .ux7-quest-filters button {font-size:10px;gap:3px;padding:3px;}#app .ux7-quest-number {font-size:10px;}}
+@media(prefers-reduced-motion:reduce){#app .ux7-city-switch *,#app .ux7-service *,#app .ux7-quest-card *,#app .ux7-disclosure *{animation:none!important;transition:none!important;}}
+#app .ux7-city-standing {margin:3px 0 4px;font-size:10px;}
+#app .ux7-city-shop .panel button {min-height:44px;max-height:50px;}

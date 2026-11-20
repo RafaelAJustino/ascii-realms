@@ -1,0 +1,9 @@
+/* Lote 4: interiores ASCII e retratos de NPCs, usando o ajuste de escala nativo. */
+.settlement-scene,.npc-portrait{max-width:100%;overflow:hidden;justify-content:center}
+.settlement-scene .ascii-art,.npc-portrait .ascii-art{font-family:ui-monospace,Consolas,"Liberation Mono",monospace;font-weight:400;white-space:pre;letter-spacing:0;text-align:left;font-variant-ligatures:none;max-width:none;line-height:1.04}
+.npc-art-detail{margin:5px 0 9px;border:1px solid var(--border,#384047);border-radius:5px;padding:5px}
+.npc-art-detail summary{cursor:pointer;font-size:.8rem;min-height:25px}
+.npc-art-detail:not([open]) .npc-portrait{display:none}
+.npc-portrait{min-height:0;max-height:310px}
+@media(max-width:430px){.npc-portrait{max-height:230px}.settlement-scene{max-height:340px}}
+@media(prefers-reduced-motion:reduce){.npc-art-detail *{animation:none!important;transition:none!important}}

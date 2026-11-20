@@ -1,0 +1,15 @@
+/* Expansão 7: ferraria e mercado legíveis em smartphones. */
+.epic7-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;width:100%;min-width:0}
+.epic7-card{min-width:0;max-width:100%;padding:11px;border:1px solid var(--border,#34594a);border-radius:5px;overflow-wrap:anywhere}
+.epic7-card>p{margin:6px 0}
+.epic7-card-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:7px}
+.epic7-label{padding:2px 6px;border:1px solid var(--border,#34594a);border-radius:3px;color:var(--gold,#ffda82);font-size:11px}
+.epic7-requirements{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.epic7-requirements span{padding:3px 6px;border:1px solid var(--border,#34594a);border-radius:3px;font-size:11px;overflow-wrap:anywhere;max-width:100%}
+.epic7-missing{color:var(--danger,#ff8989)}.epic7-owned{color:var(--accent,#a5f6ad)}
+.epic7-card-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:8px}
+.epic7-card-footer button{height:42px;min-height:42px;max-height:50px;flex:0 0 auto}
+.epic7-material-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:5px}
+.epic7-material{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:6px 8px;border:1px solid var(--border,#34594a);overflow-wrap:anywhere}
+@media(min-width:680px){.epic7-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.epic7-material-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:359px){.epic7-card-footer{flex-direction:column;align-items:stretch}.epic7-card-footer button{width:100%}}
