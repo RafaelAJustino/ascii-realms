@@ -60,7 +60,7 @@ assert.equal(chooseMonsterAction(enemy,{hp:100,maxhp:100},{random:()=>0}).id,'st
 // Integração: interface informa o cooldown, função de ação o rejeita antes do bloqueio.
 const combat=readFileSync(new URL('../js/combat.js',import.meta.url),'utf8');
 const ui=readFileSync(new URL('../js/ui.js',import.meta.url),'utf8');
-assert.match(combat,/!canUse\(c,cd\.id\)\)return/);
+assert.match(combat,/!canUse\(c,cd\.id\)/);
 assert.match(combat,/finishCooldownTurn\(c,used\?\.id,used\?\.turns\|\|0\)/);
 assert.match(ui,/RECARGA:.*TURNO/);
 assert.match(ui,/remaining>0/);

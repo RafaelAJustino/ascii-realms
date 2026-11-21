@@ -1,3 +1,4 @@
+import {bossKit} from './monster-identity.js';
 import { applyElementalDamage } from './elements.js';
 import {incomingDamage,effectiveProtection} from './final-balance.js';
 
@@ -31,7 +32,7 @@ export function updateBossPhase(enemy,log=()=>{}){
  return changes;
 }
 export function bossSpecialAvailable(enemy){return !!(enemy.boss&&enemy.bossPhase>=2&&!enemy.telegraph&&(enemy.bossSpecialCooldown||0)<=0&&BOSS_PHASES[enemy.baseName]);}
-export function announceBossAttack(enemy,log){const special=BOSS_PHASES[enemy.baseName]?.special;if(!special)return false;enemy.telegraph={...special};log(`⚠ ATAQUE IMINENTE! ${special.message} Você tem um turno para reagir.`);return true;}
+export function announceBossAttack(enemy,log){const special=BOSS_PHASES[enemy.baseName]?.special;if(!special)return false;const variant=bossKit(enemy)?.phaseAttacks[(enemy.bossPhase||1)>=3?1:0]||special;enemy.telegraph={...special,...variant,message:special.message};log(`⚠ ATAQUE IMINENTE! ${special.message} Você tem um turno para reagir.`);return true;}
 export function resolveBossAttack(enemy,player,playerStats,guard,log){
  const attack=enemy.telegraph;if(!attack)return null;
  enemy.telegraph=null;enemy.bossSpecialCooldown=3;

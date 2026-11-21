@@ -1,0 +1,222 @@
+{
+  "method": "Deterministic expected-value, 36-turn rotation, neutral affinities, existing weapon and armor catalog, 3 builds and 3 armor tiers, not interactive Monte Carlo",
+  "caseCount": 216,
+  "summaries": [
+    {
+      "classe": "guerreiro",
+      "nível": 1,
+      "DPTo": 13.3,
+      "turnos": 3.7,
+      "sobrevivência": 27.5,
+      "chefe": 23.1,
+      "MPturno": 0
+    },
+    {
+      "classe": "guerreiro",
+      "nível": 10,
+      "DPTo": 64.9,
+      "turnos": 2.9,
+      "sobrevivência": 20.7,
+      "chefe": 18.1,
+      "MPturno": 1.7
+    },
+    {
+      "classe": "guerreiro",
+      "nível": 25,
+      "DPTo": 163,
+      "turnos": 2.8,
+      "sobrevivência": 19,
+      "chefe": 17.1,
+      "MPturno": 3.3
+    },
+    {
+      "classe": "guerreiro",
+      "nível": 50,
+      "DPTo": 423.6,
+      "turnos": 2.7,
+      "sobrevivência": 22.1,
+      "chefe": 14.8,
+      "MPturno": 6
+    },
+    {
+      "classe": "guerreiro",
+      "nível": 75,
+      "DPTo": 867.7,
+      "turnos": 2.3,
+      "sobrevivência": 26.2,
+      "chefe": 12,
+      "MPturno": 8.7
+    },
+    {
+      "classe": "guerreiro",
+      "nível": 100,
+      "DPTo": 1201.9,
+      "turnos": 2.6,
+      "sobrevivência": 28.4,
+      "chefe": 12.8,
+      "MPturno": 10.8
+    },
+    {
+      "classe": "mago",
+      "nível": 1,
+      "DPTo": 17.4,
+      "turnos": 2.8,
+      "sobrevivência": 13.9,
+      "chefe": 17.6,
+      "MPturno": 0
+    },
+    {
+      "classe": "mago",
+      "nível": 10,
+      "DPTo": 106.1,
+      "turnos": 1.8,
+      "sobrevivência": 12.5,
+      "chefe": 11.3,
+      "MPturno": 6.9
+    },
+    {
+      "classe": "mago",
+      "nível": 25,
+      "DPTo": 329.2,
+      "turnos": 1.5,
+      "sobrevivência": 11.8,
+      "chefe": 8.8,
+      "MPturno": 13.4
+    },
+    {
+      "classe": "mago",
+      "nível": 50,
+      "DPTo": 841.3,
+      "turnos": 1.4,
+      "sobrevivência": 14.4,
+      "chefe": 7.6,
+      "MPturno": 14.8
+    },
+    {
+      "classe": "mago",
+      "nível": 75,
+      "DPTo": 1586,
+      "turnos": 1.3,
+      "sobrevivência": 17.3,
+      "chefe": 6.7,
+      "MPturno": 14.8
+    },
+    {
+      "classe": "mago",
+      "nível": 100,
+      "DPTo": 2179.1,
+      "turnos": 1.5,
+      "sobrevivência": 18.8,
+      "chefe": 7.1,
+      "MPturno": 14.8
+    },
+    {
+      "classe": "arqueiro",
+      "nível": 1,
+      "DPTo": 11.5,
+      "turnos": 4.3,
+      "sobrevivência": 16.2,
+      "chefe": 26.7,
+      "MPturno": 0
+    },
+    {
+      "classe": "arqueiro",
+      "nível": 10,
+      "DPTo": 55,
+      "turnos": 3.4,
+      "sobrevivência": 17.2,
+      "chefe": 21.1,
+      "MPturno": 2.8
+    },
+    {
+      "classe": "arqueiro",
+      "nível": 25,
+      "DPTo": 150.9,
+      "turnos": 3,
+      "sobrevivência": 17.5,
+      "chefe": 18.2,
+      "MPturno": 5.3
+    },
+    {
+      "classe": "arqueiro",
+      "nível": 50,
+      "DPTo": 401.3,
+      "turnos": 2.8,
+      "sobrevivência": 21.1,
+      "chefe": 15.4,
+      "MPturno": 9.5
+    },
+    {
+      "classe": "arqueiro",
+      "nível": 75,
+      "DPTo": 850.1,
+      "turnos": 2.4,
+      "sobrevivência": 25.2,
+      "chefe": 12.2,
+      "MPturno": 11.5
+    },
+    {
+      "classe": "arqueiro",
+      "nível": 100,
+      "DPTo": 1062.9,
+      "turnos": 3,
+      "sobrevivência": 26.9,
+      "chefe": 14.5,
+      "MPturno": 11.5
+    },
+    {
+      "classe": "ladino",
+      "nível": 1,
+      "DPTo": 10.9,
+      "turnos": 4.5,
+      "sobrevivência": 16.4,
+      "chefe": 28.2,
+      "MPturno": 0
+    },
+    {
+      "classe": "ladino",
+      "nível": 10,
+      "DPTo": 45.8,
+      "turnos": 4.1,
+      "sobrevivência": 16.5,
+      "chefe": 25.5,
+      "MPturno": 2.8
+    },
+    {
+      "classe": "ladino",
+      "nível": 25,
+      "DPTo": 112.2,
+      "turnos": 4.1,
+      "sobrevivência": 17.1,
+      "chefe": 24.9,
+      "MPturno": 5.2
+    },
+    {
+      "classe": "ladino",
+      "nível": 50,
+      "DPTo": 301.9,
+      "turnos": 3.8,
+      "sobrevivência": 22.6,
+      "chefe": 21,
+      "MPturno": 9.3
+    },
+    {
+      "classe": "ladino",
+      "nível": 75,
+      "DPTo": 642.6,
+      "turnos": 3.2,
+      "sobrevivência": 27.9,
+      "chefe": 16.5,
+      "MPturno": 12.3
+    },
+    {
+      "classe": "ladino",
+      "nível": 100,
+      "DPTo": 811.5,
+      "turnos": 4,
+      "sobrevivência": 29.8,
+      "chefe": 19.5,
+      "MPturno": 12.5
+    }
+  ]
+}

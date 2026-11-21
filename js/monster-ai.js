@@ -1,3 +1,4 @@
+import {monsterKit} from './monster-identity.js';
 import {finishCooldownTurn,turnsRemaining} from './turn-cooldowns.js';
 import { elementMultiplier } from './elements.js';
 import { monsterRarity } from './monster-rarity.js';
@@ -11,7 +12,7 @@ const skills=[
  {id:'guard',name:'Postura Protetora',cost:10,cooldown:3,power:0,element:'physical',kind:'guard',unlock:10}
 ];
 const styles={aggressive:{damage:1.3,heal:.5,guard:.5,debuff:.8},defensive:{damage:.8,heal:1.8,guard:1.7,debuff:1},strategic:{damage:1.1,heal:1.2,guard:1.2,debuff:1.25},opportunist:{damage:1.15,heal:.8,guard:.8,debuff:1.1},magical:{damage:1.05,heal:1,guard:.7,debuff:1.9},wild:{damage:1,heal:1,guard:1,debuff:1}};
-export function availableMonsterActions(enemy){const cooldowns=enemy.cooldowns||{};return skills.filter(a=>enemy.lv>=a.unlock&&enemy.mp>=a.cost&&turnsRemaining(enemy,a.id)===0);}
+export function availableMonsterActions(enemy){const cooldowns=enemy.cooldowns||{};const kit=monsterKit(enemy);const pool=kit?[skills[0],...kit.actions]:skills;return pool.filter(a=>enemy.lv>=a.unlock&&enemy.mp>=a.cost&&turnsRemaining(enemy,a.id)===0);}
 export function scoreMonsterAction(action,enemy,player,{playerStats={},random=Math.random}={}){
  const hp=enemy.hp/Math.max(1,enemy.maxhp),playerHp=player.hp/Math.max(1,player.maxhp||player.hp),archetype=enemy.archetype||'wild';
  const style=styles[archetype]||styles.wild;
@@ -32,7 +33,7 @@ export function scoreMonsterAction(action,enemy,player,{playerStats={},random=Ma
   if(archetype==='opportunist'&&playerHp<.35)score+=predicted*.6;
   if(archetype==='magical'&&action.element!=='physical')score+=30;
  }
- score*=style[action.kind==='heal'?'heal':action.kind==='guard'?'guard':action.kind==='debuff'?'debuff':'damage'];
+ score*=style[action.kind==='heal'?'heal':action.kind==='guard'?'guard':['debuff','weaken','poison'].includes(action.kind)?'debuff':'damage'];
  // Comuns variam mais; lendários priorizam a melhor ação.
  const noise=archetype==='wild'?55:45-skill*38;
  return score+(random()-.5)*noise;

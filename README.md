@@ -847,3 +847,18 @@ Atualização mobile-first em entrega única, partindo da versão com navegaçã
 Para detalhes, arquivos modificados, limitações de validação e testes, consulte `docs/RELATORIO-REFORMULACAO-CONSOLIDADA.md`.
 
 Testes: `npm test` e `npm run qa:ux-consolidated`.
+
+## Reformulação de Classes, Habilidades e Marcos Evolutivos (21/11/2026)
+
+Implementação **completa em uma única entrega**: quatro classes com 16 habilidades ativas e 16 passivas de desbloqueio progressivo, quatro recursos exclusivos limitados por combate, 150 espécies com kits particulares de técnicas e passivas, 20 chefes com passivas/especiais e 24 marcos evolutivos especiais (15/30/50/75 pontos investidos) além dos marcos recorrentes a cada cinco pontos. Combate, personagens, equipamentos, bestiário, masmorras, cooldowns e interface foram integrados. Salvamentos v14 e progressão até nível 100 permanecem compatíveis.
+
+**Relatório completo e tabelas:** [`docs/RELATORIO-CLASSES-COMPLETO.md`](docs/RELATORIO-CLASSES-COMPLETO.md). Os arquivos CSV em `docs/` detalham habilidades, passivas, chefes, 150 monstros, marcos e os 216 cenários de simulação.
+
+```bash
+npm test
+npm run test:classes
+npm run balance:classes
+npm run qa:ux-consolidated
+```
+
+Nota sobre validação: os testes de lógica utilizam DOM simulado. Os controles e telas foram inspecionados com HTML/CSS reais em navegador automatizado, mas a execução interativa integral em localhost foi bloqueada pelo ambiente. As simulações de balanceamento são estimativas determinísticas de valor esperado, não sessões completas de jogo.

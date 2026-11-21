@@ -5,10 +5,7 @@ import {specSkills} from './specializations.js';
 
 // Cada índice aponta para a identidade estável da habilidade existente.
 export const PLAYER_COOLDOWNS=Object.freeze({
- guerreiro:[2,3,3,4], // dano forte, proteção por 3 turnos, fúria, execução
- mago:[2,3,3,5],      // queimadura, barreira, tempestade, meteoro
- arqueiro:[1,2,3,4],  // tiro simples, múltiplas flechas, perfuração, disparo mortal
- ladino:[1,2,3,4]     // furtivo, veneno, dança, assassinato
+ guerreiro:[2,3,3,5],mago:[1,3,4,5],arqueiro:[1,3,3,5],ladino:[2,3,4,5]
 });
 export const SPECIALIZATION_COOLDOWNS=Object.freeze({
  berserker:[2,4],guardiao:[3,4],arquimago:[3,5],feiticeiro:[2,4],

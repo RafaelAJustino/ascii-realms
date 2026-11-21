@@ -12,7 +12,7 @@ export function skillAt(state,index){return Number.isInteger(index)?active[state
 export function configuredVariant(state,index){return normalizeSkillVariants(state?.skillVariants)[index]||'standard';}
 export function effectiveSkill(state,index){
  const base=skillAt(state,index);if(!base)return null;
- const [name,level,cost,mult,type]=base,variant=configuredVariant(state,index),guard=type==='guard';
+ const [name,level,cost,mult,type]=base,variant=configuredVariant(state,index),guard=type==='guard'||type==='evade';
  let actualCost=cost,actualMult=mult,guardTurns=3;
  if(variant==='power'){actualCost=Math.ceil(cost*1.25);if(guard)guardTurns=4;else actualMult=+(mult*1.12).toFixed(4);}
  if(variant==='economy'){actualCost=Math.max(1,Math.ceil(cost*.75));if(guard)guardTurns=2;else actualMult=+(mult*.92).toFixed(4);}

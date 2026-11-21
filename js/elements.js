@@ -22,4 +22,4 @@ export const BOSS_PROFILES = Object.freeze({
 export function elementMultiplier(target,element='physical') {return target?.affinities?.[element]??1;}
 export function applyElementalDamage(mitigated,target,element='physical') {return Math.max(0,Math.floor(Math.max(0,mitigated)*elementMultiplier(target,element)));}
 export function elementalMessage(target,element){const factor=elementMultiplier(target,element);if(factor===0)return 'O ataque não causou dano!';if(factor>1)return `O inimigo é vulnerável a ${ELEMENT_LABELS[element]}!`;if(factor<1)return 'O inimigo resistiu ao ataque!';return null;}
-export const PLAYER_SKILL_ELEMENTS = Object.freeze({guerreiro:['physical','physical','physical','physical'],mago:['fire','holy','lightning','fire'],arqueiro:['physical','physical','physical','physical'],ladino:['physical','poison','dark','physical']});
+export const PLAYER_SKILL_ELEMENTS = Object.freeze({guerreiro:['physical','physical','physical','physical'],mago:['holy','fire','ice','lightning'],arqueiro:['physical','physical','physical','physical'],ladino:['physical','poison','dark','physical']});

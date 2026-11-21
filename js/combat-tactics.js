@@ -18,7 +18,7 @@ export function selectAnnouncedAction(enemy,{random=Math.random}={}){
  // A mesma seleção de habilidades existentes, sem criar golpes de dano extra.
  const available=availableMonsterActions(enemy).filter(a=>a.kind==='damage'&&a.power>=1.3);
  if(!available.length)return null;
- const chosen=available.find(a=>a.id==='element')||available.find(a=>a.id==='heavy');
+ const chosen=available.find(a=>a.id==='element')||available.find(a=>a.id==='heavy')||available.sort((a,b)=>b.power-a.power)[0];
  if(!chosen)return null;
  return chosen.id==='element'?{...chosen,element:enemy.attackElement||'fire'}:{...chosen};
 }

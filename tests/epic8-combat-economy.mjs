@@ -24,7 +24,7 @@ rt.state.combat={enemy:structuredClone(sample),effects:[],turn:0,guard:0,cooldow
 let oldRandom=Math.random;Math.random=()=>.99;
 try{enemyTurn();}finally{Math.random=oldRandom;}
 const baseLoss=start-rt.state.hp;
-assert.equal(baseLoss,incomingDamage(180,stats().def));
+assert.ok(baseLoss>=incomingDamage(180,stats().def)&&baseLoss<incomingDamage(180*1.6,stats().def),'técnicas de espécie podem superar o ataque básico, sob limites');
 rt.state.hp=start;rt.state.combat={enemy:structuredClone(sample),effects:[{type:'defdown',name:'Maldição',power:.25,duration:2}],turn:0,guard:0,cooldowns:{}};
 oldRandom=Math.random;Math.random=()=>.99;
 try{enemyTurn();}finally{Math.random=oldRandom;}

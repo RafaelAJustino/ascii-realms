@@ -71,10 +71,10 @@ for(const cls of ['guerreiro','mago','arqueiro','ladino']){
   assert.equal(original.cost,base[2]);assert.equal(original.mult,base[3]);
   assert.equal(selectSkillVariant(hero,i,'power'),true);
   const strong=effectiveSkill(hero,i);assert.equal(strong.cost,Math.ceil(base[2]*1.25));
-  assert.equal(base[4]==='guard'?strong.guardTurns===4:strong.mult>base[3],true);
+  assert.equal(['guard','evade'].includes(base[4])?strong.guardTurns===4:strong.mult>base[3],true);
   assert.equal(selectSkillVariant(hero,i,'economy'),true);
   const cheap=effectiveSkill(hero,i);assert.equal(cheap.cost,Math.ceil(base[2]*.75));
-  assert.equal(base[4]==='guard'?cheap.guardTurns===2:cheap.mult<base[3],true);
+  assert.equal(['guard','evade'].includes(base[4])?cheap.guardTurns===2:cheap.mult<base[3],true);
   assert.equal(selectSkillVariant(hero,i,'standard'),true);assert.deepEqual(effectiveSkill(hero,i),original);
  }
 }

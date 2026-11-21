@@ -28,7 +28,7 @@ assert.match(css,/\.combat-attack-basic-row\{height:var\(--combat-attack-height\
 assert.match(css,/--combat-attack-height:80px/);
 assert.match(css,/--button-height:48px|--button-height\)/);
 rt.state.lv=20;rt.state.mp=1000;rt.state.hp=100000;rt.state.combat.enemy.hp=100000;rt.state.combat.enemy.atk=0;
-render();html=combatControls();assert.equal((html.match(/disabled/g)||[]).length,0);
+render();html=combatControls();assert.equal((html.match(/disabled/g)||[]).length,1); // habilidade final exige 3 de Determinação
 const first=act('attack');assert.equal(rt.busy,true);html=combatControls();assert.equal((html.match(/ disabled/g)||[]).length,6);
 const turnAtStart=rt.state.combat.turn;
 await act('attack'); // repetição durante turno deve ser ignorada
