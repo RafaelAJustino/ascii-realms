@@ -35,17 +35,17 @@ click('nav:inventory');assert.equal(rt.screen,'inventory');
 content.scrollTop=137;rememberSectionPosition('inventory',137);assert.equal(sectionPosition('inventory'),137);
 click('navArea:diario');assert.equal(rt.screen,'diary');
 click('nav:bestiary');assert.equal(rt.screen,'bestiary');
-click('navArea:personagem');assert.equal(rt.screen,'inventory','o retorno à seção mantém a tela usada');assert.equal(content.scrollTop,137,'a posição de rolagem do inventário retorna');
+click('navArea:personagem');assert.equal(rt.screen,'player','a barra abre o início da seção, não a última tela');assert.equal(content.scrollTop,0,'ao tocar na barra, a rolagem retorna ao topo');
 click('navArea:personagem');assert.equal(rt.screen,'player','selecionar a aba atual volta ao início da seção');
 click('navArea:mundo');assert.equal(rt.screen,'atlas');
 click('nav:city');assert.equal(rt.screen,'city');
 click('navArea:aventura');assert.equal(rt.screen,'world');
-click('navArea:mundo');assert.equal(rt.screen,'city','retorno Mundo mantém cidade');
+click('navArea:mundo');assert.equal(rt.screen,'atlas','Mundo sempre abre o atlas, inclusive vindo da cidade');
 click('menuBack');assert.equal(rt.screen,'world','Voltar retorna à seção anterior');
 // Confirmação de atributos não pode ser contornada por um atalho global.
 rt.state.points=1;rt.screen='character';render();assert.equal(changeDraft(rt.state,0,1),true);assert.ok(pending());
 globalThis.confirm=()=>false;click('navArea:diario');assert.equal(rt.screen,'character');assert.ok(pending());
-globalThis.confirm=()=>true;click('navArea:diario');assert.equal(rt.screen,'bestiary');assert.equal(pending(),false);
+globalThis.confirm=()=>true;click('navArea:diario');assert.equal(rt.screen,'diary');assert.equal(pending(),false);
 // Uma expedição deve ser recuperada ao voltar à seção Aventura.
 rt.state.journey={...rt.state.journey,path:'safe',area:rt.state.area};
 rt.screen='journey';render();rt.screen='diary';render();
@@ -59,6 +59,11 @@ assert.equal(sectionDestination('mundo',{currentScreen:'player',state:rt.state})
 rt.state.dungeons.attempt=null;
 const css=readFileSync(new URL('../css/mobile-navigation-stage3.css',import.meta.url),'utf8');
 assert.match(css,/grid-template-columns:repeat\(4,minmax\(0,1fr\)\)/);
-assert.match(css,/min-height:44px/);assert.doesNotMatch(css,/position:\s*fixed/);
+assert.match(css,/min-height:44px/);
+const fixedCss=readFileSync(new URL('../css/mobile-fixed-bottom-nav.css',import.meta.url),'utf8');
+assert.match(fixedCss,/position:fixed/);assert.match(fixedCss,/bottom-nav-height/);
+assert.match(fixedCss,/env\(safe-area-inset-bottom\)/);
+assert.match(fixedCss,/grid-template-columns:repeat\(4,minmax\(0,1fr\)\)/);
+assert.match(readFileSync(new URL('../index.html',import.meta.url),'utf8'),/mobile-fixed-bottom-nav\.css/);
 assert.match(readFileSync(new URL('../index.html',import.meta.url),'utf8'),/mobile-navigation-stage3\.css/);
-console.log('OK: 4 áreas, hubs, atalhos reais, retorno contextual, memória de telas, expedição, confirmação, masmorra, combate e responsividade CSS.');
+console.log('OK: 4 abas fixas, destinos iniciais, retorno ao topo, expedição preservada, confirmação, masmorra, combate e CSS mobile.');

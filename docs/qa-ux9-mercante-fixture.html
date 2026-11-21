@@ -1186,7 +1186,238 @@ button { border-radius: 7px; border-color: var(--ux-edge); touch-action: manipul
 #app .ux9-map-region[open],#app .ux9-optional-art[open]{border-color:var(--accent);}
 @media(max-width:430px){#app .ux9-map-region summary,#app .ux9-optional-art summary{font-size:12px;}}
 @media(prefers-reduced-motion:reduce){#app .ux9-optional-art *,#app .ux9-map-region *{animation:none!important;}}
-</style></head><body><a class="skip-link" href="#game-content">Pular para o jogo</a><main id="app"><header class="head"><div class="brand">* ASCII REALMS *</div><div class="small">Aventureira · Guerreiro · Nível 35 · <span class="gold">1230 ouro</span></div><div class="small">HP 137/723<div class="bar "><div style="width:18.948824343015215%"></div></div>MP 28/130<div class="bar mp"><div style="width:21.53846153846154%"></div></div>EXP 0/9922<div class="bar exp"><div style="width:0%"></div></div></div></header><div class="content" id="game-content" tabindex="-1" aria-label="Conteúdo: mercante"><h2 class="ux8-screen-heading" tabindex="-1">mercante</h2><nav class="ux-area-nav" aria-label="Navegação principal"><button type="button" class="ux-area-tab is-current" data-action="navArea:aventura" aria-current="page" >Aventura</button><button type="button" class="ux-area-tab" data-action="navArea:personagem"  >Personagem</button><button type="button" class="ux-area-tab" data-action="navArea:diario"  >Diário</button><button type="button" class="ux-area-tab" data-action="navArea:mundo"  >Mundo</button></nav><div class="menu-back-container"><button type="button" class="menu-back-button" data-action="menuBack">&lt; VOLTAR</button></div><section class="panel"><h3>CATÁLOGO</h3><div class="ascii-container settlement-scene hd-interior-scene"><pre class="ascii-art" data-ascii="true">#:@@@@@@@@@@@@@@@@@@@#:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#:@@@@@@@@@@@@@@@@@@#:
+
+/* Correção: ações respondem ao primeiro clique/toque, sem destaque de foco.
+   Não ocultar botões; conservar somente realce de seleção de abas/estado. */
+#app #game-content :focus, #app #game-content :focus-visible,
+#app :focus, #app :focus-visible,
+#ascii-art-viewer.hd8-viewer :focus, #ascii-art-viewer.hd8-viewer :focus-visible {
+ outline:none!important;
+ box-shadow:none!important;
+}
+#app .content:focus, #app .ux8-screen-heading:focus {
+ outline:none!important;
+ box-shadow:none!important;
+}
+/* Antes, focar o titulo o fazia surgir e deslocava os botoes. */
+#app .ux8-screen-heading:focus {
+ position:absolute!important;
+ width:1px!important;
+ height:1px!important;
+ padding:0!important;
+ margin:-1px!important;
+ overflow:hidden!important;
+ clip:rect(0,0,0,0)!important;
+ white-space:nowrap!important;
+ border:0!important;
+}
+#app .panel:focus-within { border-color:var(--border)!important; }
+#app button, #app summary, #app .ascii-zoomable {
+ -webkit-tap-highlight-color:transparent;
+ touch-action:manipulation;
+}
+
+/* Barra global fixa, fora da área rolável. Prioridade para toque e mouse. */
+:root { --bottom-nav-height: 62px; }
+#app > .ux-area-nav {
+  position:fixed;
+  inset:auto auto 0 50%;
+  transform:translateX(-50%);
+  z-index:110;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  align-items:center;
+  gap:6px;
+  box-sizing:border-box;
+  width:100%;
+  max-width:720px;
+  min-width:0;
+  margin:0;
+  padding:6px max(8px,env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));
+  border:1px solid var(--ux-edge);
+  border-bottom:0;
+  border-radius:12px 12px 0 0;
+  background:#101f21;
+  box-shadow:0 -5px 18px rgba(0,0,0,.44);
+  touch-action:manipulation;
+}
+#app > .ux-area-nav .ux-area-tab {
+  min-width:0;
+  width:100%;
+  height:48px;
+  min-height:48px;
+  max-height:50px;
+  margin:0;
+  padding:5px 2px;
+  font-size:clamp(10px,2.8vw,13px);
+  white-space:nowrap;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+}
+#app > .content.has-bottom-nav {
+  /* Permite alcançar o último botão sem escondê-lo atrás da barra. */
+  padding-bottom:calc(var(--bottom-nav-height) + 14px + env(safe-area-inset-bottom))!important;
+  scroll-padding-bottom:calc(var(--bottom-nav-height) + 14px + env(safe-area-inset-bottom));
+}
+#app > .ux-area-nav .ux-area-tab.is-current {
+  color:#0b211b;
+  background:#b7e6bc;
+  border-color:#dbf7d7;
+}
+@media (max-width:360px){
+  #app > .ux-area-nav {gap:3px;padding-inline:max(4px,env(safe-area-inset-left)) max(4px,env(safe-area-inset-right));}
+  #app > .ux-area-nav .ux-area-tab {font-size:10px;padding-inline:1px;}
+}
+@media (prefers-reduced-motion:reduce){
+  #app > .ux-area-nav,#app > .ux-area-nav .ux-area-tab {transition:none!important;animation:none!important;}
+}
+
+/* ASCII REALMS | Reformulação integrada em uma entrega
+   Referência: painel compacto, navegação fixa, leitura imediata, mobile-first. */
+:root{
+ --ux-bg:#0b1719;
+ --ux-surface:#192d30;
+ --ux-surface-raised:#20383a;
+ --ux-edge:#2c4a49;
+ --ux-ink:#ebf4f0;
+ --ux-secondary:#a9c4bb;
+ --ux-important:#d9efe5;
+ --ux-green:#078b51;
+ --ux-green-strong:#09a262;
+ --ux-accent:#bde8d2;
+ --ux-radius:11px;
+ --bottom-nav-height:68px;
+ --ui-gap:9px;
+}
+html,body{margin:0;background:#071113;color:var(--ux-ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:13px;line-height:1.43;max-width:100%;overflow-x:hidden}
+#app{background:var(--ux-bg);border-color:#243d3c;width:100%;max-width:720px;min-height:100dvh;height:100dvh;overflow:hidden}
+#app .head{flex:0 0 auto;min-height:50px;padding:8px max(12px,env(safe-area-inset-right)) 8px max(12px,env(safe-area-inset-left));background:#0e1c1e;border-bottom:0}
+#app .ux-topbar{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:38px}
+#app .ux-head-ident{min-width:0;display:grid;gap:0}
+#app .brand{font-family:ui-monospace,Consolas,monospace;font-size:9px!important;letter-spacing:.05em!important;font-weight:600;color:#8fccc0}
+#app .ux-head-section{color:#f4f8f5;font-size:17px;font-weight:750;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#app .ux-settings-trigger{height:36px;min-height:36px;max-height:40px;width:38px;padding:8px;flex-shrink:0;border:1px solid #365653;border-radius:8px;background:#1b3233;color:#c7e0da;display:flex;align-items:center;justify-content:center;touch-action:manipulation}
+#app .ux-icon{width:17px;height:17px;display:block;flex:0 0 auto}
+#app .content{background:var(--ux-bg);padding:4px 12px 12px;scrollbar-gutter:auto;min-height:0;overflow-x:hidden;overflow-y:auto}
+#app .content.has-bottom-nav{padding-bottom:calc(var(--bottom-nav-height) + 14px + env(safe-area-inset-bottom))!important;scroll-padding-bottom:calc(var(--bottom-nav-height) + 14px + env(safe-area-inset-bottom))}
+#app .content .panel{background:var(--ux-surface);border:1px solid var(--ux-edge);border-radius:var(--ux-radius);padding:12px;margin:0 0 9px;box-shadow:none}
+#app .content .panel>h3{font-size:13px;letter-spacing:.01em;line-height:1.35;color:#e6f3ea;margin-bottom:8px}
+#app .muted,#app .small.muted{color:var(--ux-secondary)}
+#app .small,#app .content small{font-size:11px;line-height:1.48}
+#app button{font-family:inherit;font-size:12px;line-height:1.25;border-radius:8px;min-height:44px;max-height:50px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+#app .main-actions{margin:9px 0;gap:9px}
+#app .main-actions button{min-height:46px;max-height:50px;border-radius:9px}
+#app .main-actions button:first-child{background:var(--ux-green)!important;color:#fff!important;border-color:var(--ux-green)!important;font-weight:750}
+#app .main-actions button:nth-child(n+2){background:#234043;border-color:#315654;color:#ebf5f0}
+#app .ux-kicker{font-family:ui-monospace,Consolas,monospace;font-size:10px;letter-spacing:.07em;color:#8eb8ad;font-weight:650}
+#app .ux-world-dashboard{min-width:0;display:grid;gap:0;padding:0}
+#app .ux-world-hero-card,#app .ux-world-place-card{background:var(--ux-surface);border-radius:11px;padding:13px;border:1px solid #223d3d;min-width:0;margin-bottom:9px}
+#app .ux-world-hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+#app .ux-world-hero-top>div{display:flex;flex-direction:column;min-width:0;gap:2px}
+#app .ux-world-hero-name{font-size:17px;color:#f8fff9;line-height:1.16;overflow-wrap:anywhere}
+#app .ux-world-hero-top>div>span{font-size:11px;color:#9fc8bc}
+#app .ux-world-gold{font-size:12px;white-space:nowrap;color:#f4c55a;margin-top:4px}
+#app .ux-world-vitals{display:grid;gap:5px}
+#app .ux-world-vital{display:grid;grid-template-columns:26px minmax(0,1fr) 58px;gap:9px;align-items:center;min-width:0;font-size:11px}
+#app .ux-world-vital>span{color:#d0dfda;font-weight:650}
+#app .ux-world-vital>b{font-size:10px;color:#c6dad3;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+#app .ux-world-meter{height:8px;overflow:hidden;background:#2d4548;border-radius:20px}
+#app .ux-world-meter>span{display:block;height:100%;border-radius:20px;background:#4bb59d}
+#app .ux-world-meter.mp>span{background:#65aadd}
+#app .ux-world-meter.exp>span{background:#e3bf64}
+#app .ux-world-place-card{display:flex;flex-direction:column;padding:12px;gap:0}
+#app .ux-world-place-card .ux-adventure-location{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:3px 8px}
+#app .ux-world-place-card .ux-adventure-location>.ux-kicker{grid-column:1}
+#app .ux-world-area{grid-column:2;grid-row:1;color:#a7c2b7;font-size:10px;white-space:nowrap}
+#app .ux-world-place-card .ux-adventure-location>strong{grid-column:1/-1;color:#eff7f3;font-size:15px;line-height:1.4}
+#app .ux-world-scene{height:130px;max-height:130px;min-height:115px;margin:0 0 4px;padding:4px 0;overflow:hidden;display:flex;align-items:center;justify-content:center}
+#app .ux-world-scene .ascii-art{font-size:6px;line-height:1.05!important;color:#a6c8b6;margin:0;max-width:none;letter-spacing:0}
+#app .ux-world-goal{display:grid;gap:4px;min-width:0}
+#app .ux-world-goal p{font-size:12px;line-height:1.45;color:#d4e1dc;margin:0;overflow-wrap:anywhere}
+#app .ux-world-goal-link{min-height:36px;max-height:40px;width:max-content;padding:6px 10px;margin-top:2px;background:#253f3d;border:1px solid #42675b;color:#cceadc;font-weight:650}
+#app .ux-world-place-card .ux-next-step{background:none;border:0;border-top:1px solid #294543;margin:10px 0 0;padding:8px 0 0;display:flex;gap:5px;align-items:baseline;flex-wrap:wrap}
+#app .ux-world-place-card .ux-next-step strong{font-size:11px;color:#b6dec4}
+#app .ux-world-place-card .ux-next-step p{font-size:11px;color:#a9c2b8;margin:0}
+#app .ux-world-extra{border:1px solid #2d4845!important;background:#142526!important;border-radius:9px;margin:0 0 10px}
+#app .ux-world-extra>summary{min-height:42px;font-size:12px;font-weight:650;color:#bdd7cb}
+#app .ux-world-extra .climate-summary{margin:6px 0}
+#app .ux-world-extra .ux-risk-line{margin-top:8px}
+#app .ux-resume-line{margin:0 0 9px}
+#app > .ux-area-nav{position:fixed;inset:auto auto 0 50%;transform:translateX(-50%);width:100%;max-width:720px;min-height:60px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;align-items:center;margin:0;padding:7px max(8px,env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));z-index:110;background:#101d20;border:0;border-top:1px solid #2c4947;border-radius:0;box-shadow:0 -9px 20px rgba(0,0,0,.16)}
+#app > .ux-area-nav .ux-area-tab{height:49px;min-height:49px;max-height:49px;min-width:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;padding:4px 2px;color:#a9c9bf;background:transparent;border-color:transparent;border-radius:8px;font-size:10px;line-height:1.14;font-weight:550;touch-action:manipulation}
+#app > .ux-area-nav .ux-area-tab .ux-icon{width:18px;height:18px}
+#app > .ux-area-nav .ux-area-tab.is-current{background:#265346;border:1px solid #2c5d4f;color:#d6ffe3;font-weight:750}
+#app > .ux-area-nav .ux-area-tab.is-current .ux-icon{color:#73e4a1}
+#app > .ux-area-nav .ux-area-tab:disabled{opacity:.36}
+#app .ux-route-list .ux-route{background:#1d3736;border-color:#345451;border-radius:10px;min-height:58px;max-height:none}
+#app .ux-route strong{font-size:13px;color:#eff7f3}
+#app .ux-route small{font-size:11px}
+#app .ux-route>span:last-child{color:#a7d6c0}
+#app .ux-hub-highlight{background:#1b3230;border-color:#365d51;border-radius:10px}
+#app .ux7-quest-card,#app .ux6-item-card{border-radius:10px;background:#1b302f;border-color:#38554d}
+#app .ux7-quest-card strong,#app .ux6-item-card strong{color:#f1f6ee}
+#app .ux7-disclosure,#app .ux6-detail,#app .ux-combat-details{border-radius:10px}
+#app .ux7-service,#app .ux-path-card{border-radius:10px}
+#app .ux-path-card{background:#1c3233;border-color:#3c5c57}
+#app .ux-path-card button{background:#0a9660;color:white;border-color:#0a9660}
+#app .ux-journey-actions button:first-child,#app .ux-camp-actions button:first-child{background:#0a925a;color:#fff;border-color:#0a925a}
+#app .ux7-quest-card button[data-action^="uxTrackQuest"]{background:#23443e;color:#cceedd;border:1px solid #467460;margin-top:7px}
+#app .ux7-quest-card button+button{margin-top:7px}
+#app .ux-hero-preview,#app .hero-preview{min-width:0}
+#app .combat-stage .combat-action.ux-combat-basic{background:#088c57!important;color:#fff!important;border-color:#088c57!important}
+#app .combat-stage .ux-combat-latest{background:#192f30;border-color:#345652;border-radius:8px}
+#app .combat-stage .combat-arena{border-radius:11px}
+#app .ux-start-screen{min-width:0;padding-top:15px;display:flex;flex-direction:column;gap:13px}
+#app .ux-start-illustration{background:#182a2c;border:1px solid #34514e;border-radius:14px;min-height:182px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#8eccaf}
+#app .ux-start-illustration pre{font:12px/1.2 ui-monospace,monospace!important;white-space:pre;overflow:visible;max-width:none;margin:0;color:inherit}
+#app .ux-start-copy h2{font-size:22px;line-height:1.18;margin:6px 0;color:#f0f8f3}
+#app .ux-start-copy p{font-size:13px;color:#bed1c8;line-height:1.5;margin:0}
+#app .ux-start-screen .ux-save-status{font-size:12px;background:#1a2f2e;border-radius:8px;padding:10px;border:1px solid #36564d;margin:0}
+#app .ux-start-screen .start-actions{gap:9px}
+#app .ux-start-screen .start-actions button:first-child{background:#078b51;color:#fff;font-weight:750;border-color:#078b51}
+#app .ux-start-screen .start-actions .danger{background:#2a2427;border-color:#704b4a;color:#e8aaaa}
+#app .ux-first-tip{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;background:#18312c;border:1px solid #3c6b53;border-radius:9px;padding:10px;margin:5px 0 10px}
+#app .ux-first-tip strong{font-size:12px;color:#d1f0dd}
+#app .ux-first-tip p{font-size:11px;line-height:1.45;color:#b7d4c5;margin:3px 0 0}
+#app .ux-first-tip button{font-size:11px;min-height:38px;max-height:42px;white-space:nowrap;padding:6px 9px;color:#def1e4;background:#235541;border:1px solid #56836a}
+#app .ux-settings-overlay{position:fixed;inset:0;z-index:999;background:rgba(3,11,13,.78);display:flex;justify-content:center;align-items:flex-end;padding:12px max(8px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));box-sizing:border-box}
+#app .ux-settings-sheet{width:100%;max-width:680px;max-height:94dvh;overflow-y:auto;background:#192b2d;border:1px solid #41665a;border-radius:15px;padding:16px;box-shadow:0 15px 48px #0008}
+#app .ux-settings-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+#app .ux-settings-heading small{color:#8ed0b0;font-size:9px;font-family:ui-monospace,monospace}
+#app .ux-settings-heading h2{font-size:19px;color:#f1f8f3;margin:2px 0 0}
+#app .ux-settings-heading button{min-height:38px;max-height:42px;padding:7px 12px;border:1px solid #456760;background:#274441;color:#eff5ee}
+#app .ux-settings-row{display:flex;justify-content:space-between;align-items:center;text-align:left;gap:10px;width:100%;height:auto;min-height:60px;max-height:none;padding:10px;border:1px solid #3f6059;background:#223b3a;color:#e7f2e8;margin:7px 0}
+#app .ux-settings-row>span{display:grid;gap:4px;min-width:0}
+#app .ux-settings-row strong{font-size:13px}
+#app .ux-settings-row small{font-size:11px;color:#aecbc0}
+#app .ux-settings-row .ux-switch{font-size:10px;background:#354542;color:#e6e8df;border-radius:20px;padding:6px;min-width:35px;text-align:center}
+#app .ux-settings-row .ux-switch.on{background:#0a8355;color:#fff}
+#app .ux-settings-secondary{width:100%;background:#2a4542;border-color:#46675c;color:#e0f2e4;margin-top:8px}
+#app.ux-text-large{font-size:15px}
+#app.ux-text-large .content :is(p,small,.small,.muted,.ux-route small,.ux7-quest-description,.ux-world-goal p,.ux-world-place-card .ux-next-step p){font-size:13px!important;line-height:1.5}
+#app.ux-text-large .content button{font-size:13px}
+#app.ux-motion-off *,#app.ux-motion-off *::before,#app.ux-motion-off *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(max-width:359px){#app .content{padding-inline:9px}#app .ux-world-hero-card,#app .ux-world-place-card{padding:10px}#app .ux-world-hero-name{font-size:15px}#app .ux-world-vital{grid-template-columns:24px minmax(0,1fr) 56px;gap:6px}#app .ux-first-tip{grid-template-columns:1fr}#app .ux-first-tip button{justify-self:end}#app > .ux-area-nav{gap:2px;padding-inline:5px}#app > .ux-area-nav .ux-area-tab{font-size:9px}}
+@media(min-width:600px){#app .ux-world-dashboard{max-width:620px;margin-inline:auto}#app .ux-world-scene{height:155px;max-height:155px}#app .ux-settings-overlay{align-items:center}}
+@media(prefers-reduced-motion:reduce){#app *,#app *::before,#app *::after{transition:none!important;animation:none!important}}
+
+/* Ações da aventura ficam acima das dicas, mesmo na primeira sessão. */
+#app .ux-world-place-card .ux-adventure-location{background:transparent!important;border:0!important;border-radius:0!important;padding:0!important;margin:0 0 2px!important;box-shadow:none!important}
+#app .ux-world-scene{height:112px;max-height:112px;min-height:105px}
+#app .ux-world-dashboard>.ux-resume-line{display:none}
+#app .ux-world-dashboard .ux-next-step{margin-top:7px;padding-top:7px}
+#app .ux-world-actions{margin:0 0 7px}
+
+@media(max-width:359px){#app .ux-world-scene{height:91px;max-height:91px;min-height:91px}}
+/* Alvos de toque de pelo menos 44 px nos controles desta reformulação. */
+#app .ux-settings-trigger{width:44px;height:44px;min-height:44px;max-height:44px}
+#app .ux-world-extra>summary{min-height:44px}
+#app .ux-world-goal-link{min-height:44px;max-height:48px}
+#app .ux-first-tip button{min-height:44px;max-height:48px}
+#app .ux-settings-heading button{min-height:44px;max-height:48px}
+@media(max-width:359px){#app .ux-world-scene{height:84px;max-height:84px;min-height:84px}}
+#app .object-art-detail>summary,#app .npc-art-detail>summary {min-height:44px;display:flex;align-items:center;box-sizing:border-box}
+</style></head><body><a class="skip-link" href="#game-content">Pular para o jogo</a><main id="app"><header class="head"><div class="ux-topbar"><div class="ux-head-ident"><div class="brand">ASCII REALMS</div><div class="ux-head-section">Comércio</div></div><button type="button" class="ux-settings-trigger" data-action="uxSettingsOpen" aria-label="Abrir configurações"><svg class="ux-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4m10.6 10.6 1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"/></svg></button></div></header><div class="content" id="game-content" tabindex="-1" aria-label="Conteúdo: mercante"><h2 class="ux8-screen-heading" tabindex="-1">mercante</h2><nav class="ux-area-nav" aria-label="Navegação principal"><button type="button" class="ux-area-tab is-current" tabindex="-1" data-action="navArea:aventura" aria-current="page" ><svg class="ux-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5 14.5 9.5 21.5 12l-7 2.5-2.5 7-2.5-7L2.5 12l7-2.5z"/><path d="M12 9v6M9 12h6"/></svg><span>Aventura</span></button><button type="button" class="ux-area-tab" tabindex="-1" data-action="navArea:personagem"  ><svg class="ux-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="7" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span>Personagem</span></button><button type="button" class="ux-area-tab" tabindex="-1" data-action="navArea:diario"  ><svg class="ux-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 6c-3.2-2-6.2-2.3-9-1v14c3.2-1.3 6.2-1 9 1 2.8-2 5.8-2.3 9-1V5c-2.8-1.3-5.8-1-9 1z"/><path d="M12 6v14"/></svg><span>Diário</span></button><button type="button" class="ux-area-tab" tabindex="-1" data-action="navArea:mundo"  ><svg class="ux-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.5 3.5 3.5 14.5 0 18M12 3c-3.5 3.5-3.5 14.5 0 18"/></svg><span>Mundo</span></button></nav><div class="menu-back-container"><button type="button" class="menu-back-button" data-action="menuBack">&lt; VOLTAR</button></div><section class="panel"><h3>CATÁLOGO</h3><div class="ascii-container settlement-scene hd-interior-scene"><pre class="ascii-art" data-ascii="true">#:@@@@@@@@@@@@@@@@@@@#:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#:@@@@@@@@@@@@@@@@@@#:
 #:**++*****+++*+=*|++#:++*++=++*=+*=|*+=++=++++=+++==+|*++*==+=++===++++|+==++++++=+=+=+=+|-=++====-==#:++++|+++=+-======-#:
 #:***+*+/\+++**/\*|++#:+#++=++**+=++|=+**+*++====+++++|=+++=&lt;Y&gt;===+++==+|++======+====++==|=+-++++=#+-#:-=-=|++++=-+-=-===#:
 #:*++*|*++++++****|++#:+#+++**==++==|==++++====+*===++|++==+=====+++====|=++=++=+==+-++==+|++=+=+=-#-=#:+=+=|+--====+|=-==#:

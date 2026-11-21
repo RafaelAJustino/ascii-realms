@@ -1,0 +1,54 @@
+/* Barra global fixa, fora da área rolável. Prioridade para toque e mouse. */
+:root { --bottom-nav-height: 62px; }
+#app > .ux-area-nav {
+  position:fixed;
+  inset:auto auto 0 50%;
+  transform:translateX(-50%);
+  z-index:110;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  align-items:center;
+  gap:6px;
+  box-sizing:border-box;
+  width:100%;
+  max-width:720px;
+  min-width:0;
+  margin:0;
+  padding:6px max(8px,env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));
+  border:1px solid var(--ux-edge);
+  border-bottom:0;
+  border-radius:12px 12px 0 0;
+  background:#101f21;
+  box-shadow:0 -5px 18px rgba(0,0,0,.44);
+  touch-action:manipulation;
+}
+#app > .ux-area-nav .ux-area-tab {
+  min-width:0;
+  width:100%;
+  height:48px;
+  min-height:48px;
+  max-height:50px;
+  margin:0;
+  padding:5px 2px;
+  font-size:clamp(10px,2.8vw,13px);
+  white-space:nowrap;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+}
+#app > .content.has-bottom-nav {
+  /* Permite alcançar o último botão sem escondê-lo atrás da barra. */
+  padding-bottom:calc(var(--bottom-nav-height) + 14px + env(safe-area-inset-bottom))!important;
+  scroll-padding-bottom:calc(var(--bottom-nav-height) + 14px + env(safe-area-inset-bottom));
+}
+#app > .ux-area-nav .ux-area-tab.is-current {
+  color:#0b211b;
+  background:#b7e6bc;
+  border-color:#dbf7d7;
+}
+@media (max-width:360px){
+  #app > .ux-area-nav {gap:3px;padding-inline:max(4px,env(safe-area-inset-left)) max(4px,env(safe-area-inset-right));}
+  #app > .ux-area-nav .ux-area-tab {font-size:10px;padding-inline:1px;}
+}
+@media (prefers-reduced-motion:reduce){
+  #app > .ux-area-nav,#app > .ux-area-nav .ux-area-tab {transition:none!important;animation:none!important;}
+}

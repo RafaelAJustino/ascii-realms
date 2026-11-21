@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {enhanceMobileAccessibility} from '../js/mobile-accessibility-stage8.js';
+const read=path=>readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
+const ui=read('js/ui.js'),main=read('js/main.js'),viewer=read('js/ascii-presentation.js');
+const state=read('js/viewport-state.js'),css=read('css/pointer-only-focus-fix.css'),html=read('index.html');
+assert.doesNotMatch(ui,/focusFromPreviousScreen|\.focus\?\.\(/);
+assert.doesNotMatch(main,/addEventListener\('keydown'/);
+assert.doesNotMatch(ui,/container\.onkeydown=e=>/);
+assert.doesNotMatch(viewer,/addEventListener\('keydown'|\.focus\(\{preventScroll:true\}\)/);
+assert.doesNotMatch(state,/\.focus\(\{preventScroll:true\}\)/);
+assert.doesNotMatch(html,/class="ux-skip-link"/);
+assert.match(html,/css\/pointer-only-focus-fix\.css/);
+assert.match(css,/#app #game-content :focus, #app #game-content :focus-visible/);
+assert.match(css,/outline:none!important/);
+const elements=[];
+const el=()=>({setAttribute:(k,v)=>elements.push([k,v])});
+const content={querySelector:()=>null, querySelectorAll:sel=>sel.startsWith('button,a,input')?[el(),el(),el()]:[]};
+const root={querySelector:()=>content,querySelectorAll:()=>[]};
+enhanceMobileAccessibility(root,'world');
+assert.deepEqual(elements,[['tabindex','-1'],['tabindex','-1'],['tabindex','-1']]);
+// Botões ainda executam ações via delegação de click, sem submenu de foco.
+assert.match(main,/app\.addEventListener\('click'/);
+assert.match(ui,/container\.onclick=\(\)=>openAsciiViewer/);
+console.log('OK: clique/toque com primeira acao, sem foco automatico, foco amarelo ou atalhos de teclado.');

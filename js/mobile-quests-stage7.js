@@ -28,6 +28,7 @@ export function questDashboard(personalPanel=''){
   if(status==='Disponível')action=btn('Aceitar missão',`questAccept:${q.id}`);
   if(readyToDeliver)action=btn('Entregar materiais',`questDeliver:${q.id}`);
   if(status==='Concluída')action=btn('Receber recompensa',`questClaim:${q.id}`);
+  if(status==='Em andamento'||status==='Concluída')action+=btn('Acompanhar na aventura',`uxTrackQuest:${q.id}`);
   const hint=readyToDeliver?'Materiais disponíveis. Faça a entrega para concluir.':status==='Concluída'?'Objetivo cumprido. Recompensa disponível.':status==='Recompensa recebida'?'Recompensa já recebida.':status==='Disponível'?'Aceite esta missão para registrar seu progresso.':`Objetivo: ${q.required} · ${q.type==='collect'?'Reúna os materiais indicados.':q.type==='explore'?'Explore a região.':q.type==='boss'?'Derrote o chefe regional.':'Derrote os inimigos indicados.'}`;
   register(bucket,'Regional',q.region,q.title,q.description,`${status==='Em andamento'||readyToDeliver?progressBar(progress,q.required):''}<p class="small muted">${escape(hint)}</p><p class="small ux7-quest-reward">Recompensa: ${q.reward.xp} EXP · ${q.reward.gold} ouro · ${q.reward.consumables.hp} poção(ões)</p>${action}`);
  }
@@ -38,7 +39,7 @@ export function questDashboard(personalPanel=''){
   const progress=status==='Em andamento'?state.dynamicQuests?.active?.[q.id]?.progress||0:q.required;
   const action=status==='Disponível'?btn('Aceitar história',`dynamicAccept:${q.id}`):status==='Concluída'?`<div class="ux7-decision-actions">${btn('Investigar e registrar provas',`dynamicClaim:${q.id}:investigate`)}${btn('Proteger os envolvidos',`dynamicClaim:${q.id}:protect`)}</div>`:'';
   const hint=status==='Concluída'?'Decida como encerrar esta história.':status==='Em andamento'?(q.type==='explore'?'Continue explorando nesta região.':'Derrote os inimigos necessários nesta região.'):status==='Recompensa recebida'?'História encerrada.':'História descoberta por suas interações.';
-  register(bucket,'Narrativa',q.region,q.title,q.description,`${status==='Em andamento'?progressBar(progress,q.required):''}<p class="small muted">${hint}</p><p class="small ux7-quest-reward">Recompensa base: ${q.reward.xp} EXP · ${q.reward.gold} ouro; varia conforme a decisão.</p>${action}`);
+  register(bucket,'Narrativa',q.region,q.title,q.description,`${status==='Em andamento'?progressBar(progress,q.required):''}<p class="small muted">${hint}</p><p class="small ux7-quest-reward">Recompensa base: ${q.reward.xp} EXP · ${q.reward.gold} ouro; varia conforme a decisão.</p>${action}${status==='Em andamento'||status==='Concluída'?btn('Acompanhar na aventura',`uxTrackQuest:${q.id}`):''}`);
  }
  for(let r=0;r<maps.length;r++){
   const current=adventureEntry(state,r);
@@ -51,7 +52,7 @@ export function questDashboard(personalPanel=''){
   const ending=phase==='done'?story.endings[state.adventure.decisions[story.id]]||'Concluída.':'';
   const action=phase==='available'&&inRegion?btn('Iniciar investigação',`adventureAccept:${story.id}`):phase==='decision'&&inRegion?`<div class="ux7-decision-actions">${btn('Registrar as provas',`adventureClaim:${story.id}:report`)}${btn('Proteger as testemunhas',`adventureClaim:${story.id}:protect`)}</div>`:phase==='delivery'&&inRegion?btn('Ir à taverna para entregar','nav:tavern'):'';
   const instruction=!inRegion&&phase!=='done'?`Retorne a ${locationLabel(r)} para continuar.`:phase==='investigate'?'Procure duas pistas durante a exploração.':phase==='hunt'?'Derrote os inimigos vinculados à investigação.':phase==='delivery'?'A entrega é realizada na taverna da região.':phase==='decision'?'Escolha o desfecho da investigação.':phase==='available'?'Investigação disponível para iniciar.':ending;
-  register(bucket,'Pessoal',r,story.title,story.lead,`${progress}<p class="small muted">${escape(PHASE_LABELS[phase]||phase)} · ${escape(instruction)}</p>${action}`);
+  register(bucket,'Pessoal',r,story.title,story.lead,`${progress}<p class="small muted">${escape(PHASE_LABELS[phase]||phase)} · ${escape(instruction)}</p>${action}${['active','ready'].includes(bucket)?btn('Acompanhar na aventura',`uxTrackQuest:${story.id}`):''}`);
  }
  cards.sort((a,b)=>FILTERS.findIndex(([key])=>key===a.bucket)-FILTERS.findIndex(([key])=>key===b.bucket));
  const filter=FILTERS.some(([key])=>key===rt.questFilter)?rt.questFilter:'available';

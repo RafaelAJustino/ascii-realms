@@ -1,0 +1,29 @@
+/* Correção: ações respondem ao primeiro clique/toque, sem destaque de foco.
+   Não ocultar botões; conservar somente realce de seleção de abas/estado. */
+#app #game-content :focus, #app #game-content :focus-visible,
+#app :focus, #app :focus-visible,
+#ascii-art-viewer.hd8-viewer :focus, #ascii-art-viewer.hd8-viewer :focus-visible {
+ outline:none!important;
+ box-shadow:none!important;
+}
+#app .content:focus, #app .ux8-screen-heading:focus {
+ outline:none!important;
+ box-shadow:none!important;
+}
+/* Antes, focar o titulo o fazia surgir e deslocava os botoes. */
+#app .ux8-screen-heading:focus {
+ position:absolute!important;
+ width:1px!important;
+ height:1px!important;
+ padding:0!important;
+ margin:-1px!important;
+ overflow:hidden!important;
+ clip:rect(0,0,0,0)!important;
+ white-space:nowrap!important;
+ border:0!important;
+}
+#app .panel:focus-within { border-color:var(--border)!important; }
+#app button, #app summary, #app .ascii-zoomable {
+ -webkit-tap-highlight-color:transparent;
+ touch-action:manipulation;
+}

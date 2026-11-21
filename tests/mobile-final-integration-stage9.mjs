@@ -65,13 +65,13 @@ click('questClaim:q0-collect');assert.equal(rt.state.gold,goldBefore+reward,'nun
 // Navegação contextual para a taverna também deve registrar uma visita real.
 click('nav:tavern');assert.equal(rt.screen,'tavern');
 const firstVisit=rt.state.cityLife.tavern.visits[0];assert.ok(firstVisit>=1);
-click('navArea:diario');assert.equal(rt.screen,'quests');
-click('navArea:mundo');assert.equal(rt.screen,'tavern');
-assert.equal(rt.state.cityLife.tavern.visits[0],firstVisit+1);
+click('navArea:diario');assert.equal(rt.screen,'diary');
+click('navArea:mundo');assert.equal(rt.screen,'atlas');
+assert.equal(rt.state.cityLife.tavern.visits[0],firstVisit,'a barra não visita a taverna em segundo plano');
 click('navArea:personagem');assert.equal(rt.screen,'player');
 click('nav:inventory');assert.equal(rt.screen,'inventory');
 assert.match(app.innerHTML,/invent[aá]rio/i);
-click('navArea:diario');assert.equal(rt.screen,'quests');
+click('navArea:diario');assert.equal(rt.screen,'diary');
 
 // A masmorra ativa não permite navegar para o diário ou a aventura.
 rt.state.dungeons.attempt={id:'test',room:1,roomResolved:false};rt.screen='dungeon';

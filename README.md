@@ -822,3 +822,28 @@ Esta etapa consolida o trabalho das Etapas 1 a 8: seletor de mapas compacto com 
 A exclusão de progresso remove agora as três cópias locais (principal, backup e pré-migração). A opção de continuar uma aventura é disponibilizada quando existe uma cópia recuperável. Uma nova partida salva descarta o backup de pré-migração obsoleto. **Não houve alteração do salvamento v14 nem do balanceamento.**
 
 Validação: `npm test` (**77 testes OK**) e `npm run qa:ux-stage9` (**23 estados × 8 resoluções = 184 verificações visuais**). Leia `docs/RELATORIO-UX-ETAPA9.md` para resultados, limitações e instruções. A execução interativa integral em Chromium não pôde ser verificada neste ambiente por bloqueio da navegação HTTP local; os fluxos são testados em Node com DOM simulado, e a inspeção visual usa HTML e CSS reais.
+
+
+## Correção de foco e duplo clique (21/11/2026)
+
+O jogo passou a priorizar exclusivamente interação por toque e mouse. Removidas as
+rotinas que focavam automaticamente o título, o painel e os botões reconstruídos
+entre telas, o que gerava bordas amarelas e deslocamentos inesperados. Botões,
+abas, painéis expansíveis e artes ampliáveis respondem ao primeiro clique/toque,
+sem exigir um clique prévio para remover seleções. A restauração de rolagem
+continua ativa, mas não restaura foco. Também foram removidos os atalhos manuais
+de teclado; a entrada de nome continua funcionando com teclado após clicar no
+campo. Nenhum dado de salvamento foi alterado. Para validar: `npm test`.
+
+## Atualização: navegação inferior fixa (mobile-first)
+
+A navegação pelas seções **Aventura, Personagem, Diário e Mundo** está fixa no rodapé e fora da área de rolagem. Clicar em uma aba, inclusive na já selecionada, sempre retorna à tela inicial da seção e ao topo da página. A expedição ativa e a masmorra ativa continuam sendo respeitadas; durante um combate, a barra fica oculta para não interromper o turno. Toque e mouse são os meios de navegação. A versão de salvamento permanece v14. Consulte [`docs/CORRECAO-NAVEGACAO-INFERIOR.md`](docs/CORRECAO-NAVEGACAO-INFERIOR.md) para arquivos alterados e testes.
+
+
+## Reformulação UX/UI consolidada (21/11/2026)
+
+Atualização mobile-first em entrega única, partindo da versão com navegação inferior fixa. Inclui Aventura em cartões compactos, cabeçalho e botões redesenhados, Configurações de apresentação, dicas contextuais descartáveis e missão acompanhada. Preserva a versão 14 do salvamento e as mecânicas de gameplay.
+
+Para detalhes, arquivos modificados, limitações de validação e testes, consulte `docs/RELATORIO-REFORMULACAO-CONSOLIDADA.md`.
+
+Testes: `npm test` e `npm run qa:ux-consolidated`.

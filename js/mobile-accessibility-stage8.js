@@ -17,6 +17,11 @@ export function enhanceMobileAccessibility(root,screen){
  if(!root||typeof root.querySelectorAll!=='function')return;
  const content=root.querySelector?.('.content');
  if(!content||typeof content.querySelectorAll!=='function')return;
+ // Navegação exclusiva por toque/mouse. tabIndex=-1 não impede clique,
+ // abertura de details nem digitação após tocar/clicar em um campo.
+ for(const item of content.querySelectorAll('button,a,input,select,textarea,summary,[role="button"]')){
+  item.setAttribute('tabindex','-1');
+ }
  const title=content.querySelector('.ux8-screen-heading');
  if(title)title.textContent=screenHeadingLabel(screen);
  for(const art of content.querySelectorAll('pre.ascii-art')){

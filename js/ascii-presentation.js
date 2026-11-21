@@ -20,7 +20,7 @@ function setupViewer(){
  dialog.id='ascii-art-viewer';
  dialog.setAttribute('aria-labelledby','ascii-viewer-title');
  dialog.className='hd8-viewer';
- dialog.innerHTML=`<div class="hd8-viewer-bar"><strong id="ascii-viewer-title">Arte ASCII detalhada</strong><div class="hd8-viewer-actions"><button type="button" data-zoom="out" aria-label="Diminuir zoom">−</button><button type="button" data-zoom="fit">Ajustar</button><button type="button" data-zoom="in" aria-label="Aumentar zoom">+</button><button type="button" class="ascii-close">Fechar</button></div></div><div class="hd8-viewer-info" role="status" aria-live="polite"></div><div class="hd8-viewer-viewport" tabindex="0" aria-label="Arte ampliada; utilize a rolagem para explorar"><pre></pre></div><p class="hd8-viewer-hint">Teclas: + ou − para zoom, F para ajustar, Esc para fechar. Arraste as barras de rolagem para examinar os detalhes.</p>`;
+ dialog.innerHTML=`<div class="hd8-viewer-bar"><strong id="ascii-viewer-title">Arte ASCII detalhada</strong><div class="hd8-viewer-actions"><button type="button" data-zoom="out" aria-label="Diminuir zoom">−</button><button type="button" data-zoom="fit">Ajustar</button><button type="button" data-zoom="in" aria-label="Aumentar zoom">+</button><button type="button" class="ascii-close">Fechar</button></div></div><div class="hd8-viewer-info" role="status" aria-live="polite"></div><div class="hd8-viewer-viewport" aria-label="Arte ampliada; utilize a rolagem para explorar"><pre></pre></div><p class="hd8-viewer-hint">Utilize os botões para ajustar o zoom e deslize para examinar os detalhes.</p>`;
  document.body.appendChild(dialog);
  const pre=dialog.querySelector('pre'),view=dialog.querySelector('.hd8-viewer-viewport'),status=dialog.querySelector('.hd8-viewer-info');
  function setSize(font){
@@ -45,14 +45,8 @@ function setupViewer(){
   else if(action.dataset.zoom==='in')setSize(size*1.3);
   else if(action.dataset.zoom==='out')setSize(size/1.3);
  });
- dialog.addEventListener('keydown',e=>{
-  const t=e.target;if(t?.tagName==='BUTTON'&&(e.key===' '||e.key==='Enter'))return;
-  if(e.ctrlKey||e.metaKey||e.altKey)return;
-  if(e.key==='+'||e.key==='='){e.preventDefault();setSize((parseFloat(pre.style.getPropertyValue('--hd8-font'))||12)*1.3);}
-  else if(e.key==='-'||e.key==='_'){e.preventDefault();setSize((parseFloat(pre.style.getPropertyValue('--hd8-font'))||12)/1.3);}
-  else if(e.key.toLowerCase()==='f'){e.preventDefault();fit();}
- });
- dialog.addEventListener('close',()=>{dialog._returnFocus?.focus?.();});
+ // O visualizador é controlado exclusivamente por clique ou toque.
+ dialog.querySelectorAll('button').forEach(button=>button.tabIndex=-1);
  dialog._setSize=setSize;
  dialog._fit=fit;
  currentDialog=dialog;return dialog;
@@ -81,7 +75,6 @@ export function openDetailedAsciiViewer(text,source=null){
 
  const {width,height}=asciiDimensions(contents);
  dialog.dataset.cols=String(width);dialog.dataset.rows=String(height);
- dialog._returnFocus=source?.closest?.('.ascii-zoomable')||document.activeElement;
  if(!dialog.open)dialog.showModal();
  dialog._fit();
  // Em telas pequenas, evitar que uma arte de 160 colunas fique ilegível.
@@ -93,6 +86,5 @@ export function openDetailedAsciiViewer(text,source=null){
   view.scrollLeft=Math.max(0,(pre.scrollWidth-view.clientWidth)/2);
   view.scrollTop=0;
  }
- dialog.querySelector('.hd8-viewer-viewport').focus({preventScroll:true});
  return dialog;
 }

@@ -12,7 +12,7 @@ const doc=new Element({height:500,scrollHeight:2000,top:250});globalThis.documen
 const root=new Element({height:500,scrollHeight:500});const content=root.add(new Element({height:400,scrollHeight:1800,top:450}));const list=content.add(new Element({height:150,scrollHeight:700,top:220}));const button=list.add(new Element({action:'attrPlus:0'}));document.activeElement=button;
 const snapshot=captureViewport(root);assert.equal(snapshot.scrolling.length,2);
 const newRoot=new Element({height:500,scrollHeight:500});const newContent=newRoot.add(new Element({height:400,scrollHeight:1300}));const newList=newContent.add(new Element({height:150,scrollHeight:250}));const newButton=newList.add(new Element({action:'attrPlus:0'}));doc.scrollTop=0;restoreViewport(newRoot,snapshot);
-assert.equal(newContent.scrollTop,450);assert.equal(newList.scrollTop,100);assert.equal(doc.scrollTop,250);assert.equal(document.activeElement,newButton);assert.deepEqual(newButton.focusOptions,{preventScroll:true});
+assert.equal(newContent.scrollTop,450);assert.equal(newList.scrollTop,100);assert.equal(doc.scrollTop,250);assert.equal(document.activeElement,button);assert.equal(newButton.focusOptions,undefined);
 assert.equal(shouldPreserveViewport('inventory','inventory'),true);assert.equal(shouldPreserveViewport('inventory','combat'),false);
 newContent.scrollHeight=500;restoreViewport(newRoot,snapshot);assert.equal(newContent.scrollTop,100);
-console.log('OK: rolagem principal, lista interna, limite, foco sem scroll e navegação.');
+console.log('OK: rolagem principal, lista interna, limite, sem foco automatico e navegação por clique.');
