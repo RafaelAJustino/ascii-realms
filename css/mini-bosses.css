@@ -1,0 +1,39 @@
+/* Mini Boss: progressão compacta, sem sobreposição à navegação fixa. */
+.mini-boss-progress{margin:9px 0;padding:9px 10px;border:1px solid #45685b;border-radius:8px;background:#172927;color:#d7eadd;min-width:0}
+.mini-boss-progress-heading{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:12px;line-height:1.35}
+.mini-boss-progress-heading strong{min-width:0;overflow-wrap:anywhere}
+.mini-boss-progress-heading span{white-space:nowrap;color:#c7a968;font-size:11px}
+.mini-boss-progress-track,.mini-boss-exp-track{height:7px;background:#2b403d;border-radius:6px;overflow:hidden;margin:6px 0}
+.mini-boss-progress-track>span{display:block;height:100%;background:#d5aa65;transition:width .2s ease}
+.mini-boss-progress p{margin:4px 0 0;font-size:10px;line-height:1.3}
+.mini-boss-exp{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:7px;align-items:center;font-size:11px;margin:6px 0 0}
+.mini-boss-exp-track>span{display:block;height:100%;background:#e1bd65}
+.mini-boss-city-warning,.mini-boss-warning,.mini-boss-reset{border:1px solid #a78648;color:#ffdda3;padding:9px 10px;border-radius:6px;margin:8px 0;font-size:12px;line-height:1.4;background:rgba(112,69,13,.18)}
+.mini-boss-reset{border-color:#74b6a1;color:#c4f3dc;background:rgba(16,92,72,.18)}
+.mini-boss-intro{display:flex;flex-direction:column;gap:10px;margin:4px 0 12px;padding:12px;min-width:0;background:#132421;border:1px solid #567866;border-radius:9px}
+.mini-boss-intro h3{font-size:clamp(16px,4vw,21px);color:#e2cf9b;margin:0}
+.mini-boss-kicker{font-size:10px;letter-spacing:.07em;color:#9fdfc6}
+.mini-boss-story{font-size:13px;line-height:1.5;margin:0}
+.mini-boss-portrait{height:clamp(160px,47vw,240px);min-height:160px;max-width:100%;background:#0c1918;border:1px solid #345348;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.mini-boss-portrait pre.ascii-art{margin:0;white-space:pre!important;flex:none;font-size:6px;line-height:1.06;color:#9be1ba}
+.mini-boss-intro button[data-action="miniBossFight"]{width:100%;min-height:44px;max-height:50px;background:#13874c;color:#fff;font-weight:700}
+.combat-arena .mini-boss-label{color:#e6c577}
+@media(max-width:360px){.mini-boss-progress{padding:7px}.mini-boss-progress-heading{font-size:10px}.mini-boss-progress-heading span{font-size:9px}.mini-boss-portrait{height:174px}}
+@media(prefers-reduced-motion:reduce){.mini-boss-progress-track>span{transition:none}}
+
+/* Correção de expedição: duas colunas apenas para HP/MP; EXP ocupa a linha completa. */
+#app .ux-journey-header .ux-journey-stats{display:flex;flex-direction:column;gap:10px;grid-column:1/-1;width:100%;min-width:0}
+#app .ux-journey-stats .ux-journey-vitals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;width:100%;min-width:0}
+#app .ux-journey-stats .mini-boss-exp{display:flex;flex-direction:column;gap:5px;width:100%;min-width:0;margin:0;font-size:12px}
+#app .mini-boss-exp-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-width:0;font-size:11px;line-height:1.4;color:var(--ux-secondary,#b4c8c1)}
+#app .mini-boss-exp-heading b{color:var(--ux-ink,#e1f4e8);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
+#app .ux-journey-stats .mini-boss-exp-track{width:100%;height:8px;margin:0;border-radius:20px;background:#233738;overflow:hidden}
+#app .ux-journey-stats .mini-boss-exp-track>span{display:block;height:100%;border-radius:20px;background:#dfb85c}
+#app .mini-boss-name{font-weight:700;font-size:11px;color:#e6d4a4;margin:0 0 5px!important;line-height:1.35;overflow-wrap:anywhere}
+@media (max-width:360px){#app .ux-journey-stats .ux-journey-vitals{gap:7px}#app .mini-boss-exp-heading{font-size:10px}}
+
+/* Progressão por área: seleção compacta e legível nas dez fases. */
+.area-challenge-option{display:flex;flex-direction:column;min-width:0;gap:3px;padding:3px 1px}
+.area-challenge-option button{width:100%;min-width:0;min-height:44px;max-height:50px}
+.area-challenge-option .small{font-size:10px;line-height:1.2;text-align:center;overflow-wrap:anywhere}
+@media(max-width:360px){.area-challenge-option .small{font-size:9px}}

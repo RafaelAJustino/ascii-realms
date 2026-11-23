@@ -26,6 +26,6 @@ for(const name of keys){
 assert.equal(densityCreatureArtwork('NÃO EXISTE'),null);
 const ui=readFileSync(new URL('../js/ui.js',import.meta.url),'utf8');
 const bestiary=readFileSync(new URL('../js/progression-ui.js',import.meta.url),'utf8');
-assert.match(ui,/artwork=densityCreatureArtwork\(e.baseName,true,e.boss\?e.bossPhase\|\|1:1\)\|\|detailedArtworks/);
+assert.match(ui,/miniBossArtworkForArea\(e.miniBossArea\):null\)\|\|densityCreatureArtwork\(e.baseName,true,e.boss\?e.bossPhase\|\|1:1\)\|\|detailedArtworks/);
 assert.match(bestiary,/densityCreatureArtwork\(name\)\|\|detailedArtworks/);
 console.log('OK: 150 monstros HD 112x78 e 20 chefes HD 128x88, ASCII exclusivo, integracao e compatibilidade.');

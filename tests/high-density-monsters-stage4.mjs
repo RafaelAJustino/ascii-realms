@@ -40,7 +40,7 @@ for(const viewport of [320,390,430,720]){
 }
 const ui=readFileSync(new URL('../js/ui.js',import.meta.url),'utf8');
 const bestiary=readFileSync(new URL('../js/progression-ui.js',import.meta.url),'utf8');
-assert.match(ui,/artwork=densityCreatureArtwork\(e.baseName,true,e.boss\?e.bossPhase\|\|1:1\)/);
+assert.match(ui,/miniBossArtworkForArea\(e.miniBossArea\):null\)\|\|densityCreatureArtwork\(e.baseName,true,e.boss\?e.bossPhase\|\|1:1\)/);
 assert.match(bestiary,/densityCreatureArtwork\(name\)/);
 assert.match(ui,/escape\(artwork\)/,'combat output escaped');
 assert.match(bestiary,/escape\(densityCreatureArtwork\(name\)/,'bestiary escaped');

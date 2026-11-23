@@ -9,7 +9,7 @@ export const SECTIONS=Object.freeze([
  Object.freeze({id:'mundo',label:'Mundo',root:'atlas'})
 ]);
 const GROUPS=Object.freeze({
- aventura:['world','paths','journey','camp','merchant'],
+ aventura:['world','paths','journey','camp','merchant','miniBoss'],
  personagem:['player','character','inventory','skills','statistics','specializations','achievements'],
  diario:['diary','quests','bestiary','secrets'],
  mundo:['atlas','maps','city','tavern','forge','dungeons','dungeon']

@@ -1,0 +1,22 @@
+/** Prévia estática de um personagem após trocar do primeiro para o segundo mapa. */
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+const stored=new Map();
+globalThis.localStorage={getItem:k=>stored.get(k)||null,setItem:(k,v)=>stored.set(k,v),removeItem:k=>stored.delete(k)};
+const app={innerHTML:'',addEventListener(){},querySelector(){return null},querySelectorAll(){return []}};
+globalThis.document={querySelector:s=>s==='#app'?app:null,querySelectorAll(){return []},scrollingElement:null};
+globalThis.window={innerHeight:844,addEventListener(){}};globalThis.requestAnimationFrame=f=>f();
+const {newGame}=await import('../js/player.js');
+const {rt}=await import('../js/runtime.js');
+const {changeArea}=await import('../js/exploration.js');
+const {selectChallengeMap,challengeProgress}=await import('../js/exploration-challenge.js');
+const {choosePath}=await import('../js/journey-paths.js');
+const {render}=await import('../js/ui.js');
+const {resolve}=await import('node:path');
+const root=resolve(import.meta.dirname,'..');const index=readFileSync(resolve(root,'index.html'),'utf8');
+const css=[...index.matchAll(/href="(css\/[^\"]+\.css)"/g)].map(m=>readFileSync(resolve(root,m[1]),'utf8')).join('\n');
+newGame('Brook','ladino');rt.state.lv=20;rt.state.bosses=[0];rt.state.explorationChallenge.defeatedMiniBosses[0]=true;rt.state.explorationChallenge.consecutiveByMap[0]=15;selectChallengeMap(rt.state,0);
+changeArea(11);if(challengeProgress(rt.state,1).current!==0)throw Error('Map 2 must start at zero');
+choosePath(rt.state,'safe');rt.screen='journey';render();
+const html=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ASCII REALMS | Expedição segundo mapa</title><style>${css}</style></head><body><main id="app">${app.innerHTML}</main></body></html>`;
+mkdirSync(resolve(root,'docs'),{recursive:true});writeFileSync(resolve(root,'docs/qa-mini-boss-mapa2.html'),html);
+console.log('OK: prévia do segundo mapa com Mini Boss pendente 0/15 e EXP em largura total.');

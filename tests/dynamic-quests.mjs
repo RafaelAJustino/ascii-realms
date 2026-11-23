@@ -35,7 +35,7 @@ console.log('OK: 20 missões narrativas, desbloqueio, progressão, escolhas, rec
 // Integração com os pontos reais de entrada e o menu existente.
 import {readFileSync} from 'node:fs';
 const source=name=>readFileSync(new URL('../js/'+name,import.meta.url),'utf8');
-assert.match(source('exploration.js'),/progressDynamic\(rt\.state,'explore',mapId\(rt\.area\)\)/);
+assert.match(source('exploration.js'),/completeExplorationStep[\s\S]*progressDynamic\(s,'explore',region\)/);
 assert.match(source('combat.js'),/progressDynamic\(rt\.state,'kill',mapId\(rt\.area\)\)/);
 assert.match(source('main.js'),/dynamicAccept/);
 assert.match(source('main.js'),/dynamicClaim/);

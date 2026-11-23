@@ -55,7 +55,7 @@ for(const viewport of [320,375,390,430,720]){
  assert.ok(font>0,'boss compact viewport '+viewport);
 }
 const ui=readFileSync(new URL('../js/ui.js',import.meta.url),'utf8');
-assert.match(ui,/artwork=densityCreatureArtwork\(e.baseName,true,e.boss\?e.bossPhase\|\|1:1\)/,'phase-specific combat selection');
+assert.match(ui,/miniBossArtworkForArea\(e.miniBossArea\):null\)\|\|densityCreatureArtwork\(e.baseName,true,e.boss\?e.bossPhase\|\|1:1\)/,'phase-specific combat selection');
 assert.match(ui,/escape\(artwork\)/,'HTML escaped');
 assert.match(ui,/data-ascii="true"/,'fits existing responsive component');
 assert.match(readFileSync(new URL('../js/progression-ui.js',import.meta.url),'utf8'),/densityCreatureArtwork\(name\)/);

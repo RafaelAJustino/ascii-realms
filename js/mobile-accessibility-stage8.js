@@ -1,7 +1,7 @@
 /** Etapa 8: acessibilidade progressiva, sem novas dependências ou alteração de salvamento. */
 export const SCREEN_LABELS=Object.freeze({
  home:'Início',create:'Criação de personagem',world:'Aventura',paths:'Escolher caminho',
- journey:'Expedição',camp:'Acampamento',combat:'Combate',result:'Resultado do combate',
+ journey:'Expedição',camp:'Acampamento',miniBoss:'Mini Boss',combat:'Combate',result:'Resultado do combate',
  player:'Personagem',character:'Atributos',inventory:'Inventário',skills:'Habilidades',
  achievements:'Conquistas',secrets:'Descobertas',quests:'Missões',diary:'Diário de aventuras',
  atlas:'Mundo',maps:'Mapa',city:'Cidade',merchant:'Comércio',tavern:'Taverna',

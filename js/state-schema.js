@@ -1,3 +1,4 @@
+import {emptyChallenge,normalizeChallenge} from './exploration-challenge.js';
 import {dynamicDefaults,normalizeDynamic} from './dynamic-quests.js';
 import {adventureDefaults,normalizeAdventure,stringHash} from './procedural-adventures.js';
 import {secretDefaults,normalizeSecrets} from './secrets.js';
@@ -12,7 +13,7 @@ import {normalizeWeaponEvolution} from './weapon-evolution.js';
 import {cityLifeDefaults,normalizeCityLife} from './city-life.js';
 import {narrativeDefaults,normalizeNarrative,EVENT_BY_ID} from './journey-events.js';
 export const EQUIPMENT_SLOTS = ['weapon','head','body','hands','feet','ring','amulet'];
-export function extensionDefaults(){return {quests:{active:{},completed:[],claimed:[]},bestiary:{},statistics:{playTimeSeconds:0,monstersDefeated:0,bossesDefeated:0,deaths:0,damageDealt:0,highestDamage:0,damageTaken:0,goldEarned:0,goldSpent:0,itemsFound:0,questsCompleted:0,dungeonsCompleted:0},dungeons:{completed:[],rewards:[],best:{},attempt:null},specializations:{selected:null,unlocked:[]},enhancements:{},journey:emptyJourney(),worldClimate:worldClimateDefaults(),secrets:secretDefaults(),narrative:narrativeDefaults(),cityLife:cityLifeDefaults(),achievements:normalizeAchievements(null),skillVariants:{},investedStats:[0,0,0,0,0,0],dynamicQuests:dynamicDefaults(),adventure:adventureDefaults()};}
+export function extensionDefaults(){return {quests:{active:{},completed:[],claimed:[]},bestiary:{},statistics:{playTimeSeconds:0,monstersDefeated:0,bossesDefeated:0,deaths:0,damageDealt:0,highestDamage:0,damageTaken:0,goldEarned:0,goldSpent:0,itemsFound:0,questsCompleted:0,dungeonsCompleted:0},dungeons:{completed:[],rewards:[],best:{},attempt:null},specializations:{selected:null,unlocked:[]},enhancements:{},journey:emptyJourney(),worldClimate:worldClimateDefaults(),secrets:secretDefaults(),narrative:narrativeDefaults(),cityLife:cityLifeDefaults(),achievements:normalizeAchievements(null),skillVariants:{},investedStats:[0,0,0,0,0,0],dynamicQuests:dynamicDefaults(),adventure:adventureDefaults(),explorationChallenge:emptyChallenge()};}
 export function normalizeSave(source){
  if(!source||typeof source!=='object'||Array.isArray(source))throw Error('Salvamento inválido');
  const s=structuredClone(source);
@@ -52,6 +53,10 @@ export function normalizeSave(source){
  if(!['guerreiro','mago','arqueiro','ladino'].includes(s.cls))s.specializations.selected=null;
  if(!Array.isArray(s.specializations.unlocked))s.specializations.unlocked=[];
  s.journey=normalizeJourney(s.journey,s.area);
+ s.explorationChallenge=normalizeChallenge(source.explorationChallenge,s);
+ // Combates comuns interrompidos não podem deixar uma etapa pendente irrecuperável.
+ if(source.combat&&!s.explorationChallenge.miniBossEncounterPending&&s.journey.pendingKind==='combat')s.journey.pendingKind=null;
+ if(s.explorationChallenge.miniBossEncounterPending){s.journey.event=null;s.journey.pendingKind=null;}
  s.worldClimate=normalizeWorldClimate(s.worldClimate);
  s.secrets=normalizeSecrets(s.secrets);
  // Compatibilidade com a antiga Etapa 7 descartada: nenhum aliado permanece ativo ou salvo.
@@ -59,6 +64,9 @@ export function normalizeSave(source){
  s.narrative=normalizeNarrative(s.narrative);
  s.cityLife=normalizeCityLife(s.cityLife);
  if(s.journey.event&&(!EVENT_BY_ID[s.journey.event]||s.narrative.completed.includes(s.journey.event)))s.journey.event=null;
+ // Eventos narrativos já pendentes em salvamentos legados também devem concluir uma única exploração.
+ if(s.journey.event&&!s.journey.pendingKind)s.journey.pendingKind='event';
+ if(!s.journey.event&&s.journey.pendingKind==='event')s.journey.pendingKind=null;
  s.achievements=normalizeAchievements(s.achievements);
  s.skillVariants=normalizeSkillVariants(s.skillVariants);
  syncAchievements(s);

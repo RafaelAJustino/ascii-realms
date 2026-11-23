@@ -10,7 +10,7 @@ const saved=localStorage.getItem('ascii-realms-save-v1');assert.ok(saved);rt.sta
 console.log('OK: criação, combate assíncrono, renderização, salvamento e carregamento.');
 const {changeArea,explore}=await import('../js/exploration.js');const {buyItem,buyPotion,sell}=await import('../js/shops.js');
 rt.state.gold=10000;buyItem('weapon',3);assert.equal(rt.state.items.length,1);const uid=rt.state.items[0].uid;assert.ok(rt.state.gold<10000);sell(uid);assert.equal(rt.state.items.length,0);buyPotion('hp');assert.ok(rt.state.consumables.hp>=4);
-changeArea(2);assert.equal(rt.area,1);rt.state.lv=2;changeArea(2);assert.equal(rt.area,2);assert.equal(rt.state.area,2);
+changeArea(2);assert.equal(rt.area,1);rt.state.lv=2;rt.state.explorationChallenge.defeatedMiniBosses[1]=true;changeArea(2);assert.equal(rt.area,2);assert.equal(rt.state.area,2);
 assert.ok(app.innerHTML.includes('Explorar'));console.log('OK: lojas, inventário, compra/venda e bloqueio de áreas.');
 
 // Regressão: derrotar monstro deve encerrar combate e conceder recompensas uma única vez.

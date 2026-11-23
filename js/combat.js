@@ -1,9 +1,13 @@
+import {miniBossForArea,areaBossWarning} from './area-bosses.js';
+import {isStageBossArea,challengeProgress} from './exploration-challenge.js';
+import {miniBossFor,miniBossArtwork,miniBossDamageFactor,miniBossAttackFactor,miniBossRegen,miniBossDrain,chooseMiniBossSkill} from './mini-bosses.js';
+import {encounterPending,resolveMiniBoss,mapUnlocked,resetExplorationSequence,recordExplorationCompletion} from './exploration-challenge.js';
 import {initCombatResource,resourceValue,gainResource,consumeResource,canPaySkillResource,skillInfo,hasPassive,passiveTier} from './class-combat.js';
 import {applyStatus,statusActive,statusValue,periodicStatuses,expireStatuses,combatEvent} from './combat-effects.js';
 import {hasMilestone} from './attribute-milestones.js';
 import {monsterDamageFactor,monsterPassives,bossKit,dungeonBossKit,dungeonBossPhase} from './monster-identity.js';
 import {progressDynamic} from './dynamic-quests.js';
-import {incomingDamage,effectiveProtection} from './final-balance.js';
+import {incomingDamage,effectiveProtection,monsterHealth,monsterAttack} from './final-balance.js';
 import {advanceAdventureCombat} from './procedural-adventures.js';
 import { applyDeathXpPenalty } from './death-penalty.js';
 import {resetCooldowns,finishCooldownTurn,canUse,playerCooldownDetails,specCooldownDetails,tickCooldowns} from './turn-cooldowns.js';
@@ -32,7 +36,24 @@ import { PLAYER_SKILL_ELEMENTS,applyElementalDamage,elementalMessage,elementMult
 import { chooseMonsterAction,finishMonsterAction } from './monster-ai.js';
 import { selectAnnouncedAction,announceMonsterAction,consumeAnnouncedAction,resolveElementReaction } from './combat-tactics.js';
 import { monsterRarity } from './monster-rarity.js';
-export function combat(boss=false,secret=false,forcedSpeciesId=null){if(rt.state.combat)return;cancelCombatVisuals(rt.app);stopCreatureAnimation();resetCombatVisualState(rt);rt.busy=false;let lv=boss?rt.area:Math.min(100,rt.area+rand(0,1));rt.state.combat={enemy:enemy(lv,boss,forcedSpeciesId),effects:[],turn:0,guard:0,cooldowns:{}};initCombatResource(rt.state.combat,rt.state.cls);
+
+/** Encontro garantido após 15 resultados válidos, com retorno seguro após recarga. */
+export function startMiniBossCombat(){
+ const state=rt.state,area=rt.area,region=mapId(rt.area),kit=miniBossForArea(area);
+ if(!state||state.combat||!encounterPending(state)||state.explorationChallenge.pendingMapId!==area||rt.busy)return false;
+ if(isStageBossArea(area)){combat(true,false,null,true);return true;}
+ if(!kit)return false;
+ cancelCombatVisuals(rt.app);stopCreatureAnimation();resetCombatVisualState(rt);
+ const level=Math.min(100,Math.max(rt.area,Math.min(state.lv,region*10+8)));
+ const e=enemy(level,false);
+ e.name=kit.name;e.baseName=kit.name;e.speciesId=null;e.miniBoss=true;e.miniBossRegion=region;e.miniBossArea=area;e.miniBossKit=kit;e.boss=false;e.rarityId='champion';e.lv=level;
+ e.hp=Math.ceil(monsterHealth(level,false)*kit.hp);e.maxhp=e.hp;e.atk=Math.ceil(monsterAttack(level,false)*kit.atk);e.def=Math.ceil(level*.85*kit.def);
+ e.mp=50+level*3;e.maxmp=e.mp;e.attackElement=kit.element;e.archetype=kit.archetype;e.affinities={};e.telegraph=null;e.cooldowns={};e.turn=0;
+ state.combat={enemy:e,effects:[],turn:0,guard:0,cooldowns:{}};
+ initCombatResource(state.combat,state.cls);recordEncounter(e);rt.busy=false;rt.log=[`${kit.name} protege o território!`,kit.intro];rt.sub='attack';rt.screen='combat';save();render();return true;
+}
+
+export function combat(boss=false,secret=false,forcedSpeciesId=null,challengeStage=false){if(rt.state.combat)return;cancelCombatVisuals(rt.app);stopCreatureAnimation();resetCombatVisualState(rt);rt.busy=false;let lv=boss?rt.area:Math.min(100,rt.area+rand(0,1));rt.state.combat={enemy:enemy(lv,boss,forcedSpeciesId),effects:[],turn:0,guard:0,cooldowns:{}};initCombatResource(rt.state.combat,rt.state.cls);if(challengeStage&&boss)rt.state.combat.enemy.challengeStageArea=rt.area;
  if(secret&&!boss&&SECRET_BOSS_REGIONS.includes(mapId(rt.area))){
   const e=rt.state.combat.enemy;
   e.secretGuardian=true;
@@ -44,7 +65,7 @@ export function combat(boss=false,secret=false,forcedSpeciesId=null){if(rt.state
 
 export function effectsTick(target,effects){for(let ef of [...effects]){if(ef.type==='poison'||ef.type==='burn'||ef.type==='bleed'){let dmg=Math.max(1,Math.floor(target.maxhp*ef.power));target.hp=Math.max(0,target.hp-dmg);rt.log.unshift(`${ef.name}: ${dmg} de dano.`);}if(ef.type==='regen')target.hp=Math.min(target.maxhp,target.hp+Math.ceil(target.maxhp*ef.power));ef.duration--;if(ef.duration<=0)effects.splice(effects.indexOf(ef),1);}}
 
-export function endCombat(win){cancelCombatVisuals(rt.app);stopCreatureAnimation();invalidateCombatVisualState(rt);let e=rt.state.combat.enemy;resetCooldowns(rt.state.combat);resetCooldowns(e);const inDungeon=!!rt.state.combat.dungeonRoom;recordOutcome(e,win);if(win){progressQuest('kill',e.baseName);progressDynamic(rt.state,'kill',mapId(rt.area));const storyProgress=advanceAdventureCombat(rt.state,mapId(rt.area),e);if(storyProgress)rt.log.unshift(storyProgress.text);if(e.boss)progressQuest('boss',e.baseName);if(rt.state.statistics)rt.state.statistics.monstersDefeated++;recordWeaponVictory(rt.state,e);let s=stats(),exp=Math.floor((12+e.lv*9)*(e.boss?8:1)*clamp(1+(e.lv-rt.state.lv)*.15,.15,1.5)*(1+s.expBonus/100)),gold=Math.floor((8+e.lv*4)*(e.boss?7:1)*(e.boss?1:monsterRarity(e.rarityId).reward));exp=Math.floor(exp*(e.boss?1:monsterRarity(e.rarityId).reward));rt.state.gold+=gold;statAdd('goldEarned',gold);rt.log.unshift(`Vitória! +${exp} EXP, +${gold} ouro.`);gainXp(exp);const firstBoss=e.boss&&!rt.state.bosses.includes(mapId(rt.area));
+export function endCombat(win){cancelCombatVisuals(rt.app);stopCreatureAnimation();invalidateCombatVisualState(rt);let e=rt.state.combat.enemy;resetCooldowns(rt.state.combat);resetCooldowns(e);const inDungeon=!!rt.state.combat.dungeonRoom,mini=!!e.miniBoss,miniRegion=e.miniBossRegion,challengeArea=e.miniBossArea||e.challengeStageArea,challengeStage=!!e.challengeStageArea;const journeyStep=!mini&&!e.boss&&!inDungeon&&rt.state.journey?.pendingKind==='combat'&&activeJourney(rt.state);recordOutcome(e,win);if(win){progressQuest('kill',e.baseName);progressDynamic(rt.state,'kill',mapId(rt.area));const storyProgress=advanceAdventureCombat(rt.state,mapId(rt.area),e);if(storyProgress)rt.log.unshift(storyProgress.text);if(e.boss)progressQuest('boss',e.baseName);if(rt.state.statistics)rt.state.statistics.monstersDefeated++;recordWeaponVictory(rt.state,e);let s=stats(),exp=Math.floor((12+e.lv*9)*(e.boss?8:mini?3.25:1)*clamp(1+(e.lv-rt.state.lv)*.15,.15,1.5)*(1+s.expBonus/100)),gold=Math.floor((8+e.lv*4)*(e.boss?7:mini?3.5:1)*(e.boss||mini?1:monsterRarity(e.rarityId).reward));exp=Math.floor(exp*(e.boss||mini?1:monsterRarity(e.rarityId).reward));rt.state.gold+=gold;statAdd('goldEarned',gold);rt.log.unshift(`Vitória! +${exp} EXP, +${gold} ouro.`);gainXp(exp);const firstBoss=challengeStage&&!rt.state.bosses.includes(mapId(rt.area)),firstMini=mini&&!challengeProgress(rt.state,challengeArea).defeated;
 const reward=rewardFor(e,rt.state.cls,firstBoss,Math.random,rt.state.investedStats);
 for(const [name,count] of Object.entries(reward.materials)){rt.state.materials[name]=(rt.state.materials[name]||0)+count;statAdd('itemsFound',count);rt.log.unshift(`Material obtido: ${name} ×${count}.`);}
 for(const [name,count] of Object.entries(reward.consumables)){rt.state.consumables[name]=(rt.state.consumables[name]||0)+count;statAdd('itemsFound',count);rt.log.unshift(`Consumível obtido: ${name} ×${count}.`);}
@@ -55,7 +76,26 @@ if(e.secretGuardian&&markGuardianVictory(rt.state,mapId(rt.area))){
  const message=`Guardião secreto derrotado! Relíquia obtida: ${relic.name}.`;
  rt.log.unshift(message);recordSecret(rt.state,message);
  }
- if(e.boss&&!rt.state.bosses.includes(mapId(rt.area))){rt.state.bosses.push(mapId(rt.area));if(rt.state.statistics)rt.state.statistics.bossesDefeated++;rt.log.unshift('Chefe derrotado! Próximo mapa liberado.');}}else{if(rt.state.statistics)rt.state.statistics.deaths++;let lost=Math.floor(rt.state.gold*.1);rt.state.gold-=lost;const xpPenalty=applyDeathXpPenalty(rt.state);let s=stats();rt.state.hp=s.maxhp;rt.state.mp=s.maxmp;rt.log.unshift(`Derrota. -${lost} ouro, -${xpPenalty.lost} EXP do nível atual. Seu nível foi preservado.`);}if(inDungeon)dungeonCombatEnd(win);const resumeJourney=!inDungeon&&win&&!e.boss&&activeJourney(rt.state);if(resumeJourney)addJourneyLog(rt.state,rt.log.slice(0,5));if(!win&&activeJourney(rt.state))endJourney(rt.state);if(win&&hasMilestone(rt.state.investedStats,'sor','destiny')&&Math.random()<.12){const heal=Math.max(1,Math.floor(stats().maxhp*.06));rt.state.hp=Math.min(stats().maxhp,rt.state.hp+heal);rt.log.unshift(`Destino Favorável: +${heal} HP.`);}rt.state.combat=null;rt.sub='main';rt.screen=resumeJourney?'journey':(!win&&!inDungeon?'city':'result');save();render();}
+ if(mini&&resolveMiniBoss(rt.state,challengeArea,true)){
+  const kit=miniBossForArea(challengeArea),region=mapId(challengeArea);
+  if(firstMini){const relic=makeItem(e.lv,'weapon',rt.state.cls,2,region);relic.name=`Troféu de ${kit.name}`;rt.state.items.push(relic);statAdd('itemsFound');
+  rt.state.materials[maps[region][6]]=(rt.state.materials[maps[region][6]]||0)+3;statAdd('itemsFound',3);
+  rt.log.unshift(`${kit.defeat} Troféu raro e 3 materiais regionais obtidos.`);}else rt.log.unshift(`Revanche vencida contra ${kit.name}.`);
+  rt.log.unshift(mapUnlocked(rt.state,challengeArea+1)?'CONQUISTA: Mini Boss derrotado. Próximo mapa liberado!':'CONQUISTA: Mini Boss derrotado.');
+ }
+ if(challengeStage&&resolveMiniBoss(rt.state,challengeArea,true)){
+  const region=mapId(challengeArea);
+  if(!rt.state.bosses.includes(region)){rt.state.bosses.push(region);if(rt.state.statistics)rt.state.statistics.bossesDefeated++;}
+  rt.log.unshift(challengeArea===100?'Chefe final derrotado!':'Chefe da Fase derrotado! Próxima fase liberada.');
+ }}else{if(rt.state.statistics)rt.state.statistics.deaths++;let lost=Math.floor(rt.state.gold*.1);rt.state.gold-=lost;const xpPenalty=applyDeathXpPenalty(rt.state);let s=stats();rt.state.hp=s.maxhp;rt.state.mp=s.maxmp;rt.log.unshift(`Derrota. -${lost} ouro, -${xpPenalty.lost} EXP do nível atual. Seu nível foi preservado.`);if(mini||challengeStage)resolveMiniBoss(rt.state,challengeArea,false);}if(inDungeon)dungeonCombatEnd(win);
+ let nextEncounter=false;
+ if(journeyStep){
+  rt.state.journey.pendingKind=null;
+  if(win){rt.state.journey.steps++;rt.state.narrative.explorations++;progressQuest('explore',mapId(rt.area));progressDynamic(rt.state,'explore',mapId(rt.area));const result=recordExplorationCompletion(rt.state,rt.area);
+    if(result.hint){addJourneyLog(rt.state,areaBossWarning(rt.area,result.hint));}
+    if(result.triggered){addJourneyLog(rt.state,`Você percebe ${miniBossForArea(rt.area)?.name||maps[mapId(rt.area)][2]} entre as sombras. O confronto é inevitável.`);nextEncounter=true;}}
+ }
+ const resumeJourney=!inDungeon&&win&&!e.boss&&activeJourney(rt.state);if(resumeJourney)addJourneyLog(rt.state,rt.log.slice(0,5));if(!win&&activeJourney(rt.state))endJourney(rt.state);if(win&&hasMilestone(rt.state.investedStats,'sor','destiny')&&Math.random()<.12){const heal=Math.max(1,Math.floor(stats().maxhp*.06));rt.state.hp=Math.min(stats().maxhp,rt.state.hp+heal);rt.log.unshift(`Destino Favorável: +${heal} HP.`);}rt.state.combat=null;rt.sub='main';rt.screen=nextEncounter?'miniBoss':resumeJourney?'journey':(!win&&!inDungeon?'city':'result');save();render();}
 
 /** Dano do herói: base -> passivas/marcos -> acerto/crítico -> defesa -> afinidade -> escudo -> HP. */
 export function hitEnemy(mult=1,type='damage',element='physical',options={}){
@@ -87,7 +127,7 @@ export function hitEnemy(mult=1,type='damage',element='physical',options={}){
  damage=Math.floor(damage*(1+(element!=='physical'?s.elementalBonus:0)));
  if(type==='execute'&&(e.hp/e.maxhp<.35||statusActive(e.effects,'poison')))damage=Math.floor(damage*1.38);
  if(statusActive(e.effects,'mark'))damage=Math.floor(damage*(1+statusValue(e.effects,'mark')));
- damage=Math.floor(damage*monsterDamageFactor(e,element));
+ damage=Math.floor(damage*monsterDamageFactor(e,element)*miniBossDamageFactor(e,element));
  if(e.guardTurns>0)damage=Math.ceil(damage*.65);
  damage=Math.min(e.hp,Math.max(0,damage));e.hp-=damage;
  if(element!=='physical')observeMonsterAffinity(e,element,elementMultiplier(e,element));
@@ -118,8 +158,9 @@ export function hitEnemy(mult=1,type='damage',element='physical',options={}){
 
 export function enemyTurn(){
  const c=rt.state.combat;if(!c)return;
- const e=c.enemy,s=stats();effectsTick(e,e.effects);
+ const e=c.enemy,s=stats();if(e.miniBoss)e.turn=c.turn;effectsTick(e,e.effects);
  if((monsterPassives(e).some(p=>p.id==='regeneration')||(bossKit(e)?.passive?.kind==='regen'&&((e.bossPhase||1)>=2||e.hp/e.maxhp<.5))||dungeonBossKit(e)?.passive?.kind==='regen')&&e.hp>0&&e.hp<e.maxhp){const heal=Math.max(1,Math.floor(e.maxhp*.01));e.hp=Math.min(e.maxhp,e.hp+heal);}
+ if(e.miniBoss&&e.hp>0&&e.hp<e.maxhp)e.hp=Math.min(e.maxhp,e.hp+miniBossRegen(e));
  if(e.hp<=0)return endCombat(true);
  if(e.boss){
   // O ataque anunciado sempre se resolve no turno seguinte, sem novo sorteio.
@@ -141,8 +182,18 @@ export function enemyTurn(){
  }
  // Anúncios não alteram as regras de ação. A habilidade só gasta MP ao ser executada.
  if(!e.boss&&e.telegraphCooldown>0)e.telegraphCooldown--;
- let action=consumeAnnouncedAction(e);
- if(!action&&!e.boss){
+ let action=e.miniBoss&&e.telegraph?.kind==='mini'?e.telegraph.action:consumeAnnouncedAction(e);
+ if(e.miniBoss&&e.telegraph?.kind==='mini'){e.telegraph=null;e.telegraphCooldown=3;}
+ if(e.miniBoss&&!action){
+  const next=chooseMiniBossSkill(e,{hp:rt.state.hp,maxhp:s.maxhp,effects:c.effects});
+  if(next.announce&&(e.telegraphCooldown||0)<=0){
+    e.telegraph={kind:'mini',action:next,message:`${e.name} prepara ${next.name}. Proteja-se neste turno!`};
+    c.lastVisualAction={kind:'guard',id:'announce'};rt.log.unshift(`! MINI BOSS: ${e.telegraph.message}`);tickCooldowns(e);return;
+  }
+  action=next;
+ }
+ if(e.miniBoss&&e.telegraphCooldown>0)e.telegraphCooldown--;
+ if(!action&&!e.boss&&!e.miniBoss){
   const announced=selectAnnouncedAction(e);
   if(announced&&announceMonsterAction(e,announced)){
    c.lastVisualAction={kind:'guard',id:'announce'};
@@ -163,7 +214,7 @@ export function enemyTurn(){
   if(Math.random()*100<Math.min(40,s.dodge+(statusActive(c.effects,'evade')?8:0)+(statusActive(c.effects,'freeze')?2:0))){rt.log.unshift(`Você esquivou do ataque de ${e.name}!`);if(hasPassive(rt.state,'cat_reflexes')||hasMilestone(rt.state.investedStats,'agi','fast_reflexes'))gainResource(c,rt.state.cls,1);}
   else{
    const defense=effectiveProtection(action.element==='physical'?s.def:s.md,c.effects);
-   let incomingPower=e.atk*action.power;
+   let incomingPower=e.atk*action.power*miniBossAttackFactor(e);
    if(statusActive(e.effects,'weaken'))incomingPower*=1-statusValue(e.effects,'weaken');
    if(statusActive(e.effects,'freeze'))incomingPower*=.9;
    if(monsterPassives(e).some(p=>p.id==='ferocity')&&e.hp/e.maxhp<.35)incomingPower*=1.08;
@@ -178,7 +229,7 @@ export function enemyTurn(){
    if(damage>0&&rt.state.cls==='guerreiro'&&rt.state.hp<=s.maxhp*.3&&hasPassive(rt.state,'last_bastion')&&!c.passiveUses?.lastBastion){damage=Math.ceil(damage*.65);c.passiveUses??={};c.passiveUses.lastBastion=true;rt.log.unshift('Último Bastião reduziu o impacto.');}
    rt.state.hp=Math.max(0,rt.state.hp-damage);statAdd('damageTaken',damage);
    if(c.guard>0&&damage>0){gainResource(c,rt.state.cls,1);if(hasPassive(rt.state,'counterattack')&&Math.random()<.18){const counter=Math.min(e.hp,Math.ceil(s.atk*.25));e.hp-=counter;statAdd('damageDealt',counter);rt.log.unshift(`Contra-ataque: ${counter} de dano.`);}}else if(rt.state.cls==='guerreiro'&&damage>0)gainResource(c,rt.state.cls,1);
-   rt.log.unshift(`${e.name} ${action.id==='strike'?'atacou':'utilizou uma habilidade estratégica'}: -${damage} HP.`);
+   rt.log.unshift(`${e.name} ${action.id==='strike'?'atacou':'utilizou uma habilidade estratégica'}: -${damage} HP.`);if(e.miniBoss&&damage>0){const drain=miniBossDrain(e,damage);if(drain){e.hp=Math.min(e.maxhp,e.hp+drain);rt.log.unshift(`${e.name} absorveu ${drain} HP.`);}}
    const passiveKind=(bossKit(e)||dungeonBossKit(e))?.passive?.kind;
    if(damage>0&&passiveKind==='drain'&&c.turn%3===2)e.hp=Math.min(e.maxhp,e.hp+Math.floor(damage*.12));
    if(damage>0&&passiveKind==='curse'&&c.turn%4===1)applyStatus(c.effects,'weaken',{duration:1,power:.08});
@@ -214,7 +265,7 @@ export async function act(kind,param) {
  if(kind==='skill'){const a=effectiveSkill(rt.state,Number(param)),cd=playerCooldownDetails(rt.state,Number(param));if(!a||!cd||rt.state.lv<a.level||rt.state.mp<a.cost||!canUse(c,cd.id)||!canPaySkillResource(c,rt.state.cls,Number(param)))return;}
  if(kind==='spec'){const a=specSkills(rt.state)[Number(param)],cd=specCooldownDetails(rt.state,Number(param));if(!a||!cd||rt.state.mp<a.cost||!canUse(c,cd.id))return;}
  if(kind==='potion'&&(!rt.state.consumables[param]||rt.state.consumables[param]<1))return;
- if(kind==='flee'&&(e.boss||c.dungeonRoom))return;
+ if(kind==='flee'&&(e.boss||e.miniBoss||c.dungeonRoom))return;
  const session=rt.combatVisualId;
  rt.busy=true;rt.phase='player-action';rt.float=null;rt.impactMeta=null;
  rt.app.querySelectorAll('.combat-controls button, .combat-speed-option').forEach(button=>button.disabled=true);
@@ -248,7 +299,7 @@ export async function act(kind,param) {
    rt.state.consumables[param]--;pushLog(`Consumível ${param} utilizado.`,'heal');
   } else if(kind==='flee'){
    if(Math.random()<clamp(.5+(rt.state.lv-e.lv)*.07+s.agi*.006,.1,.9)){
-    cancelCombatVisuals(rt.app);stopCreatureAnimation();invalidateCombatVisualState(rt);rt.state.combat=null;rt.sub='main';rt.screen=activeJourney(rt.state)?'journey':'world';rt.log.unshift({text:'Você fugiu!',kind:'info',id:Math.random()});if(activeJourney(rt.state))addJourneyLog(rt.state,'Você fugiu do encontro.');save();render();return;
+    cancelCombatVisuals(rt.app);stopCreatureAnimation();invalidateCombatVisualState(rt);rt.state.combat=null;rt.sub='main';rt.screen=activeJourney(rt.state)?'journey':'world';rt.log.unshift({text:'Você fugiu!',kind:'info',id:Math.random()});if(activeJourney(rt.state))addJourneyLog(rt.state,'Você fugiu do encontro.');if(activeJourney(rt.state)&&rt.state.journey?.pendingKind==='combat')rt.state.journey.pendingKind=null;save();render();return;
    }pushLog('Falha ao fugir!','error');
   }
   // Apenas ações concluídas consomem um turno. A habilidade usada recebe
